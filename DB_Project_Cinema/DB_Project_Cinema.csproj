@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6B9CE8F-219D-4DF5-8143-8566373ECCE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DB_Project_Cinema</RootNamespace>
+    <AssemblyName>DB_Project_Cinema</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChooseSeat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChooseSeat.Designer.cs">
+      <DependentUpon>ChooseSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiscountCard.Designer.cs">
+      <DependentUpon>DiscountCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FindID.Designer.cs">
+      <DependentUpon>FindID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindIDandPW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FindIDandPW.Designer.cs">
+      <DependentUpon>FindIDandPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindPW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FindPW.Designer.cs">
+      <DependentUpon>FindPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinMembership.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JoinMembership.Designer.cs">
+      <DependentUpon>JoinMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginCustomer.Designer.cs">
+      <DependentUpon>LoginCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginMember.Designer.cs">
+      <DependentUpon>LoginMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieDetail.Designer.cs">
+      <DependentUpon>MovieDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovieList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieList.Designer.cs">
+      <DependentUpon>MovieList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoviePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MoviePage.Designer.cs">
+      <DependentUpon>MoviePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPage.Designer.cs">
+      <DependentUpon>MyPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageChangeInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageChangeInfo.Designer.cs">
+      <DependentUpon>MyPageChangeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageChangePw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageChangePw.Designer.cs">
+      <DependentUpon>MyPageChangePw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageCheckResv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageCheckResv.Designer.cs">
+      <DependentUpon>MyPageCheckResv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageConfirmPW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageConfirmPW.Designer.cs">
+      <DependentUpon>MyPageConfirmPW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageInterest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageInterest.Designer.cs">
+      <DependentUpon>MyPageInterest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageMyPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageMyPoint.Designer.cs">
+      <DependentUpon>MyPageMyPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPageQuitMem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyPageQuitMem.Designer.cs">
+      <DependentUpon>MyPageQuitMem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevieiwPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RevieiwPage.Designer.cs">
+      <DependentUpon>RevieiwPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScreenInfo.Designer.cs">
+      <DependentUpon>ScreenInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectShowTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectShowTime.Designer.cs">
+      <DependentUpon>SelectShowTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TicketingPage.Designer.cs">
+      <DependentUpon>TicketingPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChooseSeat.resx">
+      <DependentUpon>ChooseSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscountCard.resx">
+      <DependentUpon>DiscountCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindID.resx">
+      <DependentUpon>FindID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindIDandPW.resx">
+      <DependentUpon>FindIDandPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPW.resx">
+      <DependentUpon>FindPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoinMembership.resx">
+      <DependentUpon>JoinMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCustomer.resx">
+      <DependentUpon>LoginCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMember.resx">
+      <DependentUpon>LoginMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieDetail.resx">
+      <DependentUpon>MovieDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieList.resx">
+      <DependentUpon>MovieList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoviePage.resx">
+      <DependentUpon>MoviePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPage.resx">
+      <DependentUpon>MyPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageChangeInfo.resx">
+      <DependentUpon>MyPageChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageChangePw.resx">
+      <DependentUpon>MyPageChangePw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageCheckResv.resx">
+      <DependentUpon>MyPageCheckResv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageConfirmPW.resx">
+      <DependentUpon>MyPageConfirmPW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageInterest.resx">
+      <DependentUpon>MyPageInterest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageMyPoint.resx">
+      <DependentUpon>MyPageMyPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPageQuitMem.resx">
+      <DependentUpon>MyPageQuitMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RevieiwPage.resx">
+      <DependentUpon>RevieiwPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenInfo.resx">
+      <DependentUpon>ScreenInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectShowTime.resx">
+      <DependentUpon>SelectShowTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketingPage.resx">
+      <DependentUpon>TicketingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
