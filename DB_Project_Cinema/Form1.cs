@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace DB_Project_Cinema
 {
     public partial class CinemaProgram : Form
     {
+      
         public CinemaProgram()
         {
             InitializeComponent();

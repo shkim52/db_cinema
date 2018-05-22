@@ -31,63 +31,76 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.Seats = new System.Windows.Forms.Label();
-            this.EmptySeatsNumber = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Screen = new System.Windows.Forms.Label();
             this.ChooseNumberList = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SCR_NM = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SEAT_CNT = new System.Windows.Forms.Label();
+            this.TOT_SEAT_CNT = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 11;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.611313F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.94104F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.05149F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.3901F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.805656F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.83393F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.36646F));
+            this.tableLayoutPanel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.tableLayoutPanel1.ColumnCount = 12;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.383354F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.79605F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.87356F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.68966F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.21698F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.03773F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.56605F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.Seats, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.EmptySeatsNumber, 7, 3);
             this.tableLayoutPanel1.Controls.Add(this.label6, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Screen, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.ChooseNumberList, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.SCR_NM, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.SEAT_CNT, 8, 3);
+            this.tableLayoutPanel1.Controls.Add(this.TOT_SEAT_CNT, 10, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 9, 3);
+            this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.418814F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.04395F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.923825F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.9622113F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.543461F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.320638F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.20145F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.320638F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.265004F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(762, 390);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(610, 325);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightGray;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 6);
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 9);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(135, 118);
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(83, 98);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(433, 26);
+            this.label2.Size = new System.Drawing.Size(465, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "SCREEN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,57 +109,35 @@
             // 
             this.Seats.AutoSize = true;
             this.Seats.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel1.SetColumnSpan(this.Seats, 6);
+            this.tableLayoutPanel1.SetColumnSpan(this.Seats, 9);
             this.Seats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Seats.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Seats.Location = new System.Drawing.Point(135, 148);
+            this.Seats.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Seats.Location = new System.Drawing.Point(83, 123);
+            this.Seats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Seats.Name = "Seats";
-            this.Seats.Size = new System.Drawing.Size(433, 173);
+            this.Seats.Size = new System.Drawing.Size(465, 144);
             this.Seats.TabIndex = 3;
             this.Seats.Text = "좌석";
             this.Seats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EmptySeatsNumber
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.EmptySeatsNumber, 3);
-            this.EmptySeatsNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmptySeatsNumber.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.EmptySeatsNumber.Location = new System.Drawing.Point(484, 84);
-            this.EmptySeatsNumber.Name = "EmptySeatsNumber";
-            this.EmptySeatsNumber.Size = new System.Drawing.Size(179, 31);
-            this.EmptySeatsNumber.TabIndex = 5;
-            this.EmptySeatsNumber.Text = "남은좌석: 0/200";
-            this.EmptySeatsNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label6
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.label6, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.label6, 5);
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(202, 23);
+            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(137, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 37);
+            this.label6.Size = new System.Drawing.Size(327, 31);
             this.label6.TabIndex = 6;
             this.label6.Text = "TICKET";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Screen
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.Screen, 2);
-            this.Screen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Screen.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen.Location = new System.Drawing.Point(262, 84);
-            this.Screen.Name = "Screen";
-            this.Screen.Size = new System.Drawing.Size(201, 31);
-            this.Screen.TabIndex = 8;
-            this.Screen.Text = "상영관: 1관";
-            this.Screen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ChooseNumberList
             // 
             this.ChooseNumberList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChooseNumberList.FormattingEnabled = true;
-            this.ChooseNumberList.ItemHeight = 18;
+            this.ChooseNumberList.ItemHeight = 15;
             this.ChooseNumberList.Items.AddRange(new object[] {
             "0",
             "1",
@@ -157,31 +148,100 @@
             "6",
             "7",
             "8"});
-            this.ChooseNumberList.Location = new System.Drawing.Point(202, 87);
+            this.ChooseNumberList.Location = new System.Drawing.Point(137, 72);
+            this.ChooseNumberList.Margin = new System.Windows.Forms.Padding(2);
             this.ChooseNumberList.Name = "ChooseNumberList";
-            this.ChooseNumberList.Size = new System.Drawing.Size(54, 25);
+            this.ChooseNumberList.Size = new System.Drawing.Size(44, 22);
             this.ChooseNumberList.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(135, 84);
+            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(83, 70);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 31);
+            this.label7.Size = new System.Drawing.Size(50, 26);
             this.label7.TabIndex = 10;
             this.label7.Text = "인원:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(240, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 26);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "상영관 : ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SCR_NM
+            // 
+            this.SCR_NM.AutoSize = true;
+            this.SCR_NM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SCR_NM.Location = new System.Drawing.Point(328, 70);
+            this.SCR_NM.Name = "SCR_NM";
+            this.SCR_NM.Size = new System.Drawing.Size(67, 26);
+            this.SCR_NM.TabIndex = 12;
+            this.SCR_NM.Text = "1관";
+            this.SCR_NM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(401, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 26);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "남은 좌석 : ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SEAT_CNT
+            // 
+            this.SEAT_CNT.AutoSize = true;
+            this.SEAT_CNT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SEAT_CNT.Location = new System.Drawing.Point(469, 70);
+            this.SEAT_CNT.Name = "SEAT_CNT";
+            this.SEAT_CNT.Size = new System.Drawing.Size(17, 26);
+            this.SEAT_CNT.TabIndex = 14;
+            this.SEAT_CNT.Text = "0";
+            this.SEAT_CNT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TOT_SEAT_CNT
+            // 
+            this.TOT_SEAT_CNT.AutoSize = true;
+            this.TOT_SEAT_CNT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TOT_SEAT_CNT.Location = new System.Drawing.Point(506, 70);
+            this.TOT_SEAT_CNT.Name = "TOT_SEAT_CNT";
+            this.TOT_SEAT_CNT.Size = new System.Drawing.Size(41, 26);
+            this.TOT_SEAT_CNT.TabIndex = 15;
+            this.TOT_SEAT_CNT.Text = "400";
+            this.TOT_SEAT_CNT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(492, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(8, 26);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "/";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ChooseSeat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChooseSeat";
-            this.Size = new System.Drawing.Size(762, 390);
+            this.Size = new System.Drawing.Size(610, 325);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -193,10 +253,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Seats;
-        private System.Windows.Forms.Label EmptySeatsNumber;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Screen;
         private System.Windows.Forms.ListBox ChooseNumberList;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SCR_NM;
+        private System.Windows.Forms.Label SEAT_CNT;
+        private System.Windows.Forms.Label TOT_SEAT_CNT;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label3;
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace DB_Project_Cinema
 {
+    
     public partial class MyPageMyPoint : UserControl
     {
         public MyPageMyPoint()
