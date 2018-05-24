@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Movie_Intro = new System.Windows.Forms.Label();
             this.SetInterestButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Movie_NM = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
@@ -49,13 +49,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.41389F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.13796F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Movie_Intro, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.SetInterestButton, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Movie_NM, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -67,17 +67,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(838, 294);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // Movie_Intro
             // 
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 3);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(242, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 189);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "영화설명";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Movie_Intro.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.Movie_Intro, 3);
+            this.Movie_Intro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Movie_Intro.Location = new System.Drawing.Point(242, 49);
+            this.Movie_Intro.Name = "Movie_Intro";
+            this.Movie_Intro.Size = new System.Drawing.Size(499, 189);
+            this.Movie_Intro.TabIndex = 1;
+            this.Movie_Intro.Text = "영화설명";
             // 
             // SetInterestButton
             // 
@@ -85,7 +84,7 @@
             this.SetInterestButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SetInterestButton.FlatAppearance.BorderSize = 0;
             this.SetInterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SetInterestButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SetInterestButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SetInterestButton.Location = new System.Drawing.Point(242, 246);
             this.SetInterestButton.Name = "SetInterestButton";
             this.SetInterestButton.Size = new System.Drawing.Size(194, 34);
@@ -93,16 +92,17 @@
             this.SetInterestButton.Text = "관심리스트 넣기";
             this.SetInterestButton.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // Movie_NM
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.label4, 3);
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(242, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(499, 49);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "영화제목";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel1.SetColumnSpan(this.Movie_NM, 3);
+            this.Movie_NM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Movie_NM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Movie_NM.Location = new System.Drawing.Point(242, 0);
+            this.Movie_NM.Name = "Movie_NM";
+            this.Movie_NM.Size = new System.Drawing.Size(499, 49);
+            this.Movie_NM.TabIndex = 5;
+            this.Movie_NM.Text = "영화제목";
+            this.Movie_NM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -141,9 +141,9 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Movie_Intro;
         private System.Windows.Forms.Button SetInterestButton;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Movie_NM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

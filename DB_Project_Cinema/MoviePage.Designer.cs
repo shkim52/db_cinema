@@ -85,7 +85,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(36, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 30);
@@ -96,7 +96,7 @@
             // SearchTypeList
             // 
             this.SearchTypeList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.SearchTypeList.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SearchTypeList.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SearchTypeList.FormattingEnabled = true;
             this.SearchTypeList.ItemHeight = 25;
             this.SearchTypeList.Items.AddRange(new object[] {
@@ -112,7 +112,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.MovieSearchText, 5);
             this.MovieSearchText.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MovieSearchText.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieSearchText.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MovieSearchText.Location = new System.Drawing.Point(177, 132);
             this.MovieSearchText.Name = "MovieSearchText";
             this.MovieSearchText.Size = new System.Drawing.Size(406, 31);
@@ -125,18 +125,19 @@
             this.SearchButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.SearchButton.FlatAppearance.BorderSize = 0;
             this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SearchButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SearchButton.Location = new System.Drawing.Point(600, 126);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(124, 37);
             this.SearchButton.TabIndex = 3;
             this.SearchButton.Text = "검색";
             this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(318, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 34);
@@ -148,15 +149,15 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 11;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.59299F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.7035F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.7035F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.7035F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.7035F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.59299F));
             this.tableLayoutPanel2.Controls.Add(this.Movie1DetailButton, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.Movie2DetailButton, 3, 1);
@@ -181,10 +182,10 @@
             this.Movie1DetailButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Movie1DetailButton.FlatAppearance.BorderSize = 0;
             this.Movie1DetailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Movie1DetailButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie1DetailButton.Location = new System.Drawing.Point(35, 7);
+            this.Movie1DetailButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Movie1DetailButton.Location = new System.Drawing.Point(-26, 7);
             this.Movie1DetailButton.Name = "Movie1DetailButton";
-            this.Movie1DetailButton.Size = new System.Drawing.Size(94, 34);
+            this.Movie1DetailButton.Size = new System.Drawing.Size(194, 34);
             this.Movie1DetailButton.TabIndex = 0;
             this.Movie1DetailButton.Text = "영화이름";
             this.Movie1DetailButton.UseVisualStyleBackColor = false;
@@ -196,10 +197,10 @@
             this.Movie2DetailButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Movie2DetailButton.FlatAppearance.BorderSize = 0;
             this.Movie2DetailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Movie2DetailButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie2DetailButton.Location = new System.Drawing.Point(184, 7);
+            this.Movie2DetailButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Movie2DetailButton.Location = new System.Drawing.Point(130, 7);
             this.Movie2DetailButton.Name = "Movie2DetailButton";
-            this.Movie2DetailButton.Size = new System.Drawing.Size(94, 34);
+            this.Movie2DetailButton.Size = new System.Drawing.Size(194, 34);
             this.Movie2DetailButton.TabIndex = 1;
             this.Movie2DetailButton.Text = "영화이름";
             this.Movie2DetailButton.UseVisualStyleBackColor = false;
@@ -210,10 +211,10 @@
             this.Movie3DetailButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Movie3DetailButton.FlatAppearance.BorderSize = 0;
             this.Movie3DetailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Movie3DetailButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie3DetailButton.Location = new System.Drawing.Point(333, 7);
+            this.Movie3DetailButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Movie3DetailButton.Location = new System.Drawing.Point(286, 7);
             this.Movie3DetailButton.Name = "Movie3DetailButton";
-            this.Movie3DetailButton.Size = new System.Drawing.Size(94, 34);
+            this.Movie3DetailButton.Size = new System.Drawing.Size(194, 34);
             this.Movie3DetailButton.TabIndex = 2;
             this.Movie3DetailButton.Text = "영화이름";
             this.Movie3DetailButton.UseVisualStyleBackColor = false;
@@ -224,10 +225,10 @@
             this.Movie4DetailButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Movie4DetailButton.FlatAppearance.BorderSize = 0;
             this.Movie4DetailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Movie4DetailButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie4DetailButton.Location = new System.Drawing.Point(482, 7);
+            this.Movie4DetailButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Movie4DetailButton.Location = new System.Drawing.Point(442, 7);
             this.Movie4DetailButton.Name = "Movie4DetailButton";
-            this.Movie4DetailButton.Size = new System.Drawing.Size(94, 34);
+            this.Movie4DetailButton.Size = new System.Drawing.Size(194, 34);
             this.Movie4DetailButton.TabIndex = 3;
             this.Movie4DetailButton.Text = "영화이름";
             this.Movie4DetailButton.UseVisualStyleBackColor = false;
@@ -238,10 +239,10 @@
             this.Movie5DetailButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Movie5DetailButton.FlatAppearance.BorderSize = 0;
             this.Movie5DetailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Movie5DetailButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie5DetailButton.Location = new System.Drawing.Point(631, 7);
+            this.Movie5DetailButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Movie5DetailButton.Location = new System.Drawing.Point(598, 7);
             this.Movie5DetailButton.Name = "Movie5DetailButton";
-            this.Movie5DetailButton.Size = new System.Drawing.Size(94, 34);
+            this.Movie5DetailButton.Size = new System.Drawing.Size(194, 34);
             this.Movie5DetailButton.TabIndex = 4;
             this.Movie5DetailButton.Text = "영화이름";
             this.Movie5DetailButton.UseVisualStyleBackColor = false;
@@ -252,10 +253,10 @@
             this.BackToHomeButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BackToHomeButton.FlatAppearance.BorderSize = 0;
             this.BackToHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToHomeButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BackToHomeButton.Location = new System.Drawing.Point(135, 7);
+            this.BackToHomeButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BackToHomeButton.Location = new System.Drawing.Point(174, 7);
             this.BackToHomeButton.Name = "BackToHomeButton";
-            this.BackToHomeButton.Size = new System.Drawing.Size(43, 34);
+            this.BackToHomeButton.Size = new System.Drawing.Size(1, 34);
             this.BackToHomeButton.TabIndex = 5;
             this.BackToHomeButton.Text = "<-홈으로";
             this.BackToHomeButton.UseVisualStyleBackColor = false;
@@ -267,10 +268,10 @@
             this.ReviewButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReviewButton.FlatAppearance.BorderSize = 0;
             this.ReviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReviewButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ReviewButton.Location = new System.Drawing.Point(284, 7);
+            this.ReviewButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ReviewButton.Location = new System.Drawing.Point(330, 7);
             this.ReviewButton.Name = "ReviewButton";
-            this.ReviewButton.Size = new System.Drawing.Size(43, 34);
+            this.ReviewButton.Size = new System.Drawing.Size(1, 34);
             this.ReviewButton.TabIndex = 6;
             this.ReviewButton.Text = "리뷰 보기/등록";
             this.ReviewButton.UseVisualStyleBackColor = false;
@@ -280,7 +281,7 @@
             // 
             this.MovieList.BackColor = System.Drawing.Color.White;
             this.MovieList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MovieList.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieList.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MovieList.Location = new System.Drawing.Point(0, 185);
             this.MovieList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MovieList.Name = "MovieList";

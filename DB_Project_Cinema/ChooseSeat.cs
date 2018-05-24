@@ -17,7 +17,7 @@ namespace DB_Project_Cinema
         public ChooseSeat()
         {
             InitializeComponent();
-            string str = "data source=localhost:1521/xe;user id=YUN; password=1234";
+            string str = "data source=localhost:1521/xe;user id=SHKIM; password=5276";
             OracleConnection Conn = new OracleConnection(str);
             /**OracleCommand Comm;
             Comm = new OracleCommand();
@@ -26,16 +26,16 @@ namespace DB_Project_Cinema
             {
             
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE";
+                string sql = "SELECT * FROM SCREEN";
                 OracleCommand Comm = new OracleCommand(sql,Conn);
 
-                Console.WriteLine("=================================");
+               
                 OracleDataReader reader = Comm.ExecuteReader();
               
                 while (reader.Read())
                 {
-                    Console.WriteLine("111111111111111111111111");
-                    this.TOT_SEAT_CNT.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+
+                    this.TOT_SEAT_CNT.Text = reader.GetString(reader.GetOrdinal("SCR_SEAT_CNT"));
 
                 }
                 Conn.Close();
@@ -43,12 +43,17 @@ namespace DB_Project_Cinema
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-                Console.Write("++++++++++++++++++++++++++++++++++++");
+               
             }
             finally
             {
                 Conn.Close();
             }
+        }
+
+        private void SEAT_CNT_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
