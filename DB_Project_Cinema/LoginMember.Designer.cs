@@ -30,17 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ID_INPUT = new System.Windows.Forms.TextBox();
+            this.PW_INPUT = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(499, 35);
+            this.label1.Location = new System.Drawing.Point(399, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 40);
+            this.label1.Size = new System.Drawing.Size(61, 33);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -48,28 +49,31 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(464, 83);
+            this.label2.Location = new System.Drawing.Point(371, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 40);
+            this.label2.Size = new System.Drawing.Size(89, 33);
             this.label2.TabIndex = 6;
             this.label2.Text = "Password:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // ID_INPUT
             // 
-            this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(600, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 34);
-            this.textBox1.TabIndex = 7;
+            this.ID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ID_INPUT.Location = new System.Drawing.Point(480, 32);
+            this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_INPUT.Name = "ID_INPUT";
+            this.ID_INPUT.Size = new System.Drawing.Size(210, 30);
+            this.ID_INPUT.TabIndex = 7;
             // 
-            // textBox2
+            // PW_INPUT
             // 
-            this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(600, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 34);
-            this.textBox2.TabIndex = 8;
+            this.PW_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PW_INPUT.Location = new System.Drawing.Point(480, 72);
+            this.PW_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PW_INPUT.Name = "PW_INPUT";
+            this.PW_INPUT.Size = new System.Drawing.Size(210, 30);
+            this.PW_INPUT.TabIndex = 8;
             // 
             // LoginButton
             // 
@@ -77,25 +81,28 @@
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.LoginButton.Location = new System.Drawing.Point(895, 38);
+            this.LoginButton.Location = new System.Drawing.Point(716, 32);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(89, 82);
+            this.LoginButton.Size = new System.Drawing.Size(71, 68);
             this.LoginButton.TabIndex = 9;
             this.LoginButton.Text = "로그인";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // LoginMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ID_INPUT);
+            this.Controls.Add(this.PW_INPUT);
             this.Controls.Add(this.LoginButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginMember";
-            this.Size = new System.Drawing.Size(1339, 456);
+            this.Size = new System.Drawing.Size(1071, 380);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,8 +112,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ID_INPUT;
+        private System.Windows.Forms.TextBox PW_INPUT;
         private System.Windows.Forms.Button LoginButton;
 
     }
