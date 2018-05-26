@@ -71,6 +71,7 @@
             this.SID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SID_INPUT.Location = new System.Drawing.Point(518, 58);
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
             this.SID_INPUT.Size = new System.Drawing.Size(204, 30);
             this.SID_INPUT.TabIndex = 8;
