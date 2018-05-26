@@ -50,9 +50,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(555, 90);
+            this.label1.Location = new System.Drawing.Point(444, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 41);
+            this.label1.Size = new System.Drawing.Size(270, 34);
             this.label1.TabIndex = 17;
             this.label1.Text = "Discount Card";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,9 +61,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(326, 221);
+            this.label2.Location = new System.Drawing.Point(261, 184);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 40);
+            this.label2.Size = new System.Drawing.Size(107, 33);
             this.label2.TabIndex = 18;
             this.label2.Text = "통신사 이름:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -70,9 +72,10 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(348, 269);
+            this.label3.Location = new System.Drawing.Point(278, 224);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 40);
+            this.label3.Size = new System.Drawing.Size(90, 33);
             this.label3.TabIndex = 19;
             this.label3.Text = "할인 금액:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -80,9 +83,10 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(332, 419);
+            this.label4.Location = new System.Drawing.Point(266, 349);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 40);
+            this.label4.Size = new System.Drawing.Size(102, 33);
             this.label4.TabIndex = 20;
             this.label4.Text = "통신사 이름:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -90,9 +94,10 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(355, 473);
+            this.label5.Location = new System.Drawing.Point(284, 394);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 40);
+            this.label5.Size = new System.Drawing.Size(84, 33);
             this.label5.TabIndex = 21;
             this.label5.Text = "할인 금액:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,9 +105,10 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(853, 221);
+            this.label6.Location = new System.Drawing.Point(682, 184);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 40);
+            this.label6.Size = new System.Drawing.Size(104, 33);
             this.label6.TabIndex = 22;
             this.label6.Text = "통신사 이름:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,9 +116,10 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(853, 269);
+            this.label7.Location = new System.Drawing.Point(682, 224);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 40);
+            this.label7.Size = new System.Drawing.Size(104, 33);
             this.label7.TabIndex = 23;
             this.label7.Text = "할인 금액:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,9 +127,10 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(853, 419);
+            this.label8.Location = new System.Drawing.Point(682, 349);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 40);
+            this.label8.Size = new System.Drawing.Size(104, 33);
             this.label8.TabIndex = 24;
             this.label8.Text = "통신사 이름:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,9 +138,10 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.Location = new System.Drawing.Point(869, 473);
+            this.label9.Location = new System.Drawing.Point(695, 394);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 40);
+            this.label9.Size = new System.Drawing.Size(91, 33);
             this.label9.TabIndex = 25;
             this.label9.Text = "할인 금액:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,9 +150,10 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Gainsboro;
             this.label10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(487, 221);
+            this.label10.Location = new System.Drawing.Point(390, 184);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 40);
+            this.label10.Size = new System.Drawing.Size(74, 33);
             this.label10.TabIndex = 26;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -151,9 +161,10 @@
             // 
             this.label11.BackColor = System.Drawing.Color.Gainsboro;
             this.label11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(487, 269);
+            this.label11.Location = new System.Drawing.Point(390, 224);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 40);
+            this.label11.Size = new System.Drawing.Size(74, 33);
             this.label11.TabIndex = 27;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -161,9 +172,10 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Gainsboro;
             this.label12.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.Location = new System.Drawing.Point(487, 419);
+            this.label12.Location = new System.Drawing.Point(390, 349);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 40);
+            this.label12.Size = new System.Drawing.Size(74, 33);
             this.label12.TabIndex = 28;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -171,9 +183,10 @@
             // 
             this.label13.BackColor = System.Drawing.Color.Gainsboro;
             this.label13.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(487, 473);
+            this.label13.Location = new System.Drawing.Point(390, 394);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 40);
+            this.label13.Size = new System.Drawing.Size(74, 33);
             this.label13.TabIndex = 29;
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -181,9 +194,10 @@
             // 
             this.label14.BackColor = System.Drawing.Color.Gainsboro;
             this.label14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(1010, 221);
+            this.label14.Location = new System.Drawing.Point(808, 184);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 40);
+            this.label14.Size = new System.Drawing.Size(74, 33);
             this.label14.TabIndex = 30;
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -191,9 +205,10 @@
             // 
             this.label15.BackColor = System.Drawing.Color.Gainsboro;
             this.label15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(1010, 269);
+            this.label15.Location = new System.Drawing.Point(808, 224);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 40);
+            this.label15.Size = new System.Drawing.Size(74, 33);
             this.label15.TabIndex = 31;
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -201,9 +216,10 @@
             // 
             this.label16.BackColor = System.Drawing.Color.Gainsboro;
             this.label16.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label16.Location = new System.Drawing.Point(1010, 419);
+            this.label16.Location = new System.Drawing.Point(808, 349);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 40);
+            this.label16.Size = new System.Drawing.Size(74, 33);
             this.label16.TabIndex = 32;
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -211,15 +227,16 @@
             // 
             this.label17.BackColor = System.Drawing.Color.Gainsboro;
             this.label17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(1010, 473);
+            this.label17.Location = new System.Drawing.Point(808, 394);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(92, 40);
+            this.label17.Size = new System.Drawing.Size(74, 33);
             this.label17.TabIndex = 33;
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DiscountCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
@@ -239,8 +256,9 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DiscountCard";
-            this.Size = new System.Drawing.Size(1354, 634);
+            this.Size = new System.Drawing.Size(1083, 528);
             this.ResumeLayout(false);
 
         }

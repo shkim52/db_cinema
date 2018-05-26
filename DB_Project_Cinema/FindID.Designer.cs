@@ -30,18 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SID_INPUT = new System.Windows.Forms.TextBox();
+            this.TELNO_INPUT = new System.Windows.Forms.TextBox();
             this.FindIDButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(474, 19);
+            this.label1.Location = new System.Drawing.Point(379, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 41);
+            this.label1.Size = new System.Drawing.Size(120, 34);
             this.label1.TabIndex = 5;
             this.label1.Text = "주민등록번호:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -49,31 +49,31 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(487, 71);
+            this.label2.Location = new System.Drawing.Point(390, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 41);
+            this.label2.Size = new System.Drawing.Size(110, 34);
             this.label2.TabIndex = 6;
             this.label2.Text = "휴대폰번호:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // SID_INPUT
             // 
-            this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(652, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 34);
-            this.textBox1.TabIndex = 7;
+            this.SID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SID_INPUT.Location = new System.Drawing.Point(522, 18);
+            this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.SID_INPUT.Name = "SID_INPUT";
+            this.SID_INPUT.Size = new System.Drawing.Size(211, 30);
+            this.SID_INPUT.TabIndex = 7;
             // 
-            // textBox2
+            // TELNO_INPUT
             // 
-            this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(652, 74);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 34);
-            this.textBox2.TabIndex = 8;
+            this.TELNO_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TELNO_INPUT.Location = new System.Drawing.Point(522, 62);
+            this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.TELNO_INPUT.Name = "TELNO_INPUT";
+            this.TELNO_INPUT.Size = new System.Drawing.Size(211, 30);
+            this.TELNO_INPUT.TabIndex = 8;
             // 
             // FindIDButton
             // 
@@ -81,27 +81,28 @@
             this.FindIDButton.FlatAppearance.BorderSize = 0;
             this.FindIDButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindIDButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindIDButton.Location = new System.Drawing.Point(953, 19);
+            this.FindIDButton.Location = new System.Drawing.Point(762, 16);
             this.FindIDButton.Margin = new System.Windows.Forms.Padding(2);
             this.FindIDButton.Name = "FindIDButton";
-            this.FindIDButton.Size = new System.Drawing.Size(104, 93);
+            this.FindIDButton.Size = new System.Drawing.Size(83, 77);
             this.FindIDButton.TabIndex = 9;
             this.FindIDButton.Text = "아이디 찾기";
             this.FindIDButton.UseVisualStyleBackColor = false;
+            this.FindIDButton.Click += new System.EventHandler(this.FindIDButton_Click);
             // 
             // FindID
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.SID_INPUT);
+            this.Controls.Add(this.TELNO_INPUT);
             this.Controls.Add(this.FindIDButton);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FindID";
-            this.Size = new System.Drawing.Size(1189, 470);
+            this.Size = new System.Drawing.Size(951, 392);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,8 +112,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox SID_INPUT;
+        private System.Windows.Forms.TextBox TELNO_INPUT;
         private System.Windows.Forms.Button FindIDButton;
 
     }

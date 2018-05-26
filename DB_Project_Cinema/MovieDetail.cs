@@ -18,7 +18,7 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-             string str = "data source=localhost:1521/xe;user id=SHKIM; password=5276";
+             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             OracleConnection Conn = new OracleConnection(str);
             /**OracleCommand Comm;
             Comm = new OracleCommand();

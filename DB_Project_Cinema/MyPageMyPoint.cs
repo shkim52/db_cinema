@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
+
 
 namespace DB_Project_Cinema
 {
@@ -16,6 +18,8 @@ namespace DB_Project_Cinema
         public MyPageMyPoint()
         {
             InitializeComponent();
+           
+            
         }
     }
 }
