@@ -34,16 +34,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.NAME_INPUT = new System.Windows.Forms.TextBox();
+            this.ID_INPUT = new System.Windows.Forms.TextBox();
+            this.EMAIL_INPUT = new System.Windows.Forms.TextBox();
+            this.SID_INPUT = new System.Windows.Forms.TextBox();
+            this.TELNO_INPUT = new System.Windows.Forms.TextBox();
+            this.SEX_INPUT = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.PWD_INPUT = new System.Windows.Forms.TextBox();
+            this.PWD2_INPUT = new System.Windows.Forms.TextBox();
             this.DoubleCheckButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
@@ -51,136 +51,152 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(323, 170);
+            this.label2.Location = new System.Drawing.Point(258, 142);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 35);
+            this.label2.Size = new System.Drawing.Size(102, 29);
             this.label2.TabIndex = 21;
             this.label2.Text = "User Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(323, 213);
+            this.label3.Location = new System.Drawing.Point(258, 177);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 40);
+            this.label3.Size = new System.Drawing.Size(102, 33);
             this.label3.TabIndex = 22;
             this.label3.Text = "ID:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(323, 347);
+            this.label4.Location = new System.Drawing.Point(258, 289);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 35);
+            this.label4.Size = new System.Drawing.Size(102, 29);
             this.label4.TabIndex = 23;
             this.label4.Text = "E-mail:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(323, 390);
+            this.label5.Location = new System.Drawing.Point(258, 325);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 35);
+            this.label5.Size = new System.Drawing.Size(102, 29);
             this.label5.TabIndex = 24;
             this.label5.Text = "주민등록번호:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(323, 433);
+            this.label6.Location = new System.Drawing.Point(258, 361);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 35);
+            this.label6.Size = new System.Drawing.Size(102, 29);
             this.label6.TabIndex = 25;
             this.label6.Text = "연락처:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(323, 468);
+            this.label7.Location = new System.Drawing.Point(258, 390);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 70);
+            this.label7.Size = new System.Drawing.Size(102, 58);
             this.label7.TabIndex = 26;
             this.label7.Text = "성별:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // NAME_INPUT
             // 
-            this.textBox1.Location = new System.Drawing.Point(469, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 28);
-            this.textBox1.TabIndex = 27;
+            this.NAME_INPUT.Location = new System.Drawing.Point(375, 144);
+            this.NAME_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NAME_INPUT.Name = "NAME_INPUT";
+            this.NAME_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.NAME_INPUT.TabIndex = 27;
             // 
-            // textBox2
+            // ID_INPUT
             // 
-            this.textBox2.Location = new System.Drawing.Point(469, 216);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 28);
-            this.textBox2.TabIndex = 28;
+            this.ID_INPUT.Location = new System.Drawing.Point(375, 180);
+            this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_INPUT.Name = "ID_INPUT";
+            this.ID_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.ID_INPUT.TabIndex = 28;
             // 
-            // textBox3
+            // EMAIL_INPUT
             // 
-            this.textBox3.Location = new System.Drawing.Point(469, 350);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(279, 28);
-            this.textBox3.TabIndex = 29;
+            this.EMAIL_INPUT.Location = new System.Drawing.Point(375, 292);
+            this.EMAIL_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EMAIL_INPUT.Name = "EMAIL_INPUT";
+            this.EMAIL_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.EMAIL_INPUT.TabIndex = 29;
             // 
-            // textBox4
+            // SID_INPUT
             // 
-            this.textBox4.Location = new System.Drawing.Point(469, 393);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 28);
-            this.textBox4.TabIndex = 30;
+            this.SID_INPUT.Location = new System.Drawing.Point(375, 327);
+            this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SID_INPUT.Name = "SID_INPUT";
+            this.SID_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.SID_INPUT.TabIndex = 30;
             // 
-            // textBox5
+            // TELNO_INPUT
             // 
-            this.textBox5.Location = new System.Drawing.Point(469, 436);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(279, 28);
-            this.textBox5.TabIndex = 31;
+            this.TELNO_INPUT.Location = new System.Drawing.Point(375, 363);
+            this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TELNO_INPUT.Name = "TELNO_INPUT";
+            this.TELNO_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.TELNO_INPUT.TabIndex = 31;
             // 
-            // checkedListBox1
+            // SEX_INPUT
             // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.SEX_INPUT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SEX_INPUT.FormattingEnabled = true;
+            this.SEX_INPUT.Items.AddRange(new object[] {
             "여자",
             "남자"});
-            this.checkedListBox1.Location = new System.Drawing.Point(469, 477);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(279, 69);
-            this.checkedListBox1.TabIndex = 32;
+            this.SEX_INPUT.Location = new System.Drawing.Point(375, 397);
+            this.SEX_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SEX_INPUT.Name = "SEX_INPUT";
+            this.SEX_INPUT.Size = new System.Drawing.Size(223, 40);
+            this.SEX_INPUT.TabIndex = 32;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(317, 261);
+            this.label8.Location = new System.Drawing.Point(254, 217);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 35);
+            this.label8.Size = new System.Drawing.Size(106, 29);
             this.label8.TabIndex = 33;
             this.label8.Text = "Password:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(275, 304);
+            this.label9.Location = new System.Drawing.Point(220, 253);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(175, 35);
+            this.label9.Size = new System.Drawing.Size(140, 29);
             this.label9.TabIndex = 34;
             this.label9.Text = "Confirm Password:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox6
+            // PWD_INPUT
             // 
-            this.textBox6.Location = new System.Drawing.Point(469, 264);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(279, 28);
-            this.textBox6.TabIndex = 35;
+            this.PWD_INPUT.Location = new System.Drawing.Point(375, 220);
+            this.PWD_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PWD_INPUT.Name = "PWD_INPUT";
+            this.PWD_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.PWD_INPUT.TabIndex = 35;
             // 
-            // textBox7
+            // PWD2_INPUT
             // 
-            this.textBox7.Location = new System.Drawing.Point(469, 307);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(279, 28);
-            this.textBox7.TabIndex = 36;
+            this.PWD2_INPUT.Location = new System.Drawing.Point(375, 256);
+            this.PWD2_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PWD2_INPUT.Name = "PWD2_INPUT";
+            this.PWD2_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.PWD2_INPUT.TabIndex = 36;
             // 
             // DoubleCheckButton
             // 
@@ -188,9 +204,10 @@
             this.DoubleCheckButton.FlatAppearance.BorderSize = 0;
             this.DoubleCheckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DoubleCheckButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DoubleCheckButton.Location = new System.Drawing.Point(765, 216);
+            this.DoubleCheckButton.Location = new System.Drawing.Point(612, 180);
+            this.DoubleCheckButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DoubleCheckButton.Name = "DoubleCheckButton";
-            this.DoubleCheckButton.Size = new System.Drawing.Size(94, 34);
+            this.DoubleCheckButton.Size = new System.Drawing.Size(75, 28);
             this.DoubleCheckButton.TabIndex = 37;
             this.DoubleCheckButton.Text = "중복확인";
             this.DoubleCheckButton.UseVisualStyleBackColor = false;
@@ -198,9 +215,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(628, 49);
+            this.label1.Location = new System.Drawing.Point(502, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 54);
+            this.label1.Size = new System.Drawing.Size(264, 45);
             this.label1.TabIndex = 38;
             this.label1.Text = "Join Membership";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,16 +229,17 @@
             this.SubmitButton.FlatAppearance.BorderSize = 0;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SubmitButton.Location = new System.Drawing.Point(600, 552);
+            this.SubmitButton.Location = new System.Drawing.Point(480, 460);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(148, 50);
+            this.SubmitButton.Size = new System.Drawing.Size(118, 42);
             this.SubmitButton.TabIndex = 39;
             this.SubmitButton.Text = "회원가입";
             this.SubmitButton.UseVisualStyleBackColor = false;
             // 
             // JoinMembership
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.SubmitButton);
@@ -230,20 +249,21 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.NAME_INPUT);
+            this.Controls.Add(this.ID_INPUT);
+            this.Controls.Add(this.EMAIL_INPUT);
+            this.Controls.Add(this.SID_INPUT);
+            this.Controls.Add(this.TELNO_INPUT);
+            this.Controls.Add(this.SEX_INPUT);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.PWD_INPUT);
+            this.Controls.Add(this.PWD2_INPUT);
             this.Controls.Add(this.DoubleCheckButton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "JoinMembership";
-            this.Size = new System.Drawing.Size(1243, 662);
+            this.Size = new System.Drawing.Size(994, 552);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,16 +277,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TextBox NAME_INPUT;
+        private System.Windows.Forms.TextBox ID_INPUT;
+        private System.Windows.Forms.TextBox EMAIL_INPUT;
+        private System.Windows.Forms.TextBox SID_INPUT;
+        private System.Windows.Forms.TextBox TELNO_INPUT;
+        private System.Windows.Forms.CheckedListBox SEX_INPUT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox PWD_INPUT;
+        private System.Windows.Forms.TextBox PWD2_INPUT;
         private System.Windows.Forms.Button DoubleCheckButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SubmitButton;
