@@ -46,103 +46,120 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(210, 228);
+            this.label2.Location = new System.Drawing.Point(168, 190);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 35);
+            this.label2.Size = new System.Drawing.Size(131, 29);
             this.label2.TabIndex = 15;
             this.label2.Text = "User Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(210, 271);
+            this.label3.Location = new System.Drawing.Point(168, 226);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 35);
+            this.label3.Size = new System.Drawing.Size(131, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "ID:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(210, 314);
+            this.label4.Location = new System.Drawing.Point(168, 262);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 35);
+            this.label4.Size = new System.Drawing.Size(131, 29);
             this.label4.TabIndex = 17;
             this.label4.Text = "E-mail:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(210, 357);
+            this.label5.Location = new System.Drawing.Point(168, 297);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 35);
+            this.label5.Size = new System.Drawing.Size(131, 29);
             this.label5.TabIndex = 18;
             this.label5.Text = "주민등록번호:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(210, 400);
+            this.label6.Location = new System.Drawing.Point(168, 333);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 35);
+            this.label6.Size = new System.Drawing.Size(131, 29);
             this.label6.TabIndex = 19;
             this.label6.Text = "연락처:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(210, 443);
+            this.label7.Location = new System.Drawing.Point(168, 369);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 70);
+            this.label7.Size = new System.Drawing.Size(131, 58);
             this.label7.TabIndex = 20;
             this.label7.Text = "성별:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(398, 228);
+            this.textBox1.Location = new System.Drawing.Point(318, 190);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(314, 28);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(252, 25);
             this.textBox1.TabIndex = 21;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(398, 271);
+            this.textBox2.Location = new System.Drawing.Point(318, 226);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(314, 28);
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(252, 25);
             this.textBox2.TabIndex = 22;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(398, 314);
+            this.textBox3.Location = new System.Drawing.Point(318, 262);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(314, 28);
+            this.textBox3.Size = new System.Drawing.Size(252, 25);
             this.textBox3.TabIndex = 23;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(398, 357);
+            this.textBox4.Location = new System.Drawing.Point(318, 297);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(314, 28);
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(252, 25);
             this.textBox4.TabIndex = 24;
+            this.textBox4.TabStop = false;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(398, 400);
+            this.textBox5.Location = new System.Drawing.Point(318, 333);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(314, 28);
+            this.textBox5.Size = new System.Drawing.Size(252, 25);
             this.textBox5.TabIndex = 25;
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.Enabled = false;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "여자",
             "남자"});
-            this.checkedListBox1.Location = new System.Drawing.Point(398, 456);
+            this.checkedListBox1.Location = new System.Drawing.Point(318, 380);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(314, 69);
+            this.checkedListBox1.Size = new System.Drawing.Size(251, 40);
             this.checkedListBox1.TabIndex = 26;
             // 
             // ChangeInfoButton
@@ -151,9 +168,10 @@
             this.ChangeInfoButton.FlatAppearance.BorderSize = 0;
             this.ChangeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ChangeInfoButton.Location = new System.Drawing.Point(398, 555);
+            this.ChangeInfoButton.Location = new System.Drawing.Point(318, 462);
+            this.ChangeInfoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ChangeInfoButton.Name = "ChangeInfoButton";
-            this.ChangeInfoButton.Size = new System.Drawing.Size(164, 49);
+            this.ChangeInfoButton.Size = new System.Drawing.Size(131, 41);
             this.ChangeInfoButton.TabIndex = 27;
             this.ChangeInfoButton.Text = "변경사항 저장";
             this.ChangeInfoButton.UseVisualStyleBackColor = false;
@@ -161,16 +179,17 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(223, 85);
+            this.label1.Location = new System.Drawing.Point(178, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 47);
+            this.label1.Size = new System.Drawing.Size(271, 39);
             this.label1.TabIndex = 28;
             this.label1.Text = "MyPage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MyPageChangeInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label2);
@@ -187,8 +206,9 @@
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.ChangeInfoButton);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MyPageChangeInfo";
-            this.Size = new System.Drawing.Size(1095, 642);
+            this.Size = new System.Drawing.Size(876, 535);
             this.ResumeLayout(false);
             this.PerformLayout();
 
