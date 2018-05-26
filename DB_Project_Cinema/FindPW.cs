@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using Oracle.ManagedDataAccess.Types;
+using System.Data.SqlClient;
 
 namespace DB_Project_Cinema
 {
@@ -40,10 +41,13 @@ namespace DB_Project_Cinema
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
                 OracleDataReader reader = Comm.ExecuteReader();
+
+
                 while (reader.Read())
                 {
+                    /*회원정보없을경우 확인 메시지 방법 찾기*/
                     MessageBox.Show("회원님의 비밀번호는 " + reader.GetString(reader.GetOrdinal("MEM_PW")) + "  입니다!");
-                }
+                }    
                 Conn.Close();
             }
             catch (Exception ex)
