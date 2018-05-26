@@ -64,6 +64,7 @@
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
+            this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(211, 30);
             this.SID_INPUT.TabIndex = 7;
             // 

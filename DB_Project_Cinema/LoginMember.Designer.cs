@@ -61,7 +61,7 @@
             // 
             this.ID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ID_INPUT.Location = new System.Drawing.Point(480, 32);
-            this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.ID_INPUT.Name = "ID_INPUT";
             this.ID_INPUT.Size = new System.Drawing.Size(210, 30);
             this.ID_INPUT.TabIndex = 7;
@@ -70,8 +70,9 @@
             // 
             this.PW_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PW_INPUT.Location = new System.Drawing.Point(480, 72);
-            this.PW_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PW_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PW_INPUT.Name = "PW_INPUT";
+            this.PW_INPUT.PasswordChar = '*';
             this.PW_INPUT.Size = new System.Drawing.Size(210, 30);
             this.PW_INPUT.TabIndex = 8;
             // 
@@ -82,7 +83,7 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LoginButton.Location = new System.Drawing.Point(716, 32);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(71, 68);
             this.LoginButton.TabIndex = 9;
@@ -100,7 +101,7 @@
             this.Controls.Add(this.ID_INPUT);
             this.Controls.Add(this.PW_INPUT);
             this.Controls.Add(this.LoginButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginMember";
             this.Size = new System.Drawing.Size(1071, 380);
             this.ResumeLayout(false);

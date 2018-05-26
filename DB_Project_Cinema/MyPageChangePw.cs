@@ -16,5 +16,10 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
         }
+
+        private void ChangePWButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

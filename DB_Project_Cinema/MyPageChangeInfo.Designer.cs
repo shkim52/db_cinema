@@ -107,7 +107,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(318, 190);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(252, 25);
@@ -116,7 +116,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(318, 226);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(252, 25);
@@ -125,7 +125,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(318, 262);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(252, 25);
             this.textBox3.TabIndex = 23;
@@ -133,8 +133,9 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(318, 297);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(252, 25);
             this.textBox4.TabIndex = 24;
@@ -143,7 +144,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(318, 333);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(252, 25);
             this.textBox5.TabIndex = 25;
@@ -157,7 +158,7 @@
             "여자",
             "남자"});
             this.checkedListBox1.Location = new System.Drawing.Point(318, 380);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(251, 40);
             this.checkedListBox1.TabIndex = 26;
@@ -169,7 +170,7 @@
             this.ChangeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ChangeInfoButton.Location = new System.Drawing.Point(318, 462);
-            this.ChangeInfoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChangeInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.ChangeInfoButton.Name = "ChangeInfoButton";
             this.ChangeInfoButton.Size = new System.Drawing.Size(131, 41);
             this.ChangeInfoButton.TabIndex = 27;
@@ -206,7 +207,7 @@
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.ChangeInfoButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageChangeInfo";
             this.Size = new System.Drawing.Size(876, 535);
             this.ResumeLayout(false);
