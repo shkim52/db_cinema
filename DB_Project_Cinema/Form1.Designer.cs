@@ -46,14 +46,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.MyPageMenu = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.TicketingPage = new DB_Project_Cinema.TicketingPage();
+            this.MoviePage = new DB_Project_Cinema.MoviePage();
+            this.FindIDandPW = new DB_Project_Cinema.FindIDandPW();
+            this.LoginPage = new DB_Project_Cinema.LoginPage();
             this.JoinMembership = new DB_Project_Cinema.JoinMembership();
             this.MyPage = new DB_Project_Cinema.MyPage();
             this.DiscountCard = new DB_Project_Cinema.DiscountCard();
             this.ScreenInfo = new DB_Project_Cinema.ScreenInfo();
-            this.LoginPage = new DB_Project_Cinema.LoginPage();
-            this.FindIDandPW = new DB_Project_Cinema.FindIDandPW();
-            this.MoviePage = new DB_Project_Cinema.MoviePage();
-            this.TicketingPage = new DB_Project_Cinema.TicketingPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -66,18 +66,18 @@
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 658);
+            this.panel1.Location = new System.Drawing.Point(0, 936);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1160, 114);
+            this.panel1.Size = new System.Drawing.Size(1924, 114);
             this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1160, 114);
+            this.label2.Size = new System.Drawing.Size(1924, 114);
             this.label2.TabIndex = 0;
             this.label2.Text = "주소 : 서울시 동대문구 서울시립대로 163\r\n고객센터 : 02-6490-2440~1\r\n소개 : 전체 8개의 상영관 2,100석 좌석 보유";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +89,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1160, 105);
+            this.panel2.Size = new System.Drawing.Size(1924, 105);
             this.panel2.TabIndex = 1;
             // 
             // panel7
@@ -122,7 +122,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 105);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1160, 40);
+            this.panel3.Size = new System.Drawing.Size(1924, 40);
             this.panel3.TabIndex = 2;
             // 
             // FindIDandPWButton
@@ -130,9 +130,9 @@
             this.FindIDandPWButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FindIDandPWButton.FlatAppearance.BorderSize = 0;
             this.FindIDandPWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindIDandPWButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FindIDandPWButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FindIDandPWButton.ForeColor = System.Drawing.Color.White;
-            this.FindIDandPWButton.Location = new System.Drawing.Point(649, 0);
+            this.FindIDandPWButton.Location = new System.Drawing.Point(1413, 0);
             this.FindIDandPWButton.Name = "FindIDandPWButton";
             this.FindIDandPWButton.Size = new System.Drawing.Size(122, 40);
             this.FindIDandPWButton.TabIndex = 3;
@@ -145,9 +145,9 @@
             this.MyPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MyPageButton.FlatAppearance.BorderSize = 0;
             this.MyPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MyPageButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MyPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MyPageButton.ForeColor = System.Drawing.Color.White;
-            this.MyPageButton.Location = new System.Drawing.Point(934, 0);
+            this.MyPageButton.Location = new System.Drawing.Point(1698, 0);
             this.MyPageButton.Name = "MyPageButton";
             this.MyPageButton.Size = new System.Drawing.Size(100, 40);
             this.MyPageButton.TabIndex = 1;
@@ -160,9 +160,9 @@
             this.JoinMembershipButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.JoinMembershipButton.FlatAppearance.BorderSize = 0;
             this.JoinMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.JoinMembershipButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JoinMembershipButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JoinMembershipButton.ForeColor = System.Drawing.Color.White;
-            this.JoinMembershipButton.Location = new System.Drawing.Point(797, 0);
+            this.JoinMembershipButton.Location = new System.Drawing.Point(1561, 0);
             this.JoinMembershipButton.Name = "JoinMembershipButton";
             this.JoinMembershipButton.Size = new System.Drawing.Size(100, 40);
             this.JoinMembershipButton.TabIndex = 1;
@@ -175,9 +175,9 @@
             this.LoginPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginPageButton.FlatAppearance.BorderSize = 0;
             this.LoginPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginPageButton.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LoginPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LoginPageButton.ForeColor = System.Drawing.Color.White;
-            this.LoginPageButton.Location = new System.Drawing.Point(521, 0);
+            this.LoginPageButton.Location = new System.Drawing.Point(1285, 0);
             this.LoginPageButton.Name = "LoginPageButton";
             this.LoginPageButton.Size = new System.Drawing.Size(100, 40);
             this.LoginPageButton.TabIndex = 0;
@@ -195,14 +195,14 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 145);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1160, 49);
+            this.panel4.Size = new System.Drawing.Size(1924, 49);
             this.panel4.TabIndex = 3;
             // 
             // DiscountCardButton
             // 
             this.DiscountCardButton.FlatAppearance.BorderSize = 0;
             this.DiscountCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DiscountCardButton.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DiscountCardButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DiscountCardButton.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.DiscountCardButton.Location = new System.Drawing.Point(803, 0);
             this.DiscountCardButton.Name = "DiscountCardButton";
@@ -216,7 +216,7 @@
             // 
             this.ScreenInfoButton.FlatAppearance.BorderSize = 0;
             this.ScreenInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScreenInfoButton.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ScreenInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ScreenInfoButton.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.ScreenInfoButton.Location = new System.Drawing.Point(588, 0);
             this.ScreenInfoButton.Name = "ScreenInfoButton";
@@ -230,7 +230,7 @@
             // 
             this.TicketingPageButton.FlatAppearance.BorderSize = 0;
             this.TicketingPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TicketingPageButton.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TicketingPageButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.TicketingPageButton.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.TicketingPageButton.Location = new System.Drawing.Point(390, 0);
             this.TicketingPageButton.Name = "TicketingPageButton";
@@ -245,7 +245,7 @@
             this.MoviePageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MoviePageButton.FlatAppearance.BorderSize = 0;
             this.MoviePageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MoviePageButton.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MoviePageButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MoviePageButton.ForeColor = System.Drawing.Color.AntiqueWhite;
             this.MoviePageButton.Location = new System.Drawing.Point(205, 0);
             this.MoviePageButton.Name = "MoviePageButton";
@@ -261,16 +261,16 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 194);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(180, 464);
+            this.panel5.Size = new System.Drawing.Size(180, 742);
             this.panel5.TabIndex = 4;
             // 
             // MyPageMenu
             // 
             this.MyPageMenu.BackColor = System.Drawing.Color.Gainsboro;
             this.MyPageMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MyPageMenu.Location = new System.Drawing.Point(980, 194);
+            this.MyPageMenu.Location = new System.Drawing.Point(1744, 194);
             this.MyPageMenu.Name = "MyPageMenu";
-            this.MyPageMenu.Size = new System.Drawing.Size(180, 464);
+            this.MyPageMenu.Size = new System.Drawing.Size(180, 742);
             this.MyPageMenu.TabIndex = 5;
             // 
             // panel8
@@ -279,15 +279,52 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(180, 194);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(800, 45);
+            this.panel8.Size = new System.Drawing.Size(1564, 45);
             this.panel8.TabIndex = 6;
+            // 
+            // TicketingPage
+            // 
+            this.TicketingPage.BackColor = System.Drawing.Color.White;
+            this.TicketingPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TicketingPage.Location = new System.Drawing.Point(180, 239);
+            this.TicketingPage.Name = "TicketingPage";
+            this.TicketingPage.Size = new System.Drawing.Size(1564, 697);
+            this.TicketingPage.TabIndex = 30;
+            // 
+            // MoviePage
+            // 
+            this.MoviePage.BackColor = System.Drawing.Color.White;
+            this.MoviePage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoviePage.Location = new System.Drawing.Point(180, 239);
+            this.MoviePage.Name = "MoviePage";
+            this.MoviePage.Size = new System.Drawing.Size(1564, 697);
+            this.MoviePage.TabIndex = 29;
+            // 
+            // FindIDandPW
+            // 
+            this.FindIDandPW.BackColor = System.Drawing.Color.White;
+            this.FindIDandPW.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FindIDandPW.Location = new System.Drawing.Point(180, 239);
+            this.FindIDandPW.Name = "FindIDandPW";
+            this.FindIDandPW.Size = new System.Drawing.Size(1564, 697);
+            this.FindIDandPW.TabIndex = 28;
+            // 
+            // LoginPage
+            // 
+            this.LoginPage.BackColor = System.Drawing.Color.White;
+            this.LoginPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginPage.Location = new System.Drawing.Point(180, 239);
+            this.LoginPage.Name = "LoginPage";
+            this.LoginPage.Size = new System.Drawing.Size(1564, 697);
+            this.LoginPage.TabIndex = 27;
             // 
             // JoinMembership
             // 
+            this.JoinMembership.BackColor = System.Drawing.Color.White;
             this.JoinMembership.Dock = System.Windows.Forms.DockStyle.Fill;
             this.JoinMembership.Location = new System.Drawing.Point(180, 239);
             this.JoinMembership.Name = "JoinMembership";
-            this.JoinMembership.Size = new System.Drawing.Size(800, 419);
+            this.JoinMembership.Size = new System.Drawing.Size(1564, 697);
             this.JoinMembership.TabIndex = 25;
             // 
             // MyPage
@@ -296,15 +333,16 @@
             this.MyPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MyPage.Location = new System.Drawing.Point(180, 239);
             this.MyPage.Name = "MyPage";
-            this.MyPage.Size = new System.Drawing.Size(800, 419);
+            this.MyPage.Size = new System.Drawing.Size(1564, 697);
             this.MyPage.TabIndex = 26;
             // 
             // DiscountCard
             // 
+            this.DiscountCard.BackColor = System.Drawing.Color.White;
             this.DiscountCard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DiscountCard.Location = new System.Drawing.Point(180, 239);
             this.DiscountCard.Name = "DiscountCard";
-            this.DiscountCard.Size = new System.Drawing.Size(800, 419);
+            this.DiscountCard.Size = new System.Drawing.Size(1564, 697);
             this.DiscountCard.TabIndex = 24;
             // 
             // ScreenInfo
@@ -313,51 +351,15 @@
             this.ScreenInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ScreenInfo.Location = new System.Drawing.Point(180, 239);
             this.ScreenInfo.Name = "ScreenInfo";
-            this.ScreenInfo.Size = new System.Drawing.Size(800, 419);
+            this.ScreenInfo.Size = new System.Drawing.Size(1564, 697);
             this.ScreenInfo.TabIndex = 11;
-            // 
-            // LoginPage
-            // 
-            this.LoginPage.BackColor = System.Drawing.Color.White;
-            this.LoginPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LoginPage.Location = new System.Drawing.Point(180, 239);
-            this.LoginPage.Name = "LoginPage";
-            this.LoginPage.Size = new System.Drawing.Size(800, 419);
-            this.LoginPage.TabIndex = 27;
-            // 
-            // FindIDandPW
-            // 
-            this.FindIDandPW.BackColor = System.Drawing.Color.White;
-            this.FindIDandPW.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindIDandPW.Location = new System.Drawing.Point(180, 239);
-            this.FindIDandPW.Name = "FindIDandPW";
-            this.FindIDandPW.Size = new System.Drawing.Size(800, 419);
-            this.FindIDandPW.TabIndex = 28;
-            // 
-            // MoviePage
-            // 
-            this.MoviePage.BackColor = System.Drawing.Color.White;
-            this.MoviePage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MoviePage.Location = new System.Drawing.Point(180, 239);
-            this.MoviePage.Name = "MoviePage";
-            this.MoviePage.Size = new System.Drawing.Size(800, 419);
-            this.MoviePage.TabIndex = 29;
-            // 
-            // TicketingPage
-            // 
-            this.TicketingPage.BackColor = System.Drawing.Color.White;
-            this.TicketingPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TicketingPage.Location = new System.Drawing.Point(180, 239);
-            this.TicketingPage.Name = "TicketingPage";
-            this.TicketingPage.Size = new System.Drawing.Size(800, 419);
-            this.TicketingPage.TabIndex = 30;
             // 
             // CinemaProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1160, 772);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.TicketingPage);
             this.Controls.Add(this.MoviePage);
             this.Controls.Add(this.FindIDandPW);
@@ -374,6 +376,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CinemaProgram";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SEOUL CINEMA";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

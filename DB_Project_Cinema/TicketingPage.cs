@@ -27,27 +27,9 @@ namespace DB_Project_Cinema
 
         
 
-        private void ChooseSeatPageButton_Click(object sender, EventArgs e)
-        {
-            ChooseSeat.BringToFront();
-            ChooseSeatPageButton.Visible = false;
-            PaymentPageButton.Visible = true;
-            BackToSelcetTimeButton.Visible = true;
-            BackToChooseSeatButton.Visible = false;
+     
 
-
-        }
-
-        private void PaymentPageButton_Click(object sender, EventArgs e)
-        {
-            Payment.BringToFront();
-            PaymentPageButton.Visible = false;
-            ChooseSeatPageButton.Visible = false;
-            BackToChooseSeatButton.Visible = true;
-            BackToSelcetTimeButton.Visible = false;
-        }
-
-        private void BackToSelcetTimeButton_Click(object sender, EventArgs e)
+        private void BackToSelcetTimeButton_Click_1(object sender, EventArgs e)
         {
             SelectShowTime.BringToFront();
             PaymentPageButton.Visible = false;
@@ -56,7 +38,25 @@ namespace DB_Project_Cinema
             BackToSelcetTimeButton.Visible = false;
         }
 
-        private void BackToChooseSeatButton_Click(object sender, EventArgs e)
+        private void BackToChooseSeatButton_Click_1(object sender, EventArgs e)
+        {
+            ChooseSeat.BringToFront();
+            ChooseSeatPageButton.Visible = false;
+            PaymentPageButton.Visible = true;
+            BackToSelcetTimeButton.Visible = true;
+            BackToChooseSeatButton.Visible = false;
+        }
+
+        private void PaymentPageButton_Click_1(object sender, EventArgs e)
+        {
+            Payment.BringToFront();
+            PaymentPageButton.Visible = false;
+            ChooseSeatPageButton.Visible = false;
+            BackToChooseSeatButton.Visible = true;
+            BackToSelcetTimeButton.Visible = false;
+        }
+
+        private void ChooseSeatPageButton_Click_1(object sender, EventArgs e)
         {
             ChooseSeat.BringToFront();
             ChooseSeatPageButton.Visible = false;

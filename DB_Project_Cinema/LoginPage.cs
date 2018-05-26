@@ -34,7 +34,9 @@ namespace DB_Project_Cinema
 
         }
 
-        private void MemLoginButton_Click(object sender, EventArgs e)
+       
+
+        private void MemLoginButton_Click_1(object sender, EventArgs e)
         {
             MemLoginButton.FlatAppearance.BorderColor = Color.Red;
             MemLoginButton.FlatAppearance.BorderSize = 1;
@@ -42,7 +44,7 @@ namespace DB_Project_Cinema
             LoginMember.BringToFront();
         }
 
-        private void CustLoginButton_Click(object sender, EventArgs e)
+        private void CustLoginButton_Click_1(object sender, EventArgs e)
         {
             CustLoginButton.FlatAppearance.BorderColor = Color.Red;
             CustLoginButton.FlatAppearance.BorderSize = 1;

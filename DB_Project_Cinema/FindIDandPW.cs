@@ -16,11 +16,11 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            FindPWButton.FlatAppearance.BorderColor = Color.Red;
-            FindPWButton.FlatAppearance.BorderSize = 1;
-            FindIDButton.FlatAppearance.BorderSize = 0;
+            FindIDButton.FlatAppearance.BorderColor = Color.Red;
+            FindIDButton.FlatAppearance.BorderSize = 1;
+            FindPWButton.FlatAppearance.BorderSize = 0;
 
-            FindPW.BringToFront();
+            FindID.BringToFront();
         }
 
         private void MemLoginButton_Click(object sender, EventArgs e)
@@ -28,22 +28,24 @@ namespace DB_Project_Cinema
 
         }
 
-        private void FindPWButton_Click(object sender, EventArgs e)
-        {
-            FindPWButton.FlatAppearance.BorderColor = Color.Red;
-            FindPWButton.FlatAppearance.BorderSize = 1;
-            FindIDButton.FlatAppearance.BorderSize = 0;
+       
 
-            FindPW.BringToFront();
-        }
-
-        private void FindIDButton_Click(object sender, EventArgs e)
+        private void FindIDButton_Click_1(object sender, EventArgs e)
         {
             FindIDButton.FlatAppearance.BorderColor = Color.Red;
             FindIDButton.FlatAppearance.BorderSize = 1;
             FindPWButton.FlatAppearance.BorderSize = 0;
 
             FindID.BringToFront();
+        }
+
+        private void FindPWButton_Click_1(object sender, EventArgs e)
+        {
+            FindPWButton.FlatAppearance.BorderColor = Color.Red;
+            FindPWButton.FlatAppearance.BorderSize = 1;
+            FindIDButton.FlatAppearance.BorderSize = 0;
+
+            FindPW.BringToFront();
         }
     }
 }

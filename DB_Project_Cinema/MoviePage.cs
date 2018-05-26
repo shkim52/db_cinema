@@ -147,5 +147,62 @@ namespace DB_Project_Cinema
         {
 
         }
+
+        private void Movie1DetailButton_Click_1(object sender, EventArgs e)
+        {
+            MovieDetail.BringToFront();
+
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = true;
+        }
+
+        private void Movie2DetailButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Movie3DetailButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Movie4DetailButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackToHomeButton_Click_1(object sender, EventArgs e)
+        {
+            MovieList.BringToFront();
+
+            Movie1DetailButton.Visible = true;
+            Movie2DetailButton.Visible = true;
+            Movie3DetailButton.Visible = true;
+            Movie4DetailButton.Visible = true;
+            Movie5DetailButton.Visible = true;
+
+            BackToHomeButton.Visible = false;
+            ReviewButton.Visible = false;
+        }
+
+        private void ReviewButton_Click_1(object sender, EventArgs e)
+        {
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = false;
+
+            ReviewPage.BringToFront();
+        }
     }
 }

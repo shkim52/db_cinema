@@ -19,6 +19,13 @@ namespace DB_Project_Cinema
             MyPageConfirmPW.BringToFront();
         }
 
+       
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void MyPageChangeInfoButton_Click(object sender, EventArgs e)
         {
             MyPageChangeInfoButton.BackColor = Color.AntiqueWhite;

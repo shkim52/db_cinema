@@ -28,111 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Movie_Intro = new System.Windows.Forms.Label();
             this.SetInterestButton = new System.Windows.Forms.Button();
             this.Movie_NM = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.13796F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.74121F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.568981F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.41389F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.13796F));
-            this.tableLayoutPanel1.Controls.Add(this.Movie_Intro, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.SetInterestButton, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Movie_NM, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.78652F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.21348F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(838, 294);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
             // Movie_Intro
             // 
-            this.Movie_Intro.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.Movie_Intro, 3);
-            this.Movie_Intro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Movie_Intro.Location = new System.Drawing.Point(242, 49);
+            this.Movie_Intro.Location = new System.Drawing.Point(545, 87);
             this.Movie_Intro.Name = "Movie_Intro";
-            this.Movie_Intro.Size = new System.Drawing.Size(499, 189);
-            this.Movie_Intro.TabIndex = 1;
+            this.Movie_Intro.Size = new System.Drawing.Size(675, 189);
+            this.Movie_Intro.TabIndex = 9;
             this.Movie_Intro.Text = "영화설명";
             // 
             // SetInterestButton
             // 
             this.SetInterestButton.BackColor = System.Drawing.Color.LightGray;
-            this.SetInterestButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SetInterestButton.FlatAppearance.BorderSize = 0;
             this.SetInterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SetInterestButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SetInterestButton.Location = new System.Drawing.Point(242, 246);
+            this.SetInterestButton.Location = new System.Drawing.Point(548, 313);
             this.SetInterestButton.Name = "SetInterestButton";
             this.SetInterestButton.Size = new System.Drawing.Size(194, 34);
-            this.SetInterestButton.TabIndex = 4;
+            this.SetInterestButton.TabIndex = 10;
             this.SetInterestButton.Text = "관심리스트 넣기";
             this.SetInterestButton.UseVisualStyleBackColor = false;
             // 
             // Movie_NM
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.Movie_NM, 3);
-            this.Movie_NM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Movie_NM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie_NM.Location = new System.Drawing.Point(242, 0);
+            this.Movie_NM.Location = new System.Drawing.Point(543, 20);
             this.Movie_NM.Name = "Movie_NM";
-            this.Movie_NM.Size = new System.Drawing.Size(499, 49);
-            this.Movie_NM.TabIndex = 5;
+            this.Movie_NM.Size = new System.Drawing.Size(430, 46);
+            this.Movie_NM.TabIndex = 11;
             this.Movie_NM.Text = "영화제목";
-            this.Movie_NM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Movie_NM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(95, 243);
+            this.label2.Location = new System.Drawing.Point(346, 293);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 40);
-            this.label2.TabIndex = 7;
+            this.label2.Size = new System.Drawing.Size(112, 40);
+            this.label2.TabIndex = 12;
             this.label2.Text = "영화평점";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Wheat;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 52);
+            this.pictureBox1.Location = new System.Drawing.Point(321, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 183);
-            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.Size = new System.Drawing.Size(148, 206);
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // MovieDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Movie_Intro);
+            this.Controls.Add(this.SetInterestButton);
+            this.Controls.Add(this.Movie_NM);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "MovieDetail";
-            this.Size = new System.Drawing.Size(838, 294);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Size = new System.Drawing.Size(1293, 391);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -140,11 +104,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label Movie_Intro;
         private System.Windows.Forms.Button SetInterestButton;
         private System.Windows.Forms.Label Movie_NM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+
     }
 }
