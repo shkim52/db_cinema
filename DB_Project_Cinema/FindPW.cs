@@ -42,7 +42,7 @@ namespace DB_Project_Cinema
                 OracleDataReader reader = Comm.ExecuteReader();
                 while (reader.Read())
                 {
-                    MessageBox.Show("회원님의 ID는 " + reader.GetString(reader.GetOrdinal("Mem_ID")) + "  입니다!");
+                    MessageBox.Show("회원님의 비밀번호는 " + reader.GetString(reader.GetOrdinal("MEM_PW")) + "  입니다!");
                 }
                 Conn.Close();
             }
