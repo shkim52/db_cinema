@@ -17,7 +17,16 @@ namespace DB_Project_Cinema
             InitializeComponent();
 
             MoviePage.BringToFront();
-            
+            if (Program.memID == "")
+            {
+                LogoutButton.Enabled = false;
+            }
+            else
+            {
+                LoginPageButton.Enabled = false;
+                FindIDandPWButton.Enabled = false;
+                JoinMembershipButton.Enabled = false;
+            }
             
         }
 
@@ -69,7 +78,7 @@ namespace DB_Project_Cinema
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
         }
-
+        
         private void LoginPageButton_Click(object sender, EventArgs e)
         {
             
@@ -87,17 +96,24 @@ namespace DB_Project_Cinema
 
         private void MyPageButton_Click(object sender, EventArgs e)
         {
-            
-            MyPage.BringToFront();
+            if (Program.memID != "")
+            {
+                MyPage.BringToFront();
 
-            MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            MyPageButton.BackColor = Color.DimGray;
-            DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                MyPageButton.BackColor = Color.DimGray;
+                DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            }
+            else
+            {
+                MessageBox.Show("로그인을 하세요!");
+
+            }
 
         }
 
@@ -138,6 +154,7 @@ namespace DB_Project_Cinema
 
         private void FindIDandPWButton_Click(object sender, EventArgs e)
         {           
+            
             FindIDandPW.BringToFront();
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -148,6 +165,13 @@ namespace DB_Project_Cinema
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             FindIDandPWButton.BackColor = Color.DimGray;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("로그아웃 되었습니다.");
+            Program.memID = "";
+
         }
     }
 }

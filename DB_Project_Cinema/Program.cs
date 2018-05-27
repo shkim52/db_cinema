@@ -8,6 +8,7 @@ namespace DB_Project_Cinema
 {
     static class Program
     {
+        internal static string memID = "";
         /// <summary>
         /// 해당 응용 프로그램의 주 진입점입니다.
         /// </summary>
