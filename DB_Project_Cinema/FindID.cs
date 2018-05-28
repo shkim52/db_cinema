@@ -31,10 +31,7 @@ namespace DB_Project_Cinema
             {
 
                 Conn.Open();
-                if (SID_INPUT.Text.Length != 13)
-                {
-                    MessageBox.Show("주민등록번호의 입력이 잘못되었습니다!!!");
-                }
+                
 
                 string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = " + SID_INPUT.Text + " AND MEM_TELNO = " + TELNO_INPUT.Text;
 

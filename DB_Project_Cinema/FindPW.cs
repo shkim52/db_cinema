@@ -33,16 +33,21 @@ namespace DB_Project_Cinema
             {
 
                 Conn.Open();
-                if (SID_INPUT.Text.Length != 13)
-                {
-                    MessageBox.Show("주민등록번호의 입력이 잘못되었습니다!!!");
-                }
+                
                 string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = " + SID_INPUT.Text + " AND MEM_ID = " + ID_INPUT.Text;
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
                 OracleDataReader reader = Comm.ExecuteReader();
 
+                if (SID_INPUT.Text.Length != 13)
+                {
+                    MessageBox.Show("주민등록번호의 입력이 잘못되었습니다!!!");
+                }
 
+                else if (!reader.HasRows)
+                {
+                    MessageBox.Show("해당 정보와 일치하는 회원이 없습니다!");
+                }
                 while (reader.Read())
                 {
                     /*회원정보없을경우 확인 메시지 방법 찾기*/
