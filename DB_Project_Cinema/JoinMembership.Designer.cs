@@ -139,6 +139,7 @@
             this.SID_INPUT.Location = new System.Drawing.Point(375, 327);
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.Name = "SID_INPUT";
+            this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(224, 25);
             this.SID_INPUT.TabIndex = 30;
             // 
@@ -188,6 +189,7 @@
             this.PWD_INPUT.Location = new System.Drawing.Point(375, 220);
             this.PWD_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PWD_INPUT.Name = "PWD_INPUT";
+            this.PWD_INPUT.PasswordChar = '*';
             this.PWD_INPUT.Size = new System.Drawing.Size(224, 25);
             this.PWD_INPUT.TabIndex = 35;
             // 
@@ -196,6 +198,7 @@
             this.PWD2_INPUT.Location = new System.Drawing.Point(375, 256);
             this.PWD2_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PWD2_INPUT.Name = "PWD2_INPUT";
+            this.PWD2_INPUT.PasswordChar = '*';
             this.PWD2_INPUT.Size = new System.Drawing.Size(224, 25);
             this.PWD2_INPUT.TabIndex = 36;
             // 

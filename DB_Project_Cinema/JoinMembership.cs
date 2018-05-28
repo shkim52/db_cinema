@@ -68,9 +68,10 @@ namespace DB_Project_Cinema
             try
             {
 
-                Conn.Open();
+                
                 OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn;
+                Cmd.Connection = Conn; 
+                Conn.Open();
 
                 if (PWD_INPUT.Text == "" && PWD2_INPUT.Text == "" && PWD2_INPUT != PWD_INPUT)
                 {
@@ -90,8 +91,8 @@ namespace DB_Project_Cinema
                 }
                 else
                 {
-                    Cmd.CommandText = "INSERT INTO MEM (MEM_ID, MEM_PW, MEM_NM, MEM_SID_NO, MEM_EMAIL, MEM_TELNO) VALUES("
-                        + ID_INPUT.Text + "," + PWD_INPUT.Text + "," + NAME_INPUT.Text + "," + SID_INPUT.Text + "," + EMAIL_INPUT.Text + "," + TELNO_INPUT.Text + ")";
+                    string sql = "INSERT INTO MEM (MEM_ID, MEM_PW, MEM_NM, MEM_SID_NO, MEM_EMAIL, MEM_TELNO) VALUES('"+ ID_INPUT.Text + "','" + PWD_INPUT.Text + "','" + NAME_INPUT.Text + "','" + SID_INPUT.Text + "','" + EMAIL_INPUT.Text + "','" + TELNO_INPUT.Text + "')";
+                    Cmd.CommandText = sql;
                     Cmd.ExecuteNonQuery();
                     MessageBox.Show("회원가입에 성공하셨습니다");
 
