@@ -40,7 +40,11 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                     /*회원정보없을경우 확인 메시지 방법 찾기*/
-                    MessageBox.Show(PW_INPUT.Text+ "님 환영합니다!");
+                    Program.memID = ID_INPUT.Text;
+                    MessageBox.Show(ID_INPUT.Text+ "님 환영합니다!");
+                    CinemaProgram c = new CinemaProgram();
+                    c.Show();
+                    
                 }
                 Conn.Close();
             }
