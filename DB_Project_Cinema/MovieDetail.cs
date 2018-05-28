@@ -28,19 +28,35 @@ namespace DB_Project_Cinema
             
                 Conn.Open();
                 string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO=1";
+                
                 OracleCommand Comm = new OracleCommand(sql,Conn);
-
+               
                
                 OracleDataReader reader = Comm.ExecuteReader();
+               
               
                 while (reader.Read())
                 {
-                
-                    //this.TOT_SEAT_CNT.Text = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
                     this.Movie_NM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                    this.Genre.Text = reader.GetString(reader.GetOrdinal("GENRE"));
+                    //this.ReleaseDate.Text = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
+                    this.ShowTime.Text = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
+                    this.Rating.Text = reader.GetString(reader.GetOrdinal("RATING"));
+                    this.DirectorNM.Text = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    this.ActorNM.Text = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
+                    this.Country.Text = reader.GetString(reader.GetOrdinal("COUNTRY"));
+                    this.Distributor.Text = reader.GetString(reader.GetOrdinal("DISTRIBUTOR"));
                     this.Movie_Intro.Text=reader.GetString(reader.GetOrdinal("MOVIE_INTRO"));
+                    var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+
+                    Poster.SizeMode = PictureBoxSizeMode.StretchImage;
+                    Poster.ImageLocation = poster;
                 }
+
+                
                 Conn.Close();
+
+                
             }
             catch (Exception ex)
             {
