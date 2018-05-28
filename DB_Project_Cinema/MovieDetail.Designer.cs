@@ -51,15 +51,16 @@
             this.Country = new System.Windows.Forms.Label();
             this.Distributor = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).BeginInit();
             this.SuspendLayout();
             // 
             // Movie_Intro
             // 
             this.Movie_Intro.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Movie_Intro.Location = new System.Drawing.Point(396, 224);
+            this.Movie_Intro.Location = new System.Drawing.Point(501, 224);
             this.Movie_Intro.Name = "Movie_Intro";
-            this.Movie_Intro.Size = new System.Drawing.Size(925, 167);
+            this.Movie_Intro.Size = new System.Drawing.Size(809, 167);
             this.Movie_Intro.TabIndex = 9;
             this.Movie_Intro.Text = "영화설명";
             // 
@@ -277,11 +278,22 @@
             this.label11.Text = "분";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Location = new System.Drawing.Point(396, 218);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 29);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "영화소개:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MovieDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Distributor);
             this.Controls.Add(this.Country);
@@ -337,6 +349,7 @@
         private System.Windows.Forms.Label Country;
         private System.Windows.Forms.Label Distributor;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
 
     }
 }
