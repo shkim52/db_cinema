@@ -76,6 +76,7 @@
             this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(204, 30);
             this.SID_INPUT.TabIndex = 8;
+            this.SID_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SID_INPUT_KeyPress);
             // 
             // FindPWButton
             // 

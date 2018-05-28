@@ -142,6 +142,7 @@
             this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(224, 25);
             this.SID_INPUT.TabIndex = 30;
+            this.SID_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SID_INPUT_KeyPress);
             // 
             // TELNO_INPUT
             // 
@@ -150,6 +151,7 @@
             this.TELNO_INPUT.Name = "TELNO_INPUT";
             this.TELNO_INPUT.Size = new System.Drawing.Size(224, 25);
             this.TELNO_INPUT.TabIndex = 31;
+            this.TELNO_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TELNO_INPUT_KeyPress);
             // 
             // SEX_INPUT
             // 

@@ -64,5 +64,13 @@ namespace DB_Project_Cinema
                 Conn.Close();
             }
         }
+
+        private void SID_INPUT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != 8 && e.KeyChar != 45 && e.KeyChar != 46) //8:백스페이스,45:마이너스,46:소수점
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
