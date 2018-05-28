@@ -41,7 +41,14 @@ namespace DB_Project_Cinema
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
                 OracleDataReader reader = Comm.ExecuteReader();
-
+                if (SID_INPUT.Text.Length != 13)
+                {
+                    MessageBox.Show("주민등록번호의 입력이 잘못되었습니다!!!");
+                }
+                else if (!reader.HasRows)
+                {
+                    MessageBox.Show("해당 정보와 일치하는 회원이 없습니다!");
+                }
                 while (reader.Read())
                 {
                     MessageBox.Show("회원님의 ID는 "+ reader.GetString(reader.GetOrdinal("Mem_ID"))+"  입니다!");
