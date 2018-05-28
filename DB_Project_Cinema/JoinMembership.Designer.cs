@@ -47,6 +47,7 @@
             this.DoubleCheckButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.ID_CHECK = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -112,7 +113,7 @@
             // NAME_INPUT
             // 
             this.NAME_INPUT.Location = new System.Drawing.Point(375, 144);
-            this.NAME_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NAME_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.NAME_INPUT.Name = "NAME_INPUT";
             this.NAME_INPUT.Size = new System.Drawing.Size(224, 25);
             this.NAME_INPUT.TabIndex = 27;
@@ -120,7 +121,7 @@
             // ID_INPUT
             // 
             this.ID_INPUT.Location = new System.Drawing.Point(375, 180);
-            this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.ID_INPUT.Name = "ID_INPUT";
             this.ID_INPUT.Size = new System.Drawing.Size(224, 25);
             this.ID_INPUT.TabIndex = 28;
@@ -128,7 +129,7 @@
             // EMAIL_INPUT
             // 
             this.EMAIL_INPUT.Location = new System.Drawing.Point(375, 292);
-            this.EMAIL_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EMAIL_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.EMAIL_INPUT.Name = "EMAIL_INPUT";
             this.EMAIL_INPUT.Size = new System.Drawing.Size(224, 25);
             this.EMAIL_INPUT.TabIndex = 29;
@@ -136,7 +137,7 @@
             // SID_INPUT
             // 
             this.SID_INPUT.Location = new System.Drawing.Point(375, 327);
-            this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.Name = "SID_INPUT";
             this.SID_INPUT.Size = new System.Drawing.Size(224, 25);
             this.SID_INPUT.TabIndex = 30;
@@ -144,7 +145,7 @@
             // TELNO_INPUT
             // 
             this.TELNO_INPUT.Location = new System.Drawing.Point(375, 363);
-            this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.TELNO_INPUT.Name = "TELNO_INPUT";
             this.TELNO_INPUT.Size = new System.Drawing.Size(224, 25);
             this.TELNO_INPUT.TabIndex = 31;
@@ -157,7 +158,7 @@
             "여자",
             "남자"});
             this.SEX_INPUT.Location = new System.Drawing.Point(375, 397);
-            this.SEX_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SEX_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SEX_INPUT.Name = "SEX_INPUT";
             this.SEX_INPUT.Size = new System.Drawing.Size(223, 40);
             this.SEX_INPUT.TabIndex = 32;
@@ -185,7 +186,7 @@
             // PWD_INPUT
             // 
             this.PWD_INPUT.Location = new System.Drawing.Point(375, 220);
-            this.PWD_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PWD_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PWD_INPUT.Name = "PWD_INPUT";
             this.PWD_INPUT.Size = new System.Drawing.Size(224, 25);
             this.PWD_INPUT.TabIndex = 35;
@@ -193,7 +194,7 @@
             // PWD2_INPUT
             // 
             this.PWD2_INPUT.Location = new System.Drawing.Point(375, 256);
-            this.PWD2_INPUT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PWD2_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PWD2_INPUT.Name = "PWD2_INPUT";
             this.PWD2_INPUT.Size = new System.Drawing.Size(224, 25);
             this.PWD2_INPUT.TabIndex = 36;
@@ -205,12 +206,13 @@
             this.DoubleCheckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DoubleCheckButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.DoubleCheckButton.Location = new System.Drawing.Point(612, 180);
-            this.DoubleCheckButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DoubleCheckButton.Margin = new System.Windows.Forms.Padding(2);
             this.DoubleCheckButton.Name = "DoubleCheckButton";
             this.DoubleCheckButton.Size = new System.Drawing.Size(75, 28);
             this.DoubleCheckButton.TabIndex = 37;
             this.DoubleCheckButton.Text = "중복확인";
             this.DoubleCheckButton.UseVisualStyleBackColor = false;
+            this.DoubleCheckButton.Click += new System.EventHandler(this.DoubleCheckButton_Click);
             // 
             // label1
             // 
@@ -230,18 +232,29 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SubmitButton.Location = new System.Drawing.Point(480, 460);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(118, 42);
             this.SubmitButton.TabIndex = 39;
             this.SubmitButton.Text = "회원가입";
             this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
+            // ID_CHECK
+            // 
+            this.ID_CHECK.AutoSize = true;
+            this.ID_CHECK.Location = new System.Drawing.Point(712, 187);
+            this.ID_CHECK.Name = "ID_CHECK";
+            this.ID_CHECK.Size = new System.Drawing.Size(162, 15);
+            this.ID_CHECK.TabIndex = 41;
+            this.ID_CHECK.Text = "중복확인을 눌러주세요";
             // 
             // JoinMembership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ID_CHECK);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -261,7 +274,7 @@
             this.Controls.Add(this.PWD2_INPUT);
             this.Controls.Add(this.DoubleCheckButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "JoinMembership";
             this.Size = new System.Drawing.Size(994, 552);
             this.ResumeLayout(false);
@@ -290,6 +303,7 @@
         private System.Windows.Forms.Button DoubleCheckButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label ID_CHECK;
 
     }
 }

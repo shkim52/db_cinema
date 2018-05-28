@@ -33,7 +33,7 @@ namespace DB_Project_Cinema
                 Conn.Open();
                 
 
-                string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = " + SID_INPUT.Text + " AND MEM_TELNO = " + TELNO_INPUT.Text;
+                string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = '" + SID_INPUT.Text + "' AND MEM_TELNO = '" + TELNO_INPUT.Text+"'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 

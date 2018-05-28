@@ -34,7 +34,7 @@ namespace DB_Project_Cinema
 
                 Conn.Open();
                 
-                string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = " + SID_INPUT.Text + " AND MEM_ID = " + ID_INPUT.Text;
+                string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = '" + SID_INPUT.Text + "' AND MEM_ID = '" + ID_INPUT.Text+"'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
                 OracleDataReader reader = Comm.ExecuteReader();
