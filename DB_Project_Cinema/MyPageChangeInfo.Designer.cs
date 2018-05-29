@@ -34,11 +34,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.NAME = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.EMAIL = new System.Windows.Forms.TextBox();
+            this.SID = new System.Windows.Forms.TextBox();
+            this.TELNO = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.ChangeInfoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -104,50 +104,50 @@
             this.label7.Text = "성별:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // NAME
             // 
-            this.textBox1.Location = new System.Drawing.Point(318, 190);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(252, 25);
-            this.textBox1.TabIndex = 21;
+            this.NAME.Location = new System.Drawing.Point(318, 190);
+            this.NAME.Margin = new System.Windows.Forms.Padding(2);
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            this.NAME.Size = new System.Drawing.Size(252, 25);
+            this.NAME.TabIndex = 21;
             // 
-            // textBox2
+            // ID
             // 
-            this.textBox2.Location = new System.Drawing.Point(318, 226);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(252, 25);
-            this.textBox2.TabIndex = 22;
+            this.ID.Location = new System.Drawing.Point(318, 226);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(252, 25);
+            this.ID.TabIndex = 22;
             // 
-            // textBox3
+            // EMAIL
             // 
-            this.textBox3.Location = new System.Drawing.Point(318, 262);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(252, 25);
-            this.textBox3.TabIndex = 23;
+            this.EMAIL.Location = new System.Drawing.Point(318, 262);
+            this.EMAIL.Margin = new System.Windows.Forms.Padding(2);
+            this.EMAIL.Name = "EMAIL";
+            this.EMAIL.Size = new System.Drawing.Size(252, 25);
+            this.EMAIL.TabIndex = 23;
             // 
-            // textBox4
+            // SID
             // 
-            this.textBox4.Location = new System.Drawing.Point(318, 297);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(252, 25);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.TabStop = false;
+            this.SID.Location = new System.Drawing.Point(318, 297);
+            this.SID.Margin = new System.Windows.Forms.Padding(2);
+            this.SID.Name = "SID";
+            this.SID.PasswordChar = '*';
+            this.SID.ReadOnly = true;
+            this.SID.Size = new System.Drawing.Size(252, 25);
+            this.SID.TabIndex = 24;
+            this.SID.TabStop = false;
             // 
-            // textBox5
+            // TELNO
             // 
-            this.textBox5.Location = new System.Drawing.Point(318, 333);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(252, 25);
-            this.textBox5.TabIndex = 25;
+            this.TELNO.Location = new System.Drawing.Point(318, 333);
+            this.TELNO.Margin = new System.Windows.Forms.Padding(2);
+            this.TELNO.Name = "TELNO";
+            this.TELNO.Size = new System.Drawing.Size(252, 25);
+            this.TELNO.TabIndex = 25;
             // 
             // checkedListBox1
             // 
@@ -176,6 +176,7 @@
             this.ChangeInfoButton.TabIndex = 27;
             this.ChangeInfoButton.Text = "변경사항 저장";
             this.ChangeInfoButton.UseVisualStyleBackColor = false;
+            this.ChangeInfoButton.Click += new System.EventHandler(this.ChangeInfoButton_Click);
             // 
             // label1
             // 
@@ -199,11 +200,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.NAME);
+            this.Controls.Add(this.ID);
+            this.Controls.Add(this.EMAIL);
+            this.Controls.Add(this.SID);
+            this.Controls.Add(this.TELNO);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.ChangeInfoButton);
             this.Controls.Add(this.label1);
@@ -223,11 +224,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox NAME;
+        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox EMAIL;
+        private System.Windows.Forms.TextBox SID;
+        private System.Windows.Forms.TextBox TELNO;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button ChangeInfoButton;
         private System.Windows.Forms.Label label1;

@@ -31,15 +31,18 @@ namespace DB_Project_Cinema
 
                 Conn.Open();
                 
-                string sql = "SELECT * FROM MEM WHERE MEM_ID = " + ID_INPUT.Text + " AND MEM_PW = " + PW_INPUT.Text;
+                string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + ID_INPUT.Text + "' AND MEM_PW = '" + PW_INPUT.Text+"'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
                 OracleDataReader reader = Comm.ExecuteReader();
 
+                if (!reader.HasRows)
+                {
+                    MessageBox.Show("아이디 혹은 비밀번호를 잘못 입력하였습니다!");
+                }
 
                 while (reader.Read())
                 {
-                    /*회원정보없을경우 확인 메시지 방법 찾기*/
                     Program.memID = ID_INPUT.Text;
                     MessageBox.Show(ID_INPUT.Text+ "님 환영합니다!");
                     CinemaProgram c = new CinemaProgram();
