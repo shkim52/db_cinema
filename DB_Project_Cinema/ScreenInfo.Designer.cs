@@ -30,9 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.ScreenNM = new System.Windows.Forms.Label();
+            this.ScreenIntro = new System.Windows.Forms.Label();
+            this.ScreenSeatCnt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -50,31 +52,19 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(226, 150);
+            this.label2.Location = new System.Drawing.Point(327, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 35);
             this.label2.TabIndex = 7;
             this.label2.Text = "상영관";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(388, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 35);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "구분";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(550, 150);
+            this.label4.Location = new System.Drawing.Point(489, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(512, 35);
             this.label4.TabIndex = 9;
@@ -86,21 +76,50 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1068, 150);
+            this.label6.Location = new System.Drawing.Point(1007, 150);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(188, 35);
             this.label6.TabIndex = 10;
             this.label6.Text = "좌석 수";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ScreenNM
+            // 
+            this.ScreenNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ScreenNM.Location = new System.Drawing.Point(350, 195);
+            this.ScreenNM.Name = "ScreenNM";
+            this.ScreenNM.Size = new System.Drawing.Size(89, 36);
+            this.ScreenNM.TabIndex = 11;
+            this.ScreenNM.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ScreenIntro
+            // 
+            this.ScreenIntro.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ScreenIntro.Location = new System.Drawing.Point(526, 195);
+            this.ScreenIntro.Name = "ScreenIntro";
+            this.ScreenIntro.Size = new System.Drawing.Size(444, 27);
+            this.ScreenIntro.TabIndex = 12;
+            this.ScreenIntro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // ScreenSeatCnt
+            // 
+            this.ScreenSeatCnt.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ScreenSeatCnt.Location = new System.Drawing.Point(1050, 195);
+            this.ScreenSeatCnt.Name = "ScreenSeatCnt";
+            this.ScreenSeatCnt.Size = new System.Drawing.Size(98, 34);
+            this.ScreenSeatCnt.TabIndex = 13;
+            this.ScreenSeatCnt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // ScreenInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ScreenSeatCnt);
+            this.Controls.Add(this.ScreenIntro);
+            this.Controls.Add(this.ScreenNM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Name = "ScreenInfo";
@@ -113,9 +132,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label ScreenNM;
+        private System.Windows.Forms.Label ScreenIntro;
+        private System.Windows.Forms.Label ScreenSeatCnt;
 
     }
 }

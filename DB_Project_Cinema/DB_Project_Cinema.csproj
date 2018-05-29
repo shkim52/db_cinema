@@ -155,11 +155,11 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieDetail.cs">
+    <Compile Include="MovieDetail1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MovieDetail.Designer.cs">
-      <DependentUpon>MovieDetail.cs</DependentUpon>
+    <Compile Include="MovieDetail1.Designer.cs">
+      <DependentUpon>MovieDetail1.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieList.cs">
       <SubType>UserControl</SubType>
@@ -283,8 +283,8 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovieDetail.resx">
-      <DependentUpon>MovieDetail.cs</DependentUpon>
+    <EmbeddedResource Include="MovieDetail1.resx">
+      <DependentUpon>MovieDetail1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieList.resx">
       <DependentUpon>MovieList.cs</DependentUpon>

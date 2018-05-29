@@ -25,16 +25,17 @@ namespace DB_Project_Cinema
             Comm.Connection = Conn;*/
             try
             {
-            
+
                 Conn.Open();
                 string sql1 = "SELECT * FROM MOVIE WHERE MOVIE_NO=1 ";
-                OracleCommand Comm1 = new OracleCommand(sql1,Conn);
-            
+                OracleCommand Comm1 = new OracleCommand(sql1, Conn);
+
                 OracleDataReader reader1 = Comm1.ExecuteReader();
 
                 while (reader1.Read())
                 {
                     this.Movie1DetailButton.Text = reader1.GetString(reader1.GetOrdinal("MOVIE_NM"));
+
                 }
 
                 string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NO=2 ";
@@ -77,76 +78,38 @@ namespace DB_Project_Cinema
                     this.Movie5DetailButton.Text = reader5.GetString(reader5.GetOrdinal("MOVIE_NM"));
                 }
 
-                
+
                 Conn.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-               
+
             }
             finally
             {
                 Conn.Close();
             }
+
+
+            MovieList.BringToFront();
+
+            BackToHomeButton.Visible = false;
+            ReviewButton.Visible = false;
+        }
+
         
-
-            MovieList.BringToFront();
-
-            BackToHomeButton.Visible = false;
-            ReviewButton.Visible = false;
-        }
-
-        private void Movie1DetailButton_Click(object sender, EventArgs e)
-        {
-            MovieDetail.BringToFront();
-
-            Movie1DetailButton.Visible = false;
-            Movie2DetailButton.Visible = false;
-            Movie3DetailButton.Visible = false;
-            Movie4DetailButton.Visible = false;
-            Movie5DetailButton.Visible = false;
-
-            BackToHomeButton.Visible = true;
-            ReviewButton.Visible = true;
-        }
-
-        private void BackToHomeButton_Click(object sender, EventArgs e)
-        {
-            MovieList.BringToFront();
-
-            Movie1DetailButton.Visible = true;
-            Movie2DetailButton.Visible = true;
-            Movie3DetailButton.Visible = true;
-            Movie4DetailButton.Visible = true;
-            Movie5DetailButton.Visible = true;
-
-            BackToHomeButton.Visible = false;
-            ReviewButton.Visible = false;
-        }
-
-        private void ReviewButton_Click(object sender, EventArgs e)
-        {
-            Movie1DetailButton.Visible = false;
-            Movie2DetailButton.Visible = false;
-            Movie3DetailButton.Visible = false;
-            Movie4DetailButton.Visible = false;
-            Movie5DetailButton.Visible = false;
-
-            BackToHomeButton.Visible = true;
-            ReviewButton.Visible = false;
-
-            ReviewPage.BringToFront();
-        }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Movie1DetailButton_Click_1(object sender, EventArgs e)
+
+
+        private void Movie1DetailButton_Click_2(object sender, EventArgs e)
         {
-            MovieDetail.BringToFront();
+            SearchText.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -158,22 +121,67 @@ namespace DB_Project_Cinema
             ReviewButton.Visible = true;
         }
 
-        private void Movie2DetailButton_Click(object sender, EventArgs e)
+        private void Movie2DetailButton_Click_1(object sender, EventArgs e)
         {
+            SearchText.BringToFront();
+
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = true;
+            //MovieDetail moviedetail = new MovieDetail(Movie2DetailButton.Text);
+           // moviedetail.Show();
+        }
+
+        private void Movie3DetailButton_Click_1(object sender, EventArgs e)
+        {
+            SearchText.BringToFront();
+
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = true;
+        }
+
+        private void Movie4DetailButton_Click_1(object sender, EventArgs e)
+        {
+            SearchText.BringToFront();
+
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = true;
+
 
         }
 
-        private void Movie3DetailButton_Click(object sender, EventArgs e)
+        private void Movie5DetailButton_Click_1(object sender, EventArgs e)
         {
+            SearchText.BringToFront();
 
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = true;
         }
 
-        private void Movie4DetailButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BackToHomeButton_Click_1(object sender, EventArgs e)
+        private void BackToHomeButton_Click_2(object sender, EventArgs e)
         {
             MovieList.BringToFront();
 
@@ -187,7 +195,7 @@ namespace DB_Project_Cinema
             ReviewButton.Visible = false;
         }
 
-        private void ReviewButton_Click_1(object sender, EventArgs e)
+        private void ReviewButton_Click_2(object sender, EventArgs e)
         {
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -200,5 +208,55 @@ namespace DB_Project_Cinema
 
             ReviewPage.BringToFront();
         }
+
+        private void SearchButton_Click_1(object sender, EventArgs e)
+        {
+            
+            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+            OracleConnection Conn = new OracleConnection(str);
+            /**OracleCommand Comm;
+            Comm = new OracleCommand();
+            Comm.Connection = Conn;*/
+            try
+            {
+
+                Conn.Open();
+
+
+                string sql2 = "SELECT MOVIE_NM FROM MOVIE WHERE MOVIE_NM = " +SearchText.Text;
+
+                OracleCommand Comm = new OracleCommand(sql2, Conn);
+
+                OracleDataReader reader2 = Comm.ExecuteReader();
+                if (reader2.HasRows)
+                {
+                    
+                }
+                else if (!reader2.HasRows)
+                {
+                    MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
+                }
+                while (reader2.Read())
+                {
+                    
+                }
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+
+
+        
+
+
+
     }
 }

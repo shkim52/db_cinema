@@ -52,7 +52,6 @@ C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.JoinMembership.re
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginCustomer.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginMember.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginPage.resources
-C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MoviePage.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPage.resources
@@ -70,3 +69,4 @@ C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.ScreenInfo.resour
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.SelectShowTime.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.TicketingPage.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.csproj.GenerateResource.Cache
+C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources

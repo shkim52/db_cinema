@@ -225,6 +225,7 @@
             this.MyPageChangePw.BackColor = System.Drawing.Color.White;
             this.MyPageChangePw.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MyPageChangePw.Location = new System.Drawing.Point(360, 0);
+            this.MyPageChangePw.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageChangePw.Name = "MyPageChangePw";
             this.MyPageChangePw.Size = new System.Drawing.Size(769, 622);
             this.MyPageChangePw.TabIndex = 3;
@@ -234,6 +235,7 @@
             this.MyPageChangeInfo.BackColor = System.Drawing.Color.White;
             this.MyPageChangeInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MyPageChangeInfo.Location = new System.Drawing.Point(360, 0);
+            this.MyPageChangeInfo.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageChangeInfo.Name = "MyPageChangeInfo";
             this.MyPageChangeInfo.Size = new System.Drawing.Size(769, 622);
             this.MyPageChangeInfo.TabIndex = 2;
