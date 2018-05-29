@@ -31,9 +31,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PWD_INPUT = new System.Windows.Forms.TextBox();
+            this.NEW_PWD_INPUT = new System.Windows.Forms.TextBox();
+            this.NEW_PWD2_INPUT = new System.Windows.Forms.TextBox();
             this.ChangePWButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -68,32 +68,32 @@
             this.label4.Text = "Confirm New Password:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // PWD_INPUT
             // 
-            this.textBox1.Location = new System.Drawing.Point(356, 219);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(253, 25);
-            this.textBox1.TabIndex = 18;
+            this.PWD_INPUT.Location = new System.Drawing.Point(356, 219);
+            this.PWD_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.PWD_INPUT.Name = "PWD_INPUT";
+            this.PWD_INPUT.PasswordChar = '*';
+            this.PWD_INPUT.Size = new System.Drawing.Size(253, 25);
+            this.PWD_INPUT.TabIndex = 18;
             // 
-            // textBox2
+            // NEW_PWD_INPUT
             // 
-            this.textBox2.Location = new System.Drawing.Point(356, 255);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(253, 25);
-            this.textBox2.TabIndex = 19;
+            this.NEW_PWD_INPUT.Location = new System.Drawing.Point(356, 255);
+            this.NEW_PWD_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.NEW_PWD_INPUT.Name = "NEW_PWD_INPUT";
+            this.NEW_PWD_INPUT.PasswordChar = '*';
+            this.NEW_PWD_INPUT.Size = new System.Drawing.Size(253, 25);
+            this.NEW_PWD_INPUT.TabIndex = 19;
             // 
-            // textBox3
+            // NEW_PWD2_INPUT
             // 
-            this.textBox3.Location = new System.Drawing.Point(356, 291);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(253, 25);
-            this.textBox3.TabIndex = 20;
+            this.NEW_PWD2_INPUT.Location = new System.Drawing.Point(356, 291);
+            this.NEW_PWD2_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.NEW_PWD2_INPUT.Name = "NEW_PWD2_INPUT";
+            this.NEW_PWD2_INPUT.PasswordChar = '*';
+            this.NEW_PWD2_INPUT.Size = new System.Drawing.Size(253, 25);
+            this.NEW_PWD2_INPUT.TabIndex = 20;
             // 
             // ChangePWButton
             // 
@@ -102,7 +102,7 @@
             this.ChangePWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangePWButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ChangePWButton.Location = new System.Drawing.Point(356, 367);
-            this.ChangePWButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChangePWButton.Margin = new System.Windows.Forms.Padding(2);
             this.ChangePWButton.Name = "ChangePWButton";
             this.ChangePWButton.Size = new System.Drawing.Size(115, 41);
             this.ChangePWButton.TabIndex = 21;
@@ -129,12 +129,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PWD_INPUT);
+            this.Controls.Add(this.NEW_PWD_INPUT);
+            this.Controls.Add(this.NEW_PWD2_INPUT);
             this.Controls.Add(this.ChangePWButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageChangePw";
             this.Size = new System.Drawing.Size(842, 485);
             this.ResumeLayout(false);
@@ -147,9 +147,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PWD_INPUT;
+        private System.Windows.Forms.TextBox NEW_PWD_INPUT;
+        private System.Windows.Forms.TextBox NEW_PWD2_INPUT;
         private System.Windows.Forms.Button ChangePWButton;
         private System.Windows.Forms.Label label1;
 
