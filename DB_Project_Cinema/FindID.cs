@@ -38,9 +38,9 @@ namespace DB_Project_Cinema
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
                 OracleDataReader reader = Comm.ExecuteReader();
-                if (SID_INPUT.Text.Length != 13)
+                if (SID_INPUT.Text.Length != 6)
                 {
-                    MessageBox.Show("주민등록번호의 입력이 잘못되었습니다!!!");
+                    MessageBox.Show("생년월일의 입력이 잘못되었습니다!!!");
                 }
                 else if (!reader.HasRows)
                 {
@@ -62,22 +62,6 @@ namespace DB_Project_Cinema
             }
         }
 
-        private void SID_INPUT_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar)))
-            {
-                e.Handled = true;
-                MessageBox.Show("숫자만 입력해주세요!");
-            }
-        }
-
-        private void TELNO_INPUT_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar))) 
-            {
-                e.Handled = true;
-                MessageBox.Show("숫자만 입력해주세요!");
-            }
-        }
+        
     }
 }

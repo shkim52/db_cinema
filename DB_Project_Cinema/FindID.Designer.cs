@@ -67,7 +67,6 @@
             this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(211, 30);
             this.SID_INPUT.TabIndex = 7;
-            this.SID_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SID_INPUT_KeyPress);
             // 
             // TELNO_INPUT
             // 
@@ -78,7 +77,6 @@
             this.TELNO_INPUT.Name = "TELNO_INPUT";
             this.TELNO_INPUT.Size = new System.Drawing.Size(211, 30);
             this.TELNO_INPUT.TabIndex = 8;
-            this.TELNO_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TELNO_INPUT_KeyPress);
             // 
             // FindIDButton
             // 
