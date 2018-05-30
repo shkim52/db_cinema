@@ -42,7 +42,6 @@
             this.picturebox = new System.Windows.Forms.DataGridViewImageColumn();
             this.MOVIE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RESERVE = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DELETE = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -82,7 +81,6 @@
             this.picturebox,
             this.MOVIE_NM,
             this.Column1,
-            this.Column2,
             this.RESERVE,
             this.DELETE});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -141,12 +139,7 @@
             this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column1.HeaderText = "개봉일";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "감독이름";
-            this.Column2.Name = "Column2";
+            this.Column1.Width = 120;
             // 
             // RESERVE
             // 
@@ -194,7 +187,6 @@
         private System.Windows.Forms.DataGridViewImageColumn picturebox;
         private System.Windows.Forms.DataGridViewTextBoxColumn MOVIE_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewButtonColumn RESERVE;
         private System.Windows.Forms.DataGridViewButtonColumn DELETE;
 

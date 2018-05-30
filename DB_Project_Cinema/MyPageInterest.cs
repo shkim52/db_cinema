@@ -27,7 +27,7 @@ namespace DB_Project_Cinema
 
                 Conn.Open();
 
-                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE, DIRECTOR_NM FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '"+Program.memID+"'";
+                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '"+Program.memID+"'";
                 Console.WriteLine(sql);
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
@@ -45,9 +45,9 @@ namespace DB_Project_Cinema
                     Image jpgImage = Image.FromStream(pipe);
                     
                     string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                    string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10);
-                    string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
-                    dataGridView1.Rows.Add(jpgImage, movie_nm, release, director_nm); 
+                    string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10)+" 개봉";
+                    //string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    dataGridView1.Rows.Add(jpgImage, movie_nm, release); 
 
                 }
                 
