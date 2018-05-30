@@ -16,7 +16,17 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            MoviePage.BringToFront();
+            if (!mainPanel.Controls.Contains(MoviePage.Instance))
+            {
+                mainPanel.Controls.Add(MoviePage.Instance);
+                MoviePage.Instance.Dock = DockStyle.Fill;
+                MoviePage.Instance.BringToFront();
+            }
+            else
+            {
+                MoviePage.Instance.BringToFront();
+            }
+
             if (Program.memID == "")
             {
                 LogoutButton.Enabled = false;
@@ -33,7 +43,6 @@ namespace DB_Project_Cinema
         private void MoviePageButton_Click(object sender, EventArgs e)
         {
             
-            MoviePage.BringToFront();
 
             MoviePageButton.BackColor = Color.DimGray;
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -50,7 +59,6 @@ namespace DB_Project_Cinema
         private void TicketingPageButton_Click(object sender, EventArgs e)
         {
             
-            TicketingPage.BringToFront();
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = Color.DimGray;
@@ -67,7 +75,6 @@ namespace DB_Project_Cinema
         private void ScreenInfoButton_Click(object sender, EventArgs e)
         {
             
-            ScreenInfo.BringToFront();
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -81,9 +88,16 @@ namespace DB_Project_Cinema
         
         private void LoginPageButton_Click(object sender, EventArgs e)
         {
-            
-            LoginPage.BringToFront();
-
+            if (!mainPanel.Controls.Contains(LoginMember.Instance))
+            {
+                mainPanel.Controls.Add(LoginMember.Instance);
+                LoginMember.Instance.Dock = DockStyle.Fill;
+                LoginMember.Instance.BringToFront();
+            }
+            else
+            {
+                LoginMember.Instance.BringToFront();
+            }
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -98,8 +112,16 @@ namespace DB_Project_Cinema
         {
             if (Program.memID != "")
             {
-                MyPage.BringToFront();
-
+                if (!mainPanel.Controls.Contains(MyPage.Instance))
+                {
+                    mainPanel.Controls.Add(MyPage.Instance);
+                    MyPage.Instance.Dock = DockStyle.Fill;
+                    MyPage.Instance.BringToFront();
+                }
+                else
+                {
+                    LoginMember.Instance.BringToFront();
+                }
                 MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -122,7 +144,6 @@ namespace DB_Project_Cinema
         private void DiscountCardButton_Click(object sender, EventArgs e)
         {
             
-            DiscountCard.BringToFront();
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -137,8 +158,16 @@ namespace DB_Project_Cinema
 
         private void JoinMembershipButton_Click(object sender, EventArgs e)
         {
-           
-            JoinMembership.BringToFront();
+            if (!mainPanel.Controls.Contains(JoinMembership.Instance))
+            {
+                mainPanel.Controls.Add(JoinMembership.Instance);
+                JoinMembership.Instance.Dock = DockStyle.Fill;
+                JoinMembership.Instance.BringToFront();
+            }
+            else
+            {
+                JoinMembership.Instance.BringToFront();
+            }
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -155,7 +184,6 @@ namespace DB_Project_Cinema
         private void FindIDandPWButton_Click(object sender, EventArgs e)
         {           
             
-            FindIDandPW.BringToFront();
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);

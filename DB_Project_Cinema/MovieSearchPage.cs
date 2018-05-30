@@ -73,5 +73,10 @@ namespace DB_Project_Cinema
                 Conn.Close();
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,11 +12,22 @@ namespace DB_Project_Cinema
 {
     public partial class MyPage : UserControl
     {
+        private static MyPage _instance;
+        public static MyPage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPage();
+                }
+                return _instance;
+            }
+        }
         public MyPage()
         {
             InitializeComponent();
 
-            MyPageConfirmPW.BringToFront();
         }
 
        

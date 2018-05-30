@@ -14,6 +14,18 @@ namespace DB_Project_Cinema
 {
     public partial class JoinMembership : UserControl
     {
+        private static JoinMembership _instance;
+        public static JoinMembership Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new JoinMembership();
+                }
+                return _instance;
+            }
+        }
         public bool idcheck = false;
         
         public JoinMembership()

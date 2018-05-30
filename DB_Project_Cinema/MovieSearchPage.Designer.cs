@@ -42,11 +42,13 @@
             this.MovieNM,
             this.DirectorNM,
             this.Rating});
-            this.dataGridView1.Location = new System.Drawing.Point(288, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(230, 77);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(817, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(654, 163);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // MovieNM
             // 
@@ -65,12 +67,13 @@
             // 
             // MovieSearchPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MovieSearchPage";
-            this.Size = new System.Drawing.Size(1183, 634);
+            this.Size = new System.Drawing.Size(946, 528);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

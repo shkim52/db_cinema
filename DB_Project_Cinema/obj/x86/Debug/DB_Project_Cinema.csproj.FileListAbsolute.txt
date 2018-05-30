@@ -71,3 +71,4 @@ C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.csproj.GenerateRe
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources
+C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources

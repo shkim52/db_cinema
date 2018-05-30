@@ -34,6 +34,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.FindIDandPWButton = new System.Windows.Forms.Button();
             this.MyPageButton = new System.Windows.Forms.Button();
             this.JoinMembershipButton = new System.Windows.Forms.Button();
@@ -46,15 +47,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.Logout = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.LogoutButton = new System.Windows.Forms.Button();
-            this.TicketingPage = new DB_Project_Cinema.TicketingPage();
-            this.MoviePage = new DB_Project_Cinema.MoviePage();
-            this.FindIDandPW = new DB_Project_Cinema.FindIDandPW();
-            this.LoginPage = new DB_Project_Cinema.LoginPage();
-            this.JoinMembership = new DB_Project_Cinema.JoinMembership();
-            this.MyPage = new DB_Project_Cinema.MyPage();
-            this.DiscountCard = new DB_Project_Cinema.DiscountCard();
-            this.ScreenInfo = new DB_Project_Cinema.ScreenInfo();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -68,7 +61,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 780);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1539, 95);
             this.panel1.TabIndex = 0;
@@ -91,7 +84,7 @@
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1539, 87);
             this.panel2.TabIndex = 1;
@@ -100,7 +93,7 @@
             // 
             this.panel7.Controls.Add(this.label1);
             this.panel7.Location = new System.Drawing.Point(138, 2);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(301, 107);
             this.panel7.TabIndex = 0;
@@ -128,179 +121,10 @@
             this.panel3.Controls.Add(this.LoginPageButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 87);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1539, 33);
             this.panel3.TabIndex = 2;
-            // 
-            // FindIDandPWButton
-            // 
-            this.FindIDandPWButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindIDandPWButton.FlatAppearance.BorderSize = 0;
-            this.FindIDandPWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FindIDandPWButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindIDandPWButton.ForeColor = System.Drawing.Color.White;
-            this.FindIDandPWButton.Location = new System.Drawing.Point(997, 0);
-            this.FindIDandPWButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FindIDandPWButton.Name = "FindIDandPWButton";
-            this.FindIDandPWButton.Size = new System.Drawing.Size(98, 33);
-            this.FindIDandPWButton.TabIndex = 3;
-            this.FindIDandPWButton.Text = "ID/PW 찾기";
-            this.FindIDandPWButton.UseVisualStyleBackColor = true;
-            this.FindIDandPWButton.Click += new System.EventHandler(this.FindIDandPWButton_Click);
-            // 
-            // MyPageButton
-            // 
-            this.MyPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MyPageButton.FlatAppearance.BorderSize = 0;
-            this.MyPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MyPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageButton.ForeColor = System.Drawing.Color.White;
-            this.MyPageButton.Location = new System.Drawing.Point(1225, 0);
-            this.MyPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MyPageButton.Name = "MyPageButton";
-            this.MyPageButton.Size = new System.Drawing.Size(80, 33);
-            this.MyPageButton.TabIndex = 1;
-            this.MyPageButton.Text = "My Page";
-            this.MyPageButton.UseVisualStyleBackColor = true;
-            this.MyPageButton.Click += new System.EventHandler(this.MyPageButton_Click);
-            // 
-            // JoinMembershipButton
-            // 
-            this.JoinMembershipButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.JoinMembershipButton.FlatAppearance.BorderSize = 0;
-            this.JoinMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.JoinMembershipButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.JoinMembershipButton.ForeColor = System.Drawing.Color.White;
-            this.JoinMembershipButton.Location = new System.Drawing.Point(1116, 0);
-            this.JoinMembershipButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.JoinMembershipButton.Name = "JoinMembershipButton";
-            this.JoinMembershipButton.Size = new System.Drawing.Size(80, 33);
-            this.JoinMembershipButton.TabIndex = 1;
-            this.JoinMembershipButton.Text = "회원가입";
-            this.JoinMembershipButton.UseVisualStyleBackColor = true;
-            this.JoinMembershipButton.Click += new System.EventHandler(this.JoinMembershipButton_Click);
-            // 
-            // LoginPageButton
-            // 
-            this.LoginPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoginPageButton.FlatAppearance.BorderSize = 0;
-            this.LoginPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.LoginPageButton.ForeColor = System.Drawing.Color.White;
-            this.LoginPageButton.Location = new System.Drawing.Point(898, 0);
-            this.LoginPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.LoginPageButton.Name = "LoginPageButton";
-            this.LoginPageButton.Size = new System.Drawing.Size(80, 33);
-            this.LoginPageButton.TabIndex = 0;
-            this.LoginPageButton.Text = "Login";
-            this.LoginPageButton.UseVisualStyleBackColor = true;
-            this.LoginPageButton.Click += new System.EventHandler(this.LoginPageButton_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.DiscountCardButton);
-            this.panel4.Controls.Add(this.ScreenInfoButton);
-            this.panel4.Controls.Add(this.TicketingPageButton);
-            this.panel4.Controls.Add(this.MoviePageButton);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 120);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1539, 41);
-            this.panel4.TabIndex = 3;
-            // 
-            // DiscountCardButton
-            // 
-            this.DiscountCardButton.FlatAppearance.BorderSize = 0;
-            this.DiscountCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DiscountCardButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DiscountCardButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.DiscountCardButton.Location = new System.Drawing.Point(642, 0);
-            this.DiscountCardButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DiscountCardButton.Name = "DiscountCardButton";
-            this.DiscountCardButton.Size = new System.Drawing.Size(100, 40);
-            this.DiscountCardButton.TabIndex = 8;
-            this.DiscountCardButton.Text = "할인카드";
-            this.DiscountCardButton.UseVisualStyleBackColor = true;
-            this.DiscountCardButton.Click += new System.EventHandler(this.DiscountCardButton_Click);
-            // 
-            // ScreenInfoButton
-            // 
-            this.ScreenInfoButton.FlatAppearance.BorderSize = 0;
-            this.ScreenInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ScreenInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ScreenInfoButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.ScreenInfoButton.Location = new System.Drawing.Point(470, 0);
-            this.ScreenInfoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ScreenInfoButton.Name = "ScreenInfoButton";
-            this.ScreenInfoButton.Size = new System.Drawing.Size(100, 40);
-            this.ScreenInfoButton.TabIndex = 7;
-            this.ScreenInfoButton.Text = "상영관";
-            this.ScreenInfoButton.UseVisualStyleBackColor = true;
-            this.ScreenInfoButton.Click += new System.EventHandler(this.ScreenInfoButton_Click);
-            // 
-            // TicketingPageButton
-            // 
-            this.TicketingPageButton.FlatAppearance.BorderSize = 0;
-            this.TicketingPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TicketingPageButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TicketingPageButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.TicketingPageButton.Location = new System.Drawing.Point(312, 0);
-            this.TicketingPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TicketingPageButton.Name = "TicketingPageButton";
-            this.TicketingPageButton.Size = new System.Drawing.Size(100, 40);
-            this.TicketingPageButton.TabIndex = 7;
-            this.TicketingPageButton.Text = "예매";
-            this.TicketingPageButton.UseVisualStyleBackColor = true;
-            this.TicketingPageButton.Click += new System.EventHandler(this.TicketingPageButton_Click);
-            // 
-            // MoviePageButton
-            // 
-            this.MoviePageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MoviePageButton.FlatAppearance.BorderSize = 0;
-            this.MoviePageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MoviePageButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MoviePageButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.MoviePageButton.Location = new System.Drawing.Point(164, 0);
-            this.MoviePageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MoviePageButton.Name = "MoviePageButton";
-            this.MoviePageButton.Size = new System.Drawing.Size(100, 40);
-            this.MoviePageButton.TabIndex = 6;
-            this.MoviePageButton.Text = "영화";
-            this.MoviePageButton.UseVisualStyleBackColor = false;
-            this.MoviePageButton.Click += new System.EventHandler(this.MoviePageButton_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 161);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(144, 619);
-            this.panel5.TabIndex = 4;
-            // 
-            // Logout
-            // 
-            this.Logout.BackColor = System.Drawing.Color.Gainsboro;
-            this.Logout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Logout.Location = new System.Drawing.Point(1395, 161);
-            this.Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(144, 619);
-            this.Logout.TabIndex = 5;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(144, 161);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1251, 37);
-            this.panel8.TabIndex = 6;
             // 
             // LogoutButton
             // 
@@ -318,85 +142,182 @@
             this.LogoutButton.UseVisualStyleBackColor = false;
             this.LogoutButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // TicketingPage
+            // FindIDandPWButton
             // 
-            this.TicketingPage.BackColor = System.Drawing.Color.White;
-            this.TicketingPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TicketingPage.Location = new System.Drawing.Point(144, 198);
-            this.TicketingPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TicketingPage.Name = "TicketingPage";
-            this.TicketingPage.Size = new System.Drawing.Size(1251, 582);
-            this.TicketingPage.TabIndex = 30;
+            this.FindIDandPWButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FindIDandPWButton.FlatAppearance.BorderSize = 0;
+            this.FindIDandPWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FindIDandPWButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FindIDandPWButton.ForeColor = System.Drawing.Color.White;
+            this.FindIDandPWButton.Location = new System.Drawing.Point(997, 0);
+            this.FindIDandPWButton.Margin = new System.Windows.Forms.Padding(2);
+            this.FindIDandPWButton.Name = "FindIDandPWButton";
+            this.FindIDandPWButton.Size = new System.Drawing.Size(98, 33);
+            this.FindIDandPWButton.TabIndex = 3;
+            this.FindIDandPWButton.Text = "ID/PW 찾기";
+            this.FindIDandPWButton.UseVisualStyleBackColor = true;
+            this.FindIDandPWButton.Click += new System.EventHandler(this.FindIDandPWButton_Click);
             // 
-            // MoviePage
+            // MyPageButton
             // 
-            this.MoviePage.BackColor = System.Drawing.Color.White;
-            this.MoviePage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MoviePage.Location = new System.Drawing.Point(144, 198);
-            this.MoviePage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MoviePage.Name = "MoviePage";
-            this.MoviePage.Size = new System.Drawing.Size(1251, 582);
-            this.MoviePage.TabIndex = 29;
+            this.MyPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MyPageButton.FlatAppearance.BorderSize = 0;
+            this.MyPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MyPageButton.ForeColor = System.Drawing.Color.White;
+            this.MyPageButton.Location = new System.Drawing.Point(1225, 0);
+            this.MyPageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.MyPageButton.Name = "MyPageButton";
+            this.MyPageButton.Size = new System.Drawing.Size(80, 33);
+            this.MyPageButton.TabIndex = 1;
+            this.MyPageButton.Text = "My Page";
+            this.MyPageButton.UseVisualStyleBackColor = true;
+            this.MyPageButton.Click += new System.EventHandler(this.MyPageButton_Click);
             // 
-            // FindIDandPW
+            // JoinMembershipButton
             // 
-            this.FindIDandPW.BackColor = System.Drawing.Color.White;
-            this.FindIDandPW.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindIDandPW.Location = new System.Drawing.Point(144, 198);
-            this.FindIDandPW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FindIDandPW.Name = "FindIDandPW";
-            this.FindIDandPW.Size = new System.Drawing.Size(1251, 582);
-            this.FindIDandPW.TabIndex = 28;
+            this.JoinMembershipButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.JoinMembershipButton.FlatAppearance.BorderSize = 0;
+            this.JoinMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.JoinMembershipButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.JoinMembershipButton.ForeColor = System.Drawing.Color.White;
+            this.JoinMembershipButton.Location = new System.Drawing.Point(1116, 0);
+            this.JoinMembershipButton.Margin = new System.Windows.Forms.Padding(2);
+            this.JoinMembershipButton.Name = "JoinMembershipButton";
+            this.JoinMembershipButton.Size = new System.Drawing.Size(80, 33);
+            this.JoinMembershipButton.TabIndex = 1;
+            this.JoinMembershipButton.Text = "회원가입";
+            this.JoinMembershipButton.UseVisualStyleBackColor = true;
+            this.JoinMembershipButton.Click += new System.EventHandler(this.JoinMembershipButton_Click);
             // 
-            // LoginPage
+            // LoginPageButton
             // 
-            this.LoginPage.BackColor = System.Drawing.Color.White;
-            this.LoginPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LoginPage.Location = new System.Drawing.Point(144, 198);
-            this.LoginPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.LoginPage.Name = "LoginPage";
-            this.LoginPage.Size = new System.Drawing.Size(1251, 582);
-            this.LoginPage.TabIndex = 27;
+            this.LoginPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoginPageButton.FlatAppearance.BorderSize = 0;
+            this.LoginPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LoginPageButton.ForeColor = System.Drawing.Color.White;
+            this.LoginPageButton.Location = new System.Drawing.Point(898, 0);
+            this.LoginPageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginPageButton.Name = "LoginPageButton";
+            this.LoginPageButton.Size = new System.Drawing.Size(80, 33);
+            this.LoginPageButton.TabIndex = 0;
+            this.LoginPageButton.Text = "Login";
+            this.LoginPageButton.UseVisualStyleBackColor = true;
+            this.LoginPageButton.Click += new System.EventHandler(this.LoginPageButton_Click);
             // 
-            // JoinMembership
+            // panel4
             // 
-            this.JoinMembership.BackColor = System.Drawing.Color.White;
-            this.JoinMembership.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.JoinMembership.Location = new System.Drawing.Point(144, 198);
-            this.JoinMembership.Margin = new System.Windows.Forms.Padding(2);
-            this.JoinMembership.Name = "JoinMembership";
-            this.JoinMembership.Size = new System.Drawing.Size(1251, 582);
-            this.JoinMembership.TabIndex = 25;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.DiscountCardButton);
+            this.panel4.Controls.Add(this.ScreenInfoButton);
+            this.panel4.Controls.Add(this.TicketingPageButton);
+            this.panel4.Controls.Add(this.MoviePageButton);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 120);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1539, 41);
+            this.panel4.TabIndex = 3;
             // 
-            // MyPage
+            // DiscountCardButton
             // 
-            this.MyPage.BackColor = System.Drawing.Color.White;
-            this.MyPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MyPage.Location = new System.Drawing.Point(144, 198);
-            this.MyPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MyPage.Name = "MyPage";
-            this.MyPage.Size = new System.Drawing.Size(1251, 582);
-            this.MyPage.TabIndex = 26;
+            this.DiscountCardButton.FlatAppearance.BorderSize = 0;
+            this.DiscountCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DiscountCardButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DiscountCardButton.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.DiscountCardButton.Location = new System.Drawing.Point(642, 0);
+            this.DiscountCardButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DiscountCardButton.Name = "DiscountCardButton";
+            this.DiscountCardButton.Size = new System.Drawing.Size(100, 40);
+            this.DiscountCardButton.TabIndex = 8;
+            this.DiscountCardButton.Text = "할인카드";
+            this.DiscountCardButton.UseVisualStyleBackColor = true;
+            this.DiscountCardButton.Click += new System.EventHandler(this.DiscountCardButton_Click);
             // 
-            // DiscountCard
+            // ScreenInfoButton
             // 
-            this.DiscountCard.BackColor = System.Drawing.Color.White;
-            this.DiscountCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiscountCard.Location = new System.Drawing.Point(144, 198);
-            this.DiscountCard.Margin = new System.Windows.Forms.Padding(2);
-            this.DiscountCard.Name = "DiscountCard";
-            this.DiscountCard.Size = new System.Drawing.Size(1251, 582);
-            this.DiscountCard.TabIndex = 24;
+            this.ScreenInfoButton.FlatAppearance.BorderSize = 0;
+            this.ScreenInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ScreenInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ScreenInfoButton.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.ScreenInfoButton.Location = new System.Drawing.Point(470, 0);
+            this.ScreenInfoButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ScreenInfoButton.Name = "ScreenInfoButton";
+            this.ScreenInfoButton.Size = new System.Drawing.Size(100, 40);
+            this.ScreenInfoButton.TabIndex = 7;
+            this.ScreenInfoButton.Text = "상영관";
+            this.ScreenInfoButton.UseVisualStyleBackColor = true;
+            this.ScreenInfoButton.Click += new System.EventHandler(this.ScreenInfoButton_Click);
             // 
-            // ScreenInfo
+            // TicketingPageButton
             // 
-            this.ScreenInfo.BackColor = System.Drawing.Color.White;
-            this.ScreenInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ScreenInfo.Location = new System.Drawing.Point(144, 198);
-            this.ScreenInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ScreenInfo.Name = "ScreenInfo";
-            this.ScreenInfo.Size = new System.Drawing.Size(1251, 582);
-            this.ScreenInfo.TabIndex = 11;
+            this.TicketingPageButton.FlatAppearance.BorderSize = 0;
+            this.TicketingPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TicketingPageButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TicketingPageButton.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.TicketingPageButton.Location = new System.Drawing.Point(312, 0);
+            this.TicketingPageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TicketingPageButton.Name = "TicketingPageButton";
+            this.TicketingPageButton.Size = new System.Drawing.Size(100, 40);
+            this.TicketingPageButton.TabIndex = 7;
+            this.TicketingPageButton.Text = "예매";
+            this.TicketingPageButton.UseVisualStyleBackColor = true;
+            this.TicketingPageButton.Click += new System.EventHandler(this.TicketingPageButton_Click);
+            // 
+            // MoviePageButton
+            // 
+            this.MoviePageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MoviePageButton.FlatAppearance.BorderSize = 0;
+            this.MoviePageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MoviePageButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MoviePageButton.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.MoviePageButton.Location = new System.Drawing.Point(164, 0);
+            this.MoviePageButton.Margin = new System.Windows.Forms.Padding(2);
+            this.MoviePageButton.Name = "MoviePageButton";
+            this.MoviePageButton.Size = new System.Drawing.Size(100, 40);
+            this.MoviePageButton.TabIndex = 6;
+            this.MoviePageButton.Text = "영화";
+            this.MoviePageButton.UseVisualStyleBackColor = false;
+            this.MoviePageButton.Click += new System.EventHandler(this.MoviePageButton_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 161);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(144, 619);
+            this.panel5.TabIndex = 4;
+            // 
+            // Logout
+            // 
+            this.Logout.BackColor = System.Drawing.Color.Gainsboro;
+            this.Logout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Logout.Location = new System.Drawing.Point(1395, 161);
+            this.Logout.Margin = new System.Windows.Forms.Padding(2);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(144, 619);
+            this.Logout.TabIndex = 5;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(144, 161);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1251, 37);
+            this.panel8.TabIndex = 6;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(144, 198);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1251, 582);
+            this.mainPanel.TabIndex = 7;
             // 
             // CinemaProgram
             // 
@@ -404,14 +325,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1539, 875);
-            this.Controls.Add(this.TicketingPage);
-            this.Controls.Add(this.MoviePage);
-            this.Controls.Add(this.FindIDandPW);
-            this.Controls.Add(this.LoginPage);
-            this.Controls.Add(this.JoinMembership);
-            this.Controls.Add(this.MyPage);
-            this.Controls.Add(this.DiscountCard);
-            this.Controls.Add(this.ScreenInfo);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.panel5);
@@ -419,7 +333,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CinemaProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SEOUL CINEMA";
@@ -450,17 +364,10 @@
         private System.Windows.Forms.Button MoviePageButton;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label2;
-        private ScreenInfo ScreenInfo;
         private System.Windows.Forms.Button DiscountCardButton;
-        private DiscountCard DiscountCard;
-        private JoinMembership JoinMembership;
-        private MyPage MyPage;
-        private LoginPage LoginPage;
-        private FindIDandPW FindIDandPW;
         private System.Windows.Forms.Button FindIDandPWButton;
-        private MoviePage MoviePage;
-        private TicketingPage TicketingPage;
         private System.Windows.Forms.Button LogoutButton;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }
 

@@ -14,6 +14,18 @@ namespace DB_Project_Cinema
 {
     public partial class MoviePage : UserControl
     {
+        private static MoviePage _instance;
+        public static MoviePage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MoviePage();
+                }
+                return _instance;
+            }
+        }
         public MoviePage()
         {
             InitializeComponent();
@@ -140,23 +152,29 @@ namespace DB_Project_Cinema
                 while (reader2.Read())
                 {
                     this.Movie2DetailButton.Text = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
-                    Program.Movie_NM = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
-                    
+                    //Program.Movie_NM = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
+
                 }
 
-            MovieDetail.BringToFront();
 
-            Movie1DetailButton.Visible = false;
-            Movie2DetailButton.Visible = false;
-            Movie3DetailButton.Visible = false;
-            Movie4DetailButton.Visible = false;
-            Movie5DetailButton.Visible = false;
+                Controls.Add(MovieDetail1.Instance);
+                MovieDetail1.Instance.setMovie_no(Convert.ToInt32(this.Movie2DetailButton.Text));
+                MovieDetail1.Instance.MovieDetail_test();
+                MovieDetail1.Instance.Dock = DockStyle.Fill;
+                MovieDetail1.Instance.BringToFront();
+               
 
-            BackToHomeButton.Visible = true;
-            ReviewButton.Visible = true;
-            //MovieDetail moviedetail = new MovieDetail(Movie2DetailButton.Text);
-           // moviedetail.Show();
-            Conn.Close();
+                Movie1DetailButton.Visible = false;
+                Movie2DetailButton.Visible = false;
+                Movie3DetailButton.Visible = false;
+                Movie4DetailButton.Visible = false;
+                Movie5DetailButton.Visible = false;
+
+                BackToHomeButton.Visible = true;
+                ReviewButton.Visible = true;
+                //MovieDetail moviedetail = new MovieDetail(Movie2DetailButton.Text);
+               // moviedetail.Show();
+                Conn.Close();
             }
             catch (Exception ex)
             {
