@@ -37,11 +37,25 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    this.ScreenNM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
-                    this.ScreenIntro.Text = reader.GetString(reader.GetOrdinal("SCR_INTRO"));
+                    this.Screen1NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
+                    this.Screen1Intro.Text = reader.GetString(reader.GetOrdinal("SCR_INTRO"));
                     //this.ScreenSeatCnt.Text = reader.GetString(reader.GetDecimal("SCR_SEAT_CNT"));
                 }
 
+                string sql2 = "SELECT * FROM SCREEN WHERE SCR_NO=2";
+
+                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+
+
+                OracleDataReader reader2 = Comm2.ExecuteReader();
+
+
+                while (reader2.Read())
+                {
+                    this.Screen2NM.Text = reader2.GetString(reader2.GetOrdinal("SCR_NM"));
+                    this.Screen2Intro.Text = reader2.GetString(reader2.GetOrdinal("SCR_INTRO"));
+                    //this.ScreenSeatCnt.Text = reader.GetString(reader.GetDecimal("SCR_SEAT_CNT"));
+                }
 
                 Conn.Close();
 

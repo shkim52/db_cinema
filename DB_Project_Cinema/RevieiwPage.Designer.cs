@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.MovieNM = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Review = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ReviewRegisterButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // MovieNM
             // 
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(477, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(510, 52);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "영화제목";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MovieNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieNM.Location = new System.Drawing.Point(477, 17);
+            this.MovieNM.Name = "MovieNM";
+            this.MovieNM.Size = new System.Drawing.Size(510, 52);
+            this.MovieNM.TabIndex = 8;
+            this.MovieNM.Text = "영화제목";
+            this.MovieNM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listBox1
             // 
@@ -73,12 +73,12 @@
             this.label2.Text = "평점";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // Review
             // 
-            this.textBox1.Location = new System.Drawing.Point(411, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(753, 28);
-            this.textBox1.TabIndex = 11;
+            this.Review.Location = new System.Drawing.Point(411, 91);
+            this.Review.Name = "Review";
+            this.Review.Size = new System.Drawing.Size(753, 28);
+            this.Review.TabIndex = 11;
             // 
             // label4
             // 
@@ -100,6 +100,7 @@
             this.ReviewRegisterButton.TabIndex = 13;
             this.ReviewRegisterButton.Text = "등록";
             this.ReviewRegisterButton.UseVisualStyleBackColor = true;
+            this.ReviewRegisterButton.Click += new System.EventHandler(this.ReviewRegisterButton_Click);
             // 
             // label3
             // 
@@ -117,10 +118,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MovieNM);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Review);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ReviewRegisterButton);
             this.Controls.Add(this.label3);
@@ -133,10 +134,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label MovieNM;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Review;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ReviewRegisterButton;
         private System.Windows.Forms.Label label3;

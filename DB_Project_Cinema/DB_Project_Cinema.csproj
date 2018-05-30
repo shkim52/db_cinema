@@ -173,6 +173,12 @@
     <Compile Include="MoviePage.Designer.cs">
       <DependentUpon>MoviePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieSearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieSearchPage.Designer.cs">
+      <DependentUpon>MovieSearchPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MoviePage.resx">
       <DependentUpon>MoviePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieSearchPage.resx">
+      <DependentUpon>MovieSearchPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyPage.resx">
       <DependentUpon>MyPage.cs</DependentUpon>

@@ -109,7 +109,7 @@ namespace DB_Project_Cinema
 
         private void Movie1DetailButton_Click_2(object sender, EventArgs e)
         {
-            SearchText.BringToFront();
+            MovieDetail.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -123,7 +123,28 @@ namespace DB_Project_Cinema
 
         private void Movie2DetailButton_Click_1(object sender, EventArgs e)
         {
-            SearchText.BringToFront();
+            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+            OracleConnection Conn = new OracleConnection(str);
+            /**OracleCommand Comm;
+            Comm = new OracleCommand();
+            Comm.Connection = Conn;*/
+            try
+            {
+
+                Conn.Open();
+                string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NO=2 ";
+                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+
+                OracleDataReader reader2 = Comm2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    this.Movie2DetailButton.Text = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
+                    Program.Movie_NM = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
+                    
+                }
+
+            MovieDetail.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -135,11 +156,22 @@ namespace DB_Project_Cinema
             ReviewButton.Visible = true;
             //MovieDetail moviedetail = new MovieDetail(Movie2DetailButton.Text);
            // moviedetail.Show();
+            Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+
+            }
+            finally
+            {
+                Conn.Close();
+            }
         }
 
         private void Movie3DetailButton_Click_1(object sender, EventArgs e)
         {
-            SearchText.BringToFront();
+            MovieDetail.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -153,7 +185,7 @@ namespace DB_Project_Cinema
 
         private void Movie4DetailButton_Click_1(object sender, EventArgs e)
         {
-            SearchText.BringToFront();
+            MovieDetail.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -169,7 +201,7 @@ namespace DB_Project_Cinema
 
         private void Movie5DetailButton_Click_1(object sender, EventArgs e)
         {
-            SearchText.BringToFront();
+            MovieDetail.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -211,51 +243,147 @@ namespace DB_Project_Cinema
 
         private void SearchButton_Click_1(object sender, EventArgs e)
         {
-            
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
-            try
+
+            if (SearchText.Text == "")
+                MessageBox.Show("검색어를 입력하세요!");
+            else
             {
 
-                Conn.Open();
-
-
-                string sql2 = "SELECT MOVIE_NM FROM MOVIE WHERE MOVIE_NM = " +SearchText.Text;
-
-                OracleCommand Comm = new OracleCommand(sql2, Conn);
-
-                OracleDataReader reader2 = Comm.ExecuteReader();
-                if (reader2.HasRows)
+                string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+                OracleConnection Conn = new OracleConnection(str);
+                /**OracleCommand Comm;
+                Comm = new OracleCommand();
+                Comm.Connection = Conn;*/
+                try
                 {
-                    
+
+                    Conn.Open();
+
+
+                    if (MovieCategory.SelectedItem.ToString() == "영화명")
+                    {
+                        string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + SearchText.Text + "'";
+
+                        OracleCommand Comm = new OracleCommand(sql2, Conn);
+                        OracleDataReader reader2 = Comm.ExecuteReader();
+                        if (reader2.HasRows)
+                        {
+                            Movie1DetailButton.Visible = false;
+                            Movie2DetailButton.Visible = false;
+                            Movie3DetailButton.Visible = false;
+                            Movie4DetailButton.Visible = false;
+                            Movie5DetailButton.Visible = false;
+
+                            BackToHomeButton.Visible = true;
+                            ReviewButton.Visible = false;
+
+                            MovieSearchPage.BringToFront();
+
+                            while (reader2.Read())
+                            {
+                                //Program.MovieNM = SearchText.Text;
+
+                            }
+
+                        }
+                        else if (!reader2.HasRows)
+                        {
+                            MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
+                        }
+                        /* while (reader2.Read())
+                         {
+                             Program.MovieNM = SearchText.Text;
+                         }
+                         */
+                    }
+                    else if (MovieCategory.SelectedItem.ToString() == "감독명")
+                    {
+                        string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM = '" + SearchText.Text + "'";
+
+                        OracleCommand Comm = new OracleCommand(sql2, Conn);
+                        OracleDataReader reader2 = Comm.ExecuteReader();
+                        if (reader2.HasRows)
+                        {
+                            Movie1DetailButton.Visible = false;
+                            Movie2DetailButton.Visible = false;
+                            Movie3DetailButton.Visible = false;
+                            Movie4DetailButton.Visible = false;
+                            Movie5DetailButton.Visible = false;
+
+                            BackToHomeButton.Visible = true;
+                            ReviewButton.Visible = false;
+
+                            MovieSearchPage.BringToFront();
+
+                            while (reader2.Read())
+                            {
+                                //Program.MovieNM = SearchText.Text;
+
+                            }
+
+                        }
+                        else if (!reader2.HasRows)
+                        {
+                            MessageBox.Show("해당 감독명과 일치하는 영화가 없습니다!");
+                        }
+                        /* while (reader2.Read())
+                         {
+                             Program.MovieNM = SearchText.Text;
+                         }
+                         */
+                    }
+                    else if (MovieCategory.SelectedItem.ToString() == "장르명")
+                    {
+                        string sql2 = "SELECT * FROM MOVIE WHERE GENRE = '" + MovieDetail.Text + "'";
+
+                        OracleCommand Comm = new OracleCommand(sql2, Conn);
+                        OracleDataReader reader2 = Comm.ExecuteReader();
+                        if (reader2.HasRows)
+                        {
+                            Movie1DetailButton.Visible = false;
+                            Movie2DetailButton.Visible = false;
+                            Movie3DetailButton.Visible = false;
+                            Movie4DetailButton.Visible = false;
+                            Movie5DetailButton.Visible = false;
+
+                            BackToHomeButton.Visible = true;
+                            ReviewButton.Visible = false;
+
+                            MovieSearchPage.BringToFront();
+
+                            while (reader2.Read())
+                            {
+                                //Program.MovieNM = SearchText.Text;
+
+                            }
+
+                        }
+                        else if (!reader2.HasRows)
+                        {
+                            MessageBox.Show("해당 장르명과 일치하는 영화가 없습니다!");
+                        }
+                        /* while (reader2.Read())
+                         {
+                             Program.MovieNM = SearchText.Text;
+                         }
+                         */
+                    }
+                    Conn.Close();
                 }
-                else if (!reader2.HasRows)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
+                    Console.WriteLine(ex.ToString());
                 }
-                while (reader2.Read())
+                finally
                 {
-                    
+                    Conn.Close();
                 }
-                Conn.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
-            }
+
+
+
+
         }
-
-
-
-        
-
 
 
     }

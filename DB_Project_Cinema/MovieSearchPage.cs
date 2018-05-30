@@ -12,9 +12,9 @@ using Oracle.ManagedDataAccess.Types;
 
 namespace DB_Project_Cinema
 {
-    public partial class SelectShowTime : UserControl
+    public partial class MovieSearchPage : UserControl
     {
-        public SelectShowTime()
+        public MovieSearchPage()
         {
             InitializeComponent();
 
@@ -41,8 +41,8 @@ namespace DB_Project_Cinema
                     //this.Genre.Text = reader.GetString(reader.GetOrdinal("GENRE"));
                     //this.ReleaseDate.Text = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
                     //this.ShowTime.Text = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                    //string c = reader.GetString(reader.GetOrdinal("RATING"));
-                    //string b = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    string c = reader.GetString(reader.GetOrdinal("RATING"));
+                    string b = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
                     // this.ActorNM.Text = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
                     //this.Country.Text = reader.GetString(reader.GetOrdinal("COUNTRY"));
                     //this.Distributor.Text = reader.GetString(reader.GetOrdinal("DISTRIBUTOR"));
@@ -52,7 +52,7 @@ namespace DB_Project_Cinema
                     //Poster.SizeMode = PictureBoxSizeMode.StretchImage;
                     //Poster.ImageLocation = poster;
 
-                    string[] row0 = { a };
+                    string[] row0 = { a,b,c };
 
                     dataGridView1.Rows.Add(row0);
                 }

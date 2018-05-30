@@ -28,7 +28,7 @@ namespace DB_Project_Cinema
             {
 
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO=2" ;
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO=1" ;
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 

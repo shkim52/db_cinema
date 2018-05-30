@@ -58,11 +58,19 @@ namespace DB_Project_Cinema
 
         private void ChooseSeatPageButton_Click_1(object sender, EventArgs e)
         {
-            ChooseSeat.BringToFront();
-            ChooseSeatPageButton.Visible = false;
-            PaymentPageButton.Visible = true;
-            BackToSelcetTimeButton.Visible = true;
-            BackToChooseSeatButton.Visible = false;
+            if (Program.memID != "")
+            {
+                ChooseSeat.BringToFront();
+                ChooseSeatPageButton.Visible = false;
+                PaymentPageButton.Visible = true;
+                BackToSelcetTimeButton.Visible = true;
+                BackToChooseSeatButton.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("로그인을 하세요!");
+
+            }
         }
     }
 }

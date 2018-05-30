@@ -30,8 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.SearchText = new System.Windows.Forms.TextBox();
+            this.MovieCategory = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ReviewButton = new System.Windows.Forms.Button();
@@ -41,9 +41,10 @@
             this.Movie3DetailButton = new System.Windows.Forms.Button();
             this.Movie2DetailButton = new System.Windows.Forms.Button();
             this.Movie1DetailButton = new System.Windows.Forms.Button();
-            this.SearchText = new DB_Project_Cinema.MovieDetail1();
+            this.MovieDetail = new DB_Project_Cinema.MovieDetail1();
             this.ReviewPage = new DB_Project_Cinema.RevieiwPage();
             this.MovieList = new DB_Project_Cinema.MovieList();
+            this.MovieSearchPage = new DB_Project_Cinema.MovieSearchPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,8 +52,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.SearchButton);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.SearchText);
+            this.panel1.Controls.Add(this.MovieCategory);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -74,26 +75,26 @@
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click_1);
             // 
-            // textBox1
+            // SearchText
             // 
-            this.textBox1.Location = new System.Drawing.Point(475, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(519, 28);
-            this.textBox1.TabIndex = 11;
+            this.SearchText.Location = new System.Drawing.Point(475, 133);
+            this.SearchText.Name = "SearchText";
+            this.SearchText.Size = new System.Drawing.Size(519, 28);
+            this.SearchText.TabIndex = 11;
             // 
-            // listBox1
+            // MovieCategory
             // 
-            this.listBox1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Items.AddRange(new object[] {
+            this.MovieCategory.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieCategory.FormattingEnabled = true;
+            this.MovieCategory.ItemHeight = 25;
+            this.MovieCategory.Items.AddRange(new object[] {
             "영화명",
             "감독명",
             "장르명"});
-            this.listBox1.Location = new System.Drawing.Point(343, 131);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(93, 29);
-            this.listBox1.TabIndex = 10;
+            this.MovieCategory.Location = new System.Drawing.Point(343, 131);
+            this.MovieCategory.Name = "MovieCategory";
+            this.MovieCategory.Size = new System.Drawing.Size(93, 29);
+            this.MovieCategory.TabIndex = 10;
             // 
             // label1
             // 
@@ -218,14 +219,14 @@
             this.Movie1DetailButton.UseVisualStyleBackColor = false;
             this.Movie1DetailButton.Click += new System.EventHandler(this.Movie1DetailButton_Click_2);
             // 
-            // SearchText
+            // MovieDetail
             // 
-            this.SearchText.BackColor = System.Drawing.Color.White;
-            this.SearchText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchText.Location = new System.Drawing.Point(0, 188);
-            this.SearchText.Name = "SearchText";
-            this.SearchText.Size = new System.Drawing.Size(1702, 308);
-            this.SearchText.TabIndex = 4;
+            this.MovieDetail.BackColor = System.Drawing.Color.White;
+            this.MovieDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MovieDetail.Location = new System.Drawing.Point(0, 188);
+            this.MovieDetail.Name = "MovieDetail";
+            this.MovieDetail.Size = new System.Drawing.Size(1702, 308);
+            this.MovieDetail.TabIndex = 4;
             // 
             // ReviewPage
             // 
@@ -247,12 +248,22 @@
             this.MovieList.Size = new System.Drawing.Size(1702, 308);
             this.MovieList.TabIndex = 2;
             // 
+            // MovieSearchPage
+            // 
+            this.MovieSearchPage.BackColor = System.Drawing.Color.White;
+            this.MovieSearchPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MovieSearchPage.Location = new System.Drawing.Point(0, 188);
+            this.MovieSearchPage.Name = "MovieSearchPage";
+            this.MovieSearchPage.Size = new System.Drawing.Size(1702, 308);
+            this.MovieSearchPage.TabIndex = 5;
+            // 
             // MoviePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.SearchText);
+            this.Controls.Add(this.MovieSearchPage);
+            this.Controls.Add(this.MovieDetail);
             this.Controls.Add(this.ReviewPage);
             this.Controls.Add(this.MovieList);
             this.Controls.Add(this.panel2);
@@ -270,8 +281,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox SearchText;
+        private System.Windows.Forms.ListBox MovieCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ReviewButton;
@@ -283,7 +294,8 @@
         private System.Windows.Forms.Button Movie1DetailButton;
         private MovieList MovieList;
         private RevieiwPage ReviewPage;
-        private MovieDetail1 SearchText;
+        private MovieDetail1 MovieDetail;
+        private MovieSearchPage MovieSearchPage;
 
     }
 }

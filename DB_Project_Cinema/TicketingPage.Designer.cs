@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BackToSelcetTimeButton = new System.Windows.Forms.Button();
-            this.BackToChooseSeatButton = new System.Windows.Forms.Button();
             this.PaymentPageButton = new System.Windows.Forms.Button();
             this.ChooseSeatPageButton = new System.Windows.Forms.Button();
+            this.BackToSelcetTimeButton = new System.Windows.Forms.Button();
+            this.BackToChooseSeatButton = new System.Windows.Forms.Button();
             this.Payment = new DB_Project_Cinema.Payment();
             this.ChooseSeat = new DB_Project_Cinema.ChooseSeat();
             this.SelectShowTime = new DB_Project_Cinema.SelectShowTime();
@@ -50,34 +50,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1472, 89);
             this.panel1.TabIndex = 4;
-            // 
-            // BackToSelcetTimeButton
-            // 
-            this.BackToSelcetTimeButton.BackColor = System.Drawing.Color.IndianRed;
-            this.BackToSelcetTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToSelcetTimeButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BackToSelcetTimeButton.ForeColor = System.Drawing.Color.White;
-            this.BackToSelcetTimeButton.Location = new System.Drawing.Point(144, 17);
-            this.BackToSelcetTimeButton.Name = "BackToSelcetTimeButton";
-            this.BackToSelcetTimeButton.Size = new System.Drawing.Size(114, 44);
-            this.BackToSelcetTimeButton.TabIndex = 4;
-            this.BackToSelcetTimeButton.Text = "<-뒤로";
-            this.BackToSelcetTimeButton.UseVisualStyleBackColor = false;
-            this.BackToSelcetTimeButton.Click += new System.EventHandler(this.BackToSelcetTimeButton_Click_1);
-            // 
-            // BackToChooseSeatButton
-            // 
-            this.BackToChooseSeatButton.BackColor = System.Drawing.Color.IndianRed;
-            this.BackToChooseSeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToChooseSeatButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BackToChooseSeatButton.ForeColor = System.Drawing.Color.White;
-            this.BackToChooseSeatButton.Location = new System.Drawing.Point(144, 17);
-            this.BackToChooseSeatButton.Name = "BackToChooseSeatButton";
-            this.BackToChooseSeatButton.Size = new System.Drawing.Size(114, 44);
-            this.BackToChooseSeatButton.TabIndex = 5;
-            this.BackToChooseSeatButton.Text = "<-뒤로";
-            this.BackToChooseSeatButton.UseVisualStyleBackColor = false;
-            this.BackToChooseSeatButton.Click += new System.EventHandler(this.BackToChooseSeatButton_Click_1);
             // 
             // PaymentPageButton
             // 
@@ -107,8 +79,37 @@
             this.ChooseSeatPageButton.UseVisualStyleBackColor = false;
             this.ChooseSeatPageButton.Click += new System.EventHandler(this.ChooseSeatPageButton_Click_1);
             // 
+            // BackToSelcetTimeButton
+            // 
+            this.BackToSelcetTimeButton.BackColor = System.Drawing.Color.IndianRed;
+            this.BackToSelcetTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToSelcetTimeButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BackToSelcetTimeButton.ForeColor = System.Drawing.Color.White;
+            this.BackToSelcetTimeButton.Location = new System.Drawing.Point(144, 17);
+            this.BackToSelcetTimeButton.Name = "BackToSelcetTimeButton";
+            this.BackToSelcetTimeButton.Size = new System.Drawing.Size(114, 44);
+            this.BackToSelcetTimeButton.TabIndex = 4;
+            this.BackToSelcetTimeButton.Text = "<-뒤로";
+            this.BackToSelcetTimeButton.UseVisualStyleBackColor = false;
+            this.BackToSelcetTimeButton.Click += new System.EventHandler(this.BackToSelcetTimeButton_Click_1);
+            // 
+            // BackToChooseSeatButton
+            // 
+            this.BackToChooseSeatButton.BackColor = System.Drawing.Color.IndianRed;
+            this.BackToChooseSeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToChooseSeatButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BackToChooseSeatButton.ForeColor = System.Drawing.Color.White;
+            this.BackToChooseSeatButton.Location = new System.Drawing.Point(144, 17);
+            this.BackToChooseSeatButton.Name = "BackToChooseSeatButton";
+            this.BackToChooseSeatButton.Size = new System.Drawing.Size(114, 44);
+            this.BackToChooseSeatButton.TabIndex = 5;
+            this.BackToChooseSeatButton.Text = "<-뒤로";
+            this.BackToChooseSeatButton.UseVisualStyleBackColor = false;
+            this.BackToChooseSeatButton.Click += new System.EventHandler(this.BackToChooseSeatButton_Click_1);
+            // 
             // Payment
             // 
+            this.Payment.BackColor = System.Drawing.Color.White;
             this.Payment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Payment.Location = new System.Drawing.Point(0, 0);
             this.Payment.Name = "Payment";
