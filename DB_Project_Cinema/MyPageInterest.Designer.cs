@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MOVIE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RESERVE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DELETE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RESERVE = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DELETE = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,35 +54,81 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MOVIE_NM,
+            this.Column1,
+            this.Column2,
             this.RESERVE,
             this.DELETE});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(247, 218);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.Location = new System.Drawing.Point(159, 186);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 218);
+            this.dataGridView1.Size = new System.Drawing.Size(574, 398);
             this.dataGridView1.TabIndex = 13;
             // 
             // MOVIE_NM
             // 
             this.MOVIE_NM.HeaderText = "영화이름";
             this.MOVIE_NM.Name = "MOVIE_NM";
+            this.MOVIE_NM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MOVIE_NM.Width = 150;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = "미정";
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "개봉일";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "감독이름";
+            this.Column2.Name = "Column2";
             // 
             // RESERVE
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.RESERVE.DefaultCellStyle = dataGridViewCellStyle3;
             this.RESERVE.HeaderText = "예매하기";
             this.RESERVE.Name = "RESERVE";
+            this.RESERVE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.RESERVE.Text = "예매하기";
+            this.RESERVE.UseColumnTextForButtonValue = true;
             // 
             // DELETE
             // 
             this.DELETE.HeaderText = "삭제";
             this.DELETE.Name = "DELETE";
+            this.DELETE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DELETE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DELETE.Text = "삭제";
+            this.DELETE.UseColumnTextForButtonValue = true;
+            this.DELETE.Width = 50;
             // 
             // MyPageInterest
             // 
@@ -99,8 +150,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MOVIE_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RESERVE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DELETE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn RESERVE;
+        private System.Windows.Forms.DataGridViewButtonColumn DELETE;
 
     }
 }

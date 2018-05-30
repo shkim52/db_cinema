@@ -27,8 +27,8 @@ namespace DB_Project_Cinema
 
                 Conn.Open();
 
-                string sql = "SELECT COUNT(*) FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '"+Program.memID+"'";
-
+                string sql = "SELECT MOVIE_NM, RELEASE_DATE, DIRECTOR_NM FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '"+Program.memID+"'";
+                Console.WriteLine(sql);
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -36,10 +36,25 @@ namespace DB_Project_Cinema
                 {
                     dataGridView1.Visible = false;
                 }
-                while (reader.Read())
-                {
+                while(reader.Read())
+                {/*
+                    var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                    System.Net.WebClient webSource = new System.Net.WebClient();
+                    byte[] data = webSource.DownloadData(poster);
+                    System.IO.MemoryStream pipe = new System.IO.MemoryStream(data);
+                    Image jpgImage = Image.FromStream(pipe);
+                    picturebox.Image = jpgImage;
+                   */ //picturebox.Image = jpgImage. .ToBitmap();
+                    //Poster.SizeMode = PictureBoxSizeMode.StretchImage;
+                    //dataGridView1.Rows.Add(Image.FromHbitmap(jpgimage)); 
+                    string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                    
+                    string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10);
+                    string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    dataGridView1.Rows.Add(movie_nm, release, director_nm); 
 
                 }
+                
                 Conn.Close();
             }
             catch (Exception ex)
