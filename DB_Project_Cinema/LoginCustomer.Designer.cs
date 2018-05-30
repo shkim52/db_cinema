@@ -54,7 +54,7 @@
             // 
             this.CustNameTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CustNameTextbox.Location = new System.Drawing.Point(483, 26);
-            this.CustNameTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustNameTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.CustNameTextbox.Name = "CustNameTextbox";
             this.CustNameTextbox.Size = new System.Drawing.Size(238, 30);
             this.CustNameTextbox.TabIndex = 17;
@@ -63,7 +63,8 @@
             // 
             this.CustResidentTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CustResidentTextbox.Location = new System.Drawing.Point(483, 67);
-            this.CustResidentTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustResidentTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.CustResidentTextbox.MaxLength = 6;
             this.CustResidentTextbox.Name = "CustResidentTextbox";
             this.CustResidentTextbox.Size = new System.Drawing.Size(238, 30);
             this.CustResidentTextbox.TabIndex = 18;
@@ -72,7 +73,8 @@
             // 
             this.CustHPNumTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CustHPNumTextbox.Location = new System.Drawing.Point(483, 109);
-            this.CustHPNumTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustHPNumTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.CustHPNumTextbox.MaxLength = 11;
             this.CustHPNumTextbox.Name = "CustHPNumTextbox";
             this.CustHPNumTextbox.Size = new System.Drawing.Size(238, 30);
             this.CustHPNumTextbox.TabIndex = 19;
@@ -81,7 +83,7 @@
             // 
             this.CustPWTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.CustPWTextbox.Location = new System.Drawing.Point(483, 151);
-            this.CustPWTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustPWTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.CustPWTextbox.Name = "CustPWTextbox";
             this.CustPWTextbox.PasswordChar = '*';
             this.CustPWTextbox.Size = new System.Drawing.Size(238, 30);
@@ -94,12 +96,13 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LoginButton.Location = new System.Drawing.Point(762, 67);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 70);
             this.LoginButton.TabIndex = 21;
             this.LoginButton.Text = "로그인";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // label3
             // 
@@ -109,7 +112,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 33);
             this.label3.TabIndex = 22;
-            this.label3.Text = "주민등록번호:";
+            this.label3.Text = "생년월일:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
@@ -148,7 +151,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginCustomer";
             this.Size = new System.Drawing.Size(1020, 418);
             this.ResumeLayout(false);

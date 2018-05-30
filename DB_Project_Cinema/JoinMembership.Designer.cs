@@ -33,13 +33,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.NAME_INPUT = new System.Windows.Forms.TextBox();
             this.ID_INPUT = new System.Windows.Forms.TextBox();
             this.EMAIL_INPUT = new System.Windows.Forms.TextBox();
             this.SID_INPUT = new System.Windows.Forms.TextBox();
             this.TELNO_INPUT = new System.Windows.Forms.TextBox();
-            this.SEX_INPUT = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.PWD_INPUT = new System.Windows.Forms.TextBox();
@@ -87,7 +85,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 29);
             this.label5.TabIndex = 24;
-            this.label5.Text = "주민등록번호:";
+            this.label5.Text = "생년월일:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
@@ -99,16 +97,6 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "연락처:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(258, 390);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 58);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "성별:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NAME_INPUT
             // 
@@ -138,11 +126,10 @@
             // 
             this.SID_INPUT.Location = new System.Drawing.Point(375, 327);
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.SID_INPUT.MaxLength = 6;
             this.SID_INPUT.Name = "SID_INPUT";
-            this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(224, 25);
             this.SID_INPUT.TabIndex = 30;
-            this.SID_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SID_INPUT_KeyPress);
             // 
             // TELNO_INPUT
             // 
@@ -151,20 +138,6 @@
             this.TELNO_INPUT.Name = "TELNO_INPUT";
             this.TELNO_INPUT.Size = new System.Drawing.Size(224, 25);
             this.TELNO_INPUT.TabIndex = 31;
-            this.TELNO_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TELNO_INPUT_KeyPress);
-            // 
-            // SEX_INPUT
-            // 
-            this.SEX_INPUT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SEX_INPUT.FormattingEnabled = true;
-            this.SEX_INPUT.Items.AddRange(new object[] {
-            "여자",
-            "남자"});
-            this.SEX_INPUT.Location = new System.Drawing.Point(375, 397);
-            this.SEX_INPUT.Margin = new System.Windows.Forms.Padding(2);
-            this.SEX_INPUT.Name = "SEX_INPUT";
-            this.SEX_INPUT.Size = new System.Drawing.Size(223, 40);
-            this.SEX_INPUT.TabIndex = 32;
             // 
             // label8
             // 
@@ -236,7 +209,7 @@
             this.SubmitButton.FlatAppearance.BorderSize = 0;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SubmitButton.Location = new System.Drawing.Point(480, 460);
+            this.SubmitButton.Location = new System.Drawing.Point(481, 417);
             this.SubmitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(118, 42);
@@ -266,13 +239,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.NAME_INPUT);
             this.Controls.Add(this.ID_INPUT);
             this.Controls.Add(this.EMAIL_INPUT);
             this.Controls.Add(this.SID_INPUT);
             this.Controls.Add(this.TELNO_INPUT);
-            this.Controls.Add(this.SEX_INPUT);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PWD_INPUT);
@@ -294,13 +265,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox NAME_INPUT;
         private System.Windows.Forms.TextBox ID_INPUT;
         private System.Windows.Forms.TextBox EMAIL_INPUT;
         private System.Windows.Forms.TextBox SID_INPUT;
         private System.Windows.Forms.TextBox TELNO_INPUT;
-        private System.Windows.Forms.CheckedListBox SEX_INPUT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox PWD_INPUT;

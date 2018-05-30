@@ -16,5 +16,10 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
         }
+
+        private void QuitMemButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

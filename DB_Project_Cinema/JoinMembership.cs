@@ -73,16 +73,16 @@ namespace DB_Project_Cinema
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            
+
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             OracleConnection Conn = new OracleConnection(str);
 
             try
             {
 
-                
+
                 OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn; 
+                Cmd.Connection = Conn;
                 Conn.Open();
 
                 if (PWD_INPUT.Text == "" && PWD2_INPUT.Text == "" && PWD2_INPUT != PWD_INPUT)
@@ -95,7 +95,7 @@ namespace DB_Project_Cinema
                 }
                 else if (SID_INPUT.Text.Length != 13)
                 {
-                    MessageBox.Show("주민등록번호 -를 제외한 13자리를 입력해주세요");
+                    MessageBox.Show("생년월일 6자리를 입력해주세요.");
                 }
                 else if (NAME_INPUT.Text == "" && ID_INPUT.Text == "" && idcheck && TELNO_INPUT.Text == "")
                 {
@@ -103,7 +103,7 @@ namespace DB_Project_Cinema
                 }
                 else
                 {
-                    string sql = "INSERT INTO MEM (MEM_ID, MEM_PW, MEM_NM, MEM_SID_NO, MEM_EMAIL, MEM_TELNO) VALUES('"+ ID_INPUT.Text + "','" + PWD_INPUT.Text + "','" + NAME_INPUT.Text + "','" + SID_INPUT.Text + "','" + EMAIL_INPUT.Text + "','" + TELNO_INPUT.Text + "')";
+                    string sql = "INSERT INTO MEM (MEM_ID, MEM_PW, MEM_NM, MEM_SID_NO, MEM_EMAIL, MEM_TELNO) VALUES('" + ID_INPUT.Text + "','" + PWD_INPUT.Text + "','" + NAME_INPUT.Text + "','" + SID_INPUT.Text + "','" + EMAIL_INPUT.Text + "','" + TELNO_INPUT.Text + "')";
                     Cmd.CommandText = sql;
                     Cmd.ExecuteNonQuery();
                     MessageBox.Show("회원가입에 성공하셨습니다");
@@ -119,25 +119,7 @@ namespace DB_Project_Cinema
             {
                 Conn.Close();
             }
-            
-        }
 
-        private void SID_INPUT_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar))) 
-            {
-                e.Handled = true;
-                MessageBox.Show("숫자만 입력해주세요!");
-            }
-        }
-
-        private void TELNO_INPUT_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar))) 
-            {
-                e.Handled = true;
-                MessageBox.Show("숫자만 입력해주세요!");
-            }
         }
     }
 }

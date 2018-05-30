@@ -33,13 +33,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.NAME = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.EMAIL = new System.Windows.Forms.TextBox();
             this.SID = new System.Windows.Forms.TextBox();
             this.TELNO = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.ChangeInfoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -81,7 +79,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 29);
             this.label5.TabIndex = 18;
-            this.label5.Text = "주민등록번호:";
+            this.label5.Text = "생년월일:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
@@ -93,16 +91,6 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "연락처:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(168, 369);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 58);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "성별:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // NAME
             // 
@@ -149,27 +137,13 @@
             this.TELNO.Size = new System.Drawing.Size(252, 25);
             this.TELNO.TabIndex = 25;
             // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.Enabled = false;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "여자",
-            "남자"});
-            this.checkedListBox1.Location = new System.Drawing.Point(318, 380);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(251, 40);
-            this.checkedListBox1.TabIndex = 26;
-            // 
             // ChangeInfoButton
             // 
             this.ChangeInfoButton.BackColor = System.Drawing.Color.LightGray;
             this.ChangeInfoButton.FlatAppearance.BorderSize = 0;
             this.ChangeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ChangeInfoButton.Location = new System.Drawing.Point(318, 462);
+            this.ChangeInfoButton.Location = new System.Drawing.Point(318, 390);
             this.ChangeInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.ChangeInfoButton.Name = "ChangeInfoButton";
             this.ChangeInfoButton.Size = new System.Drawing.Size(131, 41);
@@ -199,13 +173,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.NAME);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.SID);
             this.Controls.Add(this.TELNO);
-            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.ChangeInfoButton);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -223,13 +195,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox NAME;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.TextBox EMAIL;
         private System.Windows.Forms.TextBox SID;
         private System.Windows.Forms.TextBox TELNO;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button ChangeInfoButton;
         private System.Windows.Forms.Label label1;
 
