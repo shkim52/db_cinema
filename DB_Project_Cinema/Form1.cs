@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
+using System.Data.SqlClient;
+
 namespace DB_Project_Cinema
 {
     public partial class CinemaProgram : Form
@@ -15,7 +19,7 @@ namespace DB_Project_Cinema
         public CinemaProgram()
         {
             InitializeComponent();
-
+            
             if (!mainPanel.Controls.Contains(MoviePage.Instance))
             {
                 mainPanel.Controls.Add(MoviePage.Instance);

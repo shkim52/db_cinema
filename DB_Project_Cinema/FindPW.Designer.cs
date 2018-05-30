@@ -54,7 +54,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 33);
             this.label2.TabIndex = 6;
-            this.label2.Text = "주민등록번호:";
+            this.label2.Text = "생년월일:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ID_INPUT
@@ -73,10 +73,8 @@
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
-            this.SID_INPUT.PasswordChar = '*';
             this.SID_INPUT.Size = new System.Drawing.Size(204, 30);
             this.SID_INPUT.TabIndex = 8;
-            this.SID_INPUT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SID_INPUT_KeyPress);
             // 
             // FindPWButton
             // 
