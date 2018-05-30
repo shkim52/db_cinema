@@ -39,7 +39,7 @@ namespace DB_Project_Cinema
 
                 if (SID_INPUT.Text.Length != 6)
                 {
-                    MessageBox.Show("생년월일의 입력이 잘못되었습니다!!!");
+                    MessageBox.Show("생년월ㅎ일의 입력이 잘못되었습니다!!!");
                 }
 
                 else if (!reader.HasRows)
