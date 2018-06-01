@@ -33,6 +33,7 @@
             this.ID_INPUT = new System.Windows.Forms.TextBox();
             this.SID_INPUT = new System.Windows.Forms.TextBox();
             this.FindPWButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +74,7 @@
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
-            this.SID_INPUT.Size = new System.Drawing.Size(204, 30);
+            this.SID_INPUT.Size = new System.Drawing.Size(90, 30);
             this.SID_INPUT.TabIndex = 8;
             // 
             // FindPWButton
@@ -91,11 +92,22 @@
             this.FindPWButton.UseVisualStyleBackColor = false;
             this.FindPWButton.Click += new System.EventHandler(this.FindPWButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(613, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 19);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "-   *******";
+            // 
             // FindPW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ID_INPUT);
@@ -116,6 +128,7 @@
         private System.Windows.Forms.TextBox ID_INPUT;
         private System.Windows.Forms.TextBox SID_INPUT;
         private System.Windows.Forms.Button FindPWButton;
+        private System.Windows.Forms.Label label3;
 
     }
 }
