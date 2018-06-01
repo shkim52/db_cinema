@@ -56,7 +56,7 @@ namespace DB_Project_Cinema
                 {
                     this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     this.Genre.Text = reader.GetString(reader.GetOrdinal("GENRE"));
-                    //this.ReleaseDate.Text = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
+                    this.ReleaseDate.Text= reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10);
                     this.ShowTime.Text = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
                     this.Rating.Text = reader.GetString(reader.GetOrdinal("RATING"));
                     this.DirectorNM.Text = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
