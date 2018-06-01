@@ -35,7 +35,7 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
 
-                    this.TOT_SEAT_CNT.Text = reader.GetString(reader.GetOrdinal("SCR_SEAT_CNT"));
+                    this.TOT_SEAT_CNT.Text = reader.GetDecimal(reader.GetOrdinal("SCR_SEAT_CNT")).ToString();
 
                 }
                 Conn.Close();
