@@ -31,7 +31,7 @@ namespace DB_Project_Cinema
                 Cmd.Connection = Conn;
                 Conn.Open();
 
-                string input_sql = "UPDATE MEM SET QUIT_STAT = 'N'";
+                string input_sql = "UPDATE MEM SET QUIT_STAT = 'Y'";
                 Cmd.CommandText = input_sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("탈퇴가 완료되었습니다.");

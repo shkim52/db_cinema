@@ -48,8 +48,7 @@ namespace DB_Project_Cinema
                 }
                 while (reader.Read())
                 {
-                    /*회원정보없을경우 확인 메시지 방법 찾기*/
-                    MessageBox.Show("회원님의 비밀번호는 " + reader.GetString(reader.GetOrdinal("MEM_PW")) + "  입니다!");
+                     MessageBox.Show("회원님의 비밀번호는 " + reader.GetString(reader.GetOrdinal("MEM_PW")) + "  입니다!");
                 }    
                 Conn.Close();
             }
