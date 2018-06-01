@@ -39,6 +39,7 @@ namespace DB_Project_Cinema
             {
 
                 Conn.Open();
+
                 string sql1 = "SELECT * FROM MOVIE WHERE MOVIE_NO=1 ";
                 OracleCommand Comm1 = new OracleCommand(sql1, Conn);
 
@@ -110,18 +111,33 @@ namespace DB_Project_Cinema
             ReviewButton.Visible = false;
         }
 
-        
-
-        private void SearchButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void Movie1DetailButton_Click_2(object sender, EventArgs e)
         {
-            MovieDetail.BringToFront();
+            Controls.Add(MovieDetail1.Instance);
+            MovieDetail1.Instance.setMovie_no(1);
+            MovieDetail1.Instance.MovieDetail_test();
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
+
+            Movie1DetailButton.Visible = false;
+            Movie2DetailButton.Visible = false;
+            Movie3DetailButton.Visible = false;
+            Movie4DetailButton.Visible = false;
+            Movie5DetailButton.Visible = false;
+
+            BackToHomeButton.Visible = true;
+            ReviewButton.Visible = true;               
+        }
+
+        private void Movie2DetailButton_Click_1(object sender, EventArgs e)
+        {
+            Controls.Add(MovieDetail1.Instance);
+            MovieDetail1.Instance.setMovie_no(2);
+            MovieDetail1.Instance.MovieDetail_test();
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -133,63 +149,13 @@ namespace DB_Project_Cinema
             ReviewButton.Visible = true;
         }
 
-        private void Movie2DetailButton_Click_1(object sender, EventArgs e)
-        {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
-            try
-            {
-
-                Conn.Open();
-                string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NO=2 ";
-                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
-
-                OracleDataReader reader2 = Comm2.ExecuteReader();
-
-                while (reader2.Read())
-                {
-                    this.Movie2DetailButton.Text = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
-                    //Program.Movie_NM = reader2.GetString(reader2.GetOrdinal("MOVIE_NM"));
-
-                }
-
-
-                Controls.Add(MovieDetail1.Instance);
-                MovieDetail1.Instance.setMovie_no(Convert.ToInt32(this.Movie2DetailButton.Text));
-                MovieDetail1.Instance.MovieDetail_test();
-                MovieDetail1.Instance.Dock = DockStyle.Fill;
-                MovieDetail1.Instance.BringToFront();
-               
-
-                Movie1DetailButton.Visible = false;
-                Movie2DetailButton.Visible = false;
-                Movie3DetailButton.Visible = false;
-                Movie4DetailButton.Visible = false;
-                Movie5DetailButton.Visible = false;
-
-                BackToHomeButton.Visible = true;
-                ReviewButton.Visible = true;
-                //MovieDetail moviedetail = new MovieDetail(Movie2DetailButton.Text);
-               // moviedetail.Show();
-                Conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-
-            }
-            finally
-            {
-                Conn.Close();
-            }
-        }
-
         private void Movie3DetailButton_Click_1(object sender, EventArgs e)
         {
-            MovieDetail.BringToFront();
+            Controls.Add(MovieDetail1.Instance);
+            MovieDetail1.Instance.setMovie_no(3);
+            MovieDetail1.Instance.MovieDetail_test();
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -203,7 +169,11 @@ namespace DB_Project_Cinema
 
         private void Movie4DetailButton_Click_1(object sender, EventArgs e)
         {
-            MovieDetail.BringToFront();
+            Controls.Add(MovieDetail1.Instance);
+            MovieDetail1.Instance.setMovie_no(4);
+            MovieDetail1.Instance.MovieDetail_test();
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
@@ -219,7 +189,11 @@ namespace DB_Project_Cinema
 
         private void Movie5DetailButton_Click_1(object sender, EventArgs e)
         {
-            MovieDetail.BringToFront();
+            Controls.Add(MovieDetail1.Instance);
+            MovieDetail1.Instance.setMovie_no(5);
+            MovieDetail1.Instance.MovieDetail_test();
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
 
             Movie1DetailButton.Visible = false;
             Movie2DetailButton.Visible = false;
