@@ -12,8 +12,21 @@ namespace DB_Project_Cinema
 {
     public partial class LoginPage : UserControl
     {
+        private static LoginPage _instance;
+        public static LoginPage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new LoginPage();
+                }
+                return _instance;
+            }
+        }
         public LoginPage()
         {
+            
             InitializeComponent();
 
             MemLoginButton.FlatAppearance.BorderColor = Color.Red;

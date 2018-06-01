@@ -14,6 +14,18 @@ namespace DB_Project_Cinema
 {
     public partial class ScreenInfo : UserControl
     {
+        private static ScreenInfo _instance;
+        public static ScreenInfo Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ScreenInfo();
+                }
+                return _instance;
+            }
+        }
         public ScreenInfo()
         {
             InitializeComponent();
