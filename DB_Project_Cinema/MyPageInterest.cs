@@ -17,17 +17,22 @@ namespace DB_Project_Cinema
         public MyPageInterest()
         {
             InitializeComponent();
-            
-            
+        }
+
+        private void MyPageInterest_Load(object sender, EventArgs e)
+        {
+
+
+
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             OracleConnection Conn = new OracleConnection(str);
-            
+
             try
             {
 
                 Conn.Open();
 
-                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '"+Program.memID+"'";
+                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '" + Program.memID + "'";
                 Console.WriteLine(sql);
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
@@ -36,21 +41,21 @@ namespace DB_Project_Cinema
                 {
                     dataGridView1.Visible = false;
                 }
-                while(reader.Read())
+                while (reader.Read())
                 {
                     var poster = reader.GetString(reader.GetOrdinal("POSTER"));
                     System.Net.WebClient webSource = new System.Net.WebClient();
                     byte[] data = webSource.DownloadData(poster);
                     System.IO.MemoryStream pipe = new System.IO.MemoryStream(data);
                     Image jpgImage = Image.FromStream(pipe);
-                    
+
                     string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                    string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10)+" 개봉";
+                    string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10) + " 개봉";
                     //string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
-                    dataGridView1.Rows.Add(jpgImage, movie_nm, release); 
+                    dataGridView1.Rows.Add(jpgImage, movie_nm, release);
 
                 }
-                
+
                 Conn.Close();
             }
             catch (Exception ex)
