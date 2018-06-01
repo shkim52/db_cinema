@@ -26,7 +26,7 @@ namespace DB_Project_Cinema
             {
             
                 Conn.Open();
-                string sql = "SELECT * FROM SCREEN";
+                string sql = "SELECT * FROM SCREEN WHERE SCR_NO=1";
                 OracleCommand Comm = new OracleCommand(sql,Conn);
 
                

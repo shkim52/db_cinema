@@ -116,7 +116,7 @@ namespace DB_Project_Cinema
         private void Movie1DetailButton_Click_2(object sender, EventArgs e)
         {
             Controls.Add(MovieDetail1.Instance);
-            MovieDetail1.Instance.setMovie_no(1);
+            MovieDetail1.Instance.setMovie_nm(Movie1DetailButton.Text);
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.Fill;
             MovieDetail1.Instance.BringToFront();
@@ -134,7 +134,7 @@ namespace DB_Project_Cinema
         private void Movie2DetailButton_Click_1(object sender, EventArgs e)
         {
             Controls.Add(MovieDetail1.Instance);
-            MovieDetail1.Instance.setMovie_no(2);
+            MovieDetail1.Instance.setMovie_nm(Movie2DetailButton.Text);
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.Fill;
             MovieDetail1.Instance.BringToFront();
@@ -152,7 +152,7 @@ namespace DB_Project_Cinema
         private void Movie3DetailButton_Click_1(object sender, EventArgs e)
         {
             Controls.Add(MovieDetail1.Instance);
-            MovieDetail1.Instance.setMovie_no(3);
+            MovieDetail1.Instance.setMovie_nm(Movie3DetailButton.Text);
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.Fill;
             MovieDetail1.Instance.BringToFront();
@@ -170,7 +170,7 @@ namespace DB_Project_Cinema
         private void Movie4DetailButton_Click_1(object sender, EventArgs e)
         {
             Controls.Add(MovieDetail1.Instance);
-            MovieDetail1.Instance.setMovie_no(4);
+            MovieDetail1.Instance.setMovie_nm(Movie4DetailButton.Text);
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.Fill;
             MovieDetail1.Instance.BringToFront();
@@ -184,13 +184,12 @@ namespace DB_Project_Cinema
             BackToHomeButton.Visible = true;
             ReviewButton.Visible = true;
 
-
         }
 
         private void Movie5DetailButton_Click_1(object sender, EventArgs e)
         {
             Controls.Add(MovieDetail1.Instance);
-            MovieDetail1.Instance.setMovie_no(5);
+            MovieDetail1.Instance.setMovie_nm(Movie5DetailButton.Text);
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.Fill;
             MovieDetail1.Instance.BringToFront();
@@ -235,12 +234,10 @@ namespace DB_Project_Cinema
 
         private void SearchButton_Click_1(object sender, EventArgs e)
         {
-
             if (SearchText.Text == "")
                 MessageBox.Show("검색어를 입력하세요!");
             else
             {
-
                 string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
                 OracleConnection Conn = new OracleConnection(str);
                 /**OracleCommand Comm;
@@ -248,9 +245,7 @@ namespace DB_Project_Cinema
                 Comm.Connection = Conn;*/
                 try
                 {
-
                     Conn.Open();
-
 
                     if (MovieCategory.SelectedItem.ToString() == "영화명")
                     {
@@ -273,7 +268,6 @@ namespace DB_Project_Cinema
 
                             while (reader2.Read())
                             {
-                                //Program.MovieNM = SearchText.Text;
 
                             }
 
@@ -282,11 +276,6 @@ namespace DB_Project_Cinema
                         {
                             MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
                         }
-                        /* while (reader2.Read())
-                         {
-                             Program.MovieNM = SearchText.Text;
-                         }
-                         */
                     }
                     else if (MovieCategory.SelectedItem.ToString() == "감독명")
                     {
@@ -309,20 +298,13 @@ namespace DB_Project_Cinema
 
                             while (reader2.Read())
                             {
-                                //Program.MovieNM = SearchText.Text;
 
                             }
-
                         }
                         else if (!reader2.HasRows)
                         {
                             MessageBox.Show("해당 감독명과 일치하는 영화가 없습니다!");
                         }
-                        /* while (reader2.Read())
-                         {
-                             Program.MovieNM = SearchText.Text;
-                         }
-                         */
                     }
                     else if (MovieCategory.SelectedItem.ToString() == "장르명")
                     {
@@ -345,7 +327,6 @@ namespace DB_Project_Cinema
 
                             while (reader2.Read())
                             {
-                                //Program.MovieNM = SearchText.Text;
 
                             }
 
@@ -354,11 +335,7 @@ namespace DB_Project_Cinema
                         {
                             MessageBox.Show("해당 장르명과 일치하는 영화가 없습니다!");
                         }
-                        /* while (reader2.Read())
-                         {
-                             Program.MovieNM = SearchText.Text;
-                         }
-                         */
+
                     }
                     Conn.Close();
                 }
@@ -372,11 +349,6 @@ namespace DB_Project_Cinema
                 }
             }
 
-
-
-
         }
-
-
     }
 }

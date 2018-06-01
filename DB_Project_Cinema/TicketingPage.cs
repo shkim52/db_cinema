@@ -12,6 +12,18 @@ namespace DB_Project_Cinema
 {
     public partial class TicketingPage : UserControl
     {
+        private static TicketingPage _instance;
+        public static TicketingPage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new TicketingPage();
+                }
+                return _instance;
+            }
+        }
         public TicketingPage()
         {
             InitializeComponent();
@@ -24,10 +36,6 @@ namespace DB_Project_Cinema
 
 
         }
-
-        
-
-     
 
         private void BackToSelcetTimeButton_Click_1(object sender, EventArgs e)
         {

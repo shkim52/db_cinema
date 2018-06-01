@@ -228,7 +228,6 @@
             this.Distributor.TabIndex = 15;
             this.Distributor.Text = "label1";
             this.Distributor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Distributor.Click += new System.EventHandler(this.label14_Click);
             // 
             // MovieIntro
             // 

@@ -46,7 +46,16 @@ namespace DB_Project_Cinema
 
         private void MoviePageButton_Click(object sender, EventArgs e)
         {
-            
+            if (!mainPanel.Controls.Contains(MoviePage.Instance))
+            {
+                mainPanel.Controls.Add(MoviePage.Instance);
+                MoviePage.Instance.Dock = DockStyle.Fill;
+                MoviePage.Instance.BringToFront();
+            }
+            else
+            {
+                MoviePage.Instance.BringToFront();
+            }
 
             MoviePageButton.BackColor = Color.DimGray;
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -62,7 +71,16 @@ namespace DB_Project_Cinema
 
         private void TicketingPageButton_Click(object sender, EventArgs e)
         {
-            
+            if (!mainPanel.Controls.Contains(TicketingPage.Instance))
+            {
+                mainPanel.Controls.Add(TicketingPage.Instance);
+                TicketingPage.Instance.Dock = DockStyle.Fill;
+                TicketingPage.Instance.BringToFront();
+            }
+            else
+            {
+                TicketingPage.Instance.BringToFront();
+            }
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = Color.DimGray;
