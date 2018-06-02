@@ -42,7 +42,7 @@ namespace DB_Project_Cinema
                 else if (e.ColumnIndex == 4)
                 {
                     delete_interest(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
-                    dataGridView1.Refresh();
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
                     //load_datagridview();
                 }
             }
@@ -62,6 +62,7 @@ namespace DB_Project_Cinema
                     dataGridView1.Visible = false;
                     label2.Text = "현재 관심리스트에 내용이 존재하지 않습니다.";
                 }
+                int i = 0;
                 while (reader.Read())
                 {
                     
