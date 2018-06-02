@@ -31,6 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tbBackward = new System.Windows.Forms.ToolStripButton();
+            this.Forward = new System.Windows.Forms.ToolStripButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -50,6 +54,7 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -81,6 +86,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.toolStrip1);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -88,6 +94,47 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1539, 87);
             this.panel2.TabIndex = 1;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tbRefresh,
+            this.tbBackward,
+            this.Forward});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1539, 27);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tbRefresh
+            // 
+            this.tbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbRefresh.Image = global::DB_Project_Cinema.Properties.Resources.refresh;
+            this.tbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbRefresh.Name = "tbRefresh";
+            this.tbRefresh.Size = new System.Drawing.Size(24, 24);
+            this.tbRefresh.Text = "toolStripButton1";
+            // 
+            // tbBackward
+            // 
+            this.tbBackward.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbBackward.Image = global::DB_Project_Cinema.Properties.Resources.e_back;
+            this.tbBackward.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbBackward.Name = "tbBackward";
+            this.tbBackward.Size = new System.Drawing.Size(24, 24);
+            this.tbBackward.Text = "toolStripButton1";
+            // 
+            // Forward
+            // 
+            this.Forward.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Forward.Image = global::DB_Project_Cinema.Properties.Resources.e_forward;
+            this.Forward.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Forward.Name = "Forward";
+            this.Forward.Size = new System.Drawing.Size(24, 24);
+            this.Forward.Text = "toolStripButton1";
             // 
             // panel7
             // 
@@ -339,6 +386,9 @@
             this.Text = "SEOUL CINEMA";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -368,6 +418,10 @@
         private System.Windows.Forms.Button FindIDandPWButton;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tbRefresh;
+        private System.Windows.Forms.ToolStripButton tbBackward;
+        private System.Windows.Forms.ToolStripButton Forward;
     }
 }
 
