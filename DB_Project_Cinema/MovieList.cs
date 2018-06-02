@@ -14,6 +14,9 @@ namespace DB_Project_Cinema
 {
     public partial class MovieList : UserControl
     {
+        Button[] btn = new Button[5];
+        PictureBox[] pic = new PictureBox[5];
+
         public MovieList()
         {
             InitializeComponent();
@@ -23,93 +26,67 @@ namespace DB_Project_Cinema
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
-            try
+
+
+            for (int i = 0; i < pic.Length; i++)
             {
+                pic[i] = new PictureBox();
+                pic[i].Name = "Poster" + (i + 1).ToString();
+                pic[i].Size = new Size(130, 200);
+                pic[i].Location = new Point(90 + 180 * i, 70);
 
-                Conn.Open();
-                string sql1 = "SELECT * FROM MOVIE WHERE MOVIE_NO=1 ";
-                OracleCommand Comm1 = new OracleCommand(sql1, Conn);
-
-                OracleDataReader reader1 = Comm1.ExecuteReader();
-
-                while (reader1.Read())
+                btn[i] = new Button();
+                btn[i].Name = "MovieDetail" + (i + 1).ToString();
+                btn[i].Size = new Size(130, 25);
+                btn[i].Location = new Point(90 + 180 * i, 300);
+                btn[i].Click += Form1_Click;
+                try
                 {
-                    
+                    Conn.Open();
 
-                    var poster = reader1.GetString(reader1.GetOrdinal("POSTER"));
+                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO=" + (i + 1);
+                    OracleCommand Comm = new OracleCommand(sql, Conn);
 
-                    Poster1.SizeMode = PictureBoxSizeMode.StretchImage;
-                    Poster1.ImageLocation = poster;
+                    OracleDataReader reader = Comm.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+
+                        pic[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                        pic[i].ImageLocation = poster;
+
+                        btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+
+                    }
+                    Controls.Add(pic[i]);
+                    Controls.Add(btn[i]);
+
+
+                    Conn.Close();
                 }
-
-                string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NO=2 ";
-                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
-
-                OracleDataReader reader2 = Comm2.ExecuteReader();
-
-                while (reader2.Read())
+                catch (Exception ex)
                 {
-                    
-                    var poster = reader2.GetString(reader2.GetOrdinal("POSTER"));
+                    Console.WriteLine(ex.ToString());
 
-                    Poster2.SizeMode = PictureBoxSizeMode.StretchImage;
-                    Poster2.ImageLocation = poster;
                 }
-
-                string sql3 = "SELECT * FROM MOVIE WHERE MOVIE_NO=3 ";
-                OracleCommand Comm3 = new OracleCommand(sql3, Conn);
-
-                OracleDataReader reader3 = Comm3.ExecuteReader();
-
-                while (reader3.Read())
+                finally
                 {
-                    
-                    var poster = reader3.GetString(reader3.GetOrdinal("POSTER"));
-
-                    Poster3.SizeMode = PictureBoxSizeMode.StretchImage;
-                    Poster3.ImageLocation = poster;
+                    Conn.Close();
                 }
-
-                string sql4 = "SELECT * FROM MOVIE WHERE MOVIE_NO=4 ";
-                OracleCommand Comm4 = new OracleCommand(sql4, Conn);
-
-                OracleDataReader reader4 = Comm4.ExecuteReader();
-
-                while (reader4.Read())
-                {
-                    
-                    var poster = reader4.GetString(reader4.GetOrdinal("POSTER"));
-
-                    Poster4.SizeMode = PictureBoxSizeMode.StretchImage;
-                    Poster4.ImageLocation = poster;
-                }
-
-                string sql5 = "SELECT * FROM MOVIE WHERE MOVIE_NO=5 ";
-                OracleCommand Comm5 = new OracleCommand(sql5, Conn);
-
-                OracleDataReader reader5 = Comm5.ExecuteReader();
-
-                while (reader5.Read())
-                {
-                   
-                    var poster = reader5.GetString(reader5.GetOrdinal("POSTER"));
-
-                    Poster5.SizeMode = PictureBoxSizeMode.StretchImage;
-                    Poster5.ImageLocation = poster;
-                }
-
-
-                Conn.Close();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
+        }
 
-            }
-            finally
-            {
-                Conn.Close();
-            }
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+
+            Controls.Add(MovieDetail1.Instance);
+            MovieDetail1.Instance.setMovie_nm(btn.Text);
+            MovieDetail1.Instance.MovieDetail_test();
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
         }
     }
 }
+
