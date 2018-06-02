@@ -16,20 +16,40 @@ namespace DB_Project_Cinema
     {
         public MyPageInterest()
         {
+
             InitializeComponent();
         }
 
         private void MyPageInterest_Load(object sender, EventArgs e)
         {
+            load_datagridview();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            { 
+                if (e.ColumnIndex == 3)
+                {
+
+                }
+                else if (e.ColumnIndex == 4)
+                {
 
 
-
+                    load_datagridview();
+                }
+            }
+        }
+        private void load_datagridview()
+        {
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             OracleConnection Conn = new OracleConnection(str);
-
+                
             try
             {
-
                 Conn.Open();
 
                 string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '" + Program.memID + "'";
@@ -55,7 +75,6 @@ namespace DB_Project_Cinema
                     dataGridView1.Rows.Add(jpgImage, movie_nm, release);
 
                 }
-
                 Conn.Close();
             }
             catch (Exception ex)
@@ -67,15 +86,32 @@ namespace DB_Project_Cinema
                 Conn.Close();
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void delete_interest()
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0 && e.ColumnIndex == 4)
+            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+            OracleConnection Conn = new OracleConnection(str);
+                
+            try
             {
-                MessageBox.Show("오오옹");
+                Conn.Open();
+                OracleCommand Cmd = new OracleCommand();
+                Cmd.Connection = Conn;
+                Conn.Open();
+
+                string input_sql = "DELETE FROM INTEREST_LIST WHERE MEM_ID = '"+Program.memID+"' AND ";
+                Cmd.CommandText = input_sql;
+                Cmd.ExecuteNonQuery();
+                MessageBox.Show("삭제완료");
+
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
             }
         }
     }
