@@ -242,6 +242,7 @@
             this.InterestRegisterButton.TabIndex = 17;
             this.InterestRegisterButton.Text = "관심리스트 등록";
             this.InterestRegisterButton.UseVisualStyleBackColor = false;
+            this.InterestRegisterButton.Click += new System.EventHandler(this.InterestRegisterButton_Click);
             // 
             // label16
             // 

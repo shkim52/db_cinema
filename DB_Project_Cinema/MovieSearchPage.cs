@@ -14,20 +14,41 @@ namespace DB_Project_Cinema
 {
     public partial class MovieSearchPage : UserControl
     {
+        private static MovieSearchPage _instance;
+        private string movie_nm;
+        public OracleConnection Conn;
+        public static MovieSearchPage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MovieSearchPage();
+                }
+                return _instance;
+            }
+        }
+        public void setMovie_nm(string s)
+        {
+            movie_nm = s;
+        }
         public MovieSearchPage()
         {
             InitializeComponent();
 
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
+            Conn = new OracleConnection(str);
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
+        }
+
+        public void MovieDetail_test()
+        {
             try
             {
-
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = 3";
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '"+movie_nm+"'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
@@ -37,22 +58,18 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    string a = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                    //this.Genre.Text = reader.GetString(reader.GetOrdinal("GENRE"));
-                    //this.ReleaseDate.Text = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
-                    //this.ShowTime.Text = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                    string c = reader.GetString(reader.GetOrdinal("RATING"));
-                    string b = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
-                    // this.ActorNM.Text = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
-                    //this.Country.Text = reader.GetString(reader.GetOrdinal("COUNTRY"));
-                    //this.Distributor.Text = reader.GetString(reader.GetOrdinal("DISTRIBUTOR"));
-                    //this.MovieIntro.Text = reader.GetString(reader.GetOrdinal("MOVIE_INTRO"));
-                    //var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                    
+                    string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                    string genre = reader.GetString(reader.GetOrdinal("GENRE"));
+                    string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
+                    string rating = reader.GetString(reader.GetOrdinal("RATING"));
+                    string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
+                    string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
+                    string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
 
-                    //Poster.SizeMode = PictureBoxSizeMode.StretchImage;
-                    //Poster.ImageLocation = poster;
 
-                    string[] row0 = { a,b,c };
+                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
 
                     dataGridView1.Rows.Add(row0);
                 }
@@ -60,7 +77,6 @@ namespace DB_Project_Cinema
 
 
                 Conn.Close();
-
 
             }
             catch (Exception ex)

@@ -93,5 +93,55 @@ namespace DB_Project_Cinema
             ReviewPage.Instance.BringToFront();
             
         }
+
+        private void InterestRegisterButton_Click(object sender, EventArgs e)
+        {
+            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+            OracleConnection Conn = new OracleConnection(str);
+            if (Program.memID == "")
+            {
+                MessageBox.Show("로그인을 하세요!");
+            }
+            else
+            {
+                try
+                {
+                    OracleCommand Cmd = new OracleCommand();
+                    Cmd.Connection = Conn;
+                    Conn.Open();
+                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
+
+                    OracleCommand Comm = new OracleCommand(sql, Conn);
+                    OracleDataReader reader = Comm.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                        decimal movie_no = reader.GetDecimal(reader.GetOrdinal("MOVIE_NO"));
+
+                        string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + Program.memID + "',"+movie_no+")";
+
+                        Cmd.CommandText = sql2;
+                        Cmd.ExecuteNonQuery();
+                        MessageBox.Show("관심리스트에 등록되었습니다!");
+
+
+                    }
+
+
+
+
+                    Conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                finally
+                {
+                    Conn.Close();
+                }
+            }
+        }
     }
 }

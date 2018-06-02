@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.MovieNM = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.MovieScore = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Review = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,21 +47,21 @@
             this.MovieNM.Text = "영화제목";
             this.MovieNM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listBox1
+            // MovieScore
             // 
-            this.listBox1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Items.AddRange(new object[] {
+            this.MovieScore.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieScore.FormattingEnabled = true;
+            this.MovieScore.ItemHeight = 25;
+            this.MovieScore.Items.AddRange(new object[] {
             "5",
             "4",
             "3",
             "2",
             "1"});
-            this.listBox1.Location = new System.Drawing.Point(306, 91);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(94, 29);
-            this.listBox1.TabIndex = 9;
+            this.MovieScore.Location = new System.Drawing.Point(306, 91);
+            this.MovieScore.Name = "MovieScore";
+            this.MovieScore.Size = new System.Drawing.Size(94, 29);
+            this.MovieScore.TabIndex = 9;
             // 
             // label2
             // 
@@ -113,19 +113,19 @@
             this.label3.Text = "평점";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // RevieiwPage
+            // ReviewPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.MovieNM);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.MovieScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Review);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ReviewRegisterButton);
             this.Controls.Add(this.label3);
-            this.Name = "RevieiwPage";
+            this.Name = "ReviewPage";
             this.Size = new System.Drawing.Size(1536, 536);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +135,7 @@
         #endregion
 
         private System.Windows.Forms.Label MovieNM;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox MovieScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Review;
         private System.Windows.Forms.Label label4;

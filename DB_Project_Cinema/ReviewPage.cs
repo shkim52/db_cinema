@@ -98,7 +98,7 @@ namespace DB_Project_Cinema
                         this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                         decimal movie_no = reader.GetDecimal(reader.GetOrdinal("MOVIE_NO"));
 
-                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + Program.memID + "'," + movie_no + ",3,'" + Review.Text + "')";
+                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + Program.memID + "'," + movie_no + MovieScore.SelectedItem + Review.Text + "')";
 
                         Cmd.CommandText = sql2;
                         Cmd.ExecuteNonQuery();
