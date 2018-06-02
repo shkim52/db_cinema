@@ -33,7 +33,7 @@ namespace DB_Project_Cinema
                 pic[i] = new PictureBox();
                 pic[i].Name = "Poster" + (i + 1).ToString();
                 pic[i].Size = new Size(130, 185);
-                pic[i].Location = new Point(90 + 180 * i,30);
+                pic[i].Location = new Point(90 + 180 * i, 30);
 
                 btn[i] = new Button();
                 btn[i].Name = "MovieDetail" + (i + 1).ToString();
@@ -76,6 +76,7 @@ namespace DB_Project_Cinema
                 }
             }
         }
+        
 
         private void Form1_Click(object sender, EventArgs e)
         {
