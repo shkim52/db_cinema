@@ -38,10 +38,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(294, 94);
+            this.label1.Location = new System.Drawing.Point(235, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 57);
+            this.label1.Size = new System.Drawing.Size(136, 47);
             this.label1.TabIndex = 5;
             this.label1.Text = "MyPage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,10 +49,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(234, 295);
+            this.label2.Location = new System.Drawing.Point(187, 246);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 38);
+            this.label2.Size = new System.Drawing.Size(136, 32);
             this.label2.TabIndex = 6;
             this.label2.Text = "적립포인트:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -61,20 +61,20 @@
             // 
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.IndianRed;
-            this.label3.Location = new System.Drawing.Point(272, 362);
+            this.label3.Location = new System.Drawing.Point(218, 302);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(554, 38);
+            this.label3.Size = new System.Drawing.Size(443, 32);
             this.label3.TabIndex = 7;
             this.label3.Text = "* 적립포인트는 1000Point 이상부터 사용할 수 있습니다.";
             // 
             // point
             // 
             this.point.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.point.Location = new System.Drawing.Point(408, 295);
+            this.point.Location = new System.Drawing.Point(326, 246);
             this.point.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.point.Name = "point";
-            this.point.Size = new System.Drawing.Size(56, 38);
+            this.point.Size = new System.Drawing.Size(45, 32);
             this.point.TabIndex = 8;
             this.point.Text = "0";
             this.point.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,17 +82,17 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(468, 295);
+            this.label5.Location = new System.Drawing.Point(374, 246);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 38);
+            this.label5.Size = new System.Drawing.Size(54, 32);
             this.label5.TabIndex = 9;
             this.label5.Text = "Point";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // MyPageMyPoint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
@@ -102,7 +102,8 @@
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageMyPoint";
-            this.Size = new System.Drawing.Size(1076, 592);
+            this.Size = new System.Drawing.Size(861, 493);
+            this.Load += new System.EventHandler(this.MyPageMyPoint_Load);
             this.ResumeLayout(false);
 
         }

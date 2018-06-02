@@ -14,18 +14,7 @@ namespace DB_Project_Cinema
 {
     public partial class LoginMember : UserControl
     {
-        private static LoginMember _instance;
-        public static LoginMember Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new LoginMember();
-                }
-                return _instance;
-            }
-        }
+        
         public LoginMember()
         {
             InitializeComponent();
@@ -55,10 +44,18 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    Program.memID = ID_INPUT.Text;
-                    MessageBox.Show(ID_INPUT.Text+ "님 환영합니다!");
-                    CinemaProgram c = new CinemaProgram();
-                    c.Show();
+                    Console.WriteLine(reader.GetString(reader.GetOrdinal("QUIT_STAT")));
+                    if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
+                    {
+                        Program.memID = ID_INPUT.Text;
+                        MessageBox.Show(ID_INPUT.Text + "님 환영합니다!");
+                        CinemaProgram c = new CinemaProgram();
+                        c.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("탈퇴회원입니다.");
+                    }
                     
                 }
                 Conn.Close();

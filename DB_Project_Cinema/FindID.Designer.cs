@@ -33,6 +33,7 @@
             this.SID_INPUT = new System.Windows.Forms.TextBox();
             this.TELNO_INPUT = new System.Windows.Forms.TextBox();
             this.FindIDButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +66,7 @@
             this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
             this.SID_INPUT.PasswordChar = '*';
-            this.SID_INPUT.Size = new System.Drawing.Size(211, 30);
+            this.SID_INPUT.Size = new System.Drawing.Size(107, 30);
             this.SID_INPUT.TabIndex = 7;
             // 
             // TELNO_INPUT
@@ -93,11 +94,22 @@
             this.FindIDButton.UseVisualStyleBackColor = false;
             this.FindIDButton.Click += new System.EventHandler(this.FindIDButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(634, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 19);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "-   *******";
+            // 
             // FindID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SID_INPUT);
@@ -118,6 +130,7 @@
         private System.Windows.Forms.TextBox SID_INPUT;
         private System.Windows.Forms.TextBox TELNO_INPUT;
         private System.Windows.Forms.Button FindIDButton;
+        private System.Windows.Forms.Label label3;
 
     }
 }

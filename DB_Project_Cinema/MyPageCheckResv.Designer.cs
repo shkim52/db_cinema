@@ -28,110 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CanclePaymentButton1 = new System.Windows.Forms.Button();
-            this.CanclePaymentButton2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.resv_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resv_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resv_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.show_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resv_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quit_resv = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(236, 94);
+            this.label1.Location = new System.Drawing.Point(189, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 46);
+            this.label1.Size = new System.Drawing.Size(242, 38);
             this.label1.TabIndex = 7;
             this.label1.Text = "MyPage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // dataGridView1
             // 
-            this.label2.BackColor = System.Drawing.Color.Gainsboro;
-            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(129, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 35);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "예매일";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.resv_date,
+            this.resv_num,
+            this.resv_info,
+            this.show_date,
+            this.resv_price,
+            this.quit_resv});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.Location = new System.Drawing.Point(72, 164);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 145;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(829, 130);
+            this.dataGridView1.TabIndex = 14;
             // 
-            // label3
+            // resv_date
             // 
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(247, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 35);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "예매번호";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resv_date.HeaderText = "예매일";
+            this.resv_date.Name = "resv_date";
             // 
-            // label4
+            // resv_num
             // 
-            this.label4.BackColor = System.Drawing.Color.Gainsboro;
-            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(392, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(344, 35);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "예매내역";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.resv_num.HeaderText = "예매번호";
+            this.resv_num.Name = "resv_num";
             // 
-            // label5
+            // resv_info
             // 
-            this.label5.BackColor = System.Drawing.Color.Gainsboro;
-            this.label5.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(742, 203);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 35);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "결제금액";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resv_info.HeaderText = "영화명";
+            this.resv_info.Name = "resv_info";
             // 
-            // CanclePaymentButton1
+            // show_date
             // 
-            this.CanclePaymentButton1.BackColor = System.Drawing.Color.LightGray;
-            this.CanclePaymentButton1.FlatAppearance.BorderSize = 0;
-            this.CanclePaymentButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CanclePaymentButton1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CanclePaymentButton1.Location = new System.Drawing.Point(922, 276);
-            this.CanclePaymentButton1.Name = "CanclePaymentButton1";
-            this.CanclePaymentButton1.Size = new System.Drawing.Size(94, 34);
-            this.CanclePaymentButton1.TabIndex = 12;
-            this.CanclePaymentButton1.Text = "결제취소";
-            this.CanclePaymentButton1.UseVisualStyleBackColor = false;
+            this.show_date.HeaderText = "상영일";
+            this.show_date.Name = "show_date";
             // 
-            // CanclePaymentButton2
+            // resv_price
             // 
-            this.CanclePaymentButton2.BackColor = System.Drawing.Color.LightGray;
-            this.CanclePaymentButton2.FlatAppearance.BorderSize = 0;
-            this.CanclePaymentButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CanclePaymentButton2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CanclePaymentButton2.Location = new System.Drawing.Point(922, 330);
-            this.CanclePaymentButton2.Name = "CanclePaymentButton2";
-            this.CanclePaymentButton2.Size = new System.Drawing.Size(94, 34);
-            this.CanclePaymentButton2.TabIndex = 13;
-            this.CanclePaymentButton2.Text = "결제취소";
-            this.CanclePaymentButton2.UseVisualStyleBackColor = false;
+            this.resv_price.HeaderText = "결제금액";
+            this.resv_price.Name = "resv_price";
+            // 
+            // quit_resv
+            // 
+            this.quit_resv.HeaderText = "quit_resv";
+            this.quit_resv.Name = "quit_resv";
+            this.quit_resv.Visible = false;
             // 
             // MyPageCheckResv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.CanclePaymentButton1);
-            this.Controls.Add(this.CanclePaymentButton2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MyPageCheckResv";
-            this.Size = new System.Drawing.Size(1347, 604);
+            this.Size = new System.Drawing.Size(1078, 503);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,12 +153,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button CanclePaymentButton1;
-        private System.Windows.Forms.Button CanclePaymentButton2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resv_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resv_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resv_info;
+        private System.Windows.Forms.DataGridViewTextBoxColumn show_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resv_price;
+        private System.Windows.Forms.DataGridViewButtonColumn quit_resv;
 
     }
 }

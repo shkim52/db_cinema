@@ -93,7 +93,7 @@ namespace DB_Project_Cinema
                 {
                     MessageBox.Show("이메일 형식이 잘못되었습니다.");
                 }
-                else if (SID_INPUT.Text.Length != 13)
+                else if (SID_INPUT.Text.Length != 6)
                 {
                     MessageBox.Show("생년월일 6자리를 입력해주세요.");
                 }

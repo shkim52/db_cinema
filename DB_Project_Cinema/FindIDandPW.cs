@@ -12,6 +12,18 @@ namespace DB_Project_Cinema
 {
     public partial class FindIDandPW : UserControl
     {
+        private static FindIDandPW _instance;
+        public static FindIDandPW Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new FindIDandPW();
+                }
+                return _instance;
+            }
+        }
         public FindIDandPW()
         {
             InitializeComponent();

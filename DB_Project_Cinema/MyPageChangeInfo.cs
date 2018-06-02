@@ -17,41 +17,7 @@ namespace DB_Project_Cinema
         public MyPageChangeInfo()
         {
             InitializeComponent(); 
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
-            try
-            {
-
-                Conn.Open();
-
-
-                string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + Program.memID + "'";
-
-                OracleCommand Comm = new OracleCommand(sql, Conn);
-
-                OracleDataReader reader = Comm.ExecuteReader();
-                
-                while (reader.Read())
-                {
-                    ID.Text = reader.GetString(reader.GetOrdinal("MEM_ID"));
-                    SID.Text = reader.GetString(reader.GetOrdinal("MEM_SID_NO"));
-                    NAME.Text = reader.GetString(reader.GetOrdinal("MEM_NM"));
-                    EMAIL.Text = reader.GetString(reader.GetOrdinal("MEM_EMAIL"));
-                    TELNO.Text = reader.GetString(reader.GetOrdinal("MEM_TELNO"));
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
-            }
+            
         }
 
         private void ChangeInfoButton_Click(object sender, EventArgs e)
@@ -73,6 +39,45 @@ namespace DB_Project_Cinema
 
                 
                 Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        private void MyPageChangeInfo_Load(object sender, EventArgs e)
+        {
+            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+            OracleConnection Conn = new OracleConnection(str);
+            /**OracleCommand Comm;
+            Comm = new OracleCommand();
+            Comm.Connection = Conn;*/
+            try
+            {
+
+                Conn.Open();
+
+
+                string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + Program.memID + "'";
+
+                OracleCommand Comm = new OracleCommand(sql, Conn);
+
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ID.Text = reader.GetString(reader.GetOrdinal("MEM_ID"));
+                    SID.Text = reader.GetString(reader.GetOrdinal("MEM_SID_NO"));
+                    NAME.Text = reader.GetString(reader.GetOrdinal("MEM_NM"));
+                    EMAIL.Text = reader.GetString(reader.GetOrdinal("MEM_EMAIL"));
+                    TELNO.Text = reader.GetString(reader.GetOrdinal("MEM_TELNO"));
+                }
+
             }
             catch (Exception ex)
             {

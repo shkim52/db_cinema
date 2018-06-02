@@ -40,6 +40,7 @@
             this.TELNO = new System.Windows.Forms.TextBox();
             this.ChangeInfoButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -125,7 +126,7 @@
             this.SID.Name = "SID";
             this.SID.PasswordChar = '*';
             this.SID.ReadOnly = true;
-            this.SID.Size = new System.Drawing.Size(252, 25);
+            this.SID.Size = new System.Drawing.Size(131, 25);
             this.SID.TabIndex = 24;
             this.SID.TabStop = false;
             // 
@@ -163,11 +164,22 @@
             this.label1.Text = "MyPage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(454, 302);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 19);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "-   *******";
+            // 
             // MyPageChangeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -183,6 +195,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageChangeInfo";
             this.Size = new System.Drawing.Size(876, 535);
+            this.Load += new System.EventHandler(this.MyPageChangeInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +215,7 @@
         private System.Windows.Forms.TextBox TELNO;
         private System.Windows.Forms.Button ChangeInfoButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
 
     }
 }
