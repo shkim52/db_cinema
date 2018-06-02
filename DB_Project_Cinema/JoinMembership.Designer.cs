@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.ID_CHECK = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -128,7 +129,7 @@
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 6;
             this.SID_INPUT.Name = "SID_INPUT";
-            this.SID_INPUT.Size = new System.Drawing.Size(224, 25);
+            this.SID_INPUT.Size = new System.Drawing.Size(115, 25);
             this.SID_INPUT.TabIndex = 30;
             // 
             // TELNO_INPUT
@@ -200,7 +201,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(264, 45);
             this.label1.TabIndex = 38;
-            this.label1.Text = "Join Membership";
+            this.label1.Text = "Join Member";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SubmitButton
@@ -227,11 +228,22 @@
             this.ID_CHECK.TabIndex = 41;
             this.ID_CHECK.Text = "중복확인을 눌러주세요";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(495, 327);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 19);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "-  *******";
+            // 
             // JoinMembership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.ID_CHECK);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.label2);
@@ -278,6 +290,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label ID_CHECK;
+        private System.Windows.Forms.Label label7;
 
     }
 }

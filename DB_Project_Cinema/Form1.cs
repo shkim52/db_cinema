@@ -31,7 +31,7 @@ namespace DB_Project_Cinema
                 MoviePage.Instance.BringToFront();
             }
 
-            if (Program.memID == "")
+            if (Program.memID == "" || Program.custID == "")
             {
                 LogoutButton.Enabled = false;
             }
@@ -165,7 +165,6 @@ namespace DB_Project_Cinema
             else
             {
                 MessageBox.Show("로그인을 하세요!");
-
             }
 
         }

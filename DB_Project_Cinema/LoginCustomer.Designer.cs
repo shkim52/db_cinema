@@ -30,12 +30,8 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.CustNameTextbox = new System.Windows.Forms.TextBox();
-            this.CustResidentTextbox = new System.Windows.Forms.TextBox();
-            this.CustHPNumTextbox = new System.Windows.Forms.TextBox();
-            this.CustPWTextbox = new System.Windows.Forms.TextBox();
+            this.CustPwdTextbox = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -47,7 +43,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 33);
             this.label2.TabIndex = 16;
-            this.label2.Text = "이름:";
+            this.label2.Text = "임시ID:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CustNameTextbox
@@ -59,35 +55,15 @@
             this.CustNameTextbox.Size = new System.Drawing.Size(238, 30);
             this.CustNameTextbox.TabIndex = 17;
             // 
-            // CustResidentTextbox
+            // CustPwdTextbox
             // 
-            this.CustResidentTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CustResidentTextbox.Location = new System.Drawing.Point(483, 67);
-            this.CustResidentTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.CustResidentTextbox.MaxLength = 6;
-            this.CustResidentTextbox.Name = "CustResidentTextbox";
-            this.CustResidentTextbox.Size = new System.Drawing.Size(238, 30);
-            this.CustResidentTextbox.TabIndex = 18;
-            // 
-            // CustHPNumTextbox
-            // 
-            this.CustHPNumTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CustHPNumTextbox.Location = new System.Drawing.Point(483, 109);
-            this.CustHPNumTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.CustHPNumTextbox.MaxLength = 11;
-            this.CustHPNumTextbox.Name = "CustHPNumTextbox";
-            this.CustHPNumTextbox.Size = new System.Drawing.Size(238, 30);
-            this.CustHPNumTextbox.TabIndex = 19;
-            // 
-            // CustPWTextbox
-            // 
-            this.CustPWTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CustPWTextbox.Location = new System.Drawing.Point(483, 151);
-            this.CustPWTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.CustPWTextbox.Name = "CustPWTextbox";
-            this.CustPWTextbox.PasswordChar = '*';
-            this.CustPWTextbox.Size = new System.Drawing.Size(238, 30);
-            this.CustPWTextbox.TabIndex = 20;
+            this.CustPwdTextbox.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CustPwdTextbox.Location = new System.Drawing.Point(483, 67);
+            this.CustPwdTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.CustPwdTextbox.MaxLength = 6;
+            this.CustPwdTextbox.Name = "CustPwdTextbox";
+            this.CustPwdTextbox.Size = new System.Drawing.Size(238, 30);
+            this.CustPwdTextbox.TabIndex = 18;
             // 
             // LoginButton
             // 
@@ -95,7 +71,7 @@
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.LoginButton.Location = new System.Drawing.Point(762, 67);
+            this.LoginButton.Location = new System.Drawing.Point(767, 27);
             this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 70);
@@ -104,32 +80,10 @@
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(350, 65);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 33);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "생년월일:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(350, 107);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 33);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "휴대폰번호:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(350, 148);
+            this.label4.Location = new System.Drawing.Point(350, 67);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 33);
@@ -144,12 +98,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CustNameTextbox);
-            this.Controls.Add(this.CustResidentTextbox);
-            this.Controls.Add(this.CustHPNumTextbox);
-            this.Controls.Add(this.CustPWTextbox);
+            this.Controls.Add(this.CustPwdTextbox);
             this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginCustomer";
@@ -163,12 +113,8 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CustNameTextbox;
-        private System.Windows.Forms.TextBox CustResidentTextbox;
-        private System.Windows.Forms.TextBox CustHPNumTextbox;
-        private System.Windows.Forms.TextBox CustPWTextbox;
+        private System.Windows.Forms.TextBox CustPwdTextbox;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
 
     }
