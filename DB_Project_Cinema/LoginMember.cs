@@ -44,10 +44,18 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    Program.memID = ID_INPUT.Text;
-                    MessageBox.Show(ID_INPUT.Text+ "님 환영합니다!");
-                    CinemaProgram c = new CinemaProgram();
-                    c.Show();
+                    Console.WriteLine(reader.GetString(reader.GetOrdinal("QUIT_STAT")));
+                    if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
+                    {
+                        Program.memID = ID_INPUT.Text;
+                        MessageBox.Show(ID_INPUT.Text + "님 환영합니다!");
+                        CinemaProgram c = new CinemaProgram();
+                        c.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("탈퇴회원입니다.");
+                    }
                     
                 }
                 Conn.Close();
