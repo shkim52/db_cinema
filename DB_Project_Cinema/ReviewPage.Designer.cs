@@ -1,6 +1,6 @@
 ﻿namespace DB_Project_Cinema
 {
-    partial class RevieiwPage
+    partial class ReviewPage
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.

@@ -12,12 +12,29 @@ using Oracle.ManagedDataAccess.Types;
 
 namespace DB_Project_Cinema
 {
-    public partial class RevieiwPage : UserControl
+    public partial class ReviewPage : UserControl
     {
-        public RevieiwPage()
+        private static ReviewPage _instance;
+        private string movie_nm;
+        public OracleConnection Conn;
+        public static ReviewPage Instance
         {
-            InitializeComponent();
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ReviewPage();
+                }
+                return _instance;
+            }
+        }
+        public void setMovie_nm(string s)
+        {
+            movie_nm = s;
+        }
 
+        public ReviewPage()
+        {
             InitializeComponent();
 
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
@@ -25,11 +42,13 @@ namespace DB_Project_Cinema
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
+        }
+            public void ReviewPage_test(){
             try
             {
 
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + Program.Movie_NM + "'";
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
@@ -57,6 +76,8 @@ namespace DB_Project_Cinema
             {
                 Conn.Close();
             }
+            
+            
         }
 
         private void ReviewRegisterButton_Click(object sender, EventArgs e)
@@ -87,6 +108,7 @@ namespace DB_Project_Cinema
             {
                 Conn.Close();
             }
-        }
+        
     }
+}
 }

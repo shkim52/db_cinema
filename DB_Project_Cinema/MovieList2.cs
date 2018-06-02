@@ -12,12 +12,12 @@ using Oracle.ManagedDataAccess.Types;
 
 namespace DB_Project_Cinema
 {
-    public partial class MovieList : UserControl
+    public partial class MovieList2 : UserControl
     {
         Button[] btn = new Button[5];
         PictureBox[] pic = new PictureBox[5];
 
-        public MovieList()
+        public MovieList2()
         {
             InitializeComponent();
 
@@ -33,7 +33,7 @@ namespace DB_Project_Cinema
                 pic[i] = new PictureBox();
                 pic[i].Name = "Poster" + (i + 1).ToString();
                 pic[i].Size = new Size(130, 185);
-                pic[i].Location = new Point(90 + 180 * i,30);
+                pic[i].Location = new Point(90 + 180 * i, 30);
 
                 btn[i] = new Button();
                 btn[i].Name = "MovieDetail" + (i + 1).ToString();

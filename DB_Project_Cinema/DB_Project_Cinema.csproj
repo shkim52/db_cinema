@@ -167,6 +167,12 @@
     <Compile Include="MovieList.Designer.cs">
       <DependentUpon>MovieList.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieList2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieList2.Designer.cs">
+      <DependentUpon>MovieList2.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoviePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,11 +241,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RevieiwPage.cs">
+    <Compile Include="ReviewPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RevieiwPage.Designer.cs">
-      <DependentUpon>RevieiwPage.cs</DependentUpon>
+    <Compile Include="ReviewPage.Designer.cs">
+      <DependentUpon>ReviewPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ScreenInfo.cs">
       <SubType>UserControl</SubType>
@@ -295,6 +301,9 @@
     <EmbeddedResource Include="MovieList.resx">
       <DependentUpon>MovieList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MovieList2.resx">
+      <DependentUpon>MovieList2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MoviePage.resx">
       <DependentUpon>MoviePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,8 +346,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RevieiwPage.resx">
-      <DependentUpon>RevieiwPage.cs</DependentUpon>
+    <EmbeddedResource Include="ReviewPage.resx">
+      <DependentUpon>ReviewPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScreenInfo.resx">
       <DependentUpon>ScreenInfo.cs</DependentUpon>

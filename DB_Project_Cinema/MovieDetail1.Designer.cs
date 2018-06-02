@@ -51,16 +51,17 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MovieIntro = new System.Windows.Forms.TextBox();
+            this.ReviewButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).BeginInit();
             this.SuspendLayout();
             // 
             // Poster
             // 
             this.Poster.BackColor = System.Drawing.Color.Wheat;
-            this.Poster.Location = new System.Drawing.Point(184, 67);
+            this.Poster.Location = new System.Drawing.Point(197, 26);
             this.Poster.Margin = new System.Windows.Forms.Padding(2);
             this.Poster.Name = "Poster";
-            this.Poster.Size = new System.Drawing.Size(168, 218);
+            this.Poster.Size = new System.Drawing.Size(143, 185);
             this.Poster.TabIndex = 0;
             this.Poster.TabStop = false;
             // 
@@ -73,12 +74,11 @@
             this.MovieNM.Size = new System.Drawing.Size(710, 41);
             this.MovieNM.TabIndex = 1;
             this.MovieNM.Text = "영화제목";
-            this.MovieNM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(392, 78);
+            this.label1.Location = new System.Drawing.Point(387, 67);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 29);
@@ -89,7 +89,7 @@
             // Genre
             // 
             this.Genre.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Genre.Location = new System.Drawing.Point(464, 78);
+            this.Genre.Location = new System.Drawing.Point(459, 67);
             this.Genre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Genre.Name = "Genre";
             this.Genre.Size = new System.Drawing.Size(124, 29);
@@ -100,7 +100,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(614, 78);
+            this.label3.Location = new System.Drawing.Point(609, 67);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 29);
@@ -111,7 +111,7 @@
             // ReleaseDate
             // 
             this.ReleaseDate.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ReleaseDate.Location = new System.Drawing.Point(699, 78);
+            this.ReleaseDate.Location = new System.Drawing.Point(694, 67);
             this.ReleaseDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ReleaseDate.Name = "ReleaseDate";
             this.ReleaseDate.Size = new System.Drawing.Size(150, 29);
@@ -122,7 +122,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(870, 80);
+            this.label5.Location = new System.Drawing.Point(865, 69);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 25);
@@ -133,7 +133,7 @@
             // ShowTime
             // 
             this.ShowTime.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ShowTime.Location = new System.Drawing.Point(970, 78);
+            this.ShowTime.Location = new System.Drawing.Point(965, 67);
             this.ShowTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ShowTime.Name = "ShowTime";
             this.ShowTime.Size = new System.Drawing.Size(58, 29);
@@ -144,7 +144,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(372, 118);
+            this.label7.Location = new System.Drawing.Point(372, 106);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 29);
@@ -155,7 +155,7 @@
             // DirectorNM
             // 
             this.DirectorNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DirectorNM.Location = new System.Drawing.Point(464, 118);
+            this.DirectorNM.Location = new System.Drawing.Point(464, 106);
             this.DirectorNM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DirectorNM.Name = "DirectorNM";
             this.DirectorNM.Size = new System.Drawing.Size(192, 29);
@@ -166,7 +166,7 @@
             // ActorNM
             // 
             this.ActorNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ActorNM.Location = new System.Drawing.Point(829, 118);
+            this.ActorNM.Location = new System.Drawing.Point(829, 106);
             this.ActorNM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ActorNM.Name = "ActorNM";
             this.ActorNM.Size = new System.Drawing.Size(530, 29);
@@ -177,7 +177,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(740, 118);
+            this.label10.Location = new System.Drawing.Point(740, 106);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 29);
@@ -188,7 +188,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(393, 157);
+            this.label11.Location = new System.Drawing.Point(393, 144);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 29);
@@ -199,7 +199,7 @@
             // Country
             // 
             this.Country.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Country.Location = new System.Drawing.Point(464, 157);
+            this.Country.Location = new System.Drawing.Point(464, 144);
             this.Country.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Country.Name = "Country";
             this.Country.Size = new System.Drawing.Size(185, 29);
@@ -210,7 +210,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(731, 157);
+            this.label13.Location = new System.Drawing.Point(731, 144);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 29);
@@ -221,7 +221,7 @@
             // Distributor
             // 
             this.Distributor.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Distributor.Location = new System.Drawing.Point(829, 157);
+            this.Distributor.Location = new System.Drawing.Point(829, 144);
             this.Distributor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Distributor.Name = "Distributor";
             this.Distributor.Size = new System.Drawing.Size(412, 29);
@@ -234,11 +234,11 @@
             this.InterestRegisterButton.BackColor = System.Drawing.Color.LightGray;
             this.InterestRegisterButton.FlatAppearance.BorderSize = 0;
             this.InterestRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InterestRegisterButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.InterestRegisterButton.Location = new System.Drawing.Point(184, 356);
+            this.InterestRegisterButton.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.InterestRegisterButton.Location = new System.Drawing.Point(197, 294);
             this.InterestRegisterButton.Margin = new System.Windows.Forms.Padding(2);
             this.InterestRegisterButton.Name = "InterestRegisterButton";
-            this.InterestRegisterButton.Size = new System.Drawing.Size(162, 36);
+            this.InterestRegisterButton.Size = new System.Drawing.Size(162, 28);
             this.InterestRegisterButton.TabIndex = 17;
             this.InterestRegisterButton.Text = "관심리스트 등록";
             this.InterestRegisterButton.UseVisualStyleBackColor = false;
@@ -246,7 +246,7 @@
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label16.Location = new System.Drawing.Point(192, 308);
+            this.label16.Location = new System.Drawing.Point(203, 218);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(65, 29);
@@ -257,7 +257,7 @@
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(262, 308);
+            this.label17.Location = new System.Drawing.Point(273, 218);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(65, 29);
@@ -268,7 +268,7 @@
             // Rating
             // 
             this.Rating.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Rating.Location = new System.Drawing.Point(1199, 78);
+            this.Rating.Location = new System.Drawing.Point(1194, 67);
             this.Rating.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Rating.Name = "Rating";
             this.Rating.Size = new System.Drawing.Size(101, 29);
@@ -279,7 +279,7 @@
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(1124, 80);
+            this.label19.Location = new System.Drawing.Point(1119, 69);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 25);
@@ -290,7 +290,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(1032, 78);
+            this.label2.Location = new System.Drawing.Point(1027, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 29);
@@ -303,19 +303,35 @@
             this.MovieIntro.BackColor = System.Drawing.Color.White;
             this.MovieIntro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MovieIntro.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieIntro.Location = new System.Drawing.Point(397, 212);
+            this.MovieIntro.Location = new System.Drawing.Point(398, 187);
             this.MovieIntro.Multiline = true;
             this.MovieIntro.Name = "MovieIntro";
             this.MovieIntro.ReadOnly = true;
             this.MovieIntro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MovieIntro.Size = new System.Drawing.Size(912, 180);
+            this.MovieIntro.Size = new System.Drawing.Size(912, 135);
             this.MovieIntro.TabIndex = 23;
+            // 
+            // ReviewButton
+            // 
+            this.ReviewButton.BackColor = System.Drawing.Color.LightGray;
+            this.ReviewButton.FlatAppearance.BorderSize = 0;
+            this.ReviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReviewButton.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ReviewButton.Location = new System.Drawing.Point(197, 263);
+            this.ReviewButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ReviewButton.Name = "ReviewButton";
+            this.ReviewButton.Size = new System.Drawing.Size(162, 27);
+            this.ReviewButton.TabIndex = 25;
+            this.ReviewButton.Text = "리뷰 보기";
+            this.ReviewButton.UseVisualStyleBackColor = false;
+            this.ReviewButton.Click += new System.EventHandler(this.ReviewButton_Click);
             // 
             // MovieDetail1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ReviewButton);
             this.Controls.Add(this.MovieIntro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Rating);
@@ -341,7 +357,7 @@
             this.Controls.Add(this.Poster);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MovieDetail1";
-            this.Size = new System.Drawing.Size(1421, 511);
+            this.Size = new System.Drawing.Size(1369, 432);
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -373,5 +389,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox MovieIntro;
+        private System.Windows.Forms.Button ReviewButton;
     }
 }

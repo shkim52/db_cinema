@@ -82,5 +82,16 @@ namespace DB_Project_Cinema
                 Conn.Close();
             }
         }
+
+
+        private void ReviewButton_Click(object sender, EventArgs e)
+        {
+            Controls.Add(ReviewPage.Instance);
+            ReviewPage.Instance.setMovie_nm(MovieNM.Text);
+            ReviewPage.Instance.ReviewPage_test();
+            ReviewPage.Instance.Dock = DockStyle.Fill;
+            ReviewPage.Instance.BringToFront();
+            
+        }
     }
 }

@@ -31,7 +31,11 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            MovieList.BringToFront();         
+            MovieList.BringToFront();
+
+            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
+            PlayingMovie.FlatAppearance.BorderSize = 1;
+            ExpectedMovie.FlatAppearance.BorderSize = 0;
         }      
 
         private void SearchButton_Click_1(object sender, EventArgs e)
@@ -146,6 +150,8 @@ namespace DB_Project_Cinema
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
         {
+            MovieList2.BringToFront();
+
             ExpectedMovie.FlatAppearance.BorderColor = Color.Red;
             ExpectedMovie.FlatAppearance.BorderSize = 1;
             PlayingMovie.FlatAppearance.BorderSize = 0;

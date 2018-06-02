@@ -63,7 +63,6 @@ C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageMyPoint.res
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageQuitMem.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.Payment.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.Properties.Resources.resources
-C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.RevieiwPage.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.ScreenInfo.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.SelectShowTime.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.TicketingPage.resources
@@ -72,3 +71,5 @@ C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.reso
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources
+C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList2.resources
+C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.ReviewPage.resources
