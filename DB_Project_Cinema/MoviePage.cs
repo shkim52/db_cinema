@@ -27,23 +27,20 @@ namespace DB_Project_Cinema
             }
         }
 
-        
-
         public MoviePage()
         {
             InitializeComponent();
 
-            MovieList.BringToFront();
-           
- 
+            MovieList.BringToFront();         
         }      
-            
-            
-        
-
 
         private void SearchButton_Click_1(object sender, EventArgs e)
         {
+
+            PlayingMovie.Visible = false;
+            ExpectedMovie.Visible = false;
+
+
             if (SearchText.Text == "")
                 MessageBox.Show("검색어를 입력하세요!");
             else
@@ -64,9 +61,7 @@ namespace DB_Project_Cinema
                         OracleCommand Comm = new OracleCommand(sql2, Conn);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
-                        {
-                            
-
+                        {                         
                             MovieSearchPage.BringToFront();
 
                             while (reader2.Read())
@@ -104,7 +99,7 @@ namespace DB_Project_Cinema
                     }
                     else if (MovieCategory.SelectedItem.ToString() == "장르명")
                     {
-                        string sql2 = "SELECT * FROM MOVIE WHERE GENRE = '" + MovieDetail.Text + "'";
+                        string sql2 = "SELECT * FROM MOVIE WHERE GENRE = '" + SearchText.Text + "'";
 
                         OracleCommand Comm = new OracleCommand(sql2, Conn);
                         OracleDataReader reader2 = Comm.ExecuteReader();
@@ -138,6 +133,25 @@ namespace DB_Project_Cinema
             }
 
         }
+
+        private void PlayingMovie_Click(object sender, EventArgs e)
+        {
+            MovieList.BringToFront();
+
+            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
+            PlayingMovie.FlatAppearance.BorderSize = 1;
+            ExpectedMovie.FlatAppearance.BorderSize = 0;
+            
+        }
+
+        private void ExpectedMovie_Click(object sender, EventArgs e)
+        {
+            ExpectedMovie.FlatAppearance.BorderColor = Color.Red;
+            ExpectedMovie.FlatAppearance.BorderSize = 1;
+            PlayingMovie.FlatAppearance.BorderSize = 0;
+        }
+
+       
     }
 }
    

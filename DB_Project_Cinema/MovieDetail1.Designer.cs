@@ -308,7 +308,7 @@
             this.MovieIntro.Name = "MovieIntro";
             this.MovieIntro.ReadOnly = true;
             this.MovieIntro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MovieIntro.Size = new System.Drawing.Size(912, 200);
+            this.MovieIntro.Size = new System.Drawing.Size(912, 180);
             this.MovieIntro.TabIndex = 23;
             // 
             // MovieDetail1

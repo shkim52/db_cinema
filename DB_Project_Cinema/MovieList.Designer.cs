@@ -34,7 +34,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(78, 21);
+            this.label1.Location = new System.Drawing.Point(108, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 34);
             this.label1.TabIndex = 6;

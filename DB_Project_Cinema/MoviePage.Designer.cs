@@ -33,11 +33,13 @@
             this.SearchText = new System.Windows.Forms.TextBox();
             this.MovieCategory = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.PlayingMovie = new System.Windows.Forms.Button();
             this.MovieSearchPage = new DB_Project_Cinema.MovieSearchPage();
-            this.MovieDetail = new DB_Project_Cinema.MovieDetail1();
-            this.ReviewPage = new DB_Project_Cinema.RevieiwPage();
             this.MovieList = new DB_Project_Cinema.MovieList();
+            this.ExpectedMovie = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,48 +104,66 @@
             this.label1.Text = "Movie";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ExpectedMovie);
+            this.panel2.Controls.Add(this.PlayingMovie);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 188);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1702, 46);
+            this.panel2.TabIndex = 6;
+            // 
+            // PlayingMovie
+            // 
+            this.PlayingMovie.BackColor = System.Drawing.Color.LightGray;
+            this.PlayingMovie.FlatAppearance.BorderSize = 0;
+            this.PlayingMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayingMovie.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PlayingMovie.Location = new System.Drawing.Point(540, 7);
+            this.PlayingMovie.Name = "PlayingMovie";
+            this.PlayingMovie.Size = new System.Drawing.Size(163, 38);
+            this.PlayingMovie.TabIndex = 0;
+            this.PlayingMovie.Text = "상영중인 영화";
+            this.PlayingMovie.UseVisualStyleBackColor = false;
+            this.PlayingMovie.Click += new System.EventHandler(this.PlayingMovie_Click);
+            // 
             // MovieSearchPage
             // 
             this.MovieSearchPage.BackColor = System.Drawing.Color.White;
             this.MovieSearchPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MovieSearchPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MovieSearchPage.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieSearchPage.Location = new System.Drawing.Point(0, 188);
-            this.MovieSearchPage.Margin = new System.Windows.Forms.Padding(2);
+            this.MovieSearchPage.Location = new System.Drawing.Point(0, 234);
+            this.MovieSearchPage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MovieSearchPage.Name = "MovieSearchPage";
-            this.MovieSearchPage.Size = new System.Drawing.Size(1702, 402);
-            this.MovieSearchPage.TabIndex = 5;
-            // 
-            // MovieDetail
-            // 
-            this.MovieDetail.BackColor = System.Drawing.Color.White;
-            this.MovieDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MovieDetail.Location = new System.Drawing.Point(0, 188);
-            this.MovieDetail.Margin = new System.Windows.Forms.Padding(2);
-            this.MovieDetail.Name = "MovieDetail";
-            this.MovieDetail.Size = new System.Drawing.Size(1702, 402);
-            this.MovieDetail.TabIndex = 4;
-            // 
-            // ReviewPage
-            // 
-            this.ReviewPage.BackColor = System.Drawing.Color.White;
-            this.ReviewPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReviewPage.Location = new System.Drawing.Point(0, 188);
-            this.ReviewPage.Margin = new System.Windows.Forms.Padding(2);
-            this.ReviewPage.Name = "ReviewPage";
-            this.ReviewPage.Size = new System.Drawing.Size(1702, 402);
-            this.ReviewPage.TabIndex = 3;
+            this.MovieSearchPage.Size = new System.Drawing.Size(1702, 356);
+            this.MovieSearchPage.TabIndex = 8;
             // 
             // MovieList
             // 
             this.MovieList.BackColor = System.Drawing.Color.White;
             this.MovieList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MovieList.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieList.Location = new System.Drawing.Point(0, 188);
-            this.MovieList.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.MovieList.Location = new System.Drawing.Point(0, 234);
+            this.MovieList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MovieList.Name = "MovieList";
-            this.MovieList.Size = new System.Drawing.Size(1702, 402);
-            this.MovieList.TabIndex = 2;
+            this.MovieList.Size = new System.Drawing.Size(1702, 356);
+            this.MovieList.TabIndex = 7;
+            // 
+            // ExpectedMovie
+            // 
+            this.ExpectedMovie.BackColor = System.Drawing.Color.LightGray;
+            this.ExpectedMovie.FlatAppearance.BorderSize = 0;
+            this.ExpectedMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExpectedMovie.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ExpectedMovie.Location = new System.Drawing.Point(770, 4);
+            this.ExpectedMovie.Name = "ExpectedMovie";
+            this.ExpectedMovie.Size = new System.Drawing.Size(163, 38);
+            this.ExpectedMovie.TabIndex = 1;
+            this.ExpectedMovie.Text = "개봉예정 영화";
+            this.ExpectedMovie.UseVisualStyleBackColor = false;
+            this.ExpectedMovie.Click += new System.EventHandler(this.ExpectedMovie_Click);
             // 
             // MoviePage
             // 
@@ -151,15 +171,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.MovieSearchPage);
-            this.Controls.Add(this.MovieDetail);
-            this.Controls.Add(this.ReviewPage);
             this.Controls.Add(this.MovieList);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MoviePage";
             this.Size = new System.Drawing.Size(1702, 590);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -171,10 +191,11 @@
         private System.Windows.Forms.TextBox SearchText;
         private System.Windows.Forms.ListBox MovieCategory;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button PlayingMovie;
         private MovieList MovieList;
-        private RevieiwPage ReviewPage;
-        private MovieDetail1 MovieDetail;
         private MovieSearchPage MovieSearchPage;
+        private System.Windows.Forms.Button ExpectedMovie;
 
     }
 }

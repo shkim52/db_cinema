@@ -32,13 +32,13 @@ namespace DB_Project_Cinema
             {
                 pic[i] = new PictureBox();
                 pic[i].Name = "Poster" + (i + 1).ToString();
-                pic[i].Size = new Size(130, 200);
-                pic[i].Location = new Point(90 + 180 * i, 70);
+                pic[i].Size = new Size(130, 185);
+                pic[i].Location = new Point(90 + 180 * i,50);
 
                 btn[i] = new Button();
                 btn[i].Name = "MovieDetail" + (i + 1).ToString();
                 btn[i].Size = new Size(130, 25);
-                btn[i].Location = new Point(90 + 180 * i, 300);
+                btn[i].Location = new Point(90 + 180 * i, 245);
                 btn[i].Click += Form1_Click;
                 try
                 {
