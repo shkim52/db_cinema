@@ -14,6 +14,7 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageInterest : UserControl
     {
+        public int movie_no;
         public MyPageInterest()
         {
 
@@ -52,8 +53,7 @@ namespace DB_Project_Cinema
             {
                 Conn.Open();
 
-                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '" + Program.memID + "'";
-                Console.WriteLine(sql);
+                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE, M.MOVIE_NO FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '" + Program.memID + "'";
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -71,7 +71,7 @@ namespace DB_Project_Cinema
 
                     string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10) + " 개봉";
-                    //string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
                     dataGridView1.Rows.Add(jpgImage, movie_nm, release);
 
                 }
@@ -94,19 +94,13 @@ namespace DB_Project_Cinema
                 
             try
             {
-                string sql = "SELECT MOVIE_NO FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "' AND MEM_ID = '" + Program.memID + "'";
-                Console.WriteLine(sql);
-                OracleCommand Comm = new OracleCommand(sql, Conn);
                 Conn.Open();
-                OracleDataReader reader = Comm.ExecuteReader();
-                
-                reader.Read();
-                int movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
-
                 OracleCommand Cmd = new OracleCommand();
                 Cmd.Connection = Conn;
                 
-                string input_sql = "DELETE FROM INTEREST_LIST WHERE MEM_ID = '" + Program.memID + "' AND MOVIE_NO = '" + movie_no + "'"; 
+                string input_sql = "DELETE FROM INTEREST_LIST WHERE MEM_ID = '" + Program.memID + "' AND MOVIE_NO = '" + movie_no + "'";
+                Console.WriteLine(input_sql);
+                
                 Cmd.CommandText = input_sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("삭제완료");
