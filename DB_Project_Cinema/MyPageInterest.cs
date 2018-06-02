@@ -14,11 +14,14 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageInterest : UserControl
     {
-        public int movie_no;
+        private OracleConnection Conn;
+        private int movie_no;
         public MyPageInterest()
         {
 
             InitializeComponent();
+            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
+            Conn = new OracleConnection(str);
         }
 
         private void MyPageInterest_Load(object sender, EventArgs e)
@@ -39,16 +42,13 @@ namespace DB_Project_Cinema
                 else if (e.ColumnIndex == 4)
                 {
                     delete_interest(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
- 
-                    load_datagridview();
+                    dataGridView1.Refresh();
+                    //load_datagridview();
                 }
             }
         }
         private void load_datagridview()
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-                
             try
             {
                 Conn.Open();
@@ -60,9 +60,11 @@ namespace DB_Project_Cinema
                 if (!reader.HasRows)
                 {
                     dataGridView1.Visible = false;
+                    label2.Text = "현재 관심리스트에 내용이 존재하지 않습니다.";
                 }
                 while (reader.Read())
                 {
+                    
                     var poster = reader.GetString(reader.GetOrdinal("POSTER"));
                     System.Net.WebClient webSource = new System.Net.WebClient();
                     byte[] data = webSource.DownloadData(poster);
@@ -71,7 +73,6 @@ namespace DB_Project_Cinema
 
                     string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     string release = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10) + " 개봉";
-                    movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
                     dataGridView1.Rows.Add(jpgImage, movie_nm, release);
 
                 }
@@ -87,24 +88,46 @@ namespace DB_Project_Cinema
             }
         }
         private void delete_interest(string movie_nm)
-        {
-           
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-                
+        {    
+            find_movie_no(movie_nm);
             try
             {
                 Conn.Open();
                 OracleCommand Cmd = new OracleCommand();
                 Cmd.Connection = Conn;
                 
-                string input_sql = "DELETE FROM INTEREST_LIST WHERE MEM_ID = '" + Program.memID + "' AND MOVIE_NO = '" + movie_no + "'";
-                Console.WriteLine(input_sql);
+                string input_sql = "DELETE FROM INTEREST_LIST WHERE MOVIE_NO = " + movie_no +" AND MEM_ID = '" + Program.memID + "'";
                 
                 Cmd.CommandText = input_sql;
                 Cmd.ExecuteNonQuery();
+                
                 MessageBox.Show("삭제완료");
 
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+        private void find_movie_no(string movie_nm)
+        {
+            try
+            {
+                Conn.Open();
+
+                string sql = "SELECT I.MOVIE_NO FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND M.MOVIE_NM = '" + movie_nm + "'AND I.MEM_ID = '" + Program.memID + "'";
+                OracleCommand Comm = new OracleCommand(sql, Conn);
+
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                reader.Read();
+                movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
+                
                 Conn.Close();
             }
             catch (Exception ex)
