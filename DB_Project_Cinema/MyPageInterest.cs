@@ -37,8 +37,8 @@ namespace DB_Project_Cinema
                 }
                 else if (e.ColumnIndex == 4)
                 {
-
-
+                    delete_interest(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+ 
                     load_datagridview();
                 }
             }
@@ -86,19 +86,26 @@ namespace DB_Project_Cinema
                 Conn.Close();
             }
         }
-        private void delete_interest()
+        private void delete_interest(string movie_no)
         {
+            int movie_number = Int32.Parse(movie_no);
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             OracleConnection Conn = new OracleConnection(str);
                 
             try
             {
+                string sql = "SELECT MOVIE_NM, FROM MOVIE M, INTEREST_LIST I WHERE '"+movie_number+"'= I.MOVIE_NO AND I.MEM_ID = '" + Program.memID + "'";
+                Console.WriteLine(sql);
+                OracleCommand Comm = new OracleCommand(sql, Conn);
                 Conn.Open();
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                 OracleCommand Cmd = new OracleCommand();
                 Cmd.Connection = Conn;
-                Conn.Open();
+                
 
-                string input_sql = "DELETE FROM INTEREST_LIST WHERE MEM_ID = '"+Program.memID+"' AND ";
+                string input_sql = "DELETE FROM INTEREST_LIST WHERE MEM_ID = '" + Program.memID + "' AND MOVIE_NO = '" + movie_nm + "'"; 
                 Cmd.CommandText = input_sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("삭제완료");
