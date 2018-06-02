@@ -35,7 +35,7 @@ namespace DB_Project_Cinema
                 Cmd.CommandText = input_sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("탈퇴가 완료되었습니다.");
-                
+
 
                 Conn.Close();
             }
