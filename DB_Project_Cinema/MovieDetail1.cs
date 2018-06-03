@@ -151,14 +151,24 @@ namespace DB_Project_Cinema
 
                     while (reader.Read())
                     {
-                        this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                        decimal movie_no = reader.GetDecimal(reader.GetOrdinal("MOVIE_NO"));
+                        try
+                        {
+                            this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                            decimal movie_no = reader.GetDecimal(reader.GetOrdinal("MOVIE_NO"));
 
-                        string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + Program.memID + "',"+movie_no+")";
+                            string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + Program.memID + "',"+movie_no+")";
 
-                        Cmd.CommandText = sql2;
-                        Cmd.ExecuteNonQuery();
-                        MessageBox.Show("관심리스트에 등록되었습니다!");
+                            Cmd.CommandText = sql2;
+                            Cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("관심리스트에 등록되었습니다!");
+                        
+                        }
+                        catch (Exception exc)
+                        {
+                            MessageBox.Show("이미 등록된 영화입니다!");
+                        }
+                        
 
 
                     }
