@@ -67,18 +67,17 @@ namespace DB_Project_Cinema
                         MovieSearchPage.Instance.Dock = DockStyle.Fill;
                         MovieSearchPage.Instance.BringToFront();
 
-                        string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + SearchText.Text + "'";
-
+                        string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
+                       
                         OracleCommand Comm = new OracleCommand(sql2, Conn);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
-                        {                         
-                            MovieSearchPage.BringToFront();
-
-                            while (reader2.Read())
-                            {
-
-                            }
+                        {
+                            Controls.Add(MovieSearchPage.Instance);
+                            MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
+                            MovieSearchPage.Instance.MovieDetail_test();
+                            MovieSearchPage.Instance.Dock = DockStyle.Fill;
+                            MovieSearchPage.Instance.BringToFront();
 
                         }
                         else if (!reader2.HasRows)
@@ -88,20 +87,17 @@ namespace DB_Project_Cinema
                     }
                     else if (MovieCategory.SelectedItem.ToString() == "감독명")
                     {
-                        string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM = '" + SearchText.Text + "'";
+                        string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + SearchText.Text + "%'";
 
                         OracleCommand Comm = new OracleCommand(sql2, Conn);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
                         {
-                            
-
-                            MovieSearchPage.BringToFront();
-
-                            while (reader2.Read())
-                            {
-
-                            }
+                            Controls.Add(MovieSearchPage.Instance);
+                            MovieSearchPage.Instance.setDirector_nm(SearchText.Text);
+                            MovieSearchPage.Instance.DirectorDetail_test();
+                            MovieSearchPage.Instance.Dock = DockStyle.Fill;
+                            MovieSearchPage.Instance.BringToFront();
                         }
                         else if (!reader2.HasRows)
                         {
@@ -110,20 +106,17 @@ namespace DB_Project_Cinema
                     }
                     else if (MovieCategory.SelectedItem.ToString() == "장르명")
                     {
-                        string sql2 = "SELECT * FROM MOVIE WHERE GENRE = '" + SearchText.Text + "'";
+                        string sql2 = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + SearchText.Text + "%'";
 
                         OracleCommand Comm = new OracleCommand(sql2, Conn);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
                         {
-                           
-                            MovieSearchPage.BringToFront();
-
-                            while (reader2.Read())
-                            {
-
-                            }
-
+                            Controls.Add(MovieSearchPage.Instance);
+                            MovieSearchPage.Instance.setGenre_nm(SearchText.Text);
+                            MovieSearchPage.Instance.GenreDetail_test();
+                            MovieSearchPage.Instance.Dock = DockStyle.Fill;
+                            MovieSearchPage.Instance.BringToFront();
                         }
                         else if (!reader2.HasRows)
                         {

@@ -54,12 +54,12 @@
             this.ReleaseDate,
             this.ShowTime,
             this.Coutry});
-            this.dataGridView1.Location = new System.Drawing.Point(133, 56);
+            this.dataGridView1.Location = new System.Drawing.Point(119, 3);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(960, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(928, 316);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 

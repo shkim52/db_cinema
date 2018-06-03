@@ -16,6 +16,8 @@ namespace DB_Project_Cinema
     {
         private static MovieSearchPage _instance;
         private string movie_nm;
+        private string Director_nm;
+        private string Genre_nm;
         public OracleConnection Conn;
         public static MovieSearchPage Instance
         {
@@ -31,6 +33,14 @@ namespace DB_Project_Cinema
         public void setMovie_nm(string s)
         {
             movie_nm = s;
+        }
+        public void setDirector_nm(string s)
+        {
+            Director_nm = s;
+        }
+        public void setGenre_nm(string s)
+        {
+            Genre_nm = s;
         }
         public MovieSearchPage()
         {
@@ -48,17 +58,13 @@ namespace DB_Project_Cinema
             try
             {
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '"+movie_nm+"'";
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + movie_nm + "%'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
-
-
                 OracleDataReader reader = Comm.ExecuteReader();
 
-
                 while (reader.Read())
-                {
-                    
+                {                   
                     string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     string genre = reader.GetString(reader.GetOrdinal("GENRE"));
                     string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
@@ -68,21 +74,89 @@ namespace DB_Project_Cinema
                     string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
                     string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
 
+                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
+
+                    dataGridView1.Rows.Add(row0);
+                }
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        public void DirectorDetail_test()
+        {
+            try
+            {
+                Conn.Open();
+                string sql = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + Director_nm + "%'";
+
+                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                    string genre = reader.GetString(reader.GetOrdinal("GENRE"));
+                    string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
+                    string rating = reader.GetString(reader.GetOrdinal("RATING"));
+                    string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
+                    string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
+                    string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
 
                     string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
 
                     dataGridView1.Rows.Add(row0);
                 }
-
-
-
                 Conn.Close();
-
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
 
+        public void GenreDetail_test()
+        {
+            try
+            {
+                Conn.Open();
+                string sql = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + Genre_nm + "%'";
+
+                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                    string genre = reader.GetString(reader.GetOrdinal("GENRE"));
+                    string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                    string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
+                    string rating = reader.GetString(reader.GetOrdinal("RATING"));
+                    string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
+                    string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
+                    string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
+
+                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
+
+                    dataGridView1.Rows.Add(row0);
+                }
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
             finally
             {
