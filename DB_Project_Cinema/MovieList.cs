@@ -65,10 +65,11 @@ namespace DB_Project_Cinema
                 {
                     Conn.Open();
 
-                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO=" + (i + 1);
+                    string sql = "SELECT * FROM(SELECT ROWNUM RM, MOVIE_NO, MOVIE_NM, POSTER FROM MOVIE WHERE SHOW_STAT='Y') Y WHERE Y.RM="+(i+1);
                     OracleCommand Comm = new OracleCommand(sql, Conn);
 
                     OracleDataReader reader = Comm.ExecuteReader();
+                    
 
                     while (reader.Read())
                     {
@@ -80,13 +81,14 @@ namespace DB_Project_Cinema
                         btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                         
                         label[i].Text = "   예매율:  ";
+                        
 
                     }
                     Controls.Add(pic[i]);
                     Controls.Add(btn[i]);
                     Controls.Add(label[i]);
 
-
+                   
                     Conn.Close();
                 }
                 catch (Exception ex)

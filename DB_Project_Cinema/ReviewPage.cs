@@ -74,6 +74,8 @@ namespace DB_Project_Cinema
 
                     string[] row0 = { memID, score, review };
 
+                    this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
+
                     dataGridView1.Rows.Add(row0);
                 }
 

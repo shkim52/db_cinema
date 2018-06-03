@@ -65,7 +65,7 @@ namespace DB_Project_Cinema
                 {
                     Conn.Open();
 
-                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO=" + (i +6 );
+                    string sql = "SELECT * FROM(SELECT ROWNUM RM, MOVIE_NO, MOVIE_NM, POSTER,RELEASE_DATE FROM MOVIE WHERE SHOW_STAT='E') Y WHERE Y.RM=" + (i + 1);
                     OracleCommand Comm = new OracleCommand(sql, Conn);
 
                     OracleDataReader reader = Comm.ExecuteReader();

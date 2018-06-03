@@ -78,6 +78,7 @@ namespace DB_Project_Cinema
 
                     string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
 
+                    this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
                     dataGridView1.Rows.Add(row0);
                 }
                 Conn.Close();
