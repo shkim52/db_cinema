@@ -45,6 +45,7 @@ namespace DB_Project_Cinema
 
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             Conn = new OracleConnection(str);
+            MovieList ml = new MovieList();
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
@@ -128,8 +129,6 @@ namespace DB_Project_Cinema
                 }
 
 
-
-
                 Conn.Close();
             }
             catch (Exception ex)
@@ -186,9 +185,6 @@ namespace DB_Project_Cinema
 
 
                     }
-
-
-
 
                     Conn.Close();
                 }

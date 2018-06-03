@@ -106,14 +106,14 @@ namespace DB_Project_Cinema
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
-
+            Button btn = sender as Button; 
+            Controls.Remove(this);
             Controls.Add(MovieDetail1.Instance);
             MovieDetail1.Instance.setMovie_nm(btn.Text);
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.None;
             MovieDetail1.Instance.BringToFront();
-            
+           
         }
     }
 }
