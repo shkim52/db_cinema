@@ -31,7 +31,7 @@ namespace DB_Project_Cinema
                 MoviePage.Instance.BringToFront();
             }
 
-            if (Program.memID == "" || Program.custID == "")
+            if (Program.memID == "" && Program.custID == "")
             {
                 LogoutButton.Enabled = false;
             }
