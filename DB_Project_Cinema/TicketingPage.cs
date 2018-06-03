@@ -66,7 +66,7 @@ namespace DB_Project_Cinema
 
         private void ChooseSeatPageButton_Click_1(object sender, EventArgs e)
         {
-            if (Program.memID != "")
+            //if (Program.memID != "")
             {
                 ChooseSeat.BringToFront();
                 ChooseSeatPageButton.Visible = false;
@@ -74,9 +74,9 @@ namespace DB_Project_Cinema
                 BackToSelcetTimeButton.Visible = true;
                 BackToChooseSeatButton.Visible = false;
             }
-            else
+            //else
             {
-                MessageBox.Show("로그인을 하세요!");
+               // MessageBox.Show("로그인을 하세요!");
 
             }
         }

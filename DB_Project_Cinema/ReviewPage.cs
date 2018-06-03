@@ -60,7 +60,7 @@ namespace DB_Project_Cinema
                 }
 
                 string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
-                Review.Text = sql2;
+                
 
                 OracleCommand Comm2 = new OracleCommand(sql2, Conn);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
@@ -94,36 +94,44 @@ namespace DB_Project_Cinema
         {
             string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
             OracleConnection Conn = new OracleConnection(str);
-            if (Program.memID == "")
+            /*if (Program.memID == "")
             {
                 MessageBox.Show("로그인을 하세요!");
             }
-            else
+            else*/
             {
                 try
                 {
                     OracleCommand Cmd = new OracleCommand();
                     Cmd.Connection = Conn;
                     Conn.Open();
-                    string sql = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no ;
-                    //string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NM = '" + movie_nm + "'";
-                    OracleCommand Comm = new OracleCommand(sql, Conn);
-                    OracleDataReader reader = Comm.ExecuteReader();
-   
                     
-
-
-                    while (reader.Read())
-                    {
-                        this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                        //int movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
-
-                        string sql3 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + Program.memID + "'," + movie_no + MovieScore.SelectedItem + Review.Text + "')";
-
+                        string sql3 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('shkim5276'," + movie_no +","+ MovieScore.SelectedItem + ",'"+Review.Text + "')";
+                        //Review.Text = sql3;
                         Cmd.CommandText = sql3;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");
-                    }
+
+                        dataGridView1.Rows.Clear();
+
+                        string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
+
+
+                        OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+                        OracleDataReader reader2 = Comm2.ExecuteReader();
+
+                        while (reader2.Read())
+                        {
+                            string memID = reader2.GetString(reader2.GetOrdinal("MEM_ID"));
+                            string score = reader2.GetInt32(reader2.GetOrdinal("MOVIE_SCORE")).ToString();
+                            string review = reader2.GetString(reader2.GetOrdinal("REVIEW"));
+
+
+                            string[] row0 = { memID, score, review };
+
+                            dataGridView1.Rows.Add(row0);
+                        }
+                    
 
                     Conn.Close();
                 }
