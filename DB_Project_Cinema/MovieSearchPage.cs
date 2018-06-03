@@ -55,6 +55,8 @@ namespace DB_Project_Cinema
 
         public void MovieDetail_test()
         {
+            dataGridView1.Rows.Clear();
+
             try
             {
                 Conn.Open();
@@ -92,6 +94,8 @@ namespace DB_Project_Cinema
 
         public void DirectorDetail_test()
         {
+            dataGridView1.Rows.Clear();
+
             try
             {
                 Conn.Open();
@@ -129,6 +133,8 @@ namespace DB_Project_Cinema
 
         public void GenreDetail_test()
         {
+            dataGridView1.Rows.Clear();
+
             try
             {
                 Conn.Open();

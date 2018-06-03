@@ -14,6 +14,20 @@ namespace DB_Project_Cinema
 {
     public partial class MovieList : UserControl
     {
+        private static MovieList _instance;
+
+        public static MovieList Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MovieList();
+                }
+                return _instance;
+            }
+        }
+
         Button[] btn = new Button[5];
         PictureBox[] pic = new PictureBox[5];
 

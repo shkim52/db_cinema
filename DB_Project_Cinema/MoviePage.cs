@@ -15,6 +15,7 @@ namespace DB_Project_Cinema
     public partial class MoviePage : UserControl
     {
         private static MoviePage _instance;
+        
         public static MoviePage Instance
         {
             get
@@ -60,13 +61,7 @@ namespace DB_Project_Cinema
 
                     if (MovieCategory.SelectedItem.ToString() == "영화명")
 
-                    {
-                        Controls.Add(MovieSearchPage.Instance);
-                        MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
-                        MovieSearchPage.Instance.MovieDetail_test();
-                        MovieSearchPage.Instance.Dock = DockStyle.Fill;
-                        MovieSearchPage.Instance.BringToFront();
-
+                    {                      
                         string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
                        
                         OracleCommand Comm = new OracleCommand(sql2, Conn);

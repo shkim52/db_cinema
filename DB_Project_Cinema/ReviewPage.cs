@@ -49,7 +49,7 @@ namespace DB_Project_Cinema
             try
             {
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = '" + movie_no + "'";
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = " + movie_no ;
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -57,9 +57,26 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                     this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                    
-
                 }
+
+                string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
+                Review.Text = sql2;
+
+                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+                OracleDataReader reader2 = Comm2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    string memID = reader2.GetString(reader2.GetOrdinal("MEM_ID"));
+                    string score = reader2.GetInt32(reader2.GetOrdinal("MOVIE_SCORE")).ToString();
+                    string review = reader2.GetString(reader2.GetOrdinal("REVIEW"));
+
+
+                    string[] row0 = { memID, score, review };
+
+                    dataGridView1.Rows.Add(row0);
+                }
+
                 Conn.Close();
             }
             catch (Exception ex)
@@ -88,26 +105,12 @@ namespace DB_Project_Cinema
                     OracleCommand Cmd = new OracleCommand();
                     Cmd.Connection = Conn;
                     Conn.Open();
-                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = '" + movie_no + "'";
+                    string sql = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no ;
                     //string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NM = '" + movie_nm + "'";
                     OracleCommand Comm = new OracleCommand(sql, Conn);
                     OracleDataReader reader = Comm.ExecuteReader();
    
-                    while (reader.Read())
-                    {
-                        string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                        string genre = reader.GetString(reader.GetOrdinal("GENRE"));
-                        string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
-                        string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
-                        string rating = reader.GetString(reader.GetOrdinal("RATING"));
-                        string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
-                        string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                        string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
-
-                        string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
-
-                        dataGridView1.Rows.Add(row0);
-                    }
+                    
 
 
                     while (reader.Read())
@@ -135,5 +138,14 @@ namespace DB_Project_Cinema
             }
         
     }
+
+        private void BackToHome_Click(object sender, EventArgs e)
+        {
+            /*Controls.Add(MovieList.Instance);
+            //MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
+            //MovieSearchPage.Instance.MovieDetail_test();
+            MovieList.Instance.Dock = DockStyle.Fill;
+            MovieList.Instance.BringToFront();*/
+        }
 }
 }

@@ -16,7 +16,7 @@ namespace DB_Project_Cinema
     {
         private static MovieDetail1 _instance;
         private string movie_nm;
-        private int movie_no;
+        //private int movie_no;
         public OracleConnection Conn;
         public static MovieDetail1 Instance
         {
@@ -31,6 +31,10 @@ namespace DB_Project_Cinema
         }
         public void setMovie_nm(string s){
             movie_nm = s;
+        }
+        public void setMovie_no(int i)
+        {
+            //movie_no = i;
         }
         public MovieDetail1()
         {
@@ -100,6 +104,12 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                     int movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
+                    
+                    Controls.Add(ReviewPage.Instance);
+                    ReviewPage.Instance.setMovie_no(movie_no);
+                    ReviewPage.Instance.ReviewPage_test();
+                    ReviewPage.Instance.Dock = DockStyle.Fill;
+                    ReviewPage.Instance.BringToFront();
 
                 }
 
@@ -116,11 +126,7 @@ namespace DB_Project_Cinema
             {
                 Conn.Close();
             }
-            Controls.Add(ReviewPage.Instance);
-            //ReviewPage.Instance.setMovie_no(movie_no);
-            ReviewPage.Instance.ReviewPage_test();
-            ReviewPage.Instance.Dock = DockStyle.Fill;
-            ReviewPage.Instance.BringToFront();
+           
             
         }
 
