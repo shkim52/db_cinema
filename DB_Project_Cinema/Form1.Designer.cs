@@ -52,6 +52,7 @@
             this.Logout = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.checkResv = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -256,6 +257,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.checkResv);
             this.panel4.Controls.Add(this.DiscountCardButton);
             this.panel4.Controls.Add(this.ScreenInfoButton);
             this.panel4.Controls.Add(this.TicketingPageButton);
@@ -366,6 +368,20 @@
             this.mainPanel.Size = new System.Drawing.Size(1251, 582);
             this.mainPanel.TabIndex = 7;
             // 
+            // checkResv
+            // 
+            this.checkResv.FlatAppearance.BorderSize = 0;
+            this.checkResv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkResv.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkResv.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.checkResv.Location = new System.Drawing.Point(788, 1);
+            this.checkResv.Margin = new System.Windows.Forms.Padding(2);
+            this.checkResv.Name = "checkResv";
+            this.checkResv.Size = new System.Drawing.Size(165, 40);
+            this.checkResv.TabIndex = 9;
+            this.checkResv.Text = "예매내역 확인";
+            this.checkResv.UseVisualStyleBackColor = true;
+            // 
             // CinemaProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -422,6 +438,7 @@
         private System.Windows.Forms.ToolStripButton tbRefresh;
         private System.Windows.Forms.ToolStripButton tbBackward;
         private System.Windows.Forms.ToolStripButton Forward;
+        private System.Windows.Forms.Button checkResv;
     }
 }
 

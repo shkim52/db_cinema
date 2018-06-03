@@ -113,6 +113,7 @@ namespace DB_Project_Cinema
             MovieDetail1.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.None;
             MovieDetail1.Instance.BringToFront();
+            
         }
     }
 }

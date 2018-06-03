@@ -34,14 +34,22 @@ namespace DB_Project_Cinema
             var senderGrid = (DataGridView)sender;
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
-            { 
+            {
+                string movie_name = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 if (e.ColumnIndex == 3)
                 {
-
+                    MovieDetail1 mv = new MovieDetail1();
+                    this.Parent.Hide();
+                    mv.Show();
+                    Controls.Add(MovieDetail1.Instance);
+                    MovieDetail1.Instance.setMovie_nm(movie_name);
+                    MovieDetail1.Instance.MovieDetail_test();
+                    MovieDetail1.Instance.Dock = DockStyle.None;
+                    MovieDetail1.Instance.BringToFront();
                 }
                 else if (e.ColumnIndex == 4)
                 {
-                    delete_interest(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    delete_interest(movie_name);
                     dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
                     //load_datagridview();
                 }

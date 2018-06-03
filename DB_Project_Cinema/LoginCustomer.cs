@@ -30,7 +30,7 @@ namespace DB_Project_Cinema
             {
 
                 Conn.Open();
-
+                /*
                 string sql = "SELECT * FROM CUST WHERE CUST_ID = '" + CustNameTextbox.Text + "' AND CUST_PW = '" + CustPwdTextbox.Text + "'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
@@ -51,7 +51,7 @@ namespace DB_Project_Cinema
                         CinemaProgram c = new CinemaProgram();
                         c.Show();
                     }
-                }
+                }*/
                 Conn.Close();
             }
             catch (Exception ex)
