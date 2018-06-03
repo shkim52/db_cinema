@@ -105,33 +105,36 @@ namespace DB_Project_Cinema
                     OracleCommand Cmd = new OracleCommand();
                     Cmd.Connection = Conn;
                     Conn.Open();
-                    
-                        string sql3 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('shkim5276'," + movie_no +","+ MovieScore.SelectedItem + ",'"+Review.Text + "')";
-                        //Review.Text = sql3;
-                        Cmd.CommandText = sql3;
+
+                   try {
+                        string sql = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('shkim5276'," + movie_no + "," + MovieScore.SelectedItem + ",'" + Review.Text + "')";
+                        Cmd.CommandText = sql;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");
+                       }
+                   catch (Exception exc)
+                   {
+                       MessageBox.Show("이미 리뷰를 등록한 영화입니다!");
+                   }
 
-                        dataGridView1.Rows.Clear();
+                    dataGridView1.Rows.Clear();
 
-                        string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
+                    string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
 
+                    OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+                    OracleDataReader reader2 = Comm2.ExecuteReader();
 
-                        OracleCommand Comm2 = new OracleCommand(sql2, Conn);
-                        OracleDataReader reader2 = Comm2.ExecuteReader();
+                    while (reader2.Read())
+                    {
+                        string memID = reader2.GetString(reader2.GetOrdinal("MEM_ID"));
+                        string score = reader2.GetInt32(reader2.GetOrdinal("MOVIE_SCORE")).ToString();
+                        string review = reader2.GetString(reader2.GetOrdinal("REVIEW"));
 
-                        while (reader2.Read())
-                        {
-                            string memID = reader2.GetString(reader2.GetOrdinal("MEM_ID"));
-                            string score = reader2.GetInt32(reader2.GetOrdinal("MOVIE_SCORE")).ToString();
-                            string review = reader2.GetString(reader2.GetOrdinal("REVIEW"));
+                        string[] row0 = { memID, score, review };
 
+                        dataGridView1.Rows.Add(row0);
+                    }
 
-                            string[] row0 = { memID, score, review };
-
-                            dataGridView1.Rows.Add(row0);
-                        }
-                    
 
                     Conn.Close();
                 }

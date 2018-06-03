@@ -30,6 +30,7 @@ namespace DB_Project_Cinema
 
         Button[] btn = new Button[5];
         PictureBox[] pic = new PictureBox[5];
+        Label[] label = new Label[5];
 
         public MovieList()
         {
@@ -54,6 +55,12 @@ namespace DB_Project_Cinema
                 btn[i].Size = new Size(130, 25);
                 btn[i].Location = new Point(90 + 180 * i, 225);
                 btn[i].Click += Form1_Click;
+
+                label[i] = new Label();
+                label[i].Name = "ResvRate" + (i + 1).ToString();
+                label[i].Size = new Size(130, 25);
+                label[i].Location = new Point(90 + 180 * i, 255);
+                
                 try
                 {
                     Conn.Open();
@@ -71,10 +78,13 @@ namespace DB_Project_Cinema
                         pic[i].ImageLocation = poster;
 
                         btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                        
+                        label[i].Text = "   예매율:  ";
 
                     }
                     Controls.Add(pic[i]);
                     Controls.Add(btn[i]);
+                    Controls.Add(label[i]);
 
 
                     Conn.Close();
@@ -99,7 +109,7 @@ namespace DB_Project_Cinema
             Controls.Add(MovieDetail1.Instance);
             MovieDetail1.Instance.setMovie_nm(btn.Text);
             MovieDetail1.Instance.MovieDetail_test();
-            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.Dock = DockStyle.None;
             MovieDetail1.Instance.BringToFront();
         }
     }

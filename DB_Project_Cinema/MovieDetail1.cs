@@ -108,7 +108,7 @@ namespace DB_Project_Cinema
                     Controls.Add(ReviewPage.Instance);
                     ReviewPage.Instance.setMovie_no(movie_no);
                     ReviewPage.Instance.ReviewPage_test();
-                    ReviewPage.Instance.Dock = DockStyle.Fill;
+                    ReviewPage.Instance.Dock = DockStyle.None;
                     ReviewPage.Instance.BringToFront();
 
                 }
