@@ -36,6 +36,9 @@ namespace DB_Project_Cinema
         {
             //movie_no = i;
         }
+
+        int movie_no;
+
         public MovieDetail1()
         {
             InitializeComponent();
@@ -70,9 +73,20 @@ namespace DB_Project_Cinema
                     this.Distributor.Text = reader.GetString(reader.GetOrdinal("DISTRIBUTOR"));
                     this.MovieIntro.Text = reader.GetString(reader.GetOrdinal("MOVIE_INTRO"));
                     var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                    movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
 
                     Poster.SizeMode = PictureBoxSizeMode.StretchImage;
                     Poster.ImageLocation = poster;
+                }
+                string sql2 = "SELECT AVG(MOVIE_SCORE) FROM GRADE WHERE MOVIE_NO="+movie_no+" GROUP BY MOVIE_NO";
+                //this.MovieScore.Text = movie_no.ToString();
+                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+                OracleDataReader reader2 = Comm2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    this.MovieScore.Text = reader.GetInt32(reader.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() +"점";
+                    
                 }
 
                 Conn.Close();

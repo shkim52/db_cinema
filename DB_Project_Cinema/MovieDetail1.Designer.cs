@@ -46,7 +46,7 @@
             this.Distributor = new System.Windows.Forms.Label();
             this.InterestRegisterButton = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.MovieScore = new System.Windows.Forms.Label();
             this.Rating = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -255,16 +255,16 @@
             this.label16.Text = "평점:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label17
+            // MovieScore
             // 
-            this.label17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(273, 218);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 29);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "label1";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MovieScore.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MovieScore.Location = new System.Drawing.Point(273, 218);
+            this.MovieScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.MovieScore.Name = "MovieScore";
+            this.MovieScore.Size = new System.Drawing.Size(65, 29);
+            this.MovieScore.TabIndex = 19;
+            this.MovieScore.Text = "label1";
+            this.MovieScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Rating
             // 
@@ -337,7 +337,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Rating);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.MovieScore);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.InterestRegisterButton);
             this.Controls.Add(this.Distributor);
@@ -385,7 +385,7 @@
         private System.Windows.Forms.Label Distributor;
         private System.Windows.Forms.Button InterestRegisterButton;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label MovieScore;
         private System.Windows.Forms.Label Rating;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label2;

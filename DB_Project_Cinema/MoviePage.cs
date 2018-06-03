@@ -32,7 +32,11 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            MovieList.BringToFront();
+            panel3.Controls.Add(MovieList.Instance);
+            //MovieDetail1.Instance.setMovie_nm(btn.Text);
+           // MovieDetail1.Instance.MovieDetail_test();
+            MovieList.Instance.Dock = DockStyle.None;
+            MovieList.Instance.BringToFront();
 
             PlayingMovie.FlatAppearance.BorderColor = Color.Red;
             PlayingMovie.FlatAppearance.BorderSize = 1;
@@ -135,7 +139,11 @@ namespace DB_Project_Cinema
 
         private void PlayingMovie_Click(object sender, EventArgs e)
         {
-            MovieList.BringToFront();
+            panel3.Controls.Add(MovieList.Instance);
+            //MovieDetail1.Instance.setMovie_nm(btn.Text);
+            // MovieDetail1.Instance.MovieDetail_test();
+            MovieList.Instance.Dock = DockStyle.None;
+            MovieList.Instance.BringToFront();
 
             PlayingMovie.FlatAppearance.BorderColor = Color.Red;
             PlayingMovie.FlatAppearance.BorderSize = 1;
@@ -145,7 +153,11 @@ namespace DB_Project_Cinema
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
         {
-            MovieList2.BringToFront();
+            panel3.Controls.Add(MovieList2.Instance);
+            //MovieDetail1.Instance.setMovie_nm(btn.Text);
+            // MovieDetail1.Instance.MovieDetail_test();
+            MovieList2.Instance.Dock = DockStyle.None;
+            MovieList2.Instance.BringToFront();
 
             ExpectedMovie.FlatAppearance.BorderColor = Color.Red;
             ExpectedMovie.FlatAppearance.BorderSize = 1;

@@ -152,11 +152,11 @@ namespace DB_Project_Cinema
 
         private void BackToHome_Click(object sender, EventArgs e)
         {
-            /*Controls.Add(MovieList.Instance);
+            Controls.Add(MovieDetail1.Instance);
             //MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
             //MovieSearchPage.Instance.MovieDetail_test();
-            MovieList.Instance.Dock = DockStyle.Fill;
-            MovieList.Instance.BringToFront();*/
+            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.BringToFront();
         }
 }
 }
