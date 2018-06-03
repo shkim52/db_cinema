@@ -15,7 +15,7 @@ namespace DB_Project_Cinema
     public partial class ReviewPage : UserControl
     {
         private static ReviewPage _instance;
-        private string movie_nm;
+        private int movie_no;
         public OracleConnection Conn;
         public static ReviewPage Instance
         {
@@ -28,9 +28,9 @@ namespace DB_Project_Cinema
                 return _instance;
             }
         }
-        public void setMovie_nm(string s)
+        public void setMovie_no(int i)
         {
-            movie_nm = s;
+            movie_no = i;
         }
 
         public ReviewPage()
@@ -49,7 +49,7 @@ namespace DB_Project_Cinema
             try
             {
                 Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = '" + movie_no + "'";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -88,27 +88,39 @@ namespace DB_Project_Cinema
                     OracleCommand Cmd = new OracleCommand();
                     Cmd.Connection = Conn;
                     Conn.Open();
-                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
-
+                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = '" + movie_no + "'";
+                    //string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NM = '" + movie_nm + "'";
                     OracleCommand Comm = new OracleCommand(sql, Conn);
                     OracleDataReader reader = Comm.ExecuteReader();
+   
+                    while (reader.Read())
+                    {
+                        string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                        string genre = reader.GetString(reader.GetOrdinal("GENRE"));
+                        string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
+                        string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
+                        string rating = reader.GetString(reader.GetOrdinal("RATING"));
+                        string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
+                        string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
+                        string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
+
+                        string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
+
+                        dataGridView1.Rows.Add(row0);
+                    }
+
 
                     while (reader.Read())
                     {
                         this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                        decimal movie_no = reader.GetDecimal(reader.GetOrdinal("MOVIE_NO"));
+                        //int movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
 
-                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + Program.memID + "'," + movie_no + MovieScore.SelectedItem + Review.Text + "')";
+                        string sql3 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + Program.memID + "'," + movie_no + MovieScore.SelectedItem + Review.Text + "')";
 
-                        Cmd.CommandText = sql2;
+                        Cmd.CommandText = sql3;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");
-
-
                     }
-
-
-
 
                     Conn.Close();
                 }

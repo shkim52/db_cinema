@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     {
         private static MovieDetail1 _instance;
         private string movie_nm;
+        private int movie_no;
         public OracleConnection Conn;
         public static MovieDetail1 Instance
         {
@@ -86,8 +87,37 @@ namespace DB_Project_Cinema
 
         private void ReviewButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OracleCommand Cmd = new OracleCommand();
+                Cmd.Connection = Conn;
+                Conn.Open();
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
+
+                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
+
+                }
+
+
+
+
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
             Controls.Add(ReviewPage.Instance);
-            ReviewPage.Instance.setMovie_nm(MovieNM.Text);
+            //ReviewPage.Instance.setMovie_no(movie_no);
             ReviewPage.Instance.ReviewPage_test();
             ReviewPage.Instance.Dock = DockStyle.Fill;
             ReviewPage.Instance.BringToFront();
@@ -96,8 +126,7 @@ namespace DB_Project_Cinema
 
         private void InterestRegisterButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
+          
             if (Program.memID == "")
             {
                 MessageBox.Show("로그인을 하세요!");
