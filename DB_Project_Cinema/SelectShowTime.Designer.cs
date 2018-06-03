@@ -45,9 +45,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(198, 144);
+            this.label1.Location = new System.Drawing.Point(158, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 28);
+            this.label1.Size = new System.Drawing.Size(204, 23);
             this.label1.TabIndex = 10;
             this.label1.Text = "영화";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,9 +58,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(472, 144);
+            this.label2.Location = new System.Drawing.Point(378, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(324, 28);
+            this.label2.Size = new System.Drawing.Size(259, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "날짜";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,9 +71,10 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(815, 144);
+            this.label3.Location = new System.Drawing.Point(652, 120);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 28);
+            this.label3.Size = new System.Drawing.Size(75, 23);
             this.label3.TabIndex = 12;
             this.label3.Text = "상영관";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,25 +84,28 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(928, 144);
+            this.label4.Location = new System.Drawing.Point(742, 120);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(386, 28);
+            this.label4.Size = new System.Drawing.Size(309, 23);
             this.label4.TabIndex = 13;
             this.label4.Text = "시간";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(486, 209);
+            this.monthCalendar1.Location = new System.Drawing.Point(389, 174);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 14;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(553, 31);
+            this.label5.Location = new System.Drawing.Point(442, 26);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(324, 60);
+            this.label5.Size = new System.Drawing.Size(259, 50);
             this.label5.TabIndex = 15;
             this.label5.Text = "TICKET";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,20 +118,25 @@
             this.ScreenListBox.Items.AddRange(new object[] {
             "일반관",
             "특별관"});
-            this.ScreenListBox.Location = new System.Drawing.Point(820, 287);
+            this.ScreenListBox.Location = new System.Drawing.Point(656, 239);
+            this.ScreenListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ScreenListBox.Name = "ScreenListBox";
-            this.ScreenListBox.Size = new System.Drawing.Size(94, 78);
+            this.ScreenListBox.Size = new System.Drawing.Size(75, 44);
             this.ScreenListBox.TabIndex = 16;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MovieNM});
-            this.dataGridView1.Location = new System.Drawing.Point(251, 206);
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(162, 157);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(151, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(188, 224);
             this.dataGridView1.TabIndex = 17;
             // 
             // MovieNM
@@ -135,7 +146,7 @@
             // 
             // SelectShowTime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridView1);
@@ -146,8 +157,9 @@
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ScreenListBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SelectShowTime";
-            this.Size = new System.Drawing.Size(1529, 535);
+            this.Size = new System.Drawing.Size(1223, 446);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
