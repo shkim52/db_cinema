@@ -116,6 +116,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FindPW";
             this.Size = new System.Drawing.Size(1028, 391);
+            this.Load += new System.EventHandler(this.FindPW_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

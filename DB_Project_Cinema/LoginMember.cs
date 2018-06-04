@@ -14,6 +14,7 @@ namespace DB_Project_Cinema
 {
     public partial class LoginMember : UserControl
     {
+        private Connection Connect;
         
         public LoginMember()
         {
@@ -22,19 +23,11 @@ namespace DB_Project_Cinema
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
             try
             {
-
-                Conn.Open();
-                
                 string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + ID_INPUT.Text + "' AND MEM_PW = '" + PW_INPUT.Text+"'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, Connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 if (!reader.HasRows)
@@ -58,7 +51,7 @@ namespace DB_Project_Cinema
                     }
                     
                 }
-                Conn.Close();
+                Connect.con.Close();
             }
             catch (Exception ex)
             {

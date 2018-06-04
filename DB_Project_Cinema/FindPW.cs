@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     
     public partial class FindPW : UserControl
     {
+        private Connection Connect;
         public FindPW()
         {
             InitializeComponent();
@@ -24,17 +25,12 @@ namespace DB_Project_Cinema
 
         private void FindPWButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
             
             try
             {
-               
-                Conn.Open();
-                
                 string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = '" + SID_INPUT.Text + "' AND MEM_ID = '" + ID_INPUT.Text+"'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, Connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 if (SID_INPUT.Text.Length != 6)
@@ -49,8 +45,8 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                      MessageBox.Show("회원님의 비밀번호는 " + reader.GetString(reader.GetOrdinal("MEM_PW")) + "  입니다!");
-                }    
-                Conn.Close();
+                }
+                Connect.con.Close();
             }
             catch (Exception ex)
             {
@@ -58,8 +54,14 @@ namespace DB_Project_Cinema
             }
             finally
             {
-                Conn.Close();
+                Connect.con.Close();
             }
+        }
+
+        private void FindPW_Load(object sender, EventArgs e)
+        {
+            Connect = new Connection();
+            Connect.Connecting();
         }
 
         
