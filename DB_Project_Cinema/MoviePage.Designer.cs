@@ -109,7 +109,7 @@
             this.panel2.Controls.Add(this.PlayingMovie);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 157);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1362, 47);
             this.panel2.TabIndex = 6;
@@ -121,7 +121,7 @@
             this.ExpectedMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExpectedMovie.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ExpectedMovie.Location = new System.Drawing.Point(613, 15);
-            this.ExpectedMovie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExpectedMovie.Margin = new System.Windows.Forms.Padding(2);
             this.ExpectedMovie.Name = "ExpectedMovie";
             this.ExpectedMovie.Size = new System.Drawing.Size(130, 32);
             this.ExpectedMovie.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.PlayingMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayingMovie.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PlayingMovie.Location = new System.Drawing.Point(431, 15);
-            this.PlayingMovie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PlayingMovie.Margin = new System.Windows.Forms.Padding(2);
             this.PlayingMovie.Name = "PlayingMovie";
             this.PlayingMovie.Size = new System.Drawing.Size(130, 32);
             this.PlayingMovie.TabIndex = 0;
@@ -149,7 +149,7 @@
             this.panel3.AccessibleName = "panel3";
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 204);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1362, 288);
             this.panel3.TabIndex = 7;
@@ -165,6 +165,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MoviePage";
             this.Size = new System.Drawing.Size(1362, 492);
+            this.Load += new System.EventHandler(this.MoviePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

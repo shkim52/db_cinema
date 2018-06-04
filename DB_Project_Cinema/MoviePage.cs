@@ -32,15 +32,6 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            panel3.Controls.Add(MovieList.Instance);
-            //MovieDetail1.Instance.setMovie_nm(btn.Text);
-           // MovieDetail1.Instance.MovieDetail_test();
-            MovieList.Instance.Dock = DockStyle.None;
-            MovieList.Instance.BringToFront();
-
-            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
-            PlayingMovie.FlatAppearance.BorderSize = 1;
-            ExpectedMovie.FlatAppearance.BorderSize = 0;
         }      
 
         private void SearchButton_Click_1(object sender, EventArgs e)
@@ -153,6 +144,10 @@ namespace DB_Project_Cinema
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
         {
+            this.Refresh();
+            this.Update();
+            Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            
             panel3.Controls.Add(MovieList2.Instance);
             //MovieDetail1.Instance.setMovie_nm(btn.Text);
             // MovieDetail1.Instance.MovieDetail_test();
@@ -162,6 +157,20 @@ namespace DB_Project_Cinema
             ExpectedMovie.FlatAppearance.BorderColor = Color.Red;
             ExpectedMovie.FlatAppearance.BorderSize = 1;
             PlayingMovie.FlatAppearance.BorderSize = 0;
+        }
+
+        private void MoviePage_Load(object sender, EventArgs e)
+        {
+
+            panel3.Controls.Add(MovieList.Instance);
+            //MovieDetail1.Instance.setMovie_nm(btn.Text);
+            // MovieDetail1.Instance.MovieDetail_test();
+            MovieList.Instance.Dock = DockStyle.None;
+            MovieList.Instance.BringToFront();
+
+            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
+            PlayingMovie.FlatAppearance.BorderSize = 1;
+            ExpectedMovie.FlatAppearance.BorderSize = 0;
         }
 
        

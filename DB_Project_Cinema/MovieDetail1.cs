@@ -17,6 +17,7 @@ namespace DB_Project_Cinema
         private static MovieDetail1 _instance;
         private string movie_nm;
         //private int movie_no;
+        MoviePage m = new MoviePage();
         public OracleConnection Conn;
         public static MovieDetail1 Instance
         {
