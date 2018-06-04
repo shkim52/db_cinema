@@ -130,6 +130,7 @@ namespace DB_Project_Cinema
 
         private void PlayingMovie_Click(object sender, EventArgs e)
         {
+            MoviePage_Load(sender, e);
             panel3.Controls.Add(MovieList.Instance);
             //MovieDetail1.Instance.setMovie_nm(btn.Text);
             // MovieDetail1.Instance.MovieDetail_test();
@@ -144,8 +145,7 @@ namespace DB_Project_Cinema
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
         {
-            this.Refresh();
-            this.Update();
+            
             Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             
             panel3.Controls.Add(MovieList2.Instance);
@@ -161,7 +161,6 @@ namespace DB_Project_Cinema
 
         private void MoviePage_Load(object sender, EventArgs e)
         {
-
             panel3.Controls.Add(MovieList.Instance);
             //MovieDetail1.Instance.setMovie_nm(btn.Text);
             // MovieDetail1.Instance.MovieDetail_test();

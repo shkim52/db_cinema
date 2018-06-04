@@ -20,28 +20,6 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            if (!mainPanel.Controls.Contains(MoviePage.Instance))
-            {
-                mainPanel.Controls.Add(MoviePage.Instance);
-                MoviePage.Instance.Dock = DockStyle.Fill;
-                MoviePage.Instance.BringToFront();
-            }
-            else
-            {
-                MoviePage.Instance.BringToFront();
-            }
-
-            if (Program.memID == "" && Program.custID == "")
-            {
-                LogoutButton.Enabled = false;
-            }
-            else
-            {
-                LoginPageButton.Enabled = false;
-                FindIDandPWButton.Enabled = false;
-                JoinMembershipButton.Enabled = false;
-            }
-
         }
 
         private void MoviePageButton_Click(object sender, EventArgs e)
@@ -249,6 +227,33 @@ namespace DB_Project_Cinema
             MessageBox.Show("로그아웃 되었습니다.");
             Program.memID = "";
             this.Close();
+        }
+
+        private void CinemaProgram_Load(object sender, EventArgs e)
+        {
+
+            if (!mainPanel.Controls.Contains(MoviePage.Instance))
+            {
+                mainPanel.Controls.Add(MoviePage.Instance);
+                MoviePage.Instance.Dock = DockStyle.Fill;
+                MoviePage.Instance.BringToFront();
+            }
+            else
+            {
+                MoviePage.Instance.BringToFront();
+            }
+
+            if (Program.memID == "" && Program.custID == "")
+            {
+                LogoutButton.Enabled = false;
+            }
+            else
+            {
+                LoginPageButton.Enabled = false;
+                FindIDandPWButton.Enabled = false;
+                JoinMembershipButton.Enabled = false;
+            }
+
         }
     }
 }

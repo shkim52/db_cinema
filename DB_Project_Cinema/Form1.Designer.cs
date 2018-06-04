@@ -44,6 +44,7 @@
             this.JoinMembershipButton = new System.Windows.Forms.Button();
             this.LoginPageButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.checkResv = new System.Windows.Forms.Button();
             this.DiscountCardButton = new System.Windows.Forms.Button();
             this.ScreenInfoButton = new System.Windows.Forms.Button();
             this.TicketingPageButton = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.Logout = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.checkResv = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -269,6 +269,20 @@
             this.panel4.Size = new System.Drawing.Size(1539, 41);
             this.panel4.TabIndex = 3;
             // 
+            // checkResv
+            // 
+            this.checkResv.FlatAppearance.BorderSize = 0;
+            this.checkResv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkResv.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.checkResv.ForeColor = System.Drawing.Color.AntiqueWhite;
+            this.checkResv.Location = new System.Drawing.Point(788, 1);
+            this.checkResv.Margin = new System.Windows.Forms.Padding(2);
+            this.checkResv.Name = "checkResv";
+            this.checkResv.Size = new System.Drawing.Size(165, 40);
+            this.checkResv.TabIndex = 9;
+            this.checkResv.Text = "예매내역 확인";
+            this.checkResv.UseVisualStyleBackColor = true;
+            // 
             // DiscountCardButton
             // 
             this.DiscountCardButton.FlatAppearance.BorderSize = 0;
@@ -368,20 +382,6 @@
             this.mainPanel.Size = new System.Drawing.Size(1251, 582);
             this.mainPanel.TabIndex = 7;
             // 
-            // checkResv
-            // 
-            this.checkResv.FlatAppearance.BorderSize = 0;
-            this.checkResv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkResv.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkResv.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.checkResv.Location = new System.Drawing.Point(788, 1);
-            this.checkResv.Margin = new System.Windows.Forms.Padding(2);
-            this.checkResv.Name = "checkResv";
-            this.checkResv.Size = new System.Drawing.Size(165, 40);
-            this.checkResv.TabIndex = 9;
-            this.checkResv.Text = "예매내역 확인";
-            this.checkResv.UseVisualStyleBackColor = true;
-            // 
             // CinemaProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -400,6 +400,7 @@
             this.Name = "CinemaProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SEOUL CINEMA";
+            this.Load += new System.EventHandler(this.CinemaProgram_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
