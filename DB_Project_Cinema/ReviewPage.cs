@@ -17,6 +17,7 @@ namespace DB_Project_Cinema
         private static ReviewPage _instance;
         private int movie_no;
         public OracleConnection Conn;
+        MoviePage m = new MoviePage();
         public static ReviewPage Instance
         {
             get
@@ -154,11 +155,14 @@ namespace DB_Project_Cinema
 
         private void BackToHome_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            /*
             Controls.Add(MovieDetail1.Instance);
             //MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
             //MovieSearchPage.Instance.MovieDetail_test();
             MovieDetail1.Instance.Dock = DockStyle.Fill;
             MovieDetail1.Instance.BringToFront();
+             * */
         }
-}
+    }
 }
