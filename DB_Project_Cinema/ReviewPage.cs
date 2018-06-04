@@ -154,6 +154,7 @@ namespace DB_Project_Cinema
 
         private void BackToHome_Click(object sender, EventArgs e)
         {
+            this.Parent.Controls.Remove(this);
          //   this.Hide();
            // this.Parent.Parent.Hide();
             /*
