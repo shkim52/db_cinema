@@ -67,7 +67,13 @@ namespace DB_Project_Cinema
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
-                {                   
+                {
+                    var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                    System.Net.WebClient webSource = new System.Net.WebClient();
+                    byte[] data = webSource.DownloadData(poster);
+                    System.IO.MemoryStream pipe = new System.IO.MemoryStream(data);
+                    Image jpgImage = Image.FromStream(pipe);
+
                     string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     string genre = reader.GetString(reader.GetOrdinal("GENRE"));
                     string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
@@ -78,10 +84,9 @@ namespace DB_Project_Cinema
                     //string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
                     string movie_detail = "상세보기";
 
-                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail };
-
-                    this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
-                    dataGridView1.Rows.Add(row0);
+                    this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
+                
                 }
                 Conn.Close();
             }
@@ -111,6 +116,12 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
+                    var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                    System.Net.WebClient webSource = new System.Net.WebClient();
+                    byte[] data = webSource.DownloadData(poster);
+                    System.IO.MemoryStream pipe = new System.IO.MemoryStream(data);
+                    Image jpgImage = Image.FromStream(pipe);
+
                     string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     string genre = reader.GetString(reader.GetOrdinal("GENRE"));
                     string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
@@ -119,9 +130,8 @@ namespace DB_Project_Cinema
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
                     string movie_detail = "상세보기";
 
-                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail };
-
-                    dataGridView1.Rows.Add(row0);
+                    dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
+                
                 }
                 Conn.Close();
             }
@@ -149,6 +159,11 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
+                    var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                    System.Net.WebClient webSource = new System.Net.WebClient();
+                    byte[] data = webSource.DownloadData(poster);
+                    System.IO.MemoryStream pipe = new System.IO.MemoryStream(data);
+                    Image jpgImage = Image.FromStream(pipe);
                     string Movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                     string genre = reader.GetString(reader.GetOrdinal("GENRE"));
                     string director_nm = reader.GetString(reader.GetOrdinal("DIRECTOR_NM"));
@@ -157,11 +172,7 @@ namespace DB_Project_Cinema
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
                     string movie_detail = "상세보기";
 
-                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail };
-
-                    dataGridView1.Rows.Add(row0);
-                     
-
+                    dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
 
                 }
                 Conn.Close();
