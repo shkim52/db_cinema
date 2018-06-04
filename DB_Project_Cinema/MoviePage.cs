@@ -145,8 +145,7 @@ namespace DB_Project_Cinema
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
         {
-            
-            Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            MoviePage_Load(sender, e);
             
             panel3.Controls.Add(MovieList2.Instance);
             //MovieDetail1.Instance.setMovie_nm(btn.Text);
