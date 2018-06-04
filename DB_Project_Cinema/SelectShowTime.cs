@@ -26,6 +26,13 @@ namespace DB_Project_Cinema
         private void SelectShowTime_Load(object sender, EventArgs e)
         {
             show_movie_nm();
+            DateTime now = DateTime.Now;
+            DateTime week = now.AddDays(7);
+
+            monthCalendar1.SelectionStart = now;
+            monthCalendar1.SelectionEnd = week;
+            monthCalendar1.MinDate = now;
+            monthCalendar1.MaxDate = week;
         }
         private void show_movie_nm()
         {

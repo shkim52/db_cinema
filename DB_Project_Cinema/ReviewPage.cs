@@ -109,7 +109,7 @@ namespace DB_Project_Cinema
                     Conn.Open();
 
                    try {
-                        string sql = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('shkim5276'," + movie_no + "," + MovieScore.SelectedItem + ",'" + Review.Text + "')";
+                        string sql = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('"+Program.memID+"'," + movie_no + "," + MovieScore.SelectedItem + ",'" + Review.Text + "')";
                         Cmd.CommandText = sql;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");

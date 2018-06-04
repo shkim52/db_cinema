@@ -34,10 +34,10 @@
             this.Review = new System.Windows.Forms.TextBox();
             this.ReviewRegisterButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BackToHome = new System.Windows.Forms.Button();
             this.MemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MemReview = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BackToHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,34 +100,22 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MemID,
             this.Score,
             this.MemReview});
-            this.dataGridView1.Location = new System.Drawing.Point(167, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(206, 100);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(715, 121);
+            this.dataGridView1.Size = new System.Drawing.Size(659, 121);
             this.dataGridView1.TabIndex = 14;
-            // 
-            // MemID
-            // 
-            this.MemID.HeaderText = "회원아이디";
-            this.MemID.Name = "MemID";
-            // 
-            // Score
-            // 
-            this.Score.HeaderText = "평점";
-            this.Score.Name = "Score";
-            // 
-            // MemReview
-            // 
-            this.MemReview.HeaderText = "리뷰";
-            this.MemReview.Name = "MemReview";
             // 
             // BackToHome
             // 
@@ -143,6 +131,31 @@
             this.BackToHome.Text = "<-홈으로";
             this.BackToHome.UseVisualStyleBackColor = false;
             this.BackToHome.Click += new System.EventHandler(this.BackToHome_Click);
+            // 
+            // MemID
+            // 
+            this.MemID.FillWeight = 150F;
+            this.MemID.HeaderText = "회원아이디";
+            this.MemID.Name = "MemID";
+            this.MemID.ReadOnly = true;
+            this.MemID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MemID.Width = 150;
+            // 
+            // Score
+            // 
+            this.Score.HeaderText = "평점";
+            this.Score.Name = "Score";
+            this.Score.ReadOnly = true;
+            this.Score.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // MemReview
+            // 
+            this.MemReview.FillWeight = 400F;
+            this.MemReview.HeaderText = "리뷰";
+            this.MemReview.Name = "MemReview";
+            this.MemReview.ReadOnly = true;
+            this.MemReview.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MemReview.Width = 400;
             // 
             // ReviewPage
             // 
@@ -174,10 +187,10 @@
         private System.Windows.Forms.TextBox Review;
         private System.Windows.Forms.Button ReviewRegisterButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BackToHome;
         private System.Windows.Forms.DataGridViewTextBoxColumn MemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn MemReview;
-        private System.Windows.Forms.Button BackToHome;
 
     }
 }

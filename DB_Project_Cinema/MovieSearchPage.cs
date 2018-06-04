@@ -51,6 +51,7 @@ namespace DB_Project_Cinema
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
+
         }
 
         public void MovieDetail_test()
@@ -73,10 +74,11 @@ namespace DB_Project_Cinema
                     string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
                     string rating = reader.GetString(reader.GetOrdinal("RATING"));
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
-                    string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                    string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
+                    //string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
+                    //string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
+                    string movie_detail = "상세보기";
 
-                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
+                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail };
 
                     this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
                     dataGridView1.Rows.Add(row0);
@@ -92,6 +94,8 @@ namespace DB_Project_Cinema
                 Conn.Close();
             }
         }
+
+        
 
         public void DirectorDetail_test()
         {
@@ -113,10 +117,9 @@ namespace DB_Project_Cinema
                     string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
                     string rating = reader.GetString(reader.GetOrdinal("RATING"));
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
-                    string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                    string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
+                    string movie_detail = "상세보기";
 
-                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
+                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail };
 
                     dataGridView1.Rows.Add(row0);
                 }
@@ -152,12 +155,14 @@ namespace DB_Project_Cinema
                     string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
                     string rating = reader.GetString(reader.GetOrdinal("RATING"));
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
-                    string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                    string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
+                    string movie_detail = "상세보기";
 
-                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, show_time, country };
+                    string[] row0 = { Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail };
 
                     dataGridView1.Rows.Add(row0);
+                     
+
+
                 }
                 Conn.Close();
             }
@@ -171,9 +176,26 @@ namespace DB_Project_Cinema
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (e.ColumnIndex == 6)
+            {
+                movie_nm = dataGridView1.Rows[e.RowIndex].Cells["MovieNM"].Value.ToString();
+
+                Controls.Add(MovieDetail1.Instance);
+                MovieDetail1.Instance.setMovie_nm(movie_nm);
+                MovieDetail1.Instance.MovieDetail_test();
+                MovieDetail1.Instance.Dock = DockStyle.None;
+                MovieDetail1.Instance.BringToFront();
+            }  
+
+            }
         }
-    }
+
+        
+    
+
 }

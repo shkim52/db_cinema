@@ -35,13 +35,13 @@
             this.ActorNM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReleaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShowTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coutry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MovieDetail = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -52,8 +52,7 @@
             this.ActorNM,
             this.Rating,
             this.ReleaseDate,
-            this.ShowTime,
-            this.Coutry});
+            this.MovieDetail});
             this.dataGridView1.Location = new System.Drawing.Point(119, 3);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridView1.MaximumSize = new System.Drawing.Size(810, 350);
@@ -62,47 +61,57 @@
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(803, 200);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MovieNM
             // 
             this.MovieNM.HeaderText = "영화명";
             this.MovieNM.Name = "MovieNM";
+            this.MovieNM.ReadOnly = true;
+            this.MovieNM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Genre
             // 
             this.Genre.HeaderText = "장르";
             this.Genre.Name = "Genre";
+            this.Genre.ReadOnly = true;
+            this.Genre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // DirectorNM
             // 
             this.DirectorNM.HeaderText = "감독명";
             this.DirectorNM.Name = "DirectorNM";
+            this.DirectorNM.ReadOnly = true;
+            this.DirectorNM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ActorNM
             // 
+            this.ActorNM.FillWeight = 200F;
             this.ActorNM.HeaderText = "배우명";
             this.ActorNM.Name = "ActorNM";
+            this.ActorNM.ReadOnly = true;
+            this.ActorNM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Rating
             // 
             this.Rating.HeaderText = "관람등급";
             this.Rating.Name = "Rating";
+            this.Rating.ReadOnly = true;
+            this.Rating.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ReleaseDate
             // 
             this.ReleaseDate.HeaderText = "개봉일";
             this.ReleaseDate.Name = "ReleaseDate";
+            this.ReleaseDate.ReadOnly = true;
+            this.ReleaseDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // ShowTime
+            // MovieDetail
             // 
-            this.ShowTime.HeaderText = "상영시간";
-            this.ShowTime.Name = "ShowTime";
-            // 
-            // Coutry
-            // 
-            this.Coutry.HeaderText = "국가";
-            this.Coutry.Name = "Coutry";
+            this.MovieDetail.HeaderText = "상세보기";
+            this.MovieDetail.Name = "MovieDetail";
+            this.MovieDetail.ReadOnly = true;
+            this.MovieDetail.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // MovieSearchPage
             // 
@@ -129,7 +138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ActorNM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReleaseDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShowTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coutry;
+        private System.Windows.Forms.DataGridViewButtonColumn MovieDetail;
     }
 }
