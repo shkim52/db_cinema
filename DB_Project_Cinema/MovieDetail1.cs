@@ -178,7 +178,7 @@ namespace DB_Project_Cinema
                             MessageBox.Show("관심리스트에 등록되었습니다!");
                         
                         }
-                        catch (Exception exc)
+                        catch (Exception ex)
                         {
                             MessageBox.Show("이미 등록된 영화입니다!");
                         }

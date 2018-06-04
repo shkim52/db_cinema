@@ -14,20 +14,20 @@ namespace DB_Project_Cinema
 {
     public partial class ChooseSeat : UserControl
     {
+        private Connection connect;
         public ChooseSeat()
         {
             InitializeComponent();
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
+            connect = new Connection();
+            connect.Connecting();
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
             try
             {
             
-                Conn.Open();
                 string sql = "SELECT * FROM SCREEN WHERE SCR_NO=1";
-                OracleCommand Comm = new OracleCommand(sql,Conn);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
 
                
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -38,7 +38,7 @@ namespace DB_Project_Cinema
                     this.TOT_SEAT_CNT.Text = reader.GetDecimal(reader.GetOrdinal("SCR_SEAT_CNT")).ToString();
 
                 }
-                Conn.Close();
+                connect.con.Close();
             }
             catch (Exception ex)
             {
@@ -47,7 +47,7 @@ namespace DB_Project_Cinema
             }
             finally
             {
-                Conn.Close();
+                connect.con.Close();
             }
         }
 

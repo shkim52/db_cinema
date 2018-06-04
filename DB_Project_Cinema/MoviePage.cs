@@ -15,7 +15,7 @@ namespace DB_Project_Cinema
     public partial class MoviePage : UserControl
     {
         private static MoviePage _instance;
-        
+        private string searchType;
         public static MoviePage Instance
         {
             get
@@ -40,7 +40,6 @@ namespace DB_Project_Cinema
             PlayingMovie.Visible = false;
             ExpectedMovie.Visible = false;
 
-
             if (SearchText.Text == "")
                 MessageBox.Show("검색어를 입력하세요!");
             else
@@ -54,9 +53,17 @@ namespace DB_Project_Cinema
                 {
                     Conn.Open();
 
-                    if (MovieCategory.SelectedItem.ToString() == "영화명")
-
-                    {                      
+                    
+                    // Find the string in ListBox2.
+                    if (MovieCategory.Text != string.Empty)
+                    {
+                        Console.WriteLine("11111111111111111111");
+                        searchType = MovieCategory.Text;
+                    }
+                    Console.WriteLine("SEARCH TYPE === ");
+                    Console.WriteLine(searchType);
+                    if (searchType == "영화명")
+                    {
                         string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
                        
                         OracleCommand Comm = new OracleCommand(sql2, Conn);
@@ -75,7 +82,7 @@ namespace DB_Project_Cinema
                             MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
                         }
                     }
-                    else if (MovieCategory.SelectedItem.ToString() == "감독명")
+                    else if (searchType == "감독명")
                     {
                         string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + SearchText.Text + "%'";
 
@@ -94,7 +101,7 @@ namespace DB_Project_Cinema
                             MessageBox.Show("해당 감독명과 일치하는 영화가 없습니다!");
                         }
                     }
-                    else if (MovieCategory.SelectedItem.ToString() == "장르명")
+                    else if (searchType == "장르명")
                     {
                         string sql2 = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + SearchText.Text + "%'";
 
@@ -130,8 +137,10 @@ namespace DB_Project_Cinema
 
         private void PlayingMovie_Click(object sender, EventArgs e)
         {
-            MoviePage_Load(sender, e);
+            //MoviePage_Load(sender, e);
+
             panel3.Controls.Add(MovieList.Instance);
+           // panel3.Controls.Add(MovieList.Instance);
             //MovieDetail1.Instance.setMovie_nm(btn.Text);
             // MovieDetail1.Instance.MovieDetail_test();
             MovieList.Instance.Dock = DockStyle.None;
@@ -169,6 +178,7 @@ namespace DB_Project_Cinema
             PlayingMovie.FlatAppearance.BorderColor = Color.Red;
             PlayingMovie.FlatAppearance.BorderSize = 1;
             ExpectedMovie.FlatAppearance.BorderSize = 0;
+            searchType = "영화명";
         }
 
        

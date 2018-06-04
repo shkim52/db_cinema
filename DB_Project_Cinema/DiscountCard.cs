@@ -13,6 +13,7 @@ namespace DB_Project_Cinema
     public partial class DiscountCard : UserControl
     {
         private static DiscountCard _instance;
+        private Connection connect;
         public static DiscountCard Instance
         {
             get
@@ -27,6 +28,12 @@ namespace DB_Project_Cinema
         public DiscountCard()
         {
             InitializeComponent();
+        }
+
+        private void DiscountCard_Load(object sender, EventArgs e)
+        {
+            connect = new Connection();
+            connect.Connecting();
         }
     }
 }

@@ -14,28 +14,27 @@ namespace DB_Project_Cinema
 {
     public partial class FindID : UserControl
     {
+        private Connection Connect;
         public FindID()
         {
             InitializeComponent();
             
         }
 
+        private void FindID_Load(object sender, EventArgs e)
+        {
+            Connect = new Connection();
+            Connect.Connecting();
+        }
+
         private void FindIDButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
             try
             {
 
-                Conn.Open();
-                
-
                 string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = '" + SID_INPUT.Text + "' AND MEM_TELNO = '" + TELNO_INPUT.Text+"'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql,Connect.con);
 
                 OracleDataReader reader = Comm.ExecuteReader();
                 if (SID_INPUT.Text.Length != 6)
@@ -50,7 +49,7 @@ namespace DB_Project_Cinema
                 {
                     MessageBox.Show("회원님의 ID는 "+ reader.GetString(reader.GetOrdinal("Mem_ID"))+"  입니다!");
                 }
-                Conn.Close();
+                Connect.con.Close();
             }
             catch (Exception ex)
             {
@@ -58,7 +57,7 @@ namespace DB_Project_Cinema
             }
             finally
             {
-                Conn.Close();
+                Connect.con.Close();
             }
         }
 

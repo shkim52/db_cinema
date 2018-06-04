@@ -101,6 +101,7 @@
     <Compile Include="ChooseSeat.Designer.cs">
       <DependentUpon>ChooseSeat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection.cs" />
     <Compile Include="DiscountCard.cs">
       <SubType>UserControl</SubType>
     </Compile>

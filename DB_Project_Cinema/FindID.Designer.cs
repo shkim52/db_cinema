@@ -118,6 +118,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FindID";
             this.Size = new System.Drawing.Size(951, 392);
+            this.Load += new System.EventHandler(this.FindID_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

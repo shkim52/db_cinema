@@ -256,9 +256,10 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DiscountCard";
             this.Size = new System.Drawing.Size(1083, 528);
+            this.Load += new System.EventHandler(this.DiscountCard_Load);
             this.ResumeLayout(false);
 
         }

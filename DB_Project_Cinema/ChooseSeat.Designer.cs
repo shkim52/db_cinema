@@ -45,10 +45,10 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(452, 35);
+            this.label6.Location = new System.Drawing.Point(362, 29);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(525, 49);
+            this.label6.Size = new System.Drawing.Size(420, 41);
             this.label6.TabIndex = 7;
             this.label6.Text = "TICKET";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,10 +56,10 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(331, 144);
+            this.label7.Location = new System.Drawing.Point(265, 120);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 31);
+            this.label7.Size = new System.Drawing.Size(51, 26);
             this.label7.TabIndex = 11;
             this.label7.Text = "인원:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -68,7 +68,7 @@
             // 
             this.ChooseNumberList.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ChooseNumberList.FormattingEnabled = true;
-            this.ChooseNumberList.ItemHeight = 28;
+            this.ChooseNumberList.ItemHeight = 23;
             this.ChooseNumberList.Items.AddRange(new object[] {
             "0",
             "1",
@@ -79,19 +79,18 @@
             "6",
             "7",
             "8"});
-            this.ChooseNumberList.Location = new System.Drawing.Point(399, 144);
+            this.ChooseNumberList.Location = new System.Drawing.Point(319, 120);
             this.ChooseNumberList.Margin = new System.Windows.Forms.Padding(2);
             this.ChooseNumberList.Name = "ChooseNumberList";
-            this.ChooseNumberList.Size = new System.Drawing.Size(82, 32);
+            this.ChooseNumberList.Size = new System.Drawing.Size(66, 27);
             this.ChooseNumberList.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(692, 144);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(554, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 31);
+            this.label1.Size = new System.Drawing.Size(77, 26);
             this.label1.TabIndex = 13;
             this.label1.Text = "상영관 : ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,10 +98,9 @@
             // SCR_NM
             // 
             this.SCR_NM.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SCR_NM.Location = new System.Drawing.Point(796, 144);
-            this.SCR_NM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SCR_NM.Location = new System.Drawing.Point(637, 120);
             this.SCR_NM.Name = "SCR_NM";
-            this.SCR_NM.Size = new System.Drawing.Size(61, 31);
+            this.SCR_NM.Size = new System.Drawing.Size(49, 26);
             this.SCR_NM.TabIndex = 14;
             this.SCR_NM.Text = "1관";
             this.SCR_NM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,10 +108,9 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(879, 144);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(703, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 31);
+            this.label3.Size = new System.Drawing.Size(90, 26);
             this.label3.TabIndex = 15;
             this.label3.Text = "남은 좌석 : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -121,10 +118,9 @@
             // SEAT_CNT
             // 
             this.SEAT_CNT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SEAT_CNT.Location = new System.Drawing.Point(999, 144);
-            this.SEAT_CNT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SEAT_CNT.Location = new System.Drawing.Point(799, 120);
             this.SEAT_CNT.Name = "SEAT_CNT";
-            this.SEAT_CNT.Size = new System.Drawing.Size(21, 31);
+            this.SEAT_CNT.Size = new System.Drawing.Size(17, 26);
             this.SEAT_CNT.TabIndex = 16;
             this.SEAT_CNT.Text = "0";
             this.SEAT_CNT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,10 +128,9 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(1043, 151);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(834, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 31);
+            this.label5.Size = new System.Drawing.Size(8, 26);
             this.label5.TabIndex = 17;
             this.label5.Text = "/";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,10 +138,9 @@
             // TOT_SEAT_CNT
             // 
             this.TOT_SEAT_CNT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TOT_SEAT_CNT.Location = new System.Drawing.Point(1060, 144);
-            this.TOT_SEAT_CNT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TOT_SEAT_CNT.Location = new System.Drawing.Point(848, 120);
             this.TOT_SEAT_CNT.Name = "TOT_SEAT_CNT";
-            this.TOT_SEAT_CNT.Size = new System.Drawing.Size(51, 31);
+            this.TOT_SEAT_CNT.Size = new System.Drawing.Size(41, 26);
             this.TOT_SEAT_CNT.TabIndex = 18;
             this.TOT_SEAT_CNT.Text = "400";
             this.TOT_SEAT_CNT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,19 +148,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Location = new System.Drawing.Point(329, 267);
+            this.panel1.Location = new System.Drawing.Point(263, 222);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 305);
+            this.panel1.Size = new System.Drawing.Size(644, 254);
             this.panel1.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.LightGray;
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(329, 195);
+            this.label2.Location = new System.Drawing.Point(263, 162);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(805, 55);
+            this.label2.Size = new System.Drawing.Size(644, 46);
             this.label2.TabIndex = 19;
             this.label2.Text = "SCREEN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,15 +169,16 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(1027, 145);
+            this.label4.Location = new System.Drawing.Point(822, 121);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 24);
+            this.label4.Size = new System.Drawing.Size(21, 20);
             this.label4.TabIndex = 21;
-            this.label4.Text = "/";
+            this.label4.Text = "+9";
             // 
             // ChooseSeat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label4);
@@ -199,7 +195,7 @@
             this.Controls.Add(this.label6);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChooseSeat";
-            this.Size = new System.Drawing.Size(1303, 634);
+            this.Size = new System.Drawing.Size(1042, 528);
             this.ResumeLayout(false);
 
         }
