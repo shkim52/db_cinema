@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     {
         private static MoviePage _instance;
         private string searchType;
+        private Connection Connect;
         public static MoviePage Instance
         {
             get
@@ -44,20 +45,12 @@ namespace DB_Project_Cinema
                 MessageBox.Show("검색어를 입력하세요!");
             else
             {
-                string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-                OracleConnection Conn = new OracleConnection(str);
-                /**OracleCommand Comm;
-                Comm = new OracleCommand();
-                Comm.Connection = Conn;*/
+                
                 try
                 {
-                    Conn.Open();
-
-                    
                     // Find the string in ListBox2.
                     if (MovieCategory.Text != string.Empty)
                     {
-                        Console.WriteLine("11111111111111111111");
                         searchType = MovieCategory.Text;
                     }
                     Console.WriteLine("SEARCH TYPE === ");
@@ -66,7 +59,7 @@ namespace DB_Project_Cinema
                     {
                         string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
                        
-                        OracleCommand Comm = new OracleCommand(sql2, Conn);
+                        OracleCommand Comm = new OracleCommand(sql2, Connect.con);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
                         {
@@ -105,7 +98,7 @@ namespace DB_Project_Cinema
                     {
                         string sql2 = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + SearchText.Text + "%'";
 
-                        OracleCommand Comm = new OracleCommand(sql2, Conn);
+                        OracleCommand Comm = new OracleCommand(sql2, Connect.con);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
                         {
@@ -121,7 +114,7 @@ namespace DB_Project_Cinema
                         }
                         
                     }
-                    Conn.Close();
+                    Connect.con.Close();
                 }
                 catch (Exception ex)
                 {
@@ -129,7 +122,7 @@ namespace DB_Project_Cinema
                 }
                 finally
                 {
-                    Conn.Close();
+                    Connect.con.Close();
                 }
             }
 

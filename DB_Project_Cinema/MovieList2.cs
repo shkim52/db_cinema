@@ -15,6 +15,7 @@ namespace DB_Project_Cinema
     public partial class MovieList2 : UserControl
     {
         private static MovieList2 _instance;
+        private Connection Connect;
 
         public static MovieList2 Instance
         {
@@ -35,12 +36,6 @@ namespace DB_Project_Cinema
         public MovieList2()
         {
             InitializeComponent();
-
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
 
 
             for (int i = 0; i < pic.Length; i++)
@@ -63,10 +58,9 @@ namespace DB_Project_Cinema
 
                 try
                 {
-                    Conn.Open();
-
+                    
                     string sql = "SELECT * FROM(SELECT ROWNUM RM, MOVIE_NO, MOVIE_NM, POSTER,RELEASE_DATE FROM MOVIE WHERE SHOW_STAT='E') Y WHERE Y.RM=" + (i + 1);
-                    OracleCommand Comm = new OracleCommand(sql, Conn);
+                    OracleCommand Comm = new OracleCommand(sql, Connect.con);
 
                     OracleDataReader reader = Comm.ExecuteReader();
 
@@ -87,7 +81,7 @@ namespace DB_Project_Cinema
                     Controls.Add(label[i]);
 
 
-                    Conn.Close();
+                    Connect.con.Close();
                 }
                 catch (Exception ex)
                 {
@@ -96,7 +90,7 @@ namespace DB_Project_Cinema
                 }
                 finally
                 {
-                    Conn.Close();
+                    Connect.con.Close();
                 }
             }
         }
