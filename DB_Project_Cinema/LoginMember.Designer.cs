@@ -104,6 +104,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginMember";
             this.Size = new System.Drawing.Size(1071, 380);
+            this.Load += new System.EventHandler(this.LoginMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,6 +14,18 @@ namespace DB_Project_Cinema
 {
     public partial class LoginCustomer : UserControl
     {
+        private static LoginCustomer _instance;
+        public static LoginCustomer Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new LoginCustomer();
+                }
+                return _instance;
+            }
+        }
         public LoginCustomer()
         {
             InitializeComponent();

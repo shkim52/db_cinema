@@ -36,7 +36,8 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-           
+            Connect = new Connection();
+            Connect.Connecting();
 
             for (int i = 0; i < pic.Length; i++)
             {
@@ -63,7 +64,6 @@ namespace DB_Project_Cinema
                     OracleCommand Comm = new OracleCommand(sql, Connect.con);
 
                     OracleDataReader reader = Comm.ExecuteReader();
-                    
 
                     while (reader.Read())
                     {
@@ -82,17 +82,11 @@ namespace DB_Project_Cinema
                     Controls.Add(btn[i]);
                     Controls.Add(label[i]);
 
-                   
-                    Connect.con.Close();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
 
-                }
-                finally
-                {
-                    Connect.con.Close();
                 }
             }
         }

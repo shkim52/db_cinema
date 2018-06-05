@@ -17,6 +17,9 @@ namespace DB_Project_Cinema
         private static MovieList2 _instance;
         private Connection Connect;
 
+        private Button[] btn = new Button[5];
+        PictureBox[] pic = new PictureBox[5];
+        Label[] label = new Label[5];
         public static MovieList2 Instance
         {
             get
@@ -29,13 +32,13 @@ namespace DB_Project_Cinema
             }
         }
 
-        Button[] btn = new Button[5];
-        PictureBox[] pic = new PictureBox[5];
-        Label[] label = new Label[5];
 
         public MovieList2()
         {
             InitializeComponent();
+
+            Connect = new Connection();
+            Connect.Connecting();
 
 
             for (int i = 0; i < pic.Length; i++)
@@ -80,17 +83,11 @@ namespace DB_Project_Cinema
                     Controls.Add(btn[i]);
                     Controls.Add(label[i]);
 
-
-                    Connect.con.Close();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
 
-                }
-                finally
-                {
-                    Connect.con.Close();
                 }
             }
         }

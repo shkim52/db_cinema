@@ -79,7 +79,7 @@ namespace DB_Project_Cinema
                     {
                         string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + SearchText.Text + "%'";
 
-                        OracleCommand Comm = new OracleCommand(sql2, Conn);
+                        OracleCommand Comm = new OracleCommand(sql2, Connect.con);
                         OracleDataReader reader2 = Comm.ExecuteReader();
                         if (reader2.HasRows)
                         {

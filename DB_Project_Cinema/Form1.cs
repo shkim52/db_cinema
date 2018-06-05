@@ -97,16 +97,11 @@ namespace DB_Project_Cinema
 
         private void LoginPageButton_Click(object sender, EventArgs e)
         {
-            if (!mainPanel.Controls.Contains(LoginPage.Instance))
-            {
-                mainPanel.Controls.Add(LoginPage.Instance);
-                LoginPage.Instance.Dock = DockStyle.Fill;
-                LoginPage.Instance.BringToFront();
-            }
-            else
-            {
-                LoginPage.Instance.BringToFront();
-            }
+            LoginPage lp = new LoginPage(this);
+            mainPanel.Controls.Add(lp);
+            lp.Dock = DockStyle.Fill;
+            lp.BringToFront();            
+
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -254,6 +249,14 @@ namespace DB_Project_Cinema
                 JoinMembershipButton.Enabled = false;
             }
 
+        }
+        public void Login_Complete()
+        {
+            Console.WriteLine("--------------------");
+            LoginPageButton.Enabled = false;
+            FindIDandPWButton.Enabled = false;
+            JoinMembershipButton.Enabled = false;
+            LogoutButton.Enabled = true;
         }
     }
 }

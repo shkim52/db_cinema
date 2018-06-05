@@ -15,10 +15,27 @@ namespace DB_Project_Cinema
     public partial class LoginMember : UserControl
     {
         private Connection Connect;
-        
+        private static LoginMember _instance;
+        public static LoginMember Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new LoginMember();
+                }
+                return _instance;
+            }
+        }
         public LoginMember()
         {
             InitializeComponent();
+        }
+
+        private void LoginMember_Load(object sender, EventArgs e)
+        {
+            Connect = new Connection();
+            Connect.Connecting();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -42,8 +59,12 @@ namespace DB_Project_Cinema
                     {
                         Program.memID = ID_INPUT.Text;
                         MessageBox.Show(ID_INPUT.Text + "님 환영합니다!");
-                        CinemaProgram c = new CinemaProgram();
-                        c.Show();
+                        //CinemaProgram c = new CinemaProgram();
+                        //c.Show();
+                        //this.Parent.Login_Complete();
+                        (this.Parent).Parent.Controls.Remove(this);
+                        //MoviePage.Instance.Dock = DockStyle.Fill;
+                        //MoviePage.Instance.BringToFront();
                     }
                     else
                     {
@@ -57,10 +78,7 @@ namespace DB_Project_Cinema
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
         }
+
     }
 }

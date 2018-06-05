@@ -15,6 +15,9 @@ namespace DB_Project_Cinema
     public partial class JoinMembership : UserControl
     {
         private static JoinMembership _instance;
+        public bool idcheck = false;        
+        private Connection Connect;
+
         public static JoinMembership Instance
         {
             get
@@ -26,26 +29,24 @@ namespace DB_Project_Cinema
                 return _instance;
             }
         }
-        public bool idcheck = false;
-        
         public JoinMembership()
         {
             InitializeComponent();
         }
 
+        private void JoinMembership_Load(object sender, EventArgs e)
+        {
+            Connect = new Connection();
+            Connect.Connecting();
+        }
+
         private void DoubleCheckButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-
             try
             {
-
-                Conn.Open();
-
                 string sql = "SELECT * FROM MEM WHERE MEM_ID='" + ID_INPUT.Text+"'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, Connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 if (reader.HasRows)
@@ -58,32 +59,23 @@ namespace DB_Project_Cinema
                     ID_CHECK.Text = "사용 가능한 아이디입니다.";
                     idcheck = true;
                 }
-                Conn.Close();
+                Connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
             }
         
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-
             try
             {
-
-
+                
                 OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn;
-                Conn.Open();
+                Cmd.Connection = Connect.con;
+                Connect.con.Open();
 
                 if (PWD_INPUT.Text == "" && PWD2_INPUT.Text == "" && PWD2_INPUT != PWD_INPUT)
                 {
@@ -109,17 +101,13 @@ namespace DB_Project_Cinema
                     MessageBox.Show("회원가입에 성공하셨습니다");
 
                 }
-                Conn.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
 
         }
+
     }
 }
