@@ -67,10 +67,13 @@ namespace DB_Project_Cinema
                     Console.WriteLine(reader.GetString(reader.GetOrdinal("QUIT_STAT")));
                     if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
                     {
-                        Program.memID = ID_INPUT.Text;
-                        MessageBox.Show(ID_INPUT.Text + "님 환영합니다!");
+                        string mem_id = ID_INPUT.Text;
+                        MessageBox.Show(mem_id + "님 환영합니다!");
 
                         _parent.Login_Complete();
+
+                        MovieDetail1.Instance.setMem_id(mem_id);
+                        ReviewPage.Instance.setMem_id(mem_id);
                         MoviePage.Instance.BringToFront();
                     }
                     else

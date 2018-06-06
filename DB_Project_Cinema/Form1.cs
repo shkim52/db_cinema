@@ -221,6 +221,8 @@ namespace DB_Project_Cinema
         {
             MessageBox.Show("로그아웃 되었습니다.");
             Logout_clicked();
+            MovieDetail1.Instance.setMem_id("");
+            ReviewPage.Instance.setMem_id("");
         }
 
         private void CinemaProgram_Load(object sender, EventArgs e)
@@ -241,11 +243,11 @@ namespace DB_Project_Cinema
         }
         public void Login_Complete()
         {
-            Console.WriteLine("--------------------");
             LoginPageButton.Visible = false;
             FindIDandPWButton.Visible = false;
             JoinMembershipButton.Visible = false;
             LogoutButton.Visible = true;
+
         }
         public void Logout_clicked()
         {

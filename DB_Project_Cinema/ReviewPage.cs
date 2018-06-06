@@ -16,7 +16,8 @@ namespace DB_Project_Cinema
     {
         private static ReviewPage _instance;
         private int movie_no;
-        public OracleConnection Conn;
+        private string mem_id="";
+        private Connection connect;
         public static ReviewPage Instance
         {
             get
@@ -32,16 +33,14 @@ namespace DB_Project_Cinema
         {
             movie_no = i;
         }
-
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
         public ReviewPage()
         {
             InitializeComponent();
 
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
            
         }
 
@@ -49,10 +48,10 @@ namespace DB_Project_Cinema
         {
             try
             {
-                Conn.Open();
+                
                 string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = " + movie_no ;
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
@@ -61,8 +60,8 @@ namespace DB_Project_Cinema
                 }
 
                 string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
-                
-                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+
+                OracleCommand Comm2 = new OracleCommand(sql2, connect.con);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
 
                 while (reader2.Read())
@@ -78,37 +77,30 @@ namespace DB_Project_Cinema
                     dataGridView1.Rows.Add(row0);
                 }
 
-                Conn.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
 
             }
-            finally
-            {
-                Conn.Close();
-            }
         }
 
         private void ReviewRegisterButton_Click(object sender, EventArgs e)
         {
           
-            /*if (Program.memID == "")
+            if (mem_id == "")
             {
                 MessageBox.Show("로그인을 하세요!");
             }
-            else*/
+            else
             {
                 try
                 {
                     OracleCommand Cmd = new OracleCommand();
-                    Cmd.Connection = Conn;
-                    Conn.Open();
+                    Cmd.Connection = connect.con;
+                    string sql = "SELECT * FROM GRADE WHERE MEM_ID='"+mem_id+"' AND MOVIE_NO="+movie_no;
 
-                    string sql = "SELECT * FROM GRADE WHERE MEM_ID='"+Program.memID+"' AND MOVIE_NO="+movie_no;
-
-                    OracleCommand Comm = new OracleCommand(sql, Conn);
+                    OracleCommand Comm = new OracleCommand(sql, connect.con);
                     OracleDataReader reader = Comm.ExecuteReader();
 
                     if (reader.HasRows)
@@ -119,12 +111,13 @@ namespace DB_Project_Cinema
 
                         }
                     }
-                    else if (!reader.HasRows)
+                    else
                     {
-                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + Program.memID + "'," + movie_no + "," + MovieScore.Text + ",'" + Review.Text + "')";
+                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + mem_id + "'," + movie_no + "," + MovieScore.Text + ",'" + Review.Text + "')";
                         Cmd.CommandText = sql2;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");
+                        Review.Text = "";
                     }
 
 
@@ -132,7 +125,7 @@ namespace DB_Project_Cinema
 
                     string sql3 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
 
-                    OracleCommand Comm2 = new OracleCommand(sql3, Conn);
+                    OracleCommand Comm2 = new OracleCommand(sql3, connect.con);
                     OracleDataReader reader2 = Comm2.ExecuteReader();
 
                     while (reader2.Read())
@@ -146,16 +139,12 @@ namespace DB_Project_Cinema
                         dataGridView1.Rows.Add(row0);
                     }
 
-                    Conn.Close();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }
-                finally
-                {
-                    Conn.Close();
-                }
+                
             }      
     }
 
@@ -163,6 +152,14 @@ namespace DB_Project_Cinema
         {
             this.Parent.Controls.Remove(this);
             dataGridView1.Rows.Clear();
+            connect.con.Close();
+        }
+
+        private void ReviewPage_Load(object sender, EventArgs e)
+        {
+            connect = new Connection();
+            connect.Connecting();
+
         }
     }
 }

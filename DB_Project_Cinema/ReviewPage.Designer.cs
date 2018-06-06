@@ -55,7 +55,7 @@
             // 
             this.MovieScore.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MovieScore.FormattingEnabled = true;
-            this.MovieScore.ItemHeight = 25;
+            this.MovieScore.ItemHeight = 20;
             this.MovieScore.Items.AddRange(new object[] {
             "5",
             "4",
@@ -65,7 +65,7 @@
             this.MovieScore.Location = new System.Drawing.Point(242, 56);
             this.MovieScore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MovieScore.Name = "MovieScore";
-            this.MovieScore.Size = new System.Drawing.Size(68, 29);
+            this.MovieScore.Size = new System.Drawing.Size(68, 24);
             this.MovieScore.TabIndex = 9;
             // 
             // label2
@@ -83,7 +83,7 @@
             this.Review.Location = new System.Drawing.Point(338, 56);
             this.Review.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Review.Name = "Review";
-            this.Review.Size = new System.Drawing.Size(469, 31);
+            this.Review.Size = new System.Drawing.Size(469, 27);
             this.Review.TabIndex = 11;
             // 
             // ReviewRegisterButton
@@ -159,7 +159,7 @@
             // 
             // ReviewPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.BackToHome);
@@ -173,6 +173,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReviewPage";
             this.Size = new System.Drawing.Size(1536, 744);
+            this.Load += new System.EventHandler(this.ReviewPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

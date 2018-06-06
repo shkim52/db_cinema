@@ -16,7 +16,7 @@ namespace DB_Project_Cinema
     {
         private static MovieList2 _instance;
         private Connection Connect;
-
+        
         private Button[] btn = new Button[5];
         PictureBox[] pic = new PictureBox[5];
         Label[] label = new Label[5];
@@ -32,7 +32,7 @@ namespace DB_Project_Cinema
             }
         }
 
-
+        
         public MovieList2()
         {
             InitializeComponent();

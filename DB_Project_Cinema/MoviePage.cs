@@ -28,7 +28,6 @@ namespace DB_Project_Cinema
                 return _instance;
             }
         }
-
         public MoviePage()
         {
             InitializeComponent();
@@ -167,8 +166,6 @@ namespace DB_Project_Cinema
             ExpectedMovie.FlatAppearance.BorderSize = 0;
             searchType = "영화명";
         }
-
-       
     }
 }
    

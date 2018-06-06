@@ -17,8 +17,9 @@ namespace DB_Project_Cinema
         private static MovieDetail1 _instance;
         private string movie_nm;
         //private int movie_no;
+        private string mem_id;
         MoviePage m = new MoviePage();
-        public OracleConnection Conn;
+        private Connection connect;
         public static MovieDetail1 Instance
         {
             get
@@ -37,29 +38,26 @@ namespace DB_Project_Cinema
         {
             //movie_no = i;
         }
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
 
         int movie_no;
 
         public MovieDetail1()
         {
             InitializeComponent();
-
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            Conn = new OracleConnection(str);
-            MovieList ml = new MovieList();
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
         }
 
         public void MovieDetail_test()
         {
+            reviewbutton();
             try
             {
-                Conn.Open();
                 string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM='"+movie_nm+"'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
@@ -82,7 +80,7 @@ namespace DB_Project_Cinema
                 }
                 string sql2 = "SELECT AVG(MOVIE_SCORE) FROM GRADE WHERE MOVIE_NO="+movie_no+" GROUP BY MOVIE_NO";
 
-                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
+                OracleCommand Comm2 = new OracleCommand(sql2, connect.con);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
 
                 if (reader2.HasRows)
@@ -98,30 +96,35 @@ namespace DB_Project_Cinema
                     MovieScore.Text = "-점";
                 }
 
-                Conn.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
 
             }
-            finally
+        }
+        private void reviewbutton()
+        {
+            string sql = "SELECT SHOW_STAT FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "' AND SHOW_STAT = 'E'";
+
+            OracleCommand Comm = new OracleCommand(sql, connect.con);
+            OracleDataReader reader = Comm.ExecuteReader();
+
+            if (reader.HasRows)
             {
-                Conn.Close();
+                ReviewButton.Visible = false;
             }
         }
-
 
         private void ReviewButton_Click(object sender, EventArgs e)
         {
             try
             {
                 OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn;
-                Conn.Open();
+                Cmd.Connection = connect.con;
                 string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
@@ -136,20 +139,12 @@ namespace DB_Project_Cinema
                     ReviewPage.Instance.BringToFront();
 
                 }
-
-
-                Conn.Close();
+                connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
-           
-            
         }
 
         private void InterestRegisterButton_Click(object sender, EventArgs e)
@@ -164,11 +159,10 @@ namespace DB_Project_Cinema
                 try
                 {
                     OracleCommand Cmd = new OracleCommand();
-                    Cmd.Connection = Conn;
-                    Conn.Open();
+                    Cmd.Connection = connect.con;
                     string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM = '" + movie_nm + "'";
 
-                    OracleCommand Comm = new OracleCommand(sql, Conn);
+                    OracleCommand Comm = new OracleCommand(sql, connect.con);
                     OracleDataReader reader = Comm.ExecuteReader();
 
                     while (reader.Read())
@@ -178,7 +172,7 @@ namespace DB_Project_Cinema
                             this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                             decimal movie_no = reader.GetDecimal(reader.GetOrdinal("MOVIE_NO"));
 
-                            string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + Program.memID + "',"+movie_no+")";
+                            string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + mem_id + "',"+movie_no+")";
 
                             Cmd.CommandText = sql2;
                             Cmd.ExecuteNonQuery();
@@ -192,15 +186,11 @@ namespace DB_Project_Cinema
                         }                       
                     }
 
-                    Conn.Close();
+                    connect.con.Close();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
-                }
-                finally
-                {
-                    Conn.Close();
                 }
             }
         }
@@ -208,6 +198,12 @@ namespace DB_Project_Cinema
         private void BackToHome_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
+        }
+
+        private void MovieDetail1_Load(object sender, EventArgs e)
+        {
+            connect = new Connection();
+            connect.Connecting();
         }
     }
 }
