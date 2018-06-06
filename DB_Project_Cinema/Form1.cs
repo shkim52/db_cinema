@@ -114,7 +114,7 @@ namespace DB_Project_Cinema
 
         private void MyPageButton_Click(object sender, EventArgs e)
         {
-            if (Program.memID != "")
+            if (!LoginPageButton.Visible)
             {
                 if (!mainPanel.Controls.Contains(MyPage.Instance))
                 {
