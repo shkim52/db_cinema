@@ -189,10 +189,7 @@ namespace DB_Project_Cinema
                         catch (Exception ex)
                         {
                             MessageBox.Show("이미 등록된 영화입니다!");
-                        }
-                        
-
-
+                        }                       
                     }
 
                     Conn.Close();

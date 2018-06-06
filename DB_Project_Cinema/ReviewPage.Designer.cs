@@ -71,12 +71,12 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(162, 49);
+            this.label2.Location = new System.Drawing.Point(181, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 44);
+            this.label2.Size = new System.Drawing.Size(55, 34);
             this.label2.TabIndex = 10;
             this.label2.Text = "평점";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Review
             // 
@@ -89,10 +89,10 @@
             // ReviewRegisterButton
             // 
             this.ReviewRegisterButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ReviewRegisterButton.Location = new System.Drawing.Point(822, 50);
+            this.ReviewRegisterButton.Location = new System.Drawing.Point(822, 56);
             this.ReviewRegisterButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ReviewRegisterButton.Name = "ReviewRegisterButton";
-            this.ReviewRegisterButton.Size = new System.Drawing.Size(60, 42);
+            this.ReviewRegisterButton.Size = new System.Drawing.Size(60, 29);
             this.ReviewRegisterButton.TabIndex = 13;
             this.ReviewRegisterButton.Text = "등록";
             this.ReviewRegisterButton.UseVisualStyleBackColor = true;
@@ -148,10 +148,10 @@
             this.BackToHome.FlatAppearance.BorderSize = 0;
             this.BackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackToHome.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BackToHome.Location = new System.Drawing.Point(29, 233);
+            this.BackToHome.Location = new System.Drawing.Point(38, 238);
             this.BackToHome.Margin = new System.Windows.Forms.Padding(2);
             this.BackToHome.Name = "BackToHome";
-            this.BackToHome.Size = new System.Drawing.Size(103, 26);
+            this.BackToHome.Size = new System.Drawing.Size(94, 26);
             this.BackToHome.TabIndex = 26;
             this.BackToHome.Text = "<-뒤로가기";
             this.BackToHome.UseVisualStyleBackColor = false;

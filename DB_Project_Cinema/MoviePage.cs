@@ -134,13 +134,8 @@ namespace DB_Project_Cinema
         }
 
         private void PlayingMovie_Click(object sender, EventArgs e)
-        {
-            //MoviePage_Load(sender, e);
-
+        {          
             panel3.Controls.Add(MovieList.Instance);
-           // panel3.Controls.Add(MovieList.Instance);
-            //MovieDetail1.Instance.setMovie_nm(btn.Text);
-            // MovieDetail1.Instance.MovieDetail_test();
             MovieList.Instance.Dock = DockStyle.None;
             MovieList.Instance.BringToFront();
 
@@ -151,12 +146,8 @@ namespace DB_Project_Cinema
         }
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
-        {
-            MoviePage_Load(sender, e);
-            
+        {           
             panel3.Controls.Add(MovieList2.Instance);
-            //MovieDetail1.Instance.setMovie_nm(btn.Text);
-            // MovieDetail1.Instance.MovieDetail_test();
             MovieList2.Instance.Dock = DockStyle.None;
             MovieList2.Instance.BringToFront();
 
@@ -168,8 +159,6 @@ namespace DB_Project_Cinema
         private void MoviePage_Load(object sender, EventArgs e)
         {
             panel3.Controls.Add(MovieList.Instance);
-            //MovieDetail1.Instance.setMovie_nm(btn.Text);
-            // MovieDetail1.Instance.MovieDetail_test();
             MovieList.Instance.Dock = DockStyle.None;
             MovieList.Instance.BringToFront();
 
