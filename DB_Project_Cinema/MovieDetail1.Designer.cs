@@ -269,18 +269,18 @@
             // Rating
             // 
             this.Rating.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Rating.Location = new System.Drawing.Point(1194, 67);
+            this.Rating.Location = new System.Drawing.Point(1191, 84);
             this.Rating.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Rating.Name = "Rating";
             this.Rating.Size = new System.Drawing.Size(101, 29);
             this.Rating.TabIndex = 21;
             this.Rating.Text = "label1";
-            this.Rating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Rating.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(1119, 69);
+            this.label19.Location = new System.Drawing.Point(1116, 86);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 25);
@@ -309,7 +309,7 @@
             this.MovieIntro.Name = "MovieIntro";
             this.MovieIntro.ReadOnly = true;
             this.MovieIntro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MovieIntro.Size = new System.Drawing.Size(889, 185);
+            this.MovieIntro.Size = new System.Drawing.Size(889, 176);
             this.MovieIntro.TabIndex = 23;
             // 
             // ReviewButton

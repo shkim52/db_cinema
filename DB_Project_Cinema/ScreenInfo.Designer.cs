@@ -39,9 +39,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(587, 51);
+            this.label1.Location = new System.Drawing.Point(405, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 44);
+            this.label1.Size = new System.Drawing.Size(257, 61);
             this.label1.TabIndex = 6;
             this.label1.Text = "SCREEN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,12 +57,12 @@
             this.ScreenNM,
             this.ScreenIntro,
             this.ScreenSeatCnt});
-            this.dataGridView1.Location = new System.Drawing.Point(384, 175);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(279, 122);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(752, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(752, 592);
             this.dataGridView1.TabIndex = 17;
             // 
             // ScreenNM
@@ -90,13 +90,15 @@
             // 
             // ScreenInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ScreenInfo";
-            this.Size = new System.Drawing.Size(1326, 626);
+            this.Size = new System.Drawing.Size(1326, 869);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
