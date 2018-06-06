@@ -14,6 +14,8 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageChangePw : UserControl
     {
+        Connection connect;
+
         private static MyPageChangePw _instance;
         public static MyPageChangePw Instance
         {
@@ -36,20 +38,17 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
         }
-
+        
         private void ChangePWButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-
+            
             try
             {
                 OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn;
-                Conn.Open();
+                Cmd.Connection = connect.con;
                 
-                string s = "SELECT * FROM MEM WHERE MEM_ID = '" + Program.memID + "'";
-                OracleCommand Comm = new OracleCommand(s, Conn);
+                string s = "SELECT * FROM MEM WHERE MEM_ID = '" + mem_id + "'";
+                OracleCommand Comm = new OracleCommand(s, connect.con);
 
                 OracleDataReader reader = Comm.ExecuteReader();
                 reader.Read();
@@ -73,17 +72,18 @@ namespace DB_Project_Cinema
                     MessageBox.Show("비밀번호가 성공적으로 변경되었습니다.");
 
                 }
-                Conn.Close();
+                connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
-            
+        }
+
+        private void MyPageChangePw_Load(object sender, EventArgs e)
+        {
+            connect = new Connection();
+            connect.Connecting();
         }
 
     }

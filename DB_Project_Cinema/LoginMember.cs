@@ -54,15 +54,15 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    Console.WriteLine(reader.GetString(reader.GetOrdinal("QUIT_STAT")));
-                    if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
+                   if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
                     {
-                        Program.memID = ID_INPUT.Text;
+                        string mem_ID = ID_INPUT.Text;
                         MessageBox.Show(ID_INPUT.Text + "님 환영합니다!");
                         //CinemaProgram c = new CinemaProgram();
                         //c.Show();
                         //this.Parent.Login_Complete();
                         (this.Parent).Parent.Controls.Remove(this);
+                        MyPage.Instance.setMem_id(mem_ID);
                         //MoviePage.Instance.Dock = DockStyle.Fill;
                         //MoviePage.Instance.BringToFront();
                     }

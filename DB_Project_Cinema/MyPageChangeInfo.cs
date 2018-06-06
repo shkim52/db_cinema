@@ -40,32 +40,8 @@ namespace DB_Project_Cinema
             InitializeComponent();
             Console.WriteLine(mem_id);
         }
-
-        private void ChangeInfoButton_Click(object sender, EventArgs e)
+        public void MyPageChangeInfo_test()
         {
-            try
-            {
-                
-                OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = connect.con;
-
-                string sql = "UPDATE MEM SET MEM_EMAIL = '" + EMAIL.Text + "' , MEM_TELNO = '" + TELNO.Text + "'";
-                Cmd.CommandText = sql;
-                Cmd.ExecuteNonQuery();
-                MessageBox.Show("정보를 수정하였습니다.");
-
-                connect.con.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-        }
-
-        private void MyPageChangeInfo_Load(object sender, EventArgs e)
-        {
-            connect = new Connection();
-            connect.Connecting();
             try
             {
                 string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + mem_id + "'";
@@ -87,6 +63,32 @@ namespace DB_Project_Cinema
             {
                 Console.WriteLine(ex.ToString());
             }
+        }
+        private void ChangeInfoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleCommand Cmd = new OracleCommand();
+                Cmd.Connection = connect.con;
+
+                string sql = "UPDATE MEM SET MEM_EMAIL = '" + EMAIL.Text + "' , MEM_TELNO = '" + TELNO.Text + "'";
+                Cmd.CommandText = sql;
+                Cmd.ExecuteNonQuery();
+                MessageBox.Show("정보를 수정하였습니다.");
+
+                connect.con.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void MyPageChangeInfo_Load(object sender, EventArgs e)
+        {
+            connect = new Connection();
+            connect.Connecting();
+            
         }
     }
 }

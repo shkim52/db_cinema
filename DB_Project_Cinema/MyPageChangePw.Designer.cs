@@ -137,6 +137,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageChangePw";
             this.Size = new System.Drawing.Size(842, 485);
+            this.Load += new System.EventHandler(this.MyPageChangePw_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

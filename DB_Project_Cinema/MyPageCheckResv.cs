@@ -12,6 +12,7 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageCheckResv : UserControl
     {
+        private Connection connect;
         private static MyPageCheckResv _instance;
         public static MyPageCheckResv Instance
         {
@@ -38,6 +39,13 @@ namespace DB_Project_Cinema
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MyPageCheckResv_Load(object sender, EventArgs e)
+        {
+            
+            connect = new Connection();
+            connect.Connecting();
         }
     }
 }
