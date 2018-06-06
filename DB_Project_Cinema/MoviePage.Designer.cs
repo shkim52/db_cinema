@@ -31,21 +31,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.SearchButton = new System.Windows.Forms.Button();
             this.SearchText = new System.Windows.Forms.TextBox();
-            this.MovieCategory = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExpectedMovie = new System.Windows.Forms.Button();
             this.PlayingMovie = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.MovieCategory = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.MovieCategory);
             this.panel1.Controls.Add(this.SearchButton);
             this.panel1.Controls.Add(this.SearchText);
-            this.panel1.Controls.Add(this.MovieCategory);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -76,21 +76,6 @@
             this.SearchText.Name = "SearchText";
             this.SearchText.Size = new System.Drawing.Size(416, 25);
             this.SearchText.TabIndex = 11;
-            // 
-            // MovieCategory
-            // 
-            this.MovieCategory.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieCategory.FormattingEnabled = true;
-            this.MovieCategory.ItemHeight = 20;
-            this.MovieCategory.Items.AddRange(new object[] {
-            "영화명",
-            "감독명",
-            "장르명"});
-            this.MovieCategory.Location = new System.Drawing.Point(274, 109);
-            this.MovieCategory.Margin = new System.Windows.Forms.Padding(2);
-            this.MovieCategory.Name = "MovieCategory";
-            this.MovieCategory.Size = new System.Drawing.Size(75, 24);
-            this.MovieCategory.TabIndex = 10;
             // 
             // label1
             // 
@@ -154,6 +139,19 @@
             this.panel3.Size = new System.Drawing.Size(1362, 288);
             this.panel3.TabIndex = 7;
             // 
+            // MovieCategory
+            // 
+            this.MovieCategory.FormattingEnabled = true;
+            this.MovieCategory.Items.AddRange(new object[] {
+            "영화명",
+            "감독명",
+            "배우명"});
+            this.MovieCategory.Location = new System.Drawing.Point(254, 111);
+            this.MovieCategory.Name = "MovieCategory";
+            this.MovieCategory.Size = new System.Drawing.Size(121, 23);
+            this.MovieCategory.TabIndex = 13;
+            this.MovieCategory.SelectedIndexChanged += new System.EventHandler(this.MovieCategory_SelectedIndexChanged);
+            // 
             // MoviePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -178,12 +176,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.TextBox SearchText;
-        private System.Windows.Forms.ListBox MovieCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button PlayingMovie;
         private System.Windows.Forms.Button ExpectedMovie;
         public System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox MovieCategory;
 
     }
 }

@@ -15,7 +15,7 @@ namespace DB_Project_Cinema
     public partial class MoviePage : UserControl
     {
         private static MoviePage _instance;
-        private string searchType;
+        private string searchType="영화명";
         private Connection Connect;
         public static MoviePage Instance
         {
@@ -33,6 +33,7 @@ namespace DB_Project_Cinema
             InitializeComponent();
             Connect = new Connection();
             Connect.Connecting();
+            MovieCategory.Text = "영화명";
             /**OracleCommand Comm;
             Comm = new OracleCommand();
             Comm.Connection = Conn;*/
@@ -52,13 +53,7 @@ namespace DB_Project_Cinema
                 
                 try
                 {
-                    // Find the string in ListBox2.
-                    if (MovieCategory.Text != string.Empty)
-                    {
-                        searchType = MovieCategory.Text;
-                    }
-                    Console.WriteLine("SEARCH TYPE === ");
-                    Console.WriteLine(searchType);
+                    
                     if (searchType == "영화명")
                     {
                         string sql1 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
@@ -165,6 +160,11 @@ namespace DB_Project_Cinema
             PlayingMovie.FlatAppearance.BorderSize = 1;
             ExpectedMovie.FlatAppearance.BorderSize = 0;
             searchType = "영화명";
+        }
+
+        private void MovieCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            searchType = MovieCategory.Text;
         }
     }
 }
