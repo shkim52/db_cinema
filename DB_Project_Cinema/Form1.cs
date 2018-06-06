@@ -220,8 +220,7 @@ namespace DB_Project_Cinema
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("로그아웃 되었습니다.");
-            Program.memID = "";
-            this.Close();
+            Logout_clicked();
         }
 
         private void CinemaProgram_Load(object sender, EventArgs e)
@@ -237,26 +236,23 @@ namespace DB_Project_Cinema
             {
                 MoviePage.Instance.BringToFront();
             }
-
-            if (Program.memID == "" && Program.custID == "")
-            {
-                LogoutButton.Enabled = false;
-            }
-            else
-            {
-                LoginPageButton.Enabled = false;
-                FindIDandPWButton.Enabled = false;
-                JoinMembershipButton.Enabled = false;
-            }
+            Logout_clicked();
 
         }
         public void Login_Complete()
         {
             Console.WriteLine("--------------------");
-            LoginPageButton.Enabled = false;
-            FindIDandPWButton.Enabled = false;
-            JoinMembershipButton.Enabled = false;
-            LogoutButton.Enabled = true;
+            LoginPageButton.Visible = false;
+            FindIDandPWButton.Visible = false;
+            JoinMembershipButton.Visible = false;
+            LogoutButton.Visible = true;
+        }
+        public void Logout_clicked()
+        {
+            LoginPageButton.Visible = true;
+            FindIDandPWButton.Visible = true; 
+            JoinMembershipButton.Visible = true;
+            LogoutButton.Visible = false;
         }
     }
 }
