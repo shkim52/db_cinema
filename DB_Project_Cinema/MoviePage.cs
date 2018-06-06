@@ -32,8 +32,13 @@ namespace DB_Project_Cinema
         public MoviePage()
         {
             InitializeComponent();
+            Connect = new Connection();
+            Connect.Connecting();
+            /**OracleCommand Comm;
+            Comm = new OracleCommand();
+            Comm.Connection = Conn;*/
 
-        }      
+        }
 
         private void SearchButton_Click_1(object sender, EventArgs e)
         {
@@ -57,11 +62,11 @@ namespace DB_Project_Cinema
                     Console.WriteLine(searchType);
                     if (searchType == "영화명")
                     {
-                        string sql2 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
+                        string sql1 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
                        
-                        OracleCommand Comm = new OracleCommand(sql2, Connect.con);
-                        OracleDataReader reader2 = Comm.ExecuteReader();
-                        if (reader2.HasRows)
+                        OracleCommand Comm1 = new OracleCommand(sql1, Connect.con);
+                        OracleDataReader reader1 = Comm1.ExecuteReader();
+                        if (reader1.HasRows)
                         {
                             Controls.Add(MovieSearchPage.Instance);
                             MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
@@ -70,7 +75,7 @@ namespace DB_Project_Cinema
                             MovieSearchPage.Instance.BringToFront();
 
                         }
-                        else if (!reader2.HasRows)
+                        else if (!reader1.HasRows)
                         {
                             MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
                         }
@@ -79,8 +84,8 @@ namespace DB_Project_Cinema
                     {
                         string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + SearchText.Text + "%'";
 
-                        OracleCommand Comm = new OracleCommand(sql2, Connect.con);
-                        OracleDataReader reader2 = Comm.ExecuteReader();
+                        OracleCommand Comm2 = new OracleCommand(sql2, Connect.con);
+                        OracleDataReader reader2 = Comm2.ExecuteReader();
                         if (reader2.HasRows)
                         {
                             Controls.Add(MovieSearchPage.Instance);
@@ -96,11 +101,11 @@ namespace DB_Project_Cinema
                     }
                     else if (searchType == "장르명")
                     {
-                        string sql2 = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + SearchText.Text + "%'";
+                        string sql3 = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + SearchText.Text + "%'";
 
-                        OracleCommand Comm = new OracleCommand(sql2, Connect.con);
-                        OracleDataReader reader2 = Comm.ExecuteReader();
-                        if (reader2.HasRows)
+                        OracleCommand Comm3 = new OracleCommand(sql3, Connect.con);
+                        OracleDataReader reader3 = Comm3.ExecuteReader();
+                        if (reader3.HasRows)
                         {
                             Controls.Add(MovieSearchPage.Instance);
                             MovieSearchPage.Instance.setGenre_nm(SearchText.Text);
@@ -108,7 +113,7 @@ namespace DB_Project_Cinema
                             MovieSearchPage.Instance.Dock = DockStyle.Fill;
                             MovieSearchPage.Instance.BringToFront();
                         }
-                        else if (!reader2.HasRows)
+                        else if (!reader3.HasRows)
                         {
                             MessageBox.Show("해당 장르명과 일치하는 영화가 없습니다!");
                         }

@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     {
         private static MovieList _instance;
         private Connection Connect;
+        int movie_no;
         public static MovieList Instance
         {
             get
@@ -31,6 +32,7 @@ namespace DB_Project_Cinema
         Button[] btn = new Button[5];
         PictureBox[] pic = new PictureBox[5];
         Label[] label = new Label[5];
+        Label[] score = new Label[5];
 
         public MovieList()
         {
@@ -54,8 +56,15 @@ namespace DB_Project_Cinema
 
                 label[i] = new Label();
                 label[i].Name = "ResvRate" + (i + 1).ToString();
-                label[i].Size = new Size(130, 25);
+                label[i].Size = new Size(130, 20);
                 label[i].Location = new Point(90 + 180 * i, 255);
+
+                score[i] = new Label();
+                score[i].Name = "Score" + (i + 1).ToString();
+                score[i].Size = new Size(130, 25);
+                score[i].Location = new Point(90 + 180 * i, 275);
+
+
                 
                 try
                 {
@@ -67,7 +76,9 @@ namespace DB_Project_Cinema
 
                     while (reader.Read())
                     {
+                        movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
                         var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+
 
                         pic[i].SizeMode = PictureBoxSizeMode.StretchImage;
                         pic[i].ImageLocation = poster;
@@ -78,10 +89,28 @@ namespace DB_Project_Cinema
                         
 
                     }
+
+                    string sql2 = "SELECT AVG(MOVIE_SCORE) FROM GRADE WHERE MOVIE_NO=" + movie_no + " GROUP BY MOVIE_NO";
+                    //this.MovieScore.Text = movie_no.ToString();
+                    OracleCommand Comm2 = new OracleCommand(sql2, Connect.con);
+                    OracleDataReader reader2 = Comm2.ExecuteReader();
+                    if (reader2.HasRows)
+                    {
+                        while (reader2.Read())
+                        {
+                            score[i].Text = "      평점: " + reader2.GetInt32(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() + "점";
+
+                        }
+                    }
+                    else if (!reader2.HasRows)
+                    {                        
+                        score[i].Text = "      평점: -점";
+                    }
+
                     Controls.Add(pic[i]);
                     Controls.Add(btn[i]);
                     Controls.Add(label[i]);
-
+                    Controls.Add(score[i]);
                 }
                 catch (Exception ex)
                 {

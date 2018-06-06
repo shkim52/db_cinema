@@ -29,15 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Screen1NM = new System.Windows.Forms.Label();
-            this.Screen1Intro = new System.Windows.Forms.Label();
-            this.Screen1SeatCnt = new System.Windows.Forms.Label();
-            this.Screen2NM = new System.Windows.Forms.Label();
-            this.Screen2Intro = new System.Windows.Forms.Label();
-            this.Screen2SeatCnt = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ScreenNM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScreenIntro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScreenSeatCnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,125 +46,58 @@
             this.label1.Text = "SCREEN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // dataGridView1
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(327, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 35);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "상영관";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ScreenNM,
+            this.ScreenIntro,
+            this.ScreenSeatCnt});
+            this.dataGridView1.Location = new System.Drawing.Point(384, 175);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(752, 426);
+            this.dataGridView1.TabIndex = 17;
             // 
-            // label4
+            // ScreenNM
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(489, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(512, 35);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "상영관 설명";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ScreenNM.HeaderText = "상영관 이름";
+            this.ScreenNM.Name = "ScreenNM";
+            this.ScreenNM.ReadOnly = true;
+            this.ScreenNM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // label6
+            // ScreenIntro
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1007, 150);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 35);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "좌석 수";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ScreenIntro.FillWeight = 300F;
+            this.ScreenIntro.HeaderText = "상영관 설명";
+            this.ScreenIntro.Name = "ScreenIntro";
+            this.ScreenIntro.ReadOnly = true;
+            this.ScreenIntro.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ScreenIntro.Width = 300;
             // 
-            // Screen1NM
+            // ScreenSeatCnt
             // 
-            this.Screen1NM.BackColor = System.Drawing.Color.White;
-            this.Screen1NM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen1NM.Location = new System.Drawing.Point(350, 195);
-            this.Screen1NM.Name = "Screen1NM";
-            this.Screen1NM.Size = new System.Drawing.Size(89, 36);
-            this.Screen1NM.TabIndex = 11;
-            this.Screen1NM.Text = "label";
-            this.Screen1NM.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Screen1Intro
-            // 
-            this.Screen1Intro.BackColor = System.Drawing.Color.White;
-            this.Screen1Intro.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen1Intro.Location = new System.Drawing.Point(526, 195);
-            this.Screen1Intro.Name = "Screen1Intro";
-            this.Screen1Intro.Size = new System.Drawing.Size(444, 36);
-            this.Screen1Intro.TabIndex = 12;
-            this.Screen1Intro.Text = "label";
-            this.Screen1Intro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Screen1SeatCnt
-            // 
-            this.Screen1SeatCnt.BackColor = System.Drawing.Color.White;
-            this.Screen1SeatCnt.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen1SeatCnt.Location = new System.Drawing.Point(1050, 195);
-            this.Screen1SeatCnt.Name = "Screen1SeatCnt";
-            this.Screen1SeatCnt.Size = new System.Drawing.Size(98, 34);
-            this.Screen1SeatCnt.TabIndex = 13;
-            this.Screen1SeatCnt.Text = "label";
-            this.Screen1SeatCnt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Screen2NM
-            // 
-            this.Screen2NM.BackColor = System.Drawing.Color.White;
-            this.Screen2NM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen2NM.Location = new System.Drawing.Point(350, 246);
-            this.Screen2NM.Name = "Screen2NM";
-            this.Screen2NM.Size = new System.Drawing.Size(89, 36);
-            this.Screen2NM.TabIndex = 14;
-            this.Screen2NM.Text = "label";
-            this.Screen2NM.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Screen2Intro
-            // 
-            this.Screen2Intro.BackColor = System.Drawing.Color.White;
-            this.Screen2Intro.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen2Intro.Location = new System.Drawing.Point(526, 246);
-            this.Screen2Intro.Name = "Screen2Intro";
-            this.Screen2Intro.Size = new System.Drawing.Size(444, 36);
-            this.Screen2Intro.TabIndex = 15;
-            this.Screen2Intro.Text = "label";
-            this.Screen2Intro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Screen2SeatCnt
-            // 
-            this.Screen2SeatCnt.BackColor = System.Drawing.Color.White;
-            this.Screen2SeatCnt.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Screen2SeatCnt.Location = new System.Drawing.Point(1050, 246);
-            this.Screen2SeatCnt.Name = "Screen2SeatCnt";
-            this.Screen2SeatCnt.Size = new System.Drawing.Size(98, 34);
-            this.Screen2SeatCnt.TabIndex = 16;
-            this.Screen2SeatCnt.Text = "label";
-            this.Screen2SeatCnt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ScreenSeatCnt.HeaderText = "좌석 수";
+            this.ScreenSeatCnt.Name = "ScreenSeatCnt";
+            this.ScreenSeatCnt.ReadOnly = true;
+            this.ScreenSeatCnt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ScreenInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.Screen2SeatCnt);
-            this.Controls.Add(this.Screen2Intro);
-            this.Controls.Add(this.Screen2NM);
-            this.Controls.Add(this.Screen1SeatCnt);
-            this.Controls.Add(this.Screen1Intro);
-            this.Controls.Add(this.Screen1NM);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
             this.Name = "ScreenInfo";
-            this.Size = new System.Drawing.Size(1326, 514);
+            this.Size = new System.Drawing.Size(1326, 626);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,15 +105,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Screen1NM;
-        private System.Windows.Forms.Label Screen1Intro;
-        private System.Windows.Forms.Label Screen1SeatCnt;
-        private System.Windows.Forms.Label Screen2NM;
-        private System.Windows.Forms.Label Screen2Intro;
-        private System.Windows.Forms.Label Screen2SeatCnt;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ScreenNM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ScreenIntro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ScreenSeatCnt;
 
     }
 }

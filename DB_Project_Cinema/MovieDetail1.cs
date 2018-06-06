@@ -85,10 +85,17 @@ namespace DB_Project_Cinema
                 OracleCommand Comm2 = new OracleCommand(sql2, Conn);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
 
-                while (reader2.Read())
+                if (reader2.HasRows)
                 {
-                    this.MovieScore.Text = reader.GetInt32(reader.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() +"점";
-                    
+                    while (reader2.Read())
+                    {
+                        MovieScore.Text = reader2.GetInt32(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() + "점";
+
+                    }
+                }
+                else if (!reader2.HasRows)
+                {
+                    MovieScore.Text = "-점";
                 }
 
                 Conn.Close();

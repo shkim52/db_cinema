@@ -39,7 +39,7 @@ namespace DB_Project_Cinema
             {
 
                 Conn.Open();
-                string sql = "SELECT * FROM SCREEN WHERE SCR_NO=1";
+                string sql = "SELECT * FROM SCREEN ORDER BY SCR_NO";
 
                 OracleCommand Comm = new OracleCommand(sql, Conn);
 
@@ -49,26 +49,14 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    this.Screen1NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
-                    this.Screen1Intro.Text = reader.GetString(reader.GetOrdinal("SCR_INTRO"));
-                    //this.ScreenSeatCnt.Text = reader.GetString(reader.GetDecimal("SCR_SEAT_CNT"));
+                    string ScrNM = reader.GetString(reader.GetOrdinal("SCR_NM"));
+                    string ScrIntro = reader.GetString(reader.GetOrdinal("SCR_INTRO"));
+                    int ScrSeatCnt = reader.GetInt32(reader.GetOrdinal("SCR_SEAT_CNT"));
+
+                    dataGridView1.Rows.Add(ScrNM, ScrIntro, ScrSeatCnt);
                 }
 
-                string sql2 = "SELECT * FROM SCREEN WHERE SCR_NO=2";
-
-                OracleCommand Comm2 = new OracleCommand(sql2, Conn);
-
-
-                OracleDataReader reader2 = Comm2.ExecuteReader();
-
-
-                while (reader2.Read())
-                {
-                    this.Screen2NM.Text = reader2.GetString(reader2.GetOrdinal("SCR_NM"));
-                    this.Screen2Intro.Text = reader2.GetString(reader2.GetOrdinal("SCR_INTRO"));
-                    //this.ScreenSeatCnt.Text = reader.GetString(reader.GetDecimal("SCR_SEAT_CNT"));
-                }
-
+                
                 Conn.Close();
 
 
