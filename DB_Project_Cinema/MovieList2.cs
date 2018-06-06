@@ -95,11 +95,11 @@ namespace DB_Project_Cinema
         private void Form1_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-
-            Controls.Add(MovieDetail1.Instance);
+            Controls.Remove(this);
+            this.Parent.Controls.Add(MovieDetail1.Instance);
             MovieDetail1.Instance.setMovie_nm(btn.Text);
             MovieDetail1.Instance.MovieDetail_test();
-            MovieDetail1.Instance.Dock = DockStyle.Fill;
+            MovieDetail1.Instance.Dock = DockStyle.None;
             MovieDetail1.Instance.BringToFront();
         }
     }

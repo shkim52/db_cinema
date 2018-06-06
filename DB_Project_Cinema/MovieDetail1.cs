@@ -81,7 +81,7 @@ namespace DB_Project_Cinema
                     Poster.ImageLocation = poster;
                 }
                 string sql2 = "SELECT AVG(MOVIE_SCORE) FROM GRADE WHERE MOVIE_NO="+movie_no+" GROUP BY MOVIE_NO";
-                //this.MovieScore.Text = movie_no.ToString();
+
                 OracleCommand Comm2 = new OracleCommand(sql2, Conn);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
 
@@ -127,8 +127,9 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                     int movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
-                    
-                    Controls.Add(ReviewPage.Instance);
+
+                    this.Parent.Controls.Add(ReviewPage.Instance);
+                    Controls.Remove(this);
                     ReviewPage.Instance.setMovie_no(movie_no);
                     ReviewPage.Instance.ReviewPage_test();
                     ReviewPage.Instance.Dock = DockStyle.None;
@@ -205,6 +206,11 @@ namespace DB_Project_Cinema
                     Conn.Close();
                 }
             }
+        }
+
+        private void BackToHome_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
         }
     }
 }

@@ -34,10 +34,10 @@
             this.Review = new System.Windows.Forms.TextBox();
             this.ReviewRegisterButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BackToHome = new System.Windows.Forms.Button();
             this.MemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MemReview = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BackToHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,21 +117,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(659, 121);
             this.dataGridView1.TabIndex = 14;
             // 
-            // BackToHome
-            // 
-            this.BackToHome.BackColor = System.Drawing.Color.LightGray;
-            this.BackToHome.FlatAppearance.BorderSize = 0;
-            this.BackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToHome.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BackToHome.Location = new System.Drawing.Point(159, 260);
-            this.BackToHome.Margin = new System.Windows.Forms.Padding(2);
-            this.BackToHome.Name = "BackToHome";
-            this.BackToHome.Size = new System.Drawing.Size(151, 35);
-            this.BackToHome.TabIndex = 26;
-            this.BackToHome.Text = "<-홈으로";
-            this.BackToHome.UseVisualStyleBackColor = false;
-            this.BackToHome.Click += new System.EventHandler(this.BackToHome_Click);
-            // 
             // MemID
             // 
             this.MemID.FillWeight = 150F;
@@ -156,6 +141,21 @@
             this.MemReview.ReadOnly = true;
             this.MemReview.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.MemReview.Width = 400;
+            // 
+            // BackToHome
+            // 
+            this.BackToHome.BackColor = System.Drawing.Color.LightGray;
+            this.BackToHome.FlatAppearance.BorderSize = 0;
+            this.BackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToHome.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BackToHome.Location = new System.Drawing.Point(29, 233);
+            this.BackToHome.Margin = new System.Windows.Forms.Padding(2);
+            this.BackToHome.Name = "BackToHome";
+            this.BackToHome.Size = new System.Drawing.Size(103, 26);
+            this.BackToHome.TabIndex = 26;
+            this.BackToHome.Text = "<-뒤로가기";
+            this.BackToHome.UseVisualStyleBackColor = false;
+            this.BackToHome.Click += new System.EventHandler(this.BackToHome_Click);
             // 
             // ReviewPage
             // 

@@ -52,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MovieIntro = new System.Windows.Forms.TextBox();
             this.ReviewButton = new System.Windows.Forms.Button();
+            this.BackToHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -234,11 +235,11 @@
             this.InterestRegisterButton.BackColor = System.Drawing.Color.LightGray;
             this.InterestRegisterButton.FlatAppearance.BorderSize = 0;
             this.InterestRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InterestRegisterButton.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.InterestRegisterButton.Location = new System.Drawing.Point(197, 294);
+            this.InterestRegisterButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.InterestRegisterButton.Location = new System.Drawing.Point(197, 342);
             this.InterestRegisterButton.Margin = new System.Windows.Forms.Padding(2);
             this.InterestRegisterButton.Name = "InterestRegisterButton";
-            this.InterestRegisterButton.Size = new System.Drawing.Size(162, 28);
+            this.InterestRegisterButton.Size = new System.Drawing.Size(162, 39);
             this.InterestRegisterButton.TabIndex = 17;
             this.InterestRegisterButton.Text = "관심리스트 등록";
             this.InterestRegisterButton.UseVisualStyleBackColor = false;
@@ -304,12 +305,12 @@
             this.MovieIntro.BackColor = System.Drawing.Color.White;
             this.MovieIntro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MovieIntro.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieIntro.Location = new System.Drawing.Point(398, 187);
+            this.MovieIntro.Location = new System.Drawing.Point(415, 218);
             this.MovieIntro.Multiline = true;
             this.MovieIntro.Name = "MovieIntro";
             this.MovieIntro.ReadOnly = true;
             this.MovieIntro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MovieIntro.Size = new System.Drawing.Size(912, 135);
+            this.MovieIntro.Size = new System.Drawing.Size(889, 185);
             this.MovieIntro.TabIndex = 23;
             // 
             // ReviewButton
@@ -317,21 +318,37 @@
             this.ReviewButton.BackColor = System.Drawing.Color.LightGray;
             this.ReviewButton.FlatAppearance.BorderSize = 0;
             this.ReviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReviewButton.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ReviewButton.Location = new System.Drawing.Point(197, 263);
+            this.ReviewButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ReviewButton.Location = new System.Drawing.Point(197, 289);
             this.ReviewButton.Margin = new System.Windows.Forms.Padding(2);
             this.ReviewButton.Name = "ReviewButton";
-            this.ReviewButton.Size = new System.Drawing.Size(162, 27);
+            this.ReviewButton.Size = new System.Drawing.Size(162, 37);
             this.ReviewButton.TabIndex = 25;
             this.ReviewButton.Text = "리뷰 보기";
             this.ReviewButton.UseVisualStyleBackColor = false;
             this.ReviewButton.Click += new System.EventHandler(this.ReviewButton_Click);
+            // 
+            // BackToHome
+            // 
+            this.BackToHome.BackColor = System.Drawing.Color.LightGray;
+            this.BackToHome.FlatAppearance.BorderSize = 0;
+            this.BackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToHome.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BackToHome.Location = new System.Drawing.Point(53, 346);
+            this.BackToHome.Margin = new System.Windows.Forms.Padding(2);
+            this.BackToHome.Name = "BackToHome";
+            this.BackToHome.Size = new System.Drawing.Size(112, 35);
+            this.BackToHome.TabIndex = 26;
+            this.BackToHome.Text = "<-뒤로가기";
+            this.BackToHome.UseVisualStyleBackColor = false;
+            this.BackToHome.Click += new System.EventHandler(this.BackToHome_Click);
             // 
             // MovieDetail1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.BackToHome);
             this.Controls.Add(this.ReviewButton);
             this.Controls.Add(this.MovieIntro);
             this.Controls.Add(this.label2);
@@ -391,5 +408,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox MovieIntro;
         private System.Windows.Forms.Button ReviewButton;
+        private System.Windows.Forms.Button BackToHome;
     }
 }
