@@ -12,6 +12,24 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageCheckResv : UserControl
     {
+        private static MyPageCheckResv _instance;
+        public static MyPageCheckResv Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPageCheckResv();
+                }
+                return _instance;
+            }
+        }
+
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
         public MyPageCheckResv()
         {
             InitializeComponent();

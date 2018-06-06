@@ -13,6 +13,7 @@ namespace DB_Project_Cinema
     public partial class MyPage : UserControl
     {
         private static MyPage _instance;
+        
         public static MyPage Instance
         {
             get
@@ -24,17 +25,15 @@ namespace DB_Project_Cinema
                 return _instance;
             }
         }
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
+
         public MyPage()
         {
             InitializeComponent();
-
-        }
-
-       
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void MyPageChangeInfoButton_Click(object sender, EventArgs e)
@@ -59,6 +58,7 @@ namespace DB_Project_Cinema
             MyPageMyPointButton.BackColor = Color.White;
 
             MyPageChangePw.BringToFront();
+            
         }
 
         private void MyPageQuitMemButton_Click(object sender, EventArgs e)
@@ -70,7 +70,8 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            MyPageQuitMem.BringToFront();
+            MyPageQuitMem.BringToFront(); 
+            
         }
 
         private void MyPageCheckResvButton_Click(object sender, EventArgs e)
@@ -95,6 +96,7 @@ namespace DB_Project_Cinema
             MyPageMyPointButton.BackColor = Color.White;
 
             MyPageInterest.BringToFront();
+            
         }
 
         private void MyPageMyPointButton_Click(object sender, EventArgs e)
@@ -107,6 +109,7 @@ namespace DB_Project_Cinema
             MyPageMyPointButton.BackColor = Color.AntiqueWhite;
 
             MyPageMyPoint.BringToFront();
+            
         }
     }
 }

@@ -14,58 +14,63 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageChangeInfo : UserControl
     {
+        private Connection connect;
+
+        private static MyPageChangeInfo _instance;
+        public static MyPageChangeInfo Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPageChangeInfo();
+                }
+                return _instance;
+            }
+        }
+        
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
+        
         public MyPageChangeInfo()
         {
-            InitializeComponent(); 
-            
+            InitializeComponent();
+            Console.WriteLine(mem_id);
         }
 
         private void ChangeInfoButton_Click(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-
             try
             {
+                
                 OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn;
-                Conn.Open();
-
+                Cmd.Connection = connect.con;
 
                 string sql = "UPDATE MEM SET MEM_EMAIL = '" + EMAIL.Text + "' , MEM_TELNO = '" + TELNO.Text + "'";
                 Cmd.CommandText = sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("정보를 수정하였습니다.");
 
-                
-                Conn.Close();
+                connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
         }
 
         private void MyPageChangeInfo_Load(object sender, EventArgs e)
         {
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
+            connect = new Connection();
+            connect.Connecting();
             try
             {
-
-                Conn.Open();
-
-
-                string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + Program.memID + "'";
-
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                string sql = "SELECT * FROM MEM WHERE MEM_ID = '" + mem_id + "'";
+                Console.WriteLine(sql);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
 
                 OracleDataReader reader = Comm.ExecuteReader();
 
@@ -77,15 +82,10 @@ namespace DB_Project_Cinema
                     EMAIL.Text = reader.GetString(reader.GetOrdinal("MEM_EMAIL"));
                     TELNO.Text = reader.GetString(reader.GetOrdinal("MEM_TELNO"));
                 }
-
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
             }
         }
     }

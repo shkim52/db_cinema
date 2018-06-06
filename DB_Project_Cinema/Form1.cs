@@ -247,7 +247,6 @@ namespace DB_Project_Cinema
             FindIDandPWButton.Visible = false;
             JoinMembershipButton.Visible = false;
             LogoutButton.Visible = true;
-
         }
         public void Logout_clicked()
         {

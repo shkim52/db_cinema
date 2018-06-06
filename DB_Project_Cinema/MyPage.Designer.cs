@@ -167,7 +167,6 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "포인트";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // MyPageChangeInfoButton
             // 

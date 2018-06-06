@@ -14,6 +14,24 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageChangePw : UserControl
     {
+        private static MyPageChangePw _instance;
+        public static MyPageChangePw Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPageChangePw();
+                }
+                return _instance;
+            }
+        }
+
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
         public MyPageChangePw()
         {
             InitializeComponent();

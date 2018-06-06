@@ -14,6 +14,24 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageInterest : UserControl
     {
+        private static MyPageInterest _instance;
+        public static MyPageInterest Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPageInterest();
+                }
+                return _instance;
+            }
+        }
+
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
         private OracleConnection Conn;
         private int movie_no;
         public MyPageInterest()

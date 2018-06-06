@@ -15,6 +15,24 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageQuitMem : UserControl
     {
+        private static MyPageQuitMem _instance;
+        public static MyPageQuitMem Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPageQuitMem();
+                }
+                return _instance;
+            }
+        }
+
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
         public MyPageQuitMem()
         {
             InitializeComponent();

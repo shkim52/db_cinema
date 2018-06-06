@@ -16,6 +16,24 @@ namespace DB_Project_Cinema
     
     public partial class MyPageMyPoint : UserControl
     {
+        private static MyPageMyPoint _instance;
+        public static MyPageMyPoint Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MyPageMyPoint();
+                }
+                return _instance;
+            }
+        }
+
+        private string mem_id;
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
         public MyPageMyPoint()
         {
             InitializeComponent();
