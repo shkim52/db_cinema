@@ -15,44 +15,27 @@ namespace DB_Project_Cinema
     public partial class MyPageChangeInfo : UserControl
     {
         private Connection connect;
-        private static MyPageChangeInfo _instance;
         private string mem_id;
 
-        public static MyPageChangeInfo Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPageChangeInfo();
-                }
-                return _instance;
-            }
-        }
-        public MyPageChangeInfo()
+        public MyPageChangeInfo(string id)
         {
             InitializeComponent();
 
             connect = new Connection();
             connect.Connecting();
 
-            mem_id = CinemaProgram.Instance.GetLoginId();
-            Console.WriteLine("----------------------------");
-            Console.WriteLine(mem_id);
-            Console.WriteLine("----------------------------");
+            mem_id = id;
         }
 
         private void MyPageChangeInfo_Load(object sender, EventArgs e)
         {
-
+            MyPageChangeInfo_View();
         }
-        public void setMem_id(string s)
+        public void SetMem_id(string s)
         {
             mem_id = s;
         }
-        
-        
-        public void MyPageChangeInfo_test()
+        public void MyPageChangeInfo_View()
         {
             try
             {

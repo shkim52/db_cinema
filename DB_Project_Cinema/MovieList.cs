@@ -144,8 +144,6 @@ namespace DB_Project_Cinema
         {
             Button btn = sender as Button;
             string selected_button = btn.Name;
-            Console.WriteLine(selected_button);
-            Console.WriteLine(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
 
             MovieDetail MD = new MovieDetail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
             this.Parent.Controls.Add(MD); // parent -> panel3

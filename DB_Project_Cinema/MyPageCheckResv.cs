@@ -16,32 +16,19 @@ namespace DB_Project_Cinema
     public partial class MyPageCheckResv : UserControl
     {
         private Connection connect;
-        private static MyPageCheckResv _instance;
-        public static MyPageCheckResv Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPageCheckResv();
-                }
-                return _instance;
-            }
-        }
-
         private string mem_id;
-        public void setMem_id(string s)
-        {
-            mem_id = s;
-        }
-        public MyPageCheckResv()
+
+        public MyPageCheckResv(string id)
         {
             InitializeComponent();
+
+            connect = new Connection();
+            connect.Connecting();
+
+            mem_id = id;
         }
         private void MyPageCheckResv_Load(object sender, EventArgs e)
         {
-            connect = new Connection();
-            connect.Connecting();
             get_resveration();
         }
         //에매내역 불러오기 함수

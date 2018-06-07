@@ -15,29 +15,21 @@ namespace DB_Project_Cinema
     public partial class MyPageChangePw : UserControl
     {
         private Connection connect;
-        private static MyPageChangePw _instance;
         private string mem_id;
 
-        public static MyPageChangePw Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPageChangePw();
-                }
-                return _instance;
-            }
-        }
-        public MyPageChangePw()
+        public MyPageChangePw(string id)
         {
             InitializeComponent();
+
+            connect = new Connection();
+            connect.Connecting();
+
+            mem_id = id;
         }
 
         private void MyPageChangePw_Load(object sender, EventArgs e)
         {
-            connect = new Connection();
-            connect.Connecting();
+
         }
 
         public void setMem_id(string s)
@@ -79,12 +71,17 @@ namespace DB_Project_Cinema
                     MessageBox.Show("비밀번호가 성공적으로 변경되었습니다.");
 
                 }
-                connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
+            TextBox_Reset();
+        }
+        private void TextBox_Reset(){
+            NEW_PWD_INPUT.Text = null;
+            NEW_PWD2_INPUT.Text = null;
+            PWD_INPUT.Text = null;
         }
     }
 }

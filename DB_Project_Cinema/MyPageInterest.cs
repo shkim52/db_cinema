@@ -14,32 +14,22 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageInterest : UserControl
     {
-        private static MyPageInterest _instance;
-        public static MyPageInterest Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPageInterest();
-                }
-                return _instance;
-            }
-        }
-
+        private Connection connect;
         private string mem_id;
-        public void setMem_id(string s)
-        {
-            mem_id = s;
-        }
-        private OracleConnection Conn;
-        private int movie_no;
-        public MyPageInterest()
-        {
+        private MyPage _parent;
+        private int[] movie_array;
 
+        public MyPageInterest(MyPage parent,string member)
+        {
             InitializeComponent();
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            Conn = new OracleConnection(str);
+
+            _parent = parent;
+
+            connect = new Connection();
+            connect.Connecting();
+
+            movie_array = new int[30];
+            mem_id = member;
         }
 
         private void MyPageInterest_Load(object sender, EventArgs e)
@@ -54,20 +44,13 @@ namespace DB_Project_Cinema
                 e.RowIndex >= 0)
             {
                 string movie_name = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                if (e.ColumnIndex == 3)
+                if (e.ColumnIndex == 3) // 디테일페이지 이동
                 {
-                    //MovieDetail mv = new MovieDetail();
-                    this.Parent.Hide();
-                    //mv.Show();
-                    //Controls.Add(MovieDetail.Instance);
-                    //MovieDetail.Instance.setMovie_nm(movie_name);
-                    //MovieDetail.Instance.MovieDetail_test();
-                    //MovieDetail.Instance.Dock = DockStyle.None;
-                    //MovieDetail.Instance.BringToFront();
+                    _parent.Interest_MovieDetail_View(movie_array[e.RowIndex]);
                 }
-                else if (e.ColumnIndex == 4)
+                else if (e.ColumnIndex == 4) // 관심리스트 삭제
                 {
-                    delete_interest(movie_name);
+                    delete_interest(movie_array[e.RowIndex]);
                     dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
                     //load_datagridview();
                 }
@@ -77,20 +60,21 @@ namespace DB_Project_Cinema
         {
             try
             {
-                Conn.Open();
 
-                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE, M.MOVIE_NO FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '" + Program.memID + "'";
-                OracleCommand Comm = new OracleCommand(sql, Conn);
-
+                string sql = "SELECT POSTER, MOVIE_NM, RELEASE_DATE, M.MOVIE_NO FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND I.MEM_ID = '" + mem_id + "'";
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
+
                 if (!reader.HasRows)
                 {
                     dataGridView1.Visible = false;
                     label2.Text = "현재 관심리스트에 내용이 존재하지 않습니다.";
                 }
+                int index = 0;
+
                 while (reader.Read())
                 {
-                    
+                    movie_array[index++] = Convert.ToInt32(reader["MOVIE_NO"]);
                     var poster = reader.GetString(reader.GetOrdinal("POSTER"));
                     System.Net.WebClient webSource = new System.Net.WebClient();
                     byte[] data = webSource.DownloadData(poster);
@@ -102,67 +86,29 @@ namespace DB_Project_Cinema
                     dataGridView1.Rows.Add(jpgImage, movie_nm, release);
 
                 }
-                Conn.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
         }
-        private void delete_interest(string movie_nm)
-        {    
-            find_movie_no(movie_nm);
-            try
-            {
-                Conn.Open();
-                OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Conn;
-                
-                string input_sql = "DELETE FROM INTEREST_LIST WHERE MOVIE_NO = " + movie_no +" AND MEM_ID = '" + Program.memID + "'";
-                
-                Cmd.CommandText = input_sql;
-                Cmd.ExecuteNonQuery();
-                
-                MessageBox.Show("삭제완료");
-
-                Conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
-            }
-        }
-        private void find_movie_no(string movie_nm)
+        private void delete_interest(int movie_no)
         {
             try
             {
-                Conn.Open();
+                OracleCommand Cmd = new OracleCommand();
+                Cmd.Connection = connect.con;
 
-                string sql = "SELECT I.MOVIE_NO FROM MOVIE M, INTEREST_LIST I WHERE M.MOVIE_NO = I.MOVIE_NO AND M.MOVIE_NM = '" + movie_nm + "'AND I.MEM_ID = '" + Program.memID + "'";
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                string input_sql = "DELETE FROM INTEREST_LIST WHERE MOVIE_NO = " + movie_no + " AND MEM_ID = '" + mem_id + "'";
 
-                OracleDataReader reader = Comm.ExecuteReader();
+                Cmd.CommandText = input_sql;
+                Cmd.ExecuteNonQuery();
 
-                reader.Read();
-                movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
-                
-                Conn.Close();
+                MessageBox.Show("삭제완료");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
             }
         }
     }

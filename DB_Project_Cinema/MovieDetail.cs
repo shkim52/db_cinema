@@ -16,8 +16,9 @@ namespace DB_Project_Cinema
     {
         //private static MovieDetail _instance;
         private Connection connect;
-        private string movie_nm;
-        private string mem_id; //여기서 안쓰고 form으로 통합
+        private CinemaProgram _parents; // 사용하지 않는 변수
+        private string movie_nm; 
+        public string mem_id = null;
         private int selected_movie_no;
 
         //MoviePage m = new MoviePage();
@@ -34,6 +35,7 @@ namespace DB_Project_Cinema
         }*/
         public MovieDetail(int selected_movie)
         {
+            mem_id = CinemaProgram.Instance.GetLoginId();
             selected_movie_no = selected_movie;
             InitializeComponent();
             connect = new Connection();
@@ -149,7 +151,7 @@ namespace DB_Project_Cinema
         private void InterestRegisterButton_Click(object sender, EventArgs e)
         {
           
-            if (Program.memID == "")
+            if (mem_id == null)
             {
                 MessageBox.Show("로그인을 하세요!");
             }

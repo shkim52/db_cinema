@@ -35,18 +35,11 @@ namespace DB_Project_Cinema
             login_mem_id = String.Empty;
 
         }
-        public void Front_UserControl(Control page)
+        public void MovieDetailPage_Add(Control page)
         {
-            if (!mainPanel.Controls.Contains(page))
-            {
-                mainPanel.Controls.Add(page);
-                page.Dock = DockStyle.None;
-                page.BringToFront();
-            }
-            else
-            {
-                page.BringToFront();
-            }
+           MoviePage.Instance.panel3.Controls.Add(page);
+           page.Dock = DockStyle.None;
+           page.BringToFront();
         }
 
 
@@ -79,7 +72,6 @@ namespace DB_Project_Cinema
         {
             return login_mem_id;
         }
-
         private void MoviePageButton_Click(object sender, EventArgs e)
         {
 

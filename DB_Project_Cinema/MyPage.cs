@@ -13,7 +13,6 @@ namespace DB_Project_Cinema
     public partial class MyPage : UserControl
     {
         //private static MyPage _instance;
-        private string mem_id; //나중에 지울부분
         private CinemaProgram _parent;
 
         /*public static MyPage Instance
@@ -36,7 +35,10 @@ namespace DB_Project_Cinema
             Console.WriteLine("--------------------");
             Console.WriteLine(_parent.GetLoginId());
         }
+        ~MyPage()
+        {
 
+        }
        /* public void setMem_id(string s)
         {
             mem_id = s;
@@ -51,10 +53,11 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            SubPanel.Controls.Add(MyPageChangeInfo.Instance);
-            MyPageChangeInfo.Instance.MyPageChangeInfo_test();
-            MyPageChangeInfo.Instance.BringToFront();
-            MyPageChangeInfo.Instance.Dock = DockStyle.None;
+            
+            MyPageChangeInfo changeinfo_page = new MyPageChangeInfo(_parent.GetLoginId());
+            SubPanel.Controls.Add(changeinfo_page);
+            changeinfo_page.BringToFront();
+            changeinfo_page.Dock = DockStyle.None;
         }
 
         private void MyPageChangePwButton_Click(object sender, EventArgs e)
@@ -66,10 +69,10 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            SubPanel.Controls.Add(MyPageChangePw.Instance);
-            MyPageChangePw.Instance.setMem_id(_parent.GetLoginId());
-            MyPageChangePw.Instance.BringToFront();
-            MyPageChangePw.Instance.Dock = DockStyle.None;
+            MyPageChangePw changepw_page = new MyPageChangePw(_parent.GetLoginId());
+            SubPanel.Controls.Add(changepw_page);
+            changepw_page.BringToFront();
+            changepw_page.Dock = DockStyle.None;
         }
 
         private void MyPageQuitMemButton_Click(object sender, EventArgs e)
@@ -96,11 +99,10 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            SubPanel.Controls.Add(MyPageCheckResv.Instance);
-
-            MyPageCheckResv.Instance.setMem_id(_parent.GetLoginId());
-            MyPageCheckResv.Instance.BringToFront();
-            MyPageCheckResv.Instance.Dock = DockStyle.None;
+            MyPageCheckResv changepw_page = new MyPageCheckResv(_parent.GetLoginId());
+            SubPanel.Controls.Add(changepw_page);
+            changepw_page.BringToFront();
+            changepw_page.Dock = DockStyle.None;
         }
 
         private void MyPageInterestButton_Click(object sender, EventArgs e)
@@ -112,11 +114,10 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.AntiqueWhite;
             MyPageMyPointButton.BackColor = Color.White;
 
-            SubPanel.Controls.Add(MyPageInterest.Instance);
-
-            MyPageInterest.Instance.setMem_id(_parent.GetLoginId());
-            MyPageInterest.Instance.BringToFront();
-            MyPageInterest.Instance.Dock = DockStyle.None;
+            MyPageInterest interest_page = new MyPageInterest(this,_parent.GetLoginId());
+            SubPanel.Controls.Add(interest_page);
+            interest_page.BringToFront();
+            interest_page.Dock = DockStyle.None;
         }
 
         private void MyPageMyPointButton_Click(object sender, EventArgs e)
@@ -133,6 +134,13 @@ namespace DB_Project_Cinema
             MyPageMyPoint.Instance.setMem_id(_parent.GetLoginId());
             MyPageMyPoint.Instance.BringToFront();
             MyPageMyPoint.Instance.Dock = DockStyle.None; 
+        }
+        public void Interest_MovieDetail_View(int movie_no)
+        {
+            MovieDetail moviedetail = new MovieDetail(movie_no);
+            this.Parent.Controls.Remove(this);
+            this.Controls.Remove(this);
+            _parent.MovieDetailPage_Add(moviedetail);
         }
     }
 }

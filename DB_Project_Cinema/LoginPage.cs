@@ -79,13 +79,14 @@ namespace DB_Project_Cinema
 
                         // 없애야될것들
                         //MovieDetail.Instance.setMem_id(mem_id);
-                        MyPageChangeInfo.Instance.setMem_id(mem_id);
-                        MyPageChangePw.Instance.setMem_id(mem_id);
-                        MyPageCheckResv.Instance.setMem_id(mem_id);
-                        MyPageInterest.Instance.setMem_id(mem_id);
-                        MyPageMyPoint.Instance.setMem_id(mem_id);
-                        MyPageQuitMem.Instance.setMem_id(mem_id);
-                        ReviewPage.Instance.setMem_id(mem_id);
+                        //MyPageChangeInfo.Instance.SetMem_id(mem_id);
+                        //MyPageChangePw.Instance.setMem_id(mem_id);
+                        //MyPageCheckResv.Instance.setMem_id(mem_id);
+                        //MyPageInterest.Instance.setMem_id(mem_id);
+                        //MyPageMyPoint.Instance.setMem_id(mem_id);
+                        //MyPageQuitMem.Instance.setMem_id(mem_id);
+                        //ReviewPage.Instance.setMem_id(mem_id);
+                        
                         MoviePage.Instance.BringToFront();
                     }
                     else
