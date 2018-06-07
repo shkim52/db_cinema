@@ -10,8 +10,6 @@ C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.FindI
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.FindPW.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.CinemaProgram.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.JoinMembership.resources
-C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginCustomer.resources
-C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginMember.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginPage.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MoviePage.resources
@@ -67,12 +65,10 @@ C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.SelectShowTime.re
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.TicketingPage.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.csproj.GenerateResource.Cache
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources
-C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList2.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.ReviewPage.resources
-C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList2.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.ReviewPage.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.JoinCust.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.JoinCust.resources
@@ -151,3 +147,4 @@ D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\DB_Proje
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\Oracle.ManagedDataAccess.dll
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\Oracle.Web.dll
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail.resources
+C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail.resources

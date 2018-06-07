@@ -36,6 +36,7 @@
             this.resv_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resv_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resv_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sh_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.show_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resv_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quit_resv = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -75,6 +76,7 @@
             this.resv_date,
             this.resv_num,
             this.resv_info,
+            this.sh_date,
             this.show_date,
             this.resv_price,
             this.quit_resv});
@@ -87,7 +89,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(72, 164);
+            this.dataGridView1.Location = new System.Drawing.Point(125, 186);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -102,7 +104,7 @@
             this.dataGridView1.RowTemplate.Height = 145;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(829, 130);
-            this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.TabIndex = 15;
             // 
             // resv_date
             // 
@@ -118,6 +120,11 @@
             // 
             this.resv_info.HeaderText = "영화명";
             this.resv_info.Name = "resv_info";
+            // 
+            // sh_date
+            // 
+            this.sh_date.HeaderText = "상영시간";
+            this.sh_date.Name = "sh_date";
             // 
             // show_date
             // 
@@ -158,6 +165,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_num;
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_info;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sh_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn show_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_price;
         private System.Windows.Forms.DataGridViewButtonColumn quit_resv;
