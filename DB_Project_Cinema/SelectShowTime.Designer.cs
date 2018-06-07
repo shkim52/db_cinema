@@ -40,8 +40,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MovieNM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.screen_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.screen_time = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -147,8 +148,9 @@
             this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.screen_no,
-            this.screen_time});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewButtonColumn1,
+            this.dataGridViewTextBoxColumn2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -158,7 +160,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView2.Location = new System.Drawing.Point(663, 174);
+            this.dataGridView2.Location = new System.Drawing.Point(752, 174);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView2.Name = "dataGridView2";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -172,24 +174,31 @@
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 30;
             this.dataGridView2.RowTemplate.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(388, 199);
-            this.dataGridView2.TabIndex = 18;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.Size = new System.Drawing.Size(200, 199);
+            this.dataGridView2.TabIndex = 19;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // screen_no
+            // dataGridViewTextBoxColumn1
             // 
-            this.screen_no.Frozen = true;
-            this.screen_no.HeaderText = "상영관명";
-            this.screen_no.Name = "screen_no";
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "상영관명";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // screen_time
+            // dataGridViewButtonColumn1
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.screen_time.DefaultCellStyle = dataGridViewCellStyle2;
-            this.screen_time.Frozen = true;
-            this.screen_time.HeaderText = "상영시간";
-            this.screen_time.Name = "screen_time";
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewButtonColumn1.Frozen = true;
+            this.dataGridViewButtonColumn1.HeaderText = "상영시간";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            this.dataGridViewTextBoxColumn2.HeaderText = "상영일정번호";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // SelectShowTime
             // 
@@ -223,8 +232,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MovieNM;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn screen_no;
-        private System.Windows.Forms.DataGridViewButtonColumn screen_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 
     }
 }

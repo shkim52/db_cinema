@@ -67,24 +67,26 @@ namespace DB_Project_Cinema
                     MessageBox.Show("아이디 혹은 비밀번호를 잘못 입력하였습니다!");
                 }
 
-                while (reader.Read())
+                else
                 {
-                    Console.WriteLine(reader.GetString(reader.GetOrdinal("QUIT_STAT")));
-                    if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
+                    while (reader.Read())
                     {
-                        string mem_id = ID_INPUT.Text;
-                        MessageBox.Show(mem_id + "님 환영합니다!");
+                        Console.WriteLine(reader.GetString(reader.GetOrdinal("QUIT_STAT")));
+                        if (reader.GetString(reader.GetOrdinal("QUIT_STAT")) == "N")
+                        {
+                            string mem_id = ID_INPUT.Text;
+                            MessageBox.Show(mem_id + "님 환영합니다!");
 
-                        _parent.Login_Complete(mem_id);
+                            _parent.Login_Complete(mem_id);
 
-                        MoviePage.Instance.BringToFront();
-                    }
-                    else
-                    {
-                        MessageBox.Show("탈퇴회원입니다.");
+                            MoviePage.Instance.BringToFront();
+                        }
+                        else
+                        {
+                            MessageBox.Show("탈퇴회원입니다.");
+                        }
                     }
                 }
-                Connect.con.Close();
             }
             catch (Exception ex)
             {
