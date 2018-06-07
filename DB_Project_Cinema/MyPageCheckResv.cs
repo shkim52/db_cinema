@@ -38,18 +38,13 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MyPageCheckResv_Load(object sender, EventArgs e)
         {
             connect = new Connection();
             connect.Connecting();
             get_resveration();
         }
+        //에매내역 불러오기 함수
         public void get_resveration()
         {
             try
