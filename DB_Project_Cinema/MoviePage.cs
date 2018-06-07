@@ -15,8 +15,9 @@ namespace DB_Project_Cinema
     public partial class MoviePage : UserControl
     {
         private static MoviePage _instance;
-        private string searchType="영화명";
         private Connection Connect;
+        private MovieList Expect_ML;
+        private MovieList Show_ML;
         public static MoviePage Instance
         {
             get
@@ -33,105 +34,38 @@ namespace DB_Project_Cinema
             InitializeComponent();
             Connect = new Connection();
             Connect.Connecting();
-            MovieCategory.Text = "영화명";
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
 
+            // 인자값으로 현재 상영중인지 여부를 나타낸다
+            Show_ML = new MovieList(true);
+            Expect_ML = new MovieList(false);
+
+            MovieCategory.Text = "영화명";
         }
 
-        private void SearchButton_Click_1(object sender, EventArgs e)
+        private void MoviePage_Load(object sender, EventArgs e)
         {
+            // 상영중인 영화가 가장 먼저 보이도록
+            panel3.Controls.Add(Show_ML);
+            Show_ML.Dock = DockStyle.None;
+            Show_ML.BringToFront();
 
-            PlayingMovie.Visible = false;
-            ExpectedMovie.Visible = false;
-
-            if (SearchText.Text == "")
-                MessageBox.Show("검색어를 입력하세요!");
-            else
-            {
-                
-                try
-                {
-                    
-                    if (searchType == "영화명")
-                    {
-                        string sql1 = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + SearchText.Text + "%'" ;
-                       
-                        OracleCommand Comm1 = new OracleCommand(sql1, Connect.con);
-                        OracleDataReader reader1 = Comm1.ExecuteReader();
-                        if (reader1.HasRows)
-                        {
-                            Controls.Add(MovieSearchPage.Instance);
-                            MovieSearchPage.Instance.setMovie_nm(SearchText.Text);
-                            MovieSearchPage.Instance.MovieDetail_test();
-                            MovieSearchPage.Instance.Dock = DockStyle.Fill;
-                            MovieSearchPage.Instance.BringToFront();
-
-                        }
-                        else if (!reader1.HasRows)
-                        {
-                            MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
-                        }
-                    }
-                    else if (searchType == "감독명")
-                    {
-                        string sql2 = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + SearchText.Text + "%'";
-
-                        OracleCommand Comm2 = new OracleCommand(sql2, Connect.con);
-                        OracleDataReader reader2 = Comm2.ExecuteReader();
-                        if (reader2.HasRows)
-                        {
-                            Controls.Add(MovieSearchPage.Instance);
-                            MovieSearchPage.Instance.setDirector_nm(SearchText.Text);
-                            MovieSearchPage.Instance.DirectorDetail_test();
-                            MovieSearchPage.Instance.Dock = DockStyle.Fill;
-                            MovieSearchPage.Instance.BringToFront();
-                        }
-                        else if (!reader2.HasRows)
-                        {
-                            MessageBox.Show("해당 감독명과 일치하는 영화가 없습니다!");
-                        }
-                    }
-                    else if (searchType == "장르명")
-                    {
-                        string sql3 = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + SearchText.Text + "%'";
-
-                        OracleCommand Comm3 = new OracleCommand(sql3, Connect.con);
-                        OracleDataReader reader3 = Comm3.ExecuteReader();
-                        if (reader3.HasRows)
-                        {
-                            Controls.Add(MovieSearchPage.Instance);
-                            MovieSearchPage.Instance.setGenre_nm(SearchText.Text);
-                            MovieSearchPage.Instance.GenreDetail_test();
-                            MovieSearchPage.Instance.Dock = DockStyle.Fill;
-                            MovieSearchPage.Instance.BringToFront();
-                        }
-                        else if (!reader3.HasRows)
-                        {
-                            MessageBox.Show("해당 장르명과 일치하는 영화가 없습니다!");
-                        }
-                        
-                    }
-                    Connect.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-                finally
-                {
-                    Connect.con.Close();
-                }
-            }
-
+            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
+            PlayingMovie.FlatAppearance.BorderSize = 1;
+            ExpectedMovie.FlatAppearance.BorderSize = 0;
         }
 
         private void PlayingMovie_Click(object sender, EventArgs e)
-        {          
-            panel3.Controls.Add(MovieList.Instance);
-            MovieList.Instance.Dock = DockStyle.None;
-            MovieList.Instance.BringToFront();
+        {
+            if (!panel3.Controls.Contains(Show_ML))
+            {
+                panel3.Controls.Add(Show_ML);
+                Show_ML.Dock = DockStyle.None;
+                Show_ML.BringToFront();
+            }
+            else
+            {
+                Show_ML.BringToFront();
+            }
 
             PlayingMovie.FlatAppearance.BorderColor = Color.Red;
             PlayingMovie.FlatAppearance.BorderSize = 1;
@@ -140,31 +74,57 @@ namespace DB_Project_Cinema
         }
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
-        {           
-            panel3.Controls.Add(MovieList2.Instance);
-            MovieList2.Instance.Dock = DockStyle.None;
-            MovieList2.Instance.BringToFront();
+        {
+            if (!panel3.Controls.Contains(Expect_ML))
+            {
+                panel3.Controls.Add(Expect_ML);
+                Expect_ML.Dock = DockStyle.None;
+                Expect_ML.BringToFront();
+            }
+            else
+            {
+                Expect_ML.BringToFront();
+            }
 
             ExpectedMovie.FlatAppearance.BorderColor = Color.Red;
             ExpectedMovie.FlatAppearance.BorderSize = 1;
             PlayingMovie.FlatAppearance.BorderSize = 0;
-        }
+        }  
 
-        private void MoviePage_Load(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Add(MovieList.Instance);
-            MovieList.Instance.Dock = DockStyle.None;
-            MovieList.Instance.BringToFront();
+            PlayingMovie.Visible = false;
+            ExpectedMovie.Visible = false;
 
-            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
-            PlayingMovie.FlatAppearance.BorderSize = 1;
-            ExpectedMovie.FlatAppearance.BorderSize = 0;
-            searchType = "영화명";
-        }
+            if (SearchText.Text == "")
+                MessageBox.Show("검색어를 입력하세요!");
+            else
+            {
+                try
+                {
+                    string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + MovieCategory.Text + "%'";
+                    OracleCommand Comm1 = new OracleCommand(sql, Connect.con);
+                    OracleDataReader reader = Comm1.ExecuteReader();
 
-        private void MovieCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            searchType = MovieCategory.Text;
+                    if (reader.HasRows)
+                    {
+                        Controls.Add(MovieSearchPage.Instance);
+                        MovieSearchPage.Instance.setMovie_nm(MovieCategory.Text);
+                        MovieSearchPage.Instance.MovieDetail_test();
+                        MovieSearchPage.Instance.Dock = DockStyle.Fill;
+                        MovieSearchPage.Instance.BringToFront();
+
+                    }
+                    else if (!reader.HasRows)
+                    {
+                        MessageBox.Show("해당" + MovieCategory.Text + " 영화명과 일치하는 영화가 없습니다!");
+                    }
+                                    }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
         }
     }
 }

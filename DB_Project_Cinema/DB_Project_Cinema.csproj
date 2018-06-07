@@ -144,41 +144,23 @@
     <Compile Include="JoinMembership.Designer.cs">
       <DependentUpon>JoinMembership.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginCustomer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LoginCustomer.Designer.cs">
-      <DependentUpon>LoginCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginMember.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="LoginMember.Designer.cs">
-      <DependentUpon>LoginMember.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovieDetail1.cs">
+    <Compile Include="MovieDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MovieDetail1.Designer.cs">
-      <DependentUpon>MovieDetail1.cs</DependentUpon>
+    <Compile Include="MovieDetail.Designer.cs">
+      <DependentUpon>MovieDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MovieList.Designer.cs">
       <DependentUpon>MovieList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MovieList2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MovieList2.Designer.cs">
-      <DependentUpon>MovieList2.cs</DependentUpon>
     </Compile>
     <Compile Include="MoviePage.cs">
       <SubType>UserControl</SubType>
@@ -296,23 +278,14 @@
     <EmbeddedResource Include="JoinMembership.resx">
       <DependentUpon>JoinMembership.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginCustomer.resx">
-      <DependentUpon>LoginCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginMember.resx">
-      <DependentUpon>LoginMember.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovieDetail1.resx">
-      <DependentUpon>MovieDetail1.cs</DependentUpon>
+    <EmbeddedResource Include="MovieDetail.resx">
+      <DependentUpon>MovieDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieList.resx">
       <DependentUpon>MovieList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MovieList2.resx">
-      <DependentUpon>MovieList2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoviePage.resx">
       <DependentUpon>MoviePage.cs</DependentUpon>

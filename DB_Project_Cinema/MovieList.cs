@@ -14,32 +14,28 @@ namespace DB_Project_Cinema
 {
     public partial class MovieList : UserControl
     {
-        private static MovieList _instance;
         private Connection Connect;
-        int movie_no;
-        public static MovieList Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MovieList();
-                }
-                return _instance;
-            }
-        }
+        private Button[] btn = new Button[5];
+        private PictureBox[] pic = new PictureBox[5];
+        private Label[] label = new Label[5];
+        private Label[] score = new Label[5];
+        private int[] movie_no_array = new int[5];
+        private bool selected_show_stat;
 
-        Button[] btn = new Button[5];
-        PictureBox[] pic = new PictureBox[5];
-        Label[] label = new Label[5];
-        Label[] score = new Label[5];
-
-        public MovieList()
+        public MovieList(bool show_stat)
         {
             InitializeComponent();
 
+            selected_show_stat = show_stat;
+
             Connect = new Connection();
             Connect.Connecting();
+
+            Movie_View();
+
+        }
+        public void Movie_View()
+        {
 
             for (int i = 0; i < pic.Length; i++)
             {
@@ -52,61 +48,89 @@ namespace DB_Project_Cinema
                 btn[i].Name = "MovieDetail" + (i + 1).ToString();
                 btn[i].Size = new Size(130, 25);
                 btn[i].Location = new Point(90 + 180 * i, 225);
-                btn[i].Click += Form1_Click;
+                btn[i].Click += Movie_Click;
 
                 label[i] = new Label();
                 label[i].Name = "ResvRate" + (i + 1).ToString();
                 label[i].Size = new Size(130, 20);
                 label[i].Location = new Point(90 + 180 * i, 255);
 
-                score[i] = new Label();
-                score[i].Name = "Score" + (i + 1).ToString();
-                score[i].Size = new Size(130, 25);
-                score[i].Location = new Point(90 + 180 * i, 275);
-               
                 try
-                {                    
-                    string sql = "SELECT * FROM(SELECT ROWNUM RM, MOVIE_NO, MOVIE_NM, POSTER FROM MOVIE WHERE SHOW_STAT='Y') Y WHERE Y.RM="+(i+1);
-                    OracleCommand Comm = new OracleCommand(sql, Connect.con);
-
-                    OracleDataReader reader = Comm.ExecuteReader();
-
-                    while (reader.Read())
+                {
+                    string sql = "SELECT * FROM(SELECT ROWNUM RM, MOVIE_NO, MOVIE_NM, POSTER, RELEASE_DATE FROM MOVIE WHERE SHOW_STAT='{0}') Y WHERE Y.RM=" + (i + 1);
+                    if (selected_show_stat)
                     {
-                        movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
-                        var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                        sql = string.Format(sql, "Y");
 
+                        OracleCommand Comm = new OracleCommand(sql, Connect.con);
+                        OracleDataReader reader = Comm.ExecuteReader();
 
-                        pic[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                        pic[i].ImageLocation = poster;
+                        score[i] = new Label();
+                        score[i].Name = "Score" + (i + 1).ToString();
+                        score[i].Size = new Size(130, 25);
+                        score[i].Location = new Point(90 + 180 * i, 275);
 
-                        btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
-                        
-                        label[i].Text = "   예매율:  ";
-                        
-                    }
-
-                    string sql2 = "SELECT AVG(MOVIE_SCORE) FROM GRADE WHERE MOVIE_NO=" + movie_no + " GROUP BY MOVIE_NO";
-                    //this.MovieScore.Text = movie_no.ToString();
-                    OracleCommand Comm2 = new OracleCommand(sql2, Connect.con);
-                    OracleDataReader reader2 = Comm2.ExecuteReader();
-                    if (reader2.HasRows)
-                    {
-                        while (reader2.Read())
+                        while (reader.Read())
                         {
-                            score[i].Text = "      평점: " + reader2.GetInt32(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() + "점";
+                            var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                            movie_no_array[i] = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
+
+                            pic[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                            pic[i].ImageLocation = poster;
+
+                            btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+
+                            label[i].Text = "   예매율:  ";
 
                         }
-                    }
-                    else if (!reader2.HasRows)
-                    {                        
-                        score[i].Text = "      평점: -점";
-                    }
 
-                    Controls.Add(pic[i]);
-                    Controls.Add(btn[i]);
-                    Controls.Add(label[i]);
-                    Controls.Add(score[i]);
+                        string sql2 = "SELECT AVG(MOVIE_SCORE) FROM GRADE WHERE MOVIE_NO=" + movie_no_array[i] + " GROUP BY MOVIE_NO";
+
+                        OracleCommand Comm2 = new OracleCommand(sql2, Connect.con);
+                        OracleDataReader reader2 = Comm2.ExecuteReader();
+                        if (reader2.HasRows)
+                        {
+                            while (reader2.Read())
+                            {
+                                score[i].Text = "   평점: " + reader2.GetInt32(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() + "점";
+
+                            }
+                        }
+                        else if (!reader2.HasRows)
+                        {
+                            score[i].Text = "   평점: -점";
+                        }
+
+                        Controls.Add(pic[i]);
+                        Controls.Add(btn[i]);
+                        Controls.Add(label[i]);
+                        Controls.Add(score[i]);
+                    }
+                    else
+                    {
+                        sql = string.Format(sql, "E");
+
+                        Console.WriteLine(sql);
+                        OracleCommand Comm = new OracleCommand(sql, Connect.con);
+
+                        OracleDataReader reader = Comm.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            var poster = reader.GetString(reader.GetOrdinal("POSTER"));
+                            movie_no_array[i] = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
+                            pic[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                            pic[i].ImageLocation = poster;
+
+                            btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+
+                            label[i].Text = "  개봉일: " + reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToString().Substring(0, 10);
+
+                        }
+                        Controls.Add(pic[i]);
+                        Controls.Add(btn[i]);
+                        Controls.Add(label[i]);
+                    }                    
                 }
                 catch (Exception ex)
                 {
@@ -115,17 +139,18 @@ namespace DB_Project_Cinema
                 }
             }
         }
-        
 
-        private void Form1_Click(object sender, EventArgs e)
+        private void Movie_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button; 
-            Controls.Remove(this);
-            this.Parent.Controls.Add(MovieDetail1.Instance);
-            MovieDetail1.Instance.setMovie_nm(btn.Text);
-            MovieDetail1.Instance.MovieDetail_test();
-            MovieDetail1.Instance.Dock = DockStyle.None;
-            MovieDetail1.Instance.BringToFront();
+            Button btn = sender as Button;
+            string selected_button = btn.Name;
+            Console.WriteLine(selected_button);
+            Console.WriteLine(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
+
+            MovieDetail MD = new MovieDetail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
+            this.Parent.Controls.Add(MD); // parent -> panel3
+            MD.Dock = DockStyle.None;
+            MD.BringToFront();
         }
     }
 }

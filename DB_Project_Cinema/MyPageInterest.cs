@@ -56,14 +56,14 @@ namespace DB_Project_Cinema
                 string movie_name = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 if (e.ColumnIndex == 3)
                 {
-                    MovieDetail1 mv = new MovieDetail1();
+                    //MovieDetail mv = new MovieDetail();
                     this.Parent.Hide();
-                    mv.Show();
-                    Controls.Add(MovieDetail1.Instance);
-                    MovieDetail1.Instance.setMovie_nm(movie_name);
-                    MovieDetail1.Instance.MovieDetail_test();
-                    MovieDetail1.Instance.Dock = DockStyle.None;
-                    MovieDetail1.Instance.BringToFront();
+                    //mv.Show();
+                    //Controls.Add(MovieDetail.Instance);
+                    //MovieDetail.Instance.setMovie_nm(movie_name);
+                    //MovieDetail.Instance.MovieDetail_test();
+                    //MovieDetail.Instance.Dock = DockStyle.None;
+                    //MovieDetail.Instance.BringToFront();
                 }
                 else if (e.ColumnIndex == 4)
                 {

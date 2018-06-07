@@ -14,9 +14,10 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageChangePw : UserControl
     {
-        Connection connect;
-
+        private Connection connect;
         private static MyPageChangePw _instance;
+        private string mem_id;
+
         public static MyPageChangePw Instance
         {
             get
@@ -28,16 +29,22 @@ namespace DB_Project_Cinema
                 return _instance;
             }
         }
-
-        private string mem_id;
-        public void setMem_id(string s)
-        {
-            mem_id = s;
-        }
         public MyPageChangePw()
         {
             InitializeComponent();
         }
+
+        private void MyPageChangePw_Load(object sender, EventArgs e)
+        {
+            connect = new Connection();
+            connect.Connecting();
+        }
+
+        public void setMem_id(string s)
+        {
+            mem_id = s;
+        }
+        
         
         private void ChangePWButton_Click(object sender, EventArgs e)
         {
@@ -79,12 +86,5 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        private void MyPageChangePw_Load(object sender, EventArgs e)
-        {
-            connect = new Connection();
-            connect.Connecting();
-        }
-
     }
 }

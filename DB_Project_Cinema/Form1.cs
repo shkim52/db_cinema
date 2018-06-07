@@ -15,11 +15,69 @@ namespace DB_Project_Cinema
 {
     public partial class CinemaProgram : Form
     {
+        private static CinemaProgram _instance;
+        private string login_mem_id;
 
+        public static CinemaProgram Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new CinemaProgram();
+                }
+                return _instance;
+            }
+        }
         public CinemaProgram()
         {
             InitializeComponent();
+            login_mem_id = String.Empty;
 
+        }
+        public void Front_UserControl(Control page)
+        {
+            if (!mainPanel.Controls.Contains(page))
+            {
+                mainPanel.Controls.Add(page);
+                page.Dock = DockStyle.None;
+                page.BringToFront();
+            }
+            else
+            {
+                page.BringToFront();
+            }
+        }
+
+
+        private void CinemaProgram_Load(object sender, EventArgs e)
+        {
+            if (!mainPanel.Controls.Contains(MoviePage.Instance))
+            {
+                mainPanel.Controls.Add(MoviePage.Instance);
+                MoviePage.Instance.Dock = DockStyle.Fill;
+                MoviePage.Instance.BringToFront();
+            }
+            else
+            {
+                MoviePage.Instance.BringToFront();
+            }
+            Logout_clicked();
+
+        }
+
+        public void Login_Complete(string memberId)
+        {
+            login_mem_id = memberId;
+            LoginPageButton.Visible = false;
+            FindIDandPWButton.Visible = false;
+            JoinMembershipButton.Visible = false;
+            LogoutButton.Visible = true;
+        }
+
+        public string GetLoginId()
+        {
+            return login_mem_id;
         }
 
         private void MoviePageButton_Click(object sender, EventArgs e)
@@ -116,7 +174,7 @@ namespace DB_Project_Cinema
         {
             if (!LoginPageButton.Visible)
             {
-                if (!mainPanel.Controls.Contains(MyPage.Instance))
+                /*if (!mainPanel.Controls.Contains(MyPage.Instance))
                 {
                     mainPanel.Controls.Add(MyPage.Instance);
                     MyPage.Instance.Dock = DockStyle.Fill;
@@ -125,7 +183,13 @@ namespace DB_Project_Cinema
                 else
                 {
                     MyPage.Instance.BringToFront();
-                }
+                }*/
+
+                MyPage mypage = new MyPage(this);
+                mainPanel.Controls.Add(mypage);
+                mypage.Dock = DockStyle.Fill;
+                mypage.BringToFront();
+
                 MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -216,40 +280,20 @@ namespace DB_Project_Cinema
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             FindIDandPWButton.BackColor = Color.DimGray;
         }
-
+        // 아래 두 메소드는 왜 분리되어있는가??
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("로그아웃 되었습니다.");
             Logout_clicked();
-            MovieDetail1.Instance.setMem_id("");
+            login_mem_id = string.Empty;
+            //MovieDetail.Instance.setMem_id("");
             ReviewPage.Instance.setMem_id("");
         }
 
-        private void CinemaProgram_Load(object sender, EventArgs e)
-        {
 
-            if (!mainPanel.Controls.Contains(MoviePage.Instance))
-            {
-                mainPanel.Controls.Add(MoviePage.Instance);
-                MoviePage.Instance.Dock = DockStyle.Fill;
-                MoviePage.Instance.BringToFront();
-            }
-            else
-            {
-                MoviePage.Instance.BringToFront();
-            }
-            Logout_clicked();
-
-        }
-        public void Login_Complete()
-        {
-            LoginPageButton.Visible = false;
-            FindIDandPWButton.Visible = false;
-            JoinMembershipButton.Visible = false;
-            LogoutButton.Visible = true;
-        }
         public void Logout_clicked()
         {
+            login_mem_id = string.Empty;
             LoginPageButton.Visible = true;
             FindIDandPWButton.Visible = true; 
             JoinMembershipButton.Visible = true;

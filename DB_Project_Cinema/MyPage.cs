@@ -12,9 +12,11 @@ namespace DB_Project_Cinema
 {
     public partial class MyPage : UserControl
     {
-        private static MyPage _instance;
-        
-        public static MyPage Instance
+        //private static MyPage _instance;
+        private string mem_id; //나중에 지울부분
+        private CinemaProgram _parent;
+
+        /*public static MyPage Instance
         {
             get
             {
@@ -24,17 +26,21 @@ namespace DB_Project_Cinema
                 }
                 return _instance;
             }
-        }
-        private string mem_id;
-        public void setMem_id(string s)
+        }*/
+
+        public MyPage(CinemaProgram parent)
         {
-            mem_id = s;
+            InitializeComponent();
+            _parent = parent;
+
+            Console.WriteLine("--------------------");
+            Console.WriteLine(_parent.GetLoginId());
         }
 
-        public MyPage()
+       /* public void setMem_id(string s)
         {
-            InitializeComponent(); 
-        }
+            mem_id = s;
+        }*/        
 
         private void MyPageChangeInfoButton_Click(object sender, EventArgs e)
         {
@@ -45,7 +51,7 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            panel2.Controls.Add(MyPageChangeInfo.Instance);
+            SubPanel.Controls.Add(MyPageChangeInfo.Instance);
             MyPageChangeInfo.Instance.MyPageChangeInfo_test();
             MyPageChangeInfo.Instance.BringToFront();
             MyPageChangeInfo.Instance.Dock = DockStyle.None;
@@ -60,8 +66,8 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            panel2.Controls.Add(MyPageChangePw.Instance);
-            MyPageChangePw.Instance.setMem_id(mem_id);
+            SubPanel.Controls.Add(MyPageChangePw.Instance);
+            MyPageChangePw.Instance.setMem_id(_parent.GetLoginId());
             MyPageChangePw.Instance.BringToFront();
             MyPageChangePw.Instance.Dock = DockStyle.None;
         }
@@ -75,8 +81,8 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            panel2.Controls.Add(MyPageQuitMem.Instance);
-            MyPageQuitMem.Instance.setMem_id(mem_id);
+            SubPanel.Controls.Add(MyPageQuitMem.Instance);
+            MyPageQuitMem.Instance.setMem_id(_parent.GetLoginId());
             MyPageQuitMem.Instance.BringToFront();
             MyPageQuitMem.Instance.Dock = DockStyle.None;
         }
@@ -90,9 +96,9 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            panel2.Controls.Add(MyPageCheckResv.Instance);
+            SubPanel.Controls.Add(MyPageCheckResv.Instance);
 
-            MyPageCheckResv.Instance.setMem_id(mem_id);
+            MyPageCheckResv.Instance.setMem_id(_parent.GetLoginId());
             MyPageCheckResv.Instance.BringToFront();
             MyPageCheckResv.Instance.Dock = DockStyle.None;
         }
@@ -106,9 +112,9 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.AntiqueWhite;
             MyPageMyPointButton.BackColor = Color.White;
 
-            panel2.Controls.Add(MyPageInterest.Instance);
+            SubPanel.Controls.Add(MyPageInterest.Instance);
 
-            MyPageInterest.Instance.setMem_id(mem_id);
+            MyPageInterest.Instance.setMem_id(_parent.GetLoginId());
             MyPageInterest.Instance.BringToFront();
             MyPageInterest.Instance.Dock = DockStyle.None;
         }
@@ -122,9 +128,9 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.AntiqueWhite;
 
-            panel2.Controls.Add(MyPageMyPoint.Instance);
+            SubPanel.Controls.Add(MyPageMyPoint.Instance);
 
-            MyPageMyPoint.Instance.setMem_id(mem_id);
+            MyPageMyPoint.Instance.setMem_id(_parent.GetLoginId());
             MyPageMyPoint.Instance.BringToFront();
             MyPageMyPoint.Instance.Dock = DockStyle.None; 
         }

@@ -196,11 +196,11 @@ namespace DB_Project_Cinema
             {
                 movie_nm = dataGridView1.Rows[e.RowIndex].Cells["MovieNM"].Value.ToString();
 
-                Controls.Add(MovieDetail1.Instance);
-                MovieDetail1.Instance.setMovie_nm(movie_nm);
-                MovieDetail1.Instance.MovieDetail_test();
-                MovieDetail1.Instance.Dock = DockStyle.None;
-                MovieDetail1.Instance.BringToFront();
+                //Controls.Add(MovieDetail.Instance);
+                //MovieDetail.Instance.setMovie_nm(movie_nm);
+                //MovieDetail.Instance.MovieDetail_test();
+                //MovieDetail.Instance.Dock = DockStyle.None;
+                //MovieDetail.Instance.BringToFront();
             }  
 
             }

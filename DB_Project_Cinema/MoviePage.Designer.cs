@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MovieCategory = new System.Windows.Forms.ComboBox();
             this.SearchButton = new System.Windows.Forms.Button();
             this.SearchText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.ExpectedMovie = new System.Windows.Forms.Button();
             this.PlayingMovie = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.MovieCategory = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,18 @@
             this.panel1.Size = new System.Drawing.Size(1362, 157);
             this.panel1.TabIndex = 0;
             // 
+            // MovieCategory
+            // 
+            this.MovieCategory.FormattingEnabled = true;
+            this.MovieCategory.Items.AddRange(new object[] {
+            "영화명",
+            "감독명",
+            "배우명"});
+            this.MovieCategory.Location = new System.Drawing.Point(254, 111);
+            this.MovieCategory.Name = "MovieCategory";
+            this.MovieCategory.Size = new System.Drawing.Size(121, 23);
+            this.MovieCategory.TabIndex = 13;
+            // 
             // SearchButton
             // 
             this.SearchButton.BackColor = System.Drawing.Color.LightGray;
@@ -67,7 +79,7 @@
             this.SearchButton.TabIndex = 12;
             this.SearchButton.Text = "검색";
             this.SearchButton.UseVisualStyleBackColor = false;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click_1);
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // SearchText
             // 
@@ -138,19 +150,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1362, 288);
             this.panel3.TabIndex = 7;
-            // 
-            // MovieCategory
-            // 
-            this.MovieCategory.FormattingEnabled = true;
-            this.MovieCategory.Items.AddRange(new object[] {
-            "영화명",
-            "감독명",
-            "배우명"});
-            this.MovieCategory.Location = new System.Drawing.Point(254, 111);
-            this.MovieCategory.Name = "MovieCategory";
-            this.MovieCategory.Size = new System.Drawing.Size(121, 23);
-            this.MovieCategory.TabIndex = 13;
-            this.MovieCategory.SelectedIndexChanged += new System.EventHandler(this.MovieCategory_SelectedIndexChanged);
             // 
             // MoviePage
             // 

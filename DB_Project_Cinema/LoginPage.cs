@@ -20,34 +20,39 @@ namespace DB_Project_Cinema
         public LoginPage(CinemaProgram parent)
         {
             InitializeComponent();
+
+            Connect = new Connection();
+            Connect.Connecting();
+
             _parent = parent;
-            MemLoginButton.FlatAppearance.BorderColor = Color.Red;
-            MemLoginButton.FlatAppearance.BorderSize = 1;
-            CustLoginButton.FlatAppearance.BorderSize = 0;
+
+            MemLoginTab.FlatAppearance.BorderColor = Color.Red;
+            MemLoginTab.FlatAppearance.BorderSize = 1;
+            CustLoginTab.FlatAppearance.BorderSize = 0;
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            Connect = new Connection();
-            Connect.Connecting();
             mem_panel.BringToFront();   
         }
-
-        private void MemLoginButton_Click_1(object sender, EventArgs e)
+        private void MemLoginTab_Click(object sender, EventArgs e)
         {
             mem_panel.BringToFront();
-            MemLoginButton.FlatAppearance.BorderColor = Color.Red;
-            MemLoginButton.FlatAppearance.BorderSize = 1;
-            CustLoginButton.FlatAppearance.BorderSize = 0;            
+
+            MemLoginTab.FlatAppearance.BorderColor = Color.Red;
+            MemLoginTab.FlatAppearance.BorderSize = 1;
+            CustLoginTab.FlatAppearance.BorderSize = 0;     
         }
 
-        private void CustLoginButton_Click_1(object sender, EventArgs e)
+        private void CustLoginTab_Click(object sender, EventArgs e)
         {
             cust_panel.BringToFront();
-            CustLoginButton.FlatAppearance.BorderColor = Color.Red;
-            CustLoginButton.FlatAppearance.BorderSize = 1;
-            MemLoginButton.FlatAppearance.BorderSize = 0;
+
+            CustLoginTab.FlatAppearance.BorderColor = Color.Red;
+            CustLoginTab.FlatAppearance.BorderSize = 1;
+            MemLoginTab.FlatAppearance.BorderSize = 0;
         }
+
         private void mem_loginButton_Click(object sender, EventArgs e)
         {
             try
@@ -70,9 +75,10 @@ namespace DB_Project_Cinema
                         string mem_id = ID_INPUT.Text;
                         MessageBox.Show(mem_id + "님 환영합니다!");
 
-                        _parent.Login_Complete();
+                        _parent.Login_Complete(mem_id);
 
-                        MovieDetail1.Instance.setMem_id(mem_id);
+                        // 없애야될것들
+                        //MovieDetail.Instance.setMem_id(mem_id);
                         MyPageChangeInfo.Instance.setMem_id(mem_id);
                         MyPageChangePw.Instance.setMem_id(mem_id);
                         MyPageCheckResv.Instance.setMem_id(mem_id);
@@ -98,12 +104,13 @@ namespace DB_Project_Cinema
         {
              try
             {
-
+                 // 기능추가해야됨
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
         }
+
     }
 }

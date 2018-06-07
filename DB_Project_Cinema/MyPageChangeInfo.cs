@@ -15,8 +15,9 @@ namespace DB_Project_Cinema
     public partial class MyPageChangeInfo : UserControl
     {
         private Connection connect;
-
         private static MyPageChangeInfo _instance;
+        private string mem_id;
+
         public static MyPageChangeInfo Instance
         {
             get
@@ -28,18 +29,29 @@ namespace DB_Project_Cinema
                 return _instance;
             }
         }
-        
-        private string mem_id;
+        public MyPageChangeInfo()
+        {
+            InitializeComponent();
+
+            connect = new Connection();
+            connect.Connecting();
+
+            mem_id = CinemaProgram.Instance.GetLoginId();
+            Console.WriteLine("----------------------------");
+            Console.WriteLine(mem_id);
+            Console.WriteLine("----------------------------");
+        }
+
+        private void MyPageChangeInfo_Load(object sender, EventArgs e)
+        {
+
+        }
         public void setMem_id(string s)
         {
             mem_id = s;
         }
         
-        public MyPageChangeInfo()
-        {
-            InitializeComponent();
-            Console.WriteLine(mem_id);
-        }
+        
         public void MyPageChangeInfo_test()
         {
             try
@@ -84,11 +96,5 @@ namespace DB_Project_Cinema
             }
         }
 
-        private void MyPageChangeInfo_Load(object sender, EventArgs e)
-        {
-            connect = new Connection();
-            connect.Connecting();
-            
-        }
     }
 }

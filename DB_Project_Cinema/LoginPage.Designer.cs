@@ -30,8 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.MemLoginButton = new System.Windows.Forms.Button();
-            this.CustLoginButton = new System.Windows.Forms.Button();
+            this.MemLoginTab = new System.Windows.Forms.Button();
+            this.CustLoginTab = new System.Windows.Forms.Button();
             this.mem_panel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,16 +39,16 @@
             this.PW_INPUT = new System.Windows.Forms.TextBox();
             this.mem_loginButton = new System.Windows.Forms.Button();
             this.cust_panel = new System.Windows.Forms.Panel();
-            this.cust_loginButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.cust_loginButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.mem_panel.SuspendLayout();
             this.cust_panel.SuspendLayout();
@@ -57,8 +57,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.MemLoginButton);
-            this.panel1.Controls.Add(this.CustLoginButton);
+            this.panel1.Controls.Add(this.MemLoginTab);
+            this.panel1.Controls.Add(this.CustLoginTab);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -78,35 +78,35 @@
             this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MemLoginButton
+            // MemLoginTab
             // 
-            this.MemLoginButton.BackColor = System.Drawing.Color.LightGray;
-            this.MemLoginButton.FlatAppearance.BorderSize = 0;
-            this.MemLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemLoginButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MemLoginButton.Location = new System.Drawing.Point(512, 164);
-            this.MemLoginButton.Margin = new System.Windows.Forms.Padding(2);
-            this.MemLoginButton.Name = "MemLoginButton";
-            this.MemLoginButton.Size = new System.Drawing.Size(71, 37);
-            this.MemLoginButton.TabIndex = 4;
-            this.MemLoginButton.Text = "회원";
-            this.MemLoginButton.UseVisualStyleBackColor = false;
-            this.MemLoginButton.Click += new System.EventHandler(this.MemLoginButton_Click_1);
+            this.MemLoginTab.BackColor = System.Drawing.Color.LightGray;
+            this.MemLoginTab.FlatAppearance.BorderSize = 0;
+            this.MemLoginTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemLoginTab.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.MemLoginTab.Location = new System.Drawing.Point(512, 164);
+            this.MemLoginTab.Margin = new System.Windows.Forms.Padding(2);
+            this.MemLoginTab.Name = "MemLoginTab";
+            this.MemLoginTab.Size = new System.Drawing.Size(71, 37);
+            this.MemLoginTab.TabIndex = 4;
+            this.MemLoginTab.Text = "회원";
+            this.MemLoginTab.UseVisualStyleBackColor = false;
+            this.MemLoginTab.Click += new System.EventHandler(this.MemLoginTab_Click);
             // 
-            // CustLoginButton
+            // CustLoginTab
             // 
-            this.CustLoginButton.BackColor = System.Drawing.Color.LightGray;
-            this.CustLoginButton.FlatAppearance.BorderSize = 0;
-            this.CustLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CustLoginButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CustLoginButton.Location = new System.Drawing.Point(592, 164);
-            this.CustLoginButton.Margin = new System.Windows.Forms.Padding(2);
-            this.CustLoginButton.Name = "CustLoginButton";
-            this.CustLoginButton.Size = new System.Drawing.Size(71, 37);
-            this.CustLoginButton.TabIndex = 5;
-            this.CustLoginButton.Text = "비회원";
-            this.CustLoginButton.UseVisualStyleBackColor = false;
-            this.CustLoginButton.Click += new System.EventHandler(this.CustLoginButton_Click_1);
+            this.CustLoginTab.BackColor = System.Drawing.Color.LightGray;
+            this.CustLoginTab.FlatAppearance.BorderSize = 0;
+            this.CustLoginTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustLoginTab.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CustLoginTab.Location = new System.Drawing.Point(592, 164);
+            this.CustLoginTab.Margin = new System.Windows.Forms.Padding(2);
+            this.CustLoginTab.Name = "CustLoginTab";
+            this.CustLoginTab.Size = new System.Drawing.Size(71, 37);
+            this.CustLoginTab.TabIndex = 5;
+            this.CustLoginTab.Text = "비회원";
+            this.CustLoginTab.UseVisualStyleBackColor = false;
+            this.CustLoginTab.Click += new System.EventHandler(this.CustLoginTab_Click);
             // 
             // mem_panel
             // 
@@ -195,6 +195,16 @@
             this.cust_panel.Size = new System.Drawing.Size(1083, 262);
             this.cust_panel.TabIndex = 5;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(616, 97);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 20);
+            this.label8.TabIndex = 58;
+            this.label8.Text = "-  *******";
+            // 
             // cust_loginButton
             // 
             this.cust_loginButton.BackColor = System.Drawing.Color.LightGray;
@@ -210,6 +220,17 @@
             this.cust_loginButton.UseVisualStyleBackColor = false;
             this.cust_loginButton.Click += new System.EventHandler(this.cust_loginButton_Click);
             // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(400, 46);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 33);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "이름:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -220,6 +241,15 @@
             this.label4.TabIndex = 57;
             this.label4.Text = "비밀번호:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Location = new System.Drawing.Point(493, 49);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(238, 30);
+            this.textBox4.TabIndex = 51;
             // 
             // label5
             // 
@@ -232,6 +262,16 @@
             this.label5.Text = "휴대폰번호:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Location = new System.Drawing.Point(493, 90);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.MaxLength = 6;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(118, 30);
+            this.textBox3.TabIndex = 52;
+            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -243,16 +283,6 @@
             this.label6.Text = "생년월일:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(493, 174);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(238, 30);
-            this.textBox1.TabIndex = 54;
-            // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -263,45 +293,15 @@
             this.textBox2.Size = new System.Drawing.Size(238, 30);
             this.textBox2.TabIndex = 53;
             // 
-            // textBox3
+            // textBox1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(493, 90);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.MaxLength = 6;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(118, 30);
-            this.textBox3.TabIndex = 52;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox4.Location = new System.Drawing.Point(493, 49);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(238, 30);
-            this.textBox4.TabIndex = 51;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(400, 46);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 33);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "이름:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(616, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 20);
-            this.label8.TabIndex = 58;
-            this.label8.Text = "-  *******";
+            this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Location = new System.Drawing.Point(493, 174);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(238, 30);
+            this.textBox1.TabIndex = 54;
             // 
             // LoginPage
             // 
@@ -329,8 +329,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button MemLoginButton;
-        private System.Windows.Forms.Button CustLoginButton;
+        private System.Windows.Forms.Button MemLoginTab;
+        private System.Windows.Forms.Button CustLoginTab;
         private System.Windows.Forms.Panel mem_panel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -1,6 +1,6 @@
 ﻿namespace DB_Project_Cinema
 {
-    partial class MovieDetail1
+    partial class MovieDetail
     {
         /// <summary> 
         /// Required designer variable.

@@ -38,10 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MyPageChangeInfoButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.SubPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.SubPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -188,14 +188,14 @@
             this.MyPageChangeInfoButton.UseVisualStyleBackColor = true;
             this.MyPageChangeInfoButton.Click += new System.EventHandler(this.MyPageChangeInfoButton_Click);
             // 
-            // panel2
+            // SubPanel
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(288, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 518);
-            this.panel2.TabIndex = 1;
+            this.SubPanel.Controls.Add(this.label1);
+            this.SubPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SubPanel.Location = new System.Drawing.Point(288, 0);
+            this.SubPanel.Name = "SubPanel";
+            this.SubPanel.Size = new System.Drawing.Size(615, 518);
+            this.SubPanel.TabIndex = 1;
             // 
             // label1
             // 
@@ -212,14 +212,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.SubPanel);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPage";
             this.Size = new System.Drawing.Size(903, 518);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.SubPanel.ResumeLayout(false);
+            this.SubPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -236,7 +236,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button MyPageChangeInfoButton;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel SubPanel;
         private System.Windows.Forms.Label label1;
 
     }

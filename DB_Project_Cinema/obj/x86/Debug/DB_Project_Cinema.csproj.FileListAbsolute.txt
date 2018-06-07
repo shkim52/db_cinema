@@ -127,12 +127,8 @@ D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Proje
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.CinemaProgram.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.JoinCust.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.JoinMembership.resources
-D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginCustomer.resources
-D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginMember.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginPage.resources
-D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail1.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList.resources
-D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieList2.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MoviePage.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieSearchPage.resources
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPage.resources
@@ -154,3 +150,4 @@ D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\DB_Proje
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\DB_Project_Cinema.pdb
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\Oracle.ManagedDataAccess.dll
 D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\bin\x86\Debug\Oracle.Web.dll
+D:\dbproject_cinema\db_cinema\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MovieDetail.resources
