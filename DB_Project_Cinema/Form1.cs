@@ -17,6 +17,11 @@ namespace DB_Project_Cinema
     {
         private static CinemaProgram _instance;
         private string login_mem_id;
+        //추가부분
+        private string movie_name;
+        private string date;    //상영날짜
+        private string time;    //상영시작시간
+        private string seat;    //좌석 선택
 
         public static CinemaProgram Instance
         {
@@ -33,7 +38,7 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
             login_mem_id = String.Empty;
-
+            movie_name = String.Empty;  //
         }
         public void MovieDetailPage_Add(Control page)
         {
@@ -56,7 +61,6 @@ namespace DB_Project_Cinema
                 MoviePage.Instance.BringToFront();
             }
             Logout_clicked();
-
         }
 
         public void Login_Complete(string memberId)
@@ -71,6 +75,31 @@ namespace DB_Project_Cinema
         public string GetLoginId()
         {
             return login_mem_id;
+        }
+        //추가
+        public string GetMovieName()
+        {
+            return movie_name;
+        }
+        public void SetMovieName(string s)
+        {
+            movie_name = s;
+        }
+        public string GetDate()
+        {
+            return date;
+        }
+        public void SetDate(string s)
+        {
+            date = s;
+        }
+        public string GetTime()
+        {
+            return time;
+        }
+        public void SetTime(string s)
+        {
+            time = s;
         }
         private void MoviePageButton_Click(object sender, EventArgs e)
         {
@@ -99,7 +128,11 @@ namespace DB_Project_Cinema
 
         private void TicketingPageButton_Click(object sender, EventArgs e)
         {
-
+            TicketingPage tp = new TicketingPage(this);
+            mainPanel.Controls.Add(tp);
+            tp.Dock = DockStyle.Fill;
+            tp.BringToFront();    
+            /*
             if (!mainPanel.Controls.Contains(TicketingPage.Instance))
             {
                 mainPanel.Controls.Add(TicketingPage.Instance);
@@ -109,7 +142,7 @@ namespace DB_Project_Cinema
             else
             {
                 TicketingPage.Instance.BringToFront();
-            }
+            }*/
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = Color.DimGray;
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);

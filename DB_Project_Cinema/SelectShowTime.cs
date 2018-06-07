@@ -18,6 +18,7 @@ namespace DB_Project_Cinema
 
         private string mv_nm;
         private DateTime selected_date;
+        private string show_start_time;
         public SelectShowTime()
         {
             InitializeComponent();
@@ -95,20 +96,65 @@ namespace DB_Project_Cinema
                 OracleCommand Comm = new OracleCommand(sql2, connect.con);
 
                 OracleDataReader reader2 = Comm.ExecuteReader();
+                
                 while (reader2.Read())
                 {
                     string scr_nm = reader2.GetString(reader2.GetOrdinal("SCR_NM"));
-                    string show_start_time = reader2.GetString(reader2.GetOrdinal("SHOW_START_TIME"));
+                    show_start_time = reader2.GetString(reader2.GetOrdinal("SHOW_START_TIME"));
 
                     dataGridView2.Rows.Add(scr_nm, show_start_time);
                 }
+                show_start_time = String.Empty;
+                
                 connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
+        }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                 if (e.ColumnIndex == 1) //버튼 클릭시
+                {
+                    show_start_time = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                }
+                CinemaProgram cp = new CinemaProgram();
+                cp.SetMovieName(mv_nm);
+                cp.SetDate(selected_date.ToString().Substring(0, 10));
+                cp.SetTime(show_start_time);
+            }
+        }
+        public void chooseseatbuttonClicked()
+        {
+            
+            CinemaProgram cp = new CinemaProgram();
+            if (cp.GetLoginId() == String.Empty)
+            {
+                MessageBox.Show("로그인을 하세요!");
+            }
+            else if (selected_date.ToString().Substring(0, 10) == String.Empty || show_start_time == String.Empty)
+            {
+                MessageBox.Show("상영일자 혹은 상영시간이 선택되지 않았습니다.");
+                Console.WriteLine("!!!!!!!");
+            }
+            else
+            {
+                ChooseSeat cs = new ChooseSeat(cp.GetLoginId(), mv_nm, selected_date.ToString().Substring(0, 10), show_start_time);
+                this.Parent.Controls.Add(cs); // parent -> panel3
+                cs.Dock = DockStyle.None;
+                cs.BringToFront();
+                /*
+                ChooseSeatPageButton.Visible = false;
+                PaymentPageButton.Visible = true;
+                BackToSelcetTimeButton.Visible = true;
+                BackToChooseSeatButton.Visible = false;*/
+            }
         }
     }
 }

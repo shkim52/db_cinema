@@ -15,23 +15,29 @@ namespace DB_Project_Cinema
     public partial class ChooseSeat : UserControl
     {
         private Connection connect;
-        public ChooseSeat()
+        public ChooseSeat(string mem_id, string movie_nm, string date, string time)
         {
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
+        }
+
+        private void SEAT_CNT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChooseSeat_Load(object sender, EventArgs e)
+        {
             try
             {
-            
+
                 string sql = "SELECT * FROM SCREEN WHERE SCR_NO=1";
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
 
-               
+
                 OracleDataReader reader = Comm.ExecuteReader();
-              
+
                 while (reader.Read())
                 {
 
@@ -43,17 +49,8 @@ namespace DB_Project_Cinema
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-               
-            }
-            finally
-            {
-                connect.con.Close();
-            }
-        }
 
-        private void SEAT_CNT_Click(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }

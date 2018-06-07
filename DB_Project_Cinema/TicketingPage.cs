@@ -12,6 +12,8 @@ namespace DB_Project_Cinema
 {
     public partial class TicketingPage : UserControl
     {
+        private CinemaProgram _parent;
+        /*
         private static TicketingPage _instance;
         public static TicketingPage Instance
         {
@@ -23,23 +25,31 @@ namespace DB_Project_Cinema
                 }
                 return _instance;
             }
-        }
-        public TicketingPage()
+        }*/
+        public TicketingPage(CinemaProgram parent)
         {
             InitializeComponent();
+            _parent = parent;
+            SelectShowTime showtime_page = new SelectShowTime();
+            panel2.Controls.Add(showtime_page);
 
-            SelectShowTime.BringToFront();
+            showtime_page.BringToFront();
+            showtime_page.Dock = DockStyle.None;
+            
             PaymentPageButton.Visible = false;
             ChooseSeatPageButton.Visible = true;
             BackToChooseSeatButton.Visible = false;
             BackToSelcetTimeButton.Visible = false;
-
-
         }
 
         private void BackToSelcetTimeButton_Click_1(object sender, EventArgs e)
         {
-            SelectShowTime.BringToFront();
+            SelectShowTime showtime_page = new SelectShowTime();
+            panel2.Controls.Add(showtime_page);
+
+            showtime_page.BringToFront();
+            showtime_page.Dock = DockStyle.None;
+
             PaymentPageButton.Visible = false;
             ChooseSeatPageButton.Visible = true;
             BackToChooseSeatButton.Visible = false;
@@ -48,7 +58,12 @@ namespace DB_Project_Cinema
 
         private void BackToChooseSeatButton_Click_1(object sender, EventArgs e)
         {
-            ChooseSeat.BringToFront();
+            ChooseSeat cs = new ChooseSeat(_parent.GetLoginId(), _parent.GetMovieName(), _parent.GetDate(), _parent.GetTime());
+            panel2.Controls.Add(cs);
+
+            cs.BringToFront();
+            cs.Dock = DockStyle.None; 
+
             ChooseSeatPageButton.Visible = false;
             PaymentPageButton.Visible = true;
             BackToSelcetTimeButton.Visible = true;
@@ -57,7 +72,7 @@ namespace DB_Project_Cinema
 
         private void PaymentPageButton_Click_1(object sender, EventArgs e)
         {
-            Payment.BringToFront();
+            //Payment.BringToFront();
             PaymentPageButton.Visible = false;
             ChooseSeatPageButton.Visible = false;
             BackToChooseSeatButton.Visible = true;
@@ -66,18 +81,28 @@ namespace DB_Project_Cinema
 
         private void ChooseSeatPageButton_Click_1(object sender, EventArgs e)
         {
-            //if (Program.memID != "")
+            if (_parent.GetLoginId() == String.Empty )
             {
-                ChooseSeat.BringToFront();
+                MessageBox.Show("로그인을 하세요!"); 
+                Console.WriteLine(CinemaProgram.Instance.GetDate()+_parent.GetDate()+"@@@@@@@");
+            }
+            else if (_parent.GetDate() == String.Empty || _parent.GetTime() == String.Empty)
+            {
+                MessageBox.Show("상영일자 혹은 상영시간이 선택되지 않았습니다.");
+                Console.WriteLine("!!!!!!!");
+            }
+            else
+            {
+                ChooseSeat cs = new ChooseSeat(_parent.GetLoginId(), _parent.GetMovieName(), _parent.GetDate(), _parent.GetTime());
+                panel2.Controls.Add(cs);
+
+                cs.BringToFront();
+                cs.Dock = DockStyle.None; 
+                
                 ChooseSeatPageButton.Visible = false;
                 PaymentPageButton.Visible = true;
                 BackToSelcetTimeButton.Visible = true;
                 BackToChooseSeatButton.Visible = false;
-            }
-            //else
-            {
-               // MessageBox.Show("로그인을 하세요!");
-
             }
         }
     }
