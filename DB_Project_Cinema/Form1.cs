@@ -95,6 +95,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -113,6 +114,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = Color.DimGray;
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -136,6 +138,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = Color.DimGray;
             LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -153,6 +156,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             LoginPageButton.BackColor = Color.DimGray;
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -172,6 +176,7 @@ namespace DB_Project_Cinema
                 TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 MyPageButton.BackColor = Color.DimGray;
                 DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
                 JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -201,6 +206,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = Color.DimGray;
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -225,6 +231,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = Color.DimGray;
@@ -248,6 +255,7 @@ namespace DB_Project_Cinema
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
@@ -275,7 +283,26 @@ namespace DB_Project_Cinema
 
         private void checkResv_Click(object sender, EventArgs e)
         {
+            if (!mainPanel.Controls.Contains(LoginCust.Instance))
+            {
+                mainPanel.Controls.Add(LoginCust.Instance);
+                LoginCust.Instance.Dock = DockStyle.Fill;
+                LoginCust.Instance.BringToFront();
+            }
+            else
+            {
+                LoginCust.Instance.BringToFront();
+            }
 
+            MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = Color.DimGray;
+            DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
         }
     }
 }

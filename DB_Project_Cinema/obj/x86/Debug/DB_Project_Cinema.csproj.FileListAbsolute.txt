@@ -290,3 +290,4 @@ D:\dbproject_cinema\db_cinema\db_cinema_v7\db_cinema\DB_Project_Cinema\obj\x86\D
 D:\dbproject_cinema\db_cinema\db_cinema_v7\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.SelectShowTime.resources
 D:\dbproject_cinema\db_cinema\db_cinema_v7\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.TicketingPage.resources
 D:\dbproject_cinema\db_cinema\db_cinema_v7\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.csproj.GenerateResource.Cache
+C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.LoginCust.resources
