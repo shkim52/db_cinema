@@ -25,10 +25,6 @@ namespace DB_Project_Cinema
             Connect.Connecting();
 
             _parent = parent;
-
-            MemLoginTab.FlatAppearance.BorderColor = Color.Red;
-            MemLoginTab.FlatAppearance.BorderSize = 1;
-            CustLoginTab.FlatAppearance.BorderSize = 0;
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
@@ -38,19 +34,6 @@ namespace DB_Project_Cinema
         private void MemLoginTab_Click(object sender, EventArgs e)
         {
             mem_panel.BringToFront();
-
-            MemLoginTab.FlatAppearance.BorderColor = Color.Red;
-            MemLoginTab.FlatAppearance.BorderSize = 1;
-            CustLoginTab.FlatAppearance.BorderSize = 0;     
-        }
-
-        private void CustLoginTab_Click(object sender, EventArgs e)
-        {
-            cust_panel.BringToFront();
-
-            CustLoginTab.FlatAppearance.BorderColor = Color.Red;
-            CustLoginTab.FlatAppearance.BorderSize = 1;
-            MemLoginTab.FlatAppearance.BorderSize = 0;
         }
 
         private void mem_loginButton_Click(object sender, EventArgs e)
@@ -93,17 +76,5 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
         }
-        private void cust_loginButton_Click(object sender, EventArgs e)
-        {
-             try
-            {
-                 // 기능추가해야됨
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-        }
-
     }
 }

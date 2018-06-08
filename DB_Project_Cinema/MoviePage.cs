@@ -54,7 +54,7 @@ namespace DB_Project_Cinema
         {
             // 상영중인 영화가 가장 먼저 보이도록
             panel3.Controls.Add(Show_ML);
-            Show_ML.Dock = DockStyle.None;
+            Show_ML.Dock = DockStyle.Fill;
             Show_ML.BringToFront();
 
             PlayingMovie.FlatAppearance.BorderColor = Color.Red;
@@ -75,7 +75,7 @@ namespace DB_Project_Cinema
             if (!panel3.Controls.Contains(Show_ML))
             {
                 panel3.Controls.Add(Show_ML);
-                Show_ML.Dock = DockStyle.None;
+                Show_ML.Dock = DockStyle.Fill;
                 Show_ML.BringToFront();
             }
             else
@@ -94,7 +94,7 @@ namespace DB_Project_Cinema
             if (!panel3.Controls.Contains(Expect_ML))
             {
                 panel3.Controls.Add(Expect_ML);
-                Expect_ML.Dock = DockStyle.None;
+                Expect_ML.Dock = DockStyle.Fill;
                 Expect_ML.BringToFront();
             }
             else
@@ -128,7 +128,7 @@ namespace DB_Project_Cinema
                         {
                             MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text);
                             panel3.Controls.Add(MS);
-                            MS.Dock = DockStyle.None;
+                            MS.Dock = DockStyle.Fill;
                             MS.BringToFront();
 
                         }
@@ -147,7 +147,7 @@ namespace DB_Project_Cinema
                         {
                             MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text);
                             panel3.Controls.Add(MS);
-                            MS.Dock = DockStyle.None;
+                            MS.Dock = DockStyle.Fill;
                             MS.BringToFront();
 
                         }
@@ -166,7 +166,7 @@ namespace DB_Project_Cinema
                         {
                             MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text);
                             panel3.Controls.Add(MS);
-                            MS.Dock = DockStyle.None;
+                            MS.Dock = DockStyle.Fill;
                             MS.BringToFront();
 
                         }
