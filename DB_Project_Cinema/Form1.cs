@@ -43,6 +43,7 @@ namespace DB_Project_Cinema
             moviedetail.Dock = DockStyle.Fill;
             moviedetail.BringToFront();
         }
+        
 
         private void CinemaProgram_Load(object sender, EventArgs e)
         {

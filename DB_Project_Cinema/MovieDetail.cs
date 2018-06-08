@@ -171,6 +171,16 @@ namespace DB_Project_Cinema
             this.Parent.Controls.Remove(this);
         }
 
+        private void MoviePictureBut_Click(object sender, EventArgs e)
+        {
+
+            MoviePicture mp = new MoviePicture(selected_movie_no);
+            this.Parent.Controls.Add(mp); // parent -> panel3
+            mp.Dock = DockStyle.Fill;
+            mp.BringToFront();
+
+        }
+
 
         
     }

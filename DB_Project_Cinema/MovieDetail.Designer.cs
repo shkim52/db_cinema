@@ -56,6 +56,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BookButton = new System.Windows.Forms.Button();
+            this.MoviePictureBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -376,11 +377,22 @@
             this.BookButton.UseVisualStyleBackColor = false;
             this.BookButton.Click += new System.EventHandler(this.BookButton_Click);
             // 
+            // MoviePictureBut
+            // 
+            this.MoviePictureBut.Location = new System.Drawing.Point(187, 372);
+            this.MoviePictureBut.Name = "MoviePictureBut";
+            this.MoviePictureBut.Size = new System.Drawing.Size(152, 23);
+            this.MoviePictureBut.TabIndex = 30;
+            this.MoviePictureBut.Text = "상세 영화 사진 보기";
+            this.MoviePictureBut.UseVisualStyleBackColor = true;
+            this.MoviePictureBut.Click += new System.EventHandler(this.MoviePictureBut_Click);
+            // 
             // MovieDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.MoviePictureBut);
             this.Controls.Add(this.BookButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -449,5 +461,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BookButton;
+        private System.Windows.Forms.Button MoviePictureBut;
     }
 }
