@@ -55,6 +55,7 @@
             this.BackToHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BookButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -361,11 +362,26 @@
             this.panel2.Size = new System.Drawing.Size(719, 12);
             this.panel2.TabIndex = 28;
             // 
+            // BookButton
+            // 
+            this.BookButton.BackColor = System.Drawing.Color.DimGray;
+            this.BookButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BookButton.Font = new System.Drawing.Font("NanumGothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BookButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.BookButton.Location = new System.Drawing.Point(917, 23);
+            this.BookButton.Name = "BookButton";
+            this.BookButton.Size = new System.Drawing.Size(118, 31);
+            this.BookButton.TabIndex = 29;
+            this.BookButton.Text = "예매하기";
+            this.BookButton.UseVisualStyleBackColor = false;
+            this.BookButton.Click += new System.EventHandler(this.BookButton_Click);
+            // 
             // MovieDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.BookButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BackToHome);
@@ -432,5 +448,6 @@
         private System.Windows.Forms.Button BackToHome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BookButton;
     }
 }

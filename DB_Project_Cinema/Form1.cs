@@ -84,6 +84,7 @@ namespace DB_Project_Cinema
             else
             {
                 MoviePage.Instance.BringToFront();
+                MoviePage.Instance.Show_ML.BringToFront();
             }
 
             MoviePageButton.BackColor = Color.DimGray;

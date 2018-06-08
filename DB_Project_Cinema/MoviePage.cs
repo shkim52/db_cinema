@@ -16,8 +16,8 @@ namespace DB_Project_Cinema
     {
         private static MoviePage _instance;
         private Connection Connect;
-        private MovieList Expect_ML;
-        private MovieList Show_ML;
+        public MovieList Expect_ML;
+        public MovieList Show_ML;
         private string Mem_id;
 
         public static MoviePage Instance
