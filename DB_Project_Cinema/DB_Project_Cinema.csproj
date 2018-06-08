@@ -144,6 +144,12 @@
     <Compile Include="JoinMembership.Designer.cs">
       <DependentUpon>JoinMembership.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginCust.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginCust.Designer.cs">
+      <DependentUpon>LoginCust.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JoinMembership.resx">
       <DependentUpon>JoinMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCust.resx">
+      <DependentUpon>LoginCust.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

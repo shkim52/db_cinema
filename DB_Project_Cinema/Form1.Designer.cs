@@ -231,9 +231,9 @@
             this.checkResv.Location = new System.Drawing.Point(788, 1);
             this.checkResv.Margin = new System.Windows.Forms.Padding(2);
             this.checkResv.Name = "checkResv";
-            this.checkResv.Size = new System.Drawing.Size(165, 40);
+            this.checkResv.Size = new System.Drawing.Size(240, 40);
             this.checkResv.TabIndex = 9;
-            this.checkResv.Text = "예매내역 확인";
+            this.checkResv.Text = "비회원 예매내역 확인";
             this.checkResv.UseVisualStyleBackColor = true;
             this.checkResv.Click += new System.EventHandler(this.checkResv_Click);
             // 
