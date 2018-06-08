@@ -18,6 +18,7 @@ namespace DB_Project_Cinema
         private Connection Connect;
         public MovieList Expect_ML;
         public MovieList Show_ML;
+        private CinemaProgram _parent;
         private string Mem_id;
 
         public static MoviePage Instance
@@ -44,6 +45,9 @@ namespace DB_Project_Cinema
             MovieCategory.Text = "영화명";
 
             Mem_id = null;
+        }
+        public void SetParent(CinemaProgram parent){
+            _parent = parent;
         }
 
         private void MoviePage_Load(object sender, EventArgs e)
@@ -177,6 +181,13 @@ namespace DB_Project_Cinema
                     Console.WriteLine(ex.ToString());
                 }
             }
+        }
+
+        public void Movie_Detail(Control Detail_page)
+        {
+            _parent.MovieDetailPage_Add(Detail_page); // parent -> panel3
+           // MD.Dock = DockStyle.None;
+            //MD.BringToFront();
         }
     }
 }

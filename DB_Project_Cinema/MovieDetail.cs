@@ -23,8 +23,6 @@ namespace DB_Project_Cinema
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
-
-            MovieDetail_View();
         }
         private void MovieDetail1_Load(object sender, EventArgs e)
         {

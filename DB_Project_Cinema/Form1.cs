@@ -37,9 +37,11 @@ namespace DB_Project_Cinema
 
         public void MovieDetailPage_Add(Control page)
         {
-           MoviePage.Instance.panel3.Controls.Add(page);
-           page.Dock = DockStyle.None;
-           page.BringToFront();
+           //MoviePage.Instance.panel3.Controls.Add(page);
+            //MovieDetail md = new MovieDetail(4);
+            this.mainPanel.Controls.Add(page);
+            page.Dock = DockStyle.Fill;
+            page.BringToFront();
         }
 
         private void CinemaProgram_Load(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace DB_Project_Cinema
             if (!mainPanel.Controls.Contains(MoviePage.Instance))
             {
                 mainPanel.Controls.Add(MoviePage.Instance);
+                MoviePage.Instance.SetParent(this);
                 MoviePage.Instance.Dock = DockStyle.Fill;
                 MoviePage.Instance.BringToFront();
             }
@@ -78,6 +81,7 @@ namespace DB_Project_Cinema
             if (!mainPanel.Controls.Contains(MoviePage.Instance))
             {
                 mainPanel.Controls.Add(MoviePage.Instance);
+                MoviePage.Instance.SetParent(this);
                 MoviePage.Instance.Dock = DockStyle.Fill;
                 MoviePage.Instance.BringToFront();
             }
@@ -266,6 +270,11 @@ namespace DB_Project_Cinema
             FindIDandPWButton.Visible = true; 
             JoinMembershipButton.Visible = true;
             LogoutButton.Visible = false;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

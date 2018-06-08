@@ -61,10 +61,10 @@
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 780);
+            this.panel1.Location = new System.Drawing.Point(0, 796);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1539, 95);
+            this.panel1.Size = new System.Drawing.Size(1656, 95);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -74,7 +74,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1539, 95);
+            this.label2.Size = new System.Drawing.Size(1656, 95);
             this.label2.TabIndex = 0;
             this.label2.Text = "주소 : 서울시 동대문구 서울시립대로 163\r\n고객센터 : 02-6490-2440~1\r\n소개 : 전체 8개의 상영관 2,100석 좌석 보유";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,7 +87,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1539, 87);
+            this.panel2.Size = new System.Drawing.Size(1656, 87);
             this.panel2.TabIndex = 1;
             // 
             // panel7
@@ -124,7 +124,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 87);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1539, 33);
+            this.panel3.Size = new System.Drawing.Size(1656, 33);
             this.panel3.TabIndex = 2;
             // 
             // LogoutButton
@@ -134,7 +134,7 @@
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LogoutButton.ForeColor = System.Drawing.Color.White;
-            this.LogoutButton.Location = new System.Drawing.Point(1326, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(1443, 0);
             this.LogoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(80, 33);
@@ -150,7 +150,7 @@
             this.FindIDandPWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindIDandPWButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FindIDandPWButton.ForeColor = System.Drawing.Color.White;
-            this.FindIDandPWButton.Location = new System.Drawing.Point(997, 0);
+            this.FindIDandPWButton.Location = new System.Drawing.Point(1114, 0);
             this.FindIDandPWButton.Margin = new System.Windows.Forms.Padding(2);
             this.FindIDandPWButton.Name = "FindIDandPWButton";
             this.FindIDandPWButton.Size = new System.Drawing.Size(98, 33);
@@ -166,7 +166,7 @@
             this.MyPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MyPageButton.ForeColor = System.Drawing.Color.White;
-            this.MyPageButton.Location = new System.Drawing.Point(1225, 0);
+            this.MyPageButton.Location = new System.Drawing.Point(1342, 0);
             this.MyPageButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageButton.Name = "MyPageButton";
             this.MyPageButton.Size = new System.Drawing.Size(80, 33);
@@ -182,7 +182,7 @@
             this.JoinMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.JoinMembershipButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.JoinMembershipButton.ForeColor = System.Drawing.Color.White;
-            this.JoinMembershipButton.Location = new System.Drawing.Point(1116, 0);
+            this.JoinMembershipButton.Location = new System.Drawing.Point(1233, 0);
             this.JoinMembershipButton.Margin = new System.Windows.Forms.Padding(2);
             this.JoinMembershipButton.Name = "JoinMembershipButton";
             this.JoinMembershipButton.Size = new System.Drawing.Size(80, 33);
@@ -198,7 +198,7 @@
             this.LoginPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LoginPageButton.ForeColor = System.Drawing.Color.White;
-            this.LoginPageButton.Location = new System.Drawing.Point(898, 0);
+            this.LoginPageButton.Location = new System.Drawing.Point(1015, 0);
             this.LoginPageButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoginPageButton.Name = "LoginPageButton";
             this.LoginPageButton.Size = new System.Drawing.Size(80, 33);
@@ -219,7 +219,7 @@
             this.panel4.Location = new System.Drawing.Point(0, 120);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1539, 41);
+            this.panel4.Size = new System.Drawing.Size(1656, 41);
             this.panel4.TabIndex = 3;
             // 
             // checkResv
@@ -304,17 +304,17 @@
             this.panel5.Location = new System.Drawing.Point(0, 161);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(144, 619);
+            this.panel5.Size = new System.Drawing.Size(144, 635);
             this.panel5.TabIndex = 4;
             // 
             // Logout
             // 
             this.Logout.BackColor = System.Drawing.Color.Gainsboro;
             this.Logout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Logout.Location = new System.Drawing.Point(1395, 161);
+            this.Logout.Location = new System.Drawing.Point(1512, 161);
             this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(144, 619);
+            this.Logout.Size = new System.Drawing.Size(144, 635);
             this.Logout.TabIndex = 5;
             // 
             // panel8
@@ -324,7 +324,7 @@
             this.panel8.Location = new System.Drawing.Point(144, 161);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1251, 37);
+            this.panel8.Size = new System.Drawing.Size(1368, 37);
             this.panel8.TabIndex = 6;
             // 
             // mainPanel
@@ -332,7 +332,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(144, 198);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1251, 582);
+            this.mainPanel.Size = new System.Drawing.Size(1368, 598);
             this.mainPanel.TabIndex = 7;
             // 
             // CinemaProgram
@@ -340,7 +340,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1539, 875);
+            this.ClientSize = new System.Drawing.Size(1656, 891);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.Logout);
