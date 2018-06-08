@@ -183,11 +183,11 @@ namespace DB_Project_Cinema
             }
         }
 
-        public void Movie_Detail(Control Detail_page)
+        public void Movie_Detail(int movie_no)
         {
-            _parent.MovieDetailPage_Add(Detail_page); // parent -> panel3
-           // MD.Dock = DockStyle.None;
-            //MD.BringToFront();
+            this.Parent.Controls.Remove(this);
+            this.Controls.Remove(this);
+            _parent.MovieDetailPage_Add(movie_no);
         }
     }
 }

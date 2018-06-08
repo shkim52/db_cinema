@@ -145,12 +145,7 @@ namespace DB_Project_Cinema
             Button btn = sender as Button;
             string selected_button = btn.Name;
 
-            MovieDetail MD = new MovieDetail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
-
-            //this.Parent.Controls.Add(MD); // parent -> panel3
-            //MD.Dock = DockStyle.None;
-            //MD.BringToFront();
-            MoviePage.Instance.Movie_Detail(MD);
+            MoviePage.Instance.Movie_Detail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
         }
     }
 }

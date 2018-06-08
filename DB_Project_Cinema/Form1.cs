@@ -35,13 +35,13 @@ namespace DB_Project_Cinema
             login_mem_id = String.Empty;
         }
 
-        public void MovieDetailPage_Add(Control page)
+        public void MovieDetailPage_Add(int movie_no)
         {
-           //MoviePage.Instance.panel3.Controls.Add(page);
-            //MovieDetail md = new MovieDetail(4);
-            this.mainPanel.Controls.Add(page);
-            page.Dock = DockStyle.Fill;
-            page.BringToFront();
+            MovieDetail moviedetail = new MovieDetail(movie_no);
+            moviedetail.SetParent(this);
+            this.mainPanel.Controls.Add(moviedetail);
+            moviedetail.Dock = DockStyle.Fill;
+            moviedetail.BringToFront();
         }
 
         private void CinemaProgram_Load(object sender, EventArgs e)
@@ -106,7 +106,8 @@ namespace DB_Project_Cinema
             TicketingPage tp = new TicketingPage(this);
             mainPanel.Controls.Add(tp);
             tp.Dock = DockStyle.Fill;
-            tp.BringToFront();    
+            tp.BringToFront();
+
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = Color.DimGray;

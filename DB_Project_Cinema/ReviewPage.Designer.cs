@@ -131,7 +131,7 @@
             this.BackToHome.FlatAppearance.BorderSize = 0;
             this.BackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackToHome.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BackToHome.Location = new System.Drawing.Point(40, 341);
+            this.BackToHome.Location = new System.Drawing.Point(34, 467);
             this.BackToHome.Margin = new System.Windows.Forms.Padding(2);
             this.BackToHome.Name = "BackToHome";
             this.BackToHome.Size = new System.Drawing.Size(94, 26);
@@ -169,7 +169,7 @@
             this.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReviewPage";
-            this.Size = new System.Drawing.Size(1536, 408);
+            this.Size = new System.Drawing.Size(1536, 529);
             this.Load += new System.EventHandler(this.ReviewPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

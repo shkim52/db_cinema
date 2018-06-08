@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     {
         private Connection connect;
         private int selected_movie_no;
+        private CinemaProgram _parent;
 
         public MovieDetail(int selected_movie)
         {
@@ -27,6 +28,11 @@ namespace DB_Project_Cinema
         private void MovieDetail1_Load(object sender, EventArgs e)
         {
             MovieDetail_View();
+        }
+
+        public void SetParent(CinemaProgram parent)
+        {
+            _parent = parent;
         }
 
         public void MovieDetail_View()
@@ -108,7 +114,7 @@ namespace DB_Project_Cinema
 
                 ReviewPage RV = new ReviewPage(selected_movie_no);
                 this.Parent.Controls.Add(RV); // parent -> panel3
-                RV.Dock = DockStyle.None;
+                RV.Dock = DockStyle.Fill;
                 RV.BringToFront();
 
             }
@@ -121,7 +127,7 @@ namespace DB_Project_Cinema
         private void InterestRegisterButton_Click(object sender, EventArgs e)
         {
 
-            if (MoviePage.Instance.GetMem_id() == null)
+            if (_parent.GetLoginId() == String.Empty)
             {
                 MessageBox.Show("로그인을 하세요!");
             }
@@ -140,7 +146,7 @@ namespace DB_Project_Cinema
 
                     this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
 
-                    string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + MoviePage.Instance.GetMem_id() + "'," + selected_movie_no + ")";
+                    string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + _parent.GetLoginId() + "'," + selected_movie_no + ")";
                     Console.WriteLine(sql2);
 
                     Cmd.CommandText = sql2;

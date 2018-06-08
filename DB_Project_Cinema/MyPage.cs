@@ -12,38 +12,18 @@ namespace DB_Project_Cinema
 {
     public partial class MyPage : UserControl
     {
-        //private static MyPage _instance;
         private CinemaProgram _parent;
-
-        /*public static MyPage Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPage();
-                }
-                return _instance;
-            }
-        }*/
 
         public MyPage(CinemaProgram parent)
         {
             InitializeComponent();
             _parent = parent;
-
-            Console.WriteLine("--------------------");
             Console.WriteLine(_parent.GetLoginId());
         }
         ~MyPage()
         {
 
         }
-       /* public void setMem_id(string s)
-        {
-            mem_id = s;
-        }*/        
-
         private void MyPageChangeInfoButton_Click(object sender, EventArgs e)
         {
             MyPageChangeInfoButton.BackColor = Color.AntiqueWhite;
@@ -137,10 +117,9 @@ namespace DB_Project_Cinema
         }
         public void Interest_MovieDetail_View(int movie_no)
         {
-            MovieDetail moviedetail = new MovieDetail(movie_no);
             this.Parent.Controls.Remove(this);
             this.Controls.Remove(this);
-            _parent.MovieDetailPage_Add(moviedetail);
+            _parent.MovieDetailPage_Add(movie_no);
         }
     }
 }
