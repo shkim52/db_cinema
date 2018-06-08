@@ -82,7 +82,7 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    movie_no_array[index++] = Convert.ToInt32(reader["MOVIE_NO"]);
+                    movie_no_array[index++] = Convert.ToInt32(reader["MOVIE_NO"]); // select문으로 받아온 영화번호를 배열에 저장해둔다
                     dataGridView1.Rows.Add(reader["MOVIE_NM"]);
                 }
             }
@@ -93,7 +93,7 @@ namespace DB_Project_Cinema
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            selected_movie_no = e.RowIndex;
+            selected_movie_no = e.RowIndex; // 선택된 열의 index를 받아서 저장 
 
             DataGridViewCell cell = dataGridView1[e.ColumnIndex, e.RowIndex];
             DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();

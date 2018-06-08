@@ -14,16 +14,11 @@ namespace DB_Project_Cinema
 {
     public partial class MovieDetail : UserControl
     {
-        //private static MovieDetail _instance;
         private Connection connect;
-        private CinemaProgram _parents; // 사용하지 않는 변수
-        private string movie_nm; 
-        public string mem_id = null;
         private int selected_movie_no;
 
         public MovieDetail(int selected_movie)
         {
-            mem_id = CinemaProgram.Instance.GetLoginId();
             selected_movie_no = selected_movie;
             InitializeComponent();
             connect = new Connection();
@@ -127,8 +122,8 @@ namespace DB_Project_Cinema
 
         private void InterestRegisterButton_Click(object sender, EventArgs e)
         {
-          
-            if (mem_id == null)
+
+            if (MoviePage.Instance.GetMem_id() == null)
             {
                 MessageBox.Show("로그인을 하세요!");
             }
@@ -147,13 +142,13 @@ namespace DB_Project_Cinema
 
                     this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
 
-                    string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + mem_id + "'," + selected_movie_no + ")";
+                    string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + MoviePage.Instance.GetMem_id() + "'," + selected_movie_no + ")";
+                    Console.WriteLine(sql2);
 
                     Cmd.CommandText = sql2;
                     Cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("관심리스트에 등록되었습니다!");
-                        
+                    MessageBox.Show("관심리스트에 등록되었습니다!");                        
                       
                 }
                 catch (Exception ex)

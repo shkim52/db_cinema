@@ -34,13 +34,13 @@ namespace DB_Project_Cinema
             InitializeComponent();
             login_mem_id = String.Empty;
         }
+
         public void MovieDetailPage_Add(Control page)
         {
            MoviePage.Instance.panel3.Controls.Add(page);
            page.Dock = DockStyle.None;
            page.BringToFront();
         }
-
 
         private void CinemaProgram_Load(object sender, EventArgs e)
         {
@@ -64,6 +64,8 @@ namespace DB_Project_Cinema
             FindIDandPWButton.Visible = false;
             JoinMembershipButton.Visible = false;
             LogoutButton.Visible = true;
+
+            MoviePage.Instance.SetMem_id(memberId);
         }
 
         public string GetLoginId()

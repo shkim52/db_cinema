@@ -146,6 +146,9 @@ namespace DB_Project_Cinema
             string selected_button = btn.Name;
 
             MovieDetail MD = new MovieDetail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
+
+            Console.WriteLine(MoviePage.Instance.GetMem_id());
+
             this.Parent.Controls.Add(MD); // parent -> panel3
             MD.Dock = DockStyle.None;
             MD.BringToFront();

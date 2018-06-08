@@ -14,41 +14,28 @@ namespace DB_Project_Cinema
 {
     public partial class ReviewPage : UserControl
     {
-        private static ReviewPage _instance;
-        private Connection connect;        
-        private string mem_id="";
+        private Connection connect;      
         private int selected_movie_no;
-        /*public static ReviewPage Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new ReviewPage();
-                }
-                return _instance;
-            }
-        }*/
-        
-        public void setMem_id(string s)
-        {
-            mem_id = s;
-        }
+
         public ReviewPage(int selected_movie)
         {
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
+
             selected_movie_no = selected_movie;
+        }
+
+        private void ReviewPage_Load(object sender, EventArgs e)
+        {
+            MovieScore.Text = "5";
 
             Review_View();
         }
-
         public void Review_View()
         {
             try
             {
-
                 string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = " + selected_movie_no;
 
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
@@ -87,8 +74,8 @@ namespace DB_Project_Cinema
 
         private void ReviewRegisterButton_Click(object sender, EventArgs e)
         {
-          
-            if (mem_id == "")
+
+            if (MoviePage.Instance.GetMem_id() == null)
             {
                 MessageBox.Show("로그인을 하세요!");
             }
@@ -98,7 +85,7 @@ namespace DB_Project_Cinema
                 {
                     OracleCommand Cmd = new OracleCommand();
                     Cmd.Connection = connect.con;
-                    string sql = "SELECT * FROM GRADE WHERE MEM_ID='" + mem_id + "' AND MOVIE_NO=" + selected_movie_no;
+                    string sql = "SELECT * FROM GRADE WHERE MEM_ID='" + MoviePage.Instance.GetMem_id() + "' AND MOVIE_NO=" + selected_movie_no;
 
                     OracleCommand Comm = new OracleCommand(sql, connect.con);
                     OracleDataReader reader = Comm.ExecuteReader();
@@ -113,7 +100,7 @@ namespace DB_Project_Cinema
                     }
                     else
                     {
-                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + mem_id + "'," + selected_movie_no + "," + MovieScore.Text + ",'" + Review.Text + "')";
+                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + MoviePage.Instance.GetMem_id() + "'," + selected_movie_no + "," + MovieScore.Text + ",'" + Review.Text + "')";
                         Cmd.CommandText = sql2;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");
@@ -153,13 +140,6 @@ namespace DB_Project_Cinema
             this.Parent.Controls.Remove(this);
             dataGridView1.Rows.Clear();
             connect.con.Close();
-        }
-
-        private void ReviewPage_Load(object sender, EventArgs e)
-        {
-            connect = new Connection();
-            connect.Connecting();
-
         }
     }
 }

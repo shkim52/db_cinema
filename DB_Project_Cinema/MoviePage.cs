@@ -18,6 +18,8 @@ namespace DB_Project_Cinema
         private Connection Connect;
         private MovieList Expect_ML;
         private MovieList Show_ML;
+        private string Mem_id;
+
         public static MoviePage Instance
         {
             get
@@ -40,6 +42,8 @@ namespace DB_Project_Cinema
             Expect_ML = new MovieList(false);
 
             MovieCategory.Text = "영화명";
+
+            Mem_id = null;
         }
 
         private void MoviePage_Load(object sender, EventArgs e)
@@ -54,6 +58,14 @@ namespace DB_Project_Cinema
             ExpectedMovie.FlatAppearance.BorderSize = 0;
         }
 
+        public void SetMem_id(string id)
+        {
+            Mem_id =id;
+        }
+        public string GetMem_id()
+        {
+            return Mem_id;
+        }
         private void PlayingMovie_Click(object sender, EventArgs e)
         {
             if (!panel3.Controls.Contains(Show_ML))

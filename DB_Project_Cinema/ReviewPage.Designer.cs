@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.MovieNM = new System.Windows.Forms.Label();
-            this.MovieScore = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Review = new System.Windows.Forms.TextBox();
             this.ReviewRegisterButton = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MemReview = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BackToHome = new System.Windows.Forms.Button();
+            this.MovieScore = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,23 +50,6 @@
             this.MovieNM.TabIndex = 8;
             this.MovieNM.Text = "영화제목";
             this.MovieNM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // MovieScore
-            // 
-            this.MovieScore.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieScore.FormattingEnabled = true;
-            this.MovieScore.ItemHeight = 20;
-            this.MovieScore.Items.AddRange(new object[] {
-            "5",
-            "4",
-            "3",
-            "2",
-            "1"});
-            this.MovieScore.Location = new System.Drawing.Point(242, 56);
-            this.MovieScore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MovieScore.Name = "MovieScore";
-            this.MovieScore.Size = new System.Drawing.Size(68, 24);
-            this.MovieScore.TabIndex = 9;
             // 
             // label2
             // 
@@ -157,15 +140,29 @@
             this.BackToHome.UseVisualStyleBackColor = false;
             this.BackToHome.Click += new System.EventHandler(this.BackToHome_Click);
             // 
+            // MovieScore
+            // 
+            this.MovieScore.FormattingEnabled = true;
+            this.MovieScore.Items.AddRange(new object[] {
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
+            this.MovieScore.Location = new System.Drawing.Point(242, 55);
+            this.MovieScore.Name = "MovieScore";
+            this.MovieScore.Size = new System.Drawing.Size(75, 28);
+            this.MovieScore.TabIndex = 27;
+            // 
             // ReviewPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.MovieScore);
             this.Controls.Add(this.BackToHome);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.MovieNM);
-            this.Controls.Add(this.MovieScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Review);
             this.Controls.Add(this.ReviewRegisterButton);
@@ -183,7 +180,6 @@
         #endregion
 
         private System.Windows.Forms.Label MovieNM;
-        private System.Windows.Forms.ListBox MovieScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Review;
         private System.Windows.Forms.Button ReviewRegisterButton;
@@ -192,6 +188,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn MemReview;
+        private System.Windows.Forms.ComboBox MovieScore;
 
     }
 }
