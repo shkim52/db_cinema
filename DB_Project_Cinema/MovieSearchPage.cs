@@ -15,12 +15,15 @@ namespace DB_Project_Cinema
     public partial class MovieSearchPage : UserControl
     {
         private static MovieSearchPage _instance;
+        private Connection connect;
         private string movie_nm;
         private string Director_nm;
         private string Genre_nm;
-        public OracleConnection Conn;
-        public static MovieSearchPage Instance
-        {
+        //public OracleConnection Conn;
+        private string category;
+        private string searchtext;
+        //public static MovieSearchPage Instance
+        /*{
             get
             {
                 if (_instance == null)
@@ -28,8 +31,7 @@ namespace DB_Project_Cinema
                     _instance = new MovieSearchPage();
                 }
                 return _instance;
-            }
-        }
+            }*/
         public void setMovie_nm(string s)
         {
             movie_nm = s;
@@ -42,32 +44,43 @@ namespace DB_Project_Cinema
         {
             Genre_nm = s;
         }
-        public MovieSearchPage()
+        public MovieSearchPage(string movie_category, string search_text)
         {
+           
             InitializeComponent();
+            connect = new Connection();
+            connect.Connecting();
+            searchtext = search_text;
+            category = movie_category;
 
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
+            if (category == "영화명")
+            {
+                Movie_Search();
+            }
+            else if (category == "감독명")
+            {
+                Director_Search();
+            }
+            else if (category == "장르명")
+            {
+                Genre_Search();
+            }
+        }       
 
-        }
-
-        public void MovieDetail_test()
+        public void Movie_Search()
         {
             dataGridView1.Rows.Clear();
 
             try
             {
-                Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + movie_nm + "%'";
-
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NM LIKE '%" + searchtext + "%'";
+                
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
-                while (reader.Read())
-                {
+                    reader.Read();
+                
                     var poster = reader.GetString(reader.GetOrdinal("POSTER"));
                     System.Net.WebClient webSource = new System.Net.WebClient();
                     byte[] data = webSource.DownloadData(poster);
@@ -88,30 +101,27 @@ namespace DB_Project_Cinema
                     dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
                 
                 }
-                Conn.Close();
-            }
+               
+            
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
+            
         }
 
         
 
-        public void DirectorDetail_test()
+        public void Director_Search()
         {
             dataGridView1.Rows.Clear();
 
             try
             {
-                Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + Director_nm + "%'";
+                
+                string sql = "SELECT * FROM MOVIE WHERE DIRECTOR_NM LIKE '%" + searchtext + "%'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
@@ -133,28 +143,25 @@ namespace DB_Project_Cinema
                     dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
                 
                 }
-                Conn.Close();
+               
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
+            
         }
 
-        public void GenreDetail_test()
+        public void Genre_Search()
         {
             dataGridView1.Rows.Clear();
 
             try
             {
-                Conn.Open();
-                string sql = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + Genre_nm + "%'";
+                
+                string sql = "SELECT * FROM MOVIE WHERE GENRE LIKE '%" + searchtext + "%'";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
@@ -175,16 +182,13 @@ namespace DB_Project_Cinema
                     dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
 
                 }
-                Conn.Close();
+               
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Conn.Close();
-            }
+            
         }
 
 
@@ -192,15 +196,14 @@ namespace DB_Project_Cinema
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
                 movie_nm = dataGridView1.Rows[e.RowIndex].Cells["MovieNM"].Value.ToString();
 
-                //Controls.Add(MovieDetail.Instance);
-                //MovieDetail.Instance.setMovie_nm(movie_nm);
-                //MovieDetail.Instance.MovieDetail_test();
-                //MovieDetail.Instance.Dock = DockStyle.None;
-                //MovieDetail.Instance.BringToFront();
+                //MovieDetail MD = new MovieDetail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
+                //this.Parent.Controls.Add(MD); // parent -> panel3
+               // MD.Dock = DockStyle.None;
+                //MD.BringToFront();
             }  
 
             }
