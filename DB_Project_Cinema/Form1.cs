@@ -272,7 +272,7 @@ namespace DB_Project_Cinema
             LogoutButton.Visible = false;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void checkResv_Click(object sender, EventArgs e)
         {
 
         }

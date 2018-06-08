@@ -235,6 +235,7 @@
             this.checkResv.TabIndex = 9;
             this.checkResv.Text = "예매내역 확인";
             this.checkResv.UseVisualStyleBackColor = true;
+            this.checkResv.Click += new System.EventHandler(this.checkResv_Click);
             // 
             // DiscountCardButton
             // 
