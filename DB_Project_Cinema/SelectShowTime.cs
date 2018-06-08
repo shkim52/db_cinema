@@ -13,11 +13,9 @@ using Oracle.ManagedDataAccess.Types;
 namespace DB_Project_Cinema
 {
     public partial class SelectShowTime : UserControl
-    {
+    { 
         private Connection connect;
-        private string mv_nm; // 삭제해야될 부분 
         private DateTime selected_date;
-        private string show_start_time;
         private int[] movie_no_array;
         private int selected_movie_no;
         private string select_sch_no;
@@ -35,7 +33,13 @@ namespace DB_Project_Cinema
         private void SelectShowTime_Load(object sender, EventArgs e)
         {
             show_movie_nm();
-            mv_nm = dataGridView1.Rows[0].Cells[0].Value.ToString();//초기값으로 맨 위에있는 영화 선택
+
+            DataGridViewCell cell = dataGridView1[0,0];
+            DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
+            cellStyle.SelectionBackColor = Color.Red;
+            cellStyle.SelectionForeColor = Color.White;
+            cell.Style = cellStyle;
+
             selected_movie_no = 0;
 
             //일주일만 선택 가능하도록 제한
@@ -47,7 +51,8 @@ namespace DB_Project_Cinema
             monthCalendar1.MinDate = now;
             monthCalendar1.MaxDate = week;
 
-            selected_date = monthCalendar1.SelectionRange.Start;
+            selected_date = now;
+            refresh_showtime();
         }
 
         public string Get_SchNo()
@@ -86,11 +91,15 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            mv_nm = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            selected_movie_no = movie_no_array[e.RowIndex];
+            selected_movie_no = e.RowIndex;
+
+            DataGridViewCell cell = dataGridView1[e.ColumnIndex, e.RowIndex];
+            DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
+            cellStyle.SelectionBackColor = Color.Red;
+            cellStyle.SelectionForeColor = Color.White;
+            cell.Style = cellStyle;
 
             refresh_showtime();
         }
@@ -108,7 +117,7 @@ namespace DB_Project_Cinema
 
             try
             {
-                string sql = "SELECT SC.SCR_NM, SH.SHOW_START_TIME,SH.SHOW_SCHE_NO FROM MOVIE M, SH_SCHE SH, SCREEN SC WHERE M.MOVIE_NO = '" + selected_movie_no + "' AND M.MOVIE_NO = SH.MOVIE_NO AND SH.SCR_NO = SC.SCR_NO AND SH.SHOW_DATE= '" + selected_date.ToString().Substring(0, 10) + "' ORDER BY SC.SCR_NM, SH.SHOW_START_TIME";
+                string sql = "SELECT SC.SCR_NM, SH.SHOW_START_TIME,SH.SHOW_SCHE_NO FROM SH_SCHE SH, SCREEN SC WHERE SH.MOVIE_NO = " + movie_no_array[selected_movie_no] + " AND SH.SCR_NO = SC.SCR_NO AND SH.SHOW_DATE= '" + selected_date.ToString().Substring(0, 10) + "' ORDER BY SC.SCR_NM, SH.SHOW_START_TIME";
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
                 int index;
@@ -125,33 +134,6 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
         }
-
-        public void chooseseatbuttonClicked()
-        {
-            CinemaProgram cp = new CinemaProgram();
-            if (cp.GetLoginId() == String.Empty)
-            {
-                MessageBox.Show("로그인을 하세요!");
-            }
-            else if (selected_date.ToString().Substring(0, 10) == String.Empty || show_start_time == String.Empty)
-            {
-                MessageBox.Show("상영일자 혹은 상영시간이 선택되지 않았습니다.");
-                Console.WriteLine("!!!!!!!");
-            }
-            else
-            {
-                ChooseSeat cs = new ChooseSeat(cp.GetLoginId(), selected_date.ToString());
-                this.Parent.Controls.Add(cs); // parent -> panel3
-                cs.Dock = DockStyle.None;
-                cs.BringToFront();
-                /*
-                ChooseSeatPageButton.Visible = false;
-                PaymentPageButton.Visible = true;
-                BackToSelcetTimeButton.Visible = true;
-                BackToChooseSeatButton.Visible = false;*/
-            }
-        }
-
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -160,7 +142,7 @@ namespace DB_Project_Cinema
                 {
                     DataGridViewCell cell = dataGridView2[e.ColumnIndex, e.RowIndex];
                     DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
-                    cellStyle.SelectionBackColor = Color.DarkRed;
+                    cellStyle.SelectionBackColor = Color.Red;
                     cellStyle.SelectionForeColor = Color.White;
                     cell.Style = cellStyle;
 
