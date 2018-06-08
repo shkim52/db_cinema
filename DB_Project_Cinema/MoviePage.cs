@@ -118,7 +118,7 @@ namespace DB_Project_Cinema
                         }
                         else if (!reader.HasRows)
                         {
-                            MessageBox.Show("해당" + MovieCategory.Text + " 영화명과 일치하는 영화가 없습니다!");
+                            MessageBox.Show("해당 영화명과 일치하는 영화가 없습니다!");
                         }
                     }
                     else if(MovieCategory.Text == "감독명")
@@ -137,7 +137,7 @@ namespace DB_Project_Cinema
                         }
                         else if (!reader.HasRows)
                         {
-                            MessageBox.Show("해당" + MovieCategory.Text + " 영화명과 일치하는 영화가 없습니다!");
+                            MessageBox.Show("해당 감독의 영화가 없습니다!");
                         }
                     }
                     else if (MovieCategory.Text == "장르명")
@@ -156,7 +156,7 @@ namespace DB_Project_Cinema
                         }
                         else if (!reader.HasRows)
                         {
-                            MessageBox.Show("해당" + MovieCategory.Text + " 영화명과 일치하는 영화가 없습니다!");
+                            MessageBox.Show("해당 장르인 영화가 없습니다!");
                         }
                     }
                 }

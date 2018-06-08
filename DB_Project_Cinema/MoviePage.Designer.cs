@@ -56,15 +56,16 @@
             // 
             // MovieCategory
             // 
+            this.MovieCategory.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.MovieCategory.FormattingEnabled = true;
             this.MovieCategory.Items.AddRange(new object[] {
             "영화명",
             "감독명",
             "장르명"});
             this.MovieCategory.Location = new System.Drawing.Point(318, 133);
-            this.MovieCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MovieCategory.Margin = new System.Windows.Forms.Padding(4);
             this.MovieCategory.Name = "MovieCategory";
-            this.MovieCategory.Size = new System.Drawing.Size(150, 26);
+            this.MovieCategory.Size = new System.Drawing.Size(127, 33);
             this.MovieCategory.TabIndex = 13;
             // 
             // SearchButton
@@ -84,10 +85,11 @@
             // 
             // SearchText
             // 
-            this.SearchText.Location = new System.Drawing.Point(475, 133);
+            this.SearchText.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.SearchText.Location = new System.Drawing.Point(494, 133);
             this.SearchText.Margin = new System.Windows.Forms.Padding(2);
             this.SearchText.Name = "SearchText";
-            this.SearchText.Size = new System.Drawing.Size(519, 28);
+            this.SearchText.Size = new System.Drawing.Size(500, 31);
             this.SearchText.TabIndex = 11;
             // 
             // label1

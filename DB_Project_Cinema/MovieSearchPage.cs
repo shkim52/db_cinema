@@ -16,40 +16,17 @@ namespace DB_Project_Cinema
     {
         private static MovieSearchPage _instance;
         private Connection connect;
-        private string movie_nm;
-        private string Director_nm;
-        private string Genre_nm;
-        //public OracleConnection Conn;
         private string category;
         private string searchtext;
-        //public static MovieSearchPage Instance
-        /*{
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MovieSearchPage();
-                }
-                return _instance;
-            }*/
-        public void setMovie_nm(string s)
-        {
-            movie_nm = s;
-        }
-        public void setDirector_nm(string s)
-        {
-            Director_nm = s;
-        }
-        public void setGenre_nm(string s)
-        {
-            Genre_nm = s;
-        }
+        private int movie_no;
+      
         public MovieSearchPage(string movie_category, string search_text)
         {
            
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
+
             searchtext = search_text;
             category = movie_category;
 
@@ -93,9 +70,8 @@ namespace DB_Project_Cinema
                     string actor_nm = reader.GetString(reader.GetOrdinal("ACTOR_NM"));
                     string rating = reader.GetString(reader.GetOrdinal("RATING"));
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
-                    //string show_time = reader.GetString(reader.GetOrdinal("SHOW_TIME"));
-                    //string country = reader.GetString(reader.GetOrdinal("COUNTRY"));
                     string movie_detail = "상세보기";
+                    movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
 
                     this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
@@ -139,6 +115,7 @@ namespace DB_Project_Cinema
                     string rating = reader.GetString(reader.GetOrdinal("RATING"));
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
                     string movie_detail = "상세보기";
+                    movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
 
                     dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
                 
@@ -178,6 +155,7 @@ namespace DB_Project_Cinema
                     string rating = reader.GetString(reader.GetOrdinal("RATING"));
                     string release_date = reader.GetDateTime(reader.GetOrdinal("RELEASE_DATE")).ToShortDateString();
                     string movie_detail = "상세보기";
+                    movie_no = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
 
                     dataGridView1.Rows.Add(jpgImage, Movie_nm, genre, director_nm, actor_nm, rating, release_date, movie_detail);
 
@@ -198,12 +176,10 @@ namespace DB_Project_Cinema
             
             if (e.ColumnIndex == 7)
             {
-                movie_nm = dataGridView1.Rows[e.RowIndex].Cells["MovieNM"].Value.ToString();
-
-                //MovieDetail MD = new MovieDetail(movie_no_array[Convert.ToInt32(selected_button.Substring(11, 1)) - 1]);
-                //this.Parent.Controls.Add(MD); // parent -> panel3
-               // MD.Dock = DockStyle.None;
-                //MD.BringToFront();
+                MovieDetail MD = new MovieDetail(movie_no);
+                this.Parent.Controls.Add(MD); // parent -> panel3
+                MD.Dock = DockStyle.None;
+                MD.BringToFront();
             }  
 
             }

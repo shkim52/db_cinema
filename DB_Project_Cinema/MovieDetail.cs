@@ -21,18 +21,6 @@ namespace DB_Project_Cinema
         public string mem_id = null;
         private int selected_movie_no;
 
-        //MoviePage m = new MoviePage();
-        /*public static MovieDetail Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MovieDetail();
-                }
-                return _instance;
-            }
-        }*/
         public MovieDetail(int selected_movie)
         {
             mem_id = CinemaProgram.Instance.GetLoginId();
@@ -47,16 +35,7 @@ namespace DB_Project_Cinema
         {
             MovieDetail_View();
         }
-        // 얘들은 왜 필요할까?
-        public void SetMovie_nm(string s){
-            movie_nm = s;
-        }
-        public void SetMovie_no(int i)
-        {
-            //movie_no = i;
-        }
 
-       
         public void MovieDetail_View()
         {
             ReviewButton_Visible();
@@ -134,12 +113,10 @@ namespace DB_Project_Cinema
                 
                 reader.Read();
 
-                this.Parent.Controls.Add(ReviewPage.Instance);// panel3
-                Controls.Remove(this);
-                ReviewPage.Instance.setMovie_no(selected_movie_no);
-                ReviewPage.Instance.ReviewPage_test();
-                ReviewPage.Instance.Dock = DockStyle.None;
-                ReviewPage.Instance.BringToFront();
+                ReviewPage RV = new ReviewPage(selected_movie_no);
+                this.Parent.Controls.Add(RV); // parent -> panel3
+                RV.Dock = DockStyle.None;
+                RV.BringToFront();
 
             }
             catch (Exception ex)

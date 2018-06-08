@@ -15,10 +15,10 @@ namespace DB_Project_Cinema
     public partial class ReviewPage : UserControl
     {
         private static ReviewPage _instance;
-        private int movie_no;
+        private Connection connect;        
         private string mem_id="";
-        private Connection connect;
-        public static ReviewPage Instance
+        private int selected_movie_no;
+        /*public static ReviewPage Instance
         {
             get
             {
@@ -28,28 +28,28 @@ namespace DB_Project_Cinema
                 }
                 return _instance;
             }
-        }
-        public void setMovie_no(int i)
-        {
-            movie_no = i;
-        }
+        }*/
+        
         public void setMem_id(string s)
         {
             mem_id = s;
         }
-        public ReviewPage()
+        public ReviewPage(int selected_movie)
         {
             InitializeComponent();
+            connect = new Connection();
+            connect.Connecting();
+            selected_movie_no = selected_movie;
 
-           
+            Review_View();
         }
 
-        public void ReviewPage_test()
+        public void Review_View()
         {
             try
             {
-                
-                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = " + movie_no ;
+
+                string sql = "SELECT * FROM MOVIE WHERE MOVIE_NO = " + selected_movie_no;
 
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -59,7 +59,7 @@ namespace DB_Project_Cinema
                     this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                 }
 
-                string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
+                string sql2 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + selected_movie_no;
 
                 OracleCommand Comm2 = new OracleCommand(sql2, connect.con);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
@@ -98,7 +98,7 @@ namespace DB_Project_Cinema
                 {
                     OracleCommand Cmd = new OracleCommand();
                     Cmd.Connection = connect.con;
-                    string sql = "SELECT * FROM GRADE WHERE MEM_ID='"+mem_id+"' AND MOVIE_NO="+movie_no;
+                    string sql = "SELECT * FROM GRADE WHERE MEM_ID='" + mem_id + "' AND MOVIE_NO=" + selected_movie_no;
 
                     OracleCommand Comm = new OracleCommand(sql, connect.con);
                     OracleDataReader reader = Comm.ExecuteReader();
@@ -113,7 +113,7 @@ namespace DB_Project_Cinema
                     }
                     else
                     {
-                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + mem_id + "'," + movie_no + "," + MovieScore.Text + ",'" + Review.Text + "')";
+                        string sql2 = "INSERT INTO GRADE (MEM_ID, MOVIE_NO, MOVIE_SCORE, REVIEW) VALUES('" + mem_id + "'," + selected_movie_no + "," + MovieScore.Text + ",'" + Review.Text + "')";
                         Cmd.CommandText = sql2;
                         Cmd.ExecuteNonQuery();
                         MessageBox.Show("리뷰가 등록되었습니다!");
@@ -123,7 +123,7 @@ namespace DB_Project_Cinema
 
                     dataGridView1.Rows.Clear();
 
-                    string sql3 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + movie_no;
+                    string sql3 = "SELECT * FROM GRADE WHERE MOVIE_NO = " + selected_movie_no;
 
                     OracleCommand Comm2 = new OracleCommand(sql3, connect.con);
                     OracleDataReader reader2 = Comm2.ExecuteReader();

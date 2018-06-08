@@ -253,7 +253,7 @@ namespace DB_Project_Cinema
             Logout_clicked();
             login_mem_id = string.Empty;
             //MovieDetail.Instance.setMem_id("");
-            ReviewPage.Instance.setMem_id("");
+           // ReviewPage.Instance.setMem_id("");
         }
 
         public void Logout_clicked()
