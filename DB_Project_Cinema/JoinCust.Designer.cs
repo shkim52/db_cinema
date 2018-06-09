@@ -39,6 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -81,6 +83,7 @@
             this.CustResidentTextbox.Name = "CustResidentTextbox";
             this.CustResidentTextbox.Size = new System.Drawing.Size(118, 30);
             this.CustResidentTextbox.TabIndex = 42;
+            this.CustResidentTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustResidentTextbox_KeyPress);
             // 
             // CustHPNumTextbox
             // 
@@ -91,6 +94,7 @@
             this.CustHPNumTextbox.Name = "CustHPNumTextbox";
             this.CustHPNumTextbox.Size = new System.Drawing.Size(238, 30);
             this.CustHPNumTextbox.TabIndex = 43;
+            this.CustHPNumTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CustHPNumTextbox_KeyPress);
             // 
             // CustPWTextbox
             // 
@@ -115,6 +119,7 @@
             this.LoginButton.TabIndex = 45;
             this.LoginButton.Text = "가입하기";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // label3
             // 
@@ -159,11 +164,31 @@
             this.label7.TabIndex = 49;
             this.label7.Text = "-  *******";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(744, 250);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(215, 15);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "-를 제외한 숫자만 입력하세요.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(527, 308);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(422, 15);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "비밀번호를 잊어버리면 홈페이지에서 예매확인이 불가합니다.";
+            // 
             // JoinCust
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CustNameTextbox);
@@ -178,6 +203,7 @@
             this.Location = new System.Drawing.Point(502, 41);
             this.Name = "JoinCust";
             this.Size = new System.Drawing.Size(994, 552);
+            this.Load += new System.EventHandler(this.JoinCust_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +222,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
     }
 }

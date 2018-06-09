@@ -79,6 +79,17 @@ namespace DB_Project_Cinema
             if (_parent.GetLoginId() == String.Empty)
             {
                 MessageBox.Show("로그인을 하세요!");
+                if (MessageBox.Show("회원으로 로그인 하시겠습니까?", "", MessageBoxButtons.YesNo)== DialogResult.Yes)
+                {
+                    
+                }
+                else
+                {
+                    _parent.mainPanel.Controls.Add(JoinCust.Instance);
+                    JoinCust.Instance.Dock = DockStyle.Fill;
+                    JoinCust.Instance.BringToFront();
+                }
+                
             }
             else if (showtime_page.Get_SchNo() == null)
             {

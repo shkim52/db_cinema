@@ -385,8 +385,8 @@
         private System.Windows.Forms.Button DiscountCardButton;
         private System.Windows.Forms.Button FindIDandPWButton;
         private System.Windows.Forms.Button LogoutButton;
-        private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button checkResv;
+        public System.Windows.Forms.Panel mainPanel;
     }
 }
 
