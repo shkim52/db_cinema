@@ -21,7 +21,9 @@ namespace DB_Project_Cinema
         private Button[,] seat = new Button[19, 20];
 
         private int chosen_seat_cnt = 0;
-        private string[] chosen_seat = new string[8];
+        private string[] chosen_seat = new string[20];
+        private int cnt = 0;
+        private int index = 0;
 
         private string member;
         private string show_schedule;
@@ -51,9 +53,13 @@ namespace DB_Project_Cinema
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
-                reader.Read();
-                this.TOT_SEAT_CNT.Text = reader.GetDecimal(reader.GetOrdinal("SCR_SEAT_CNT")).ToString();
-            }
+                while (reader.Read())
+                {
+                    this.SCR_NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
+                    this.TOT_SEAT_CNT.Text = reader.GetDecimal(reader.GetOrdinal("SCR_SEAT_CNT")).ToString();
+
+                }
+            } 
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
@@ -68,7 +74,7 @@ namespace DB_Project_Cinema
                 RowNM[i].Name = Convert.ToChar(i + 65) + "행";
                 RowNM[i].Size = new Size(18, 18);
                 RowNM[i].Location = new Point(0, 20 * (i + 1));
-                RowNM[i].Text = Convert.ToChar(i + 65)+"";
+                RowNM[i].Text = Convert.ToChar(i + 65) + "";
                 RowNM[i].TextAlign = ContentAlignment.MiddleCenter;
 
                 panel1.Controls.Add(RowNM[i]);
@@ -107,7 +113,7 @@ namespace DB_Project_Cinema
         private void Seat_Click(object sender, EventArgs e)
         {
             Button seat = sender as Button;
-            int i = 0;
+
 
             if (chosen_seat.Contains(seat.Name))
             {
@@ -115,8 +121,11 @@ namespace DB_Project_Cinema
                 chosen_seat_cnt--;
                 Console.WriteLine(chosen_seat_cnt);
                 Console.WriteLine(seat.Name);
-                var chosen_seat_List = chosen_seat.ToList();
-                chosen_seat_List.Remove(seat.Name);
+                index = Array.IndexOf(chosen_seat, seat.Name);
+                chosen_seat[index] = chosen_seat[cnt - 1];
+                chosen_seat[cnt - 1] = null;
+                cnt--;
+
             }
             else
             {
@@ -124,8 +133,8 @@ namespace DB_Project_Cinema
                 chosen_seat_cnt++;
                 Console.WriteLine(chosen_seat_cnt);
                 Console.WriteLine(seat.Name);
-                chosen_seat[i] = seat.Name;
-                i++;
+                chosen_seat[cnt] = seat.Name;
+                cnt++;
             }
         }
         public bool SeatCnt_Check()
@@ -133,6 +142,7 @@ namespace DB_Project_Cinema
             if (ChooseNumber.Text != chosen_seat_cnt.ToString())
             {
                 MessageBox.Show("인원 수에 맞게 좌석 선택을 다시 해주세요!");
+               
                 return false;
             }
             else
@@ -143,3 +153,4 @@ namespace DB_Project_Cinema
         }
     }
 }
+

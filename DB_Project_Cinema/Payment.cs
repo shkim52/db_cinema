@@ -12,9 +12,13 @@ namespace DB_Project_Cinema
 {
     public partial class Payment : UserControl
     {
+        private Connection connect;
+
         public Payment()
         {
             InitializeComponent();
+            connect = new Connection();
+            connect.Connecting();
         }
 
         
