@@ -376,7 +376,6 @@
         private System.Windows.Forms.Panel Logout;
         private System.Windows.Forms.Button MyPageButton;
         private System.Windows.Forms.Button JoinMembershipButton;
-        private System.Windows.Forms.Button LoginPageButton;
         private System.Windows.Forms.Button ScreenInfoButton;
         private System.Windows.Forms.Button TicketingPageButton;
         private System.Windows.Forms.Button MoviePageButton;
@@ -387,6 +386,7 @@
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Button checkResv;
         public System.Windows.Forms.Panel mainPanel;
+        public System.Windows.Forms.Button LoginPageButton;
     }
 }
 

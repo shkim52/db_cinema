@@ -266,6 +266,13 @@ namespace DB_Project_Cinema
             JoinMembershipButton.Visible = true;
             LogoutButton.Visible = false;
             checkResv.Visible = true;
+
+            mainPanel.Controls.Remove(MoviePage.Instance);
+            mainPanel.Controls.Add(MoviePage.Instance);
+            MoviePage.Instance.SetParent(this);
+            MoviePage.Instance.Dock = DockStyle.Fill;
+            MoviePage.Instance.BringToFront();
+            
         }
 
         private void checkResv_Click(object sender, EventArgs e)
@@ -275,9 +282,9 @@ namespace DB_Project_Cinema
                 mainPanel.Controls.Remove(LoginCust.Instance);
             }
             
-                mainPanel.Controls.Add(LoginCust.Instance);
-                LoginCust.Instance.Dock = DockStyle.Fill;
-                LoginCust.Instance.BringToFront();
+            mainPanel.Controls.Add(LoginCust.Instance);
+            LoginCust.Instance.Dock = DockStyle.Fill;
+            LoginCust.Instance.BringToFront();
             
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
