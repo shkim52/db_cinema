@@ -108,6 +108,47 @@ namespace DB_Project_Cinema
                     panel1.Controls.Add(seat[i, j]);
                 }
             }
+
+            Label choose = new Label();
+            choose.Size = new Size(18, 18);
+            choose.Location = new Point(0, 0);
+            choose.BackColor = Color.Red;
+
+            Label chooseSeat = new Label();
+            chooseSeat.Size = new Size(100, 18);
+            chooseSeat.Location = new Point(23, 0);
+            chooseSeat.Text = "선택 좌석";
+            chooseSeat.TextAlign = ContentAlignment.MiddleLeft;
+
+            Label unresv = new Label();            
+            unresv.Size = new Size(18, 18);
+            unresv.Location = new Point(0,25);
+            unresv.BackColor = Color.Gray;
+            
+            Label unresvSeat = new Label();
+            unresvSeat.Size = new Size(100, 18);
+            unresvSeat.Location = new Point(23, 25);
+            unresvSeat.Text = "예매 가능 좌석";
+            unresvSeat.TextAlign = ContentAlignment.MiddleLeft;
+
+            Label resv = new Label();
+            resv.Size = new Size(18, 18);
+            resv.Location = new Point(0, 50);
+            resv.BackColor = Color.LightGray;
+
+            Label resvSeat = new Label();
+            resvSeat.Size = new Size(100, 18);
+            resvSeat.Location = new Point(23, 50);
+            resvSeat.Text = "예매된 좌석";
+            resvSeat.TextAlign = ContentAlignment.MiddleLeft;
+            
+
+            panel2.Controls.Add(choose);
+            panel2.Controls.Add(chooseSeat);
+            panel2.Controls.Add(unresv);
+            panel2.Controls.Add(unresvSeat);
+            panel2.Controls.Add(resv);
+            panel2.Controls.Add(resvSeat);
         }
 
         private void Seat_Click(object sender, EventArgs e)

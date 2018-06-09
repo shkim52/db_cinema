@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ChooseNumber = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label6
@@ -136,7 +137,7 @@
             this.panel1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(356, 121);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(668, 510);
             this.panel1.TabIndex = 21;
@@ -177,17 +178,26 @@
             "7",
             "8"});
             this.ChooseNumber.Location = new System.Drawing.Point(402, 46);
-            this.ChooseNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChooseNumber.Margin = new System.Windows.Forms.Padding(2);
             this.ChooseNumber.Name = "ChooseNumber";
             this.ChooseNumber.Size = new System.Drawing.Size(76, 33);
             this.ChooseNumber.TabIndex = 23;
             this.ChooseNumber.Text = "0";
+            // 
+            // panel2
+            // 
+            this.panel2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.panel2.Location = new System.Drawing.Point(1175, 288);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(192, 185);
+            this.panel2.TabIndex = 24;
             // 
             // ChooseSeat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.ChooseNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -200,7 +210,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChooseSeat";
             this.Size = new System.Drawing.Size(1472, 690);
             this.Load += new System.EventHandler(this.ChooseSeat_Load);
@@ -222,6 +232,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox ChooseNumber;
+        private System.Windows.Forms.Panel panel2;
 
     }
 }
