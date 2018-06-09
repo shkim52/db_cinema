@@ -68,6 +68,7 @@ namespace DB_Project_Cinema
             FindIDandPWButton.Visible = false;
             JoinMembershipButton.Visible = false;
             LogoutButton.Visible = true;
+            checkResv.Visible = false;
 
             MoviePage.Instance.SetMem_id(memberId);
         }
@@ -280,6 +281,7 @@ namespace DB_Project_Cinema
             FindIDandPWButton.Visible = true; 
             JoinMembershipButton.Visible = true;
             LogoutButton.Visible = false;
+            checkResv.Visible = true;
         }
 
         private void checkResv_Click(object sender, EventArgs e)

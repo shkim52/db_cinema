@@ -59,6 +59,7 @@ namespace DB_Project_Cinema
                         {
                             string mem_id = ID_INPUT.Text;
                             MessageBox.Show(mem_id + "님 환영합니다!");
+                            this.Parent.Controls.Remove(this);
 
                             _parent.Login_Complete(mem_id);
 
