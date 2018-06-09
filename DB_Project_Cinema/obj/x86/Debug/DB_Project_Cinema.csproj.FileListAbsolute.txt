@@ -17,7 +17,6 @@ C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPag
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageChangeInfo.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageChangePw.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageCheckResv.resources
-C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageConfirmPW.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageInterest.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageMyPoint.resources
 C:\Users\ynkim\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.MyPageQuitMem.resources

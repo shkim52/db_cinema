@@ -210,12 +210,6 @@
     <Compile Include="MyPageCheckResv.Designer.cs">
       <DependentUpon>MyPageCheckResv.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyPageConfirmPW.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MyPageConfirmPW.Designer.cs">
-      <DependentUpon>MyPageConfirmPW.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyPageInterest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -322,9 +316,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyPageCheckResv.resx">
       <DependentUpon>MyPageCheckResv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyPageConfirmPW.resx">
-      <DependentUpon>MyPageConfirmPW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyPageInterest.resx">
       <DependentUpon>MyPageInterest.cs</DependentUpon>
