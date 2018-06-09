@@ -28,19 +28,38 @@ namespace DB_Project_Cinema
             connect.Connecting();
             PictureLoad();
         }
-        private int CountPicture()
-        {
-            string sql = "SELECT COUNT(*) FROM MV_PHOTO WHERE MOVIE_NO = " + selected_movie_no;
-            OracleCommand Comm = new OracleCommand(sql, connect.con);
-            OracleDataReader reader = Comm.ExecuteReader();
-            int count = Convert.ToInt32(Comm.ExecuteScalar());
-            
-            return count;
-        }
         private void PictureLoad()
         {
-            int count = CountPicture();
+            try
+            {
+                string sql = "SELECT * FROM MV_PHOTO WHERE MOVIE_NO = " + selected_movie_no;
+                Console.WriteLine(selected_movie_no);
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
+                OracleDataReader reader = Comm.ExecuteReader();
 
+                reader.Read();
+                var poster = reader.GetString(reader.GetOrdinal("PHOTO_ROUTE"));
+
+                Picture1.SizeMode = PictureBoxSizeMode.StretchImage;
+                Picture1.ImageLocation = poster;
+
+                reader.Read();
+                poster = reader.GetString(reader.GetOrdinal("PHOTO_ROUTE"));
+
+                Picture2.SizeMode = PictureBoxSizeMode.StretchImage;
+                Picture2.ImageLocation = poster;
+
+                reader.Read();
+                poster = reader.GetString(reader.GetOrdinal("PHOTO_ROUTE"));
+
+                Picture3.SizeMode = PictureBoxSizeMode.StretchImage;
+                Picture3.ImageLocation = poster;
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

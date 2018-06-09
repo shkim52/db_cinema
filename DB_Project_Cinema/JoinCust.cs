@@ -16,7 +16,6 @@ namespace DB_Project_Cinema
     {
         private static JoinCust _instance;
         private Connection connect;
-        private string sche_no;
         public static JoinCust Instance
         {
             get
@@ -29,10 +28,6 @@ namespace DB_Project_Cinema
             }
         }
 
-        public void setSche_No(string sche_no)
-        {
-            this.sche_no = sche_no;
-        }
         public JoinCust()
         {
             InitializeComponent();

@@ -80,7 +80,6 @@ namespace DB_Project_Cinema
                 if (MessageBox.Show("비회원으로 예매 하시겠습니까?", "", MessageBoxButtons.YesNo)== DialogResult.Yes)
                 {
                     _parent.mainPanel.Controls.Add(JoinCust.Instance);
-                    JoinCust.Instance.setSche_No(showtime_page.Get_SchNo());
                     JoinCust.Instance.Dock = DockStyle.Fill;
                     JoinCust.Instance.BringToFront();
                 }
