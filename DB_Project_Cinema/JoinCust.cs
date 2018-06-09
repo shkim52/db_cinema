@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     {
         private static JoinCust _instance;
         private Connection connect;
+        private string sche_no;
         public static JoinCust Instance
         {
             get
@@ -26,6 +27,11 @@ namespace DB_Project_Cinema
                 }
                 return _instance;
             }
+        }
+
+        public void setSche_No(string sche_no)
+        {
+            this.sche_no = sche_no;
         }
         public JoinCust()
         {
@@ -54,13 +60,18 @@ namespace DB_Project_Cinema
                 {
                     MessageBox.Show("임시 ID는 티켓예매번호이며 티켓예매번호와 비밀번호를 잊어버리면 예매확인이 어려우니 양해부탁드립니다!");
                 }
+
+                CinemaProgram cp = new CinemaProgram();
+                this.Parent.Controls.Remove(this);
+                ChooseSeat cs = new ChooseSeat("", new SelectShowTime().Get_SchNo());
+                cp.mainPanel.Controls.Add(cs);
+                cs.Dock = DockStyle.Fill;
+                cs.BringToFront();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
-            CinemaProgram cp = new CinemaProgram();
-            this.Parent.Controls.Remove(this);
         }
 
         private void CustResidentTextbox_KeyPress(object sender, KeyPressEventArgs e)

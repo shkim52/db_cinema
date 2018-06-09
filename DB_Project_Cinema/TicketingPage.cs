@@ -47,15 +47,10 @@ namespace DB_Project_Cinema
             BackToSelcetTimeButton.Visible = false;
         }
 
-        // 이름은 backto이지만 좌석선택하는 버튼인가??
         private void BackToChooseSeatButton_Click_1(object sender, EventArgs e)
         {
-            choose_seat = new ChooseSeat(_parent.GetLoginId(), showtime_page.Get_SchNo());
-            panel2.Controls.Add(choose_seat);
-
-            choose_seat.BringToFront();
-            choose_seat.Dock = DockStyle.None;
-
+            this.Parent.Controls.Remove(this);
+            
             ChooseSeatPageButton.Visible = false;
             PaymentPageButton.Visible = true;
             BackToSelcetTimeButton.Visible = true;
@@ -76,11 +71,16 @@ namespace DB_Project_Cinema
 
         private void ChooseSeatPageButton_Click_1(object sender, EventArgs e)
         {
-            if (_parent.GetLoginId() == String.Empty)
+            if (showtime_page.Get_SchNo() == null)
+            {
+                MessageBox.Show("상영일자 혹은 상영시간이 선택되지 않았습니다.");
+            }
+            else if (_parent.GetLoginId() == String.Empty)
             {
                 if (MessageBox.Show("비회원으로 예매 하시겠습니까?", "", MessageBoxButtons.YesNo)== DialogResult.Yes)
                 {
                     _parent.mainPanel.Controls.Add(JoinCust.Instance);
+                    JoinCust.Instance.setSche_No(showtime_page.Get_SchNo());
                     JoinCust.Instance.Dock = DockStyle.Fill;
                     JoinCust.Instance.BringToFront();
                 }
@@ -88,11 +88,6 @@ namespace DB_Project_Cinema
                 {
                     MessageBox.Show("회원으로 로그인 해주세요!");
                 }
-                
-            }
-            else if (showtime_page.Get_SchNo() == null)
-            {
-                MessageBox.Show("상영일자 혹은 상영시간이 선택되지 않았습니다.");
             }
             else
             {
