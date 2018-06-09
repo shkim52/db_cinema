@@ -145,15 +145,26 @@ namespace DB_Project_Cinema
                     reader.Read();
 
                     this.MovieNM.Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
+                    sql = "SELECT  * FROM INTEREST_LIST WHERE MEM_ID = '" + _parent.GetLoginId() + "' AND MOVIE_NO = " + selected_movie_no;
+                    Comm = new OracleCommand(sql, connect.con);
+                    reader = Comm.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        MessageBox.Show("이미 관심리스트에 등록되었습니다.");
+                    } 
+                    else
+                    {
+                        reader.Read();
+                        string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + _parent.GetLoginId() + "'," + selected_movie_no + ")";
+                        Console.WriteLine(sql2);
 
-                    string sql2 = "INSERT INTO INTEREST_LIST (MEM_ID, MOVIE_NO) VALUES('" + _parent.GetLoginId() + "'," + selected_movie_no + ")";
-                    Console.WriteLine(sql2);
+                        Cmd.CommandText = sql2;
+                        Cmd.ExecuteNonQuery();
 
-                    Cmd.CommandText = sql2;
-                    Cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("관심리스트에 등록되었습니다!");                        
+                        MessageBox.Show("관심리스트에 등록되었습니다!");                        
                       
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
