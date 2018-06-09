@@ -59,6 +59,8 @@ namespace DB_Project_Cinema
             {
                 Console.WriteLine(ex.ToString());
             }
+            CinemaProgram cp = new CinemaProgram();
+            this.Parent.Controls.Remove(this);
         }
 
         private void CustResidentTextbox_KeyPress(object sender, KeyPressEventArgs e)
