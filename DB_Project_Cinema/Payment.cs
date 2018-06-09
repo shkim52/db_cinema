@@ -19,6 +19,8 @@ namespace DB_Project_Cinema
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
+
+
         }
 
         
