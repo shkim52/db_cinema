@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SCR_NM = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.SEAT_CNT = new System.Windows.Forms.Label();
+            this.LeftSeatCnt = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TOT_SEAT_CNT = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -98,16 +98,16 @@
             this.label3.Text = "남은 좌석 : ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // SEAT_CNT
+            // LeftSeatCnt
             // 
-            this.SEAT_CNT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SEAT_CNT.Location = new System.Drawing.Point(1002, 47);
-            this.SEAT_CNT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SEAT_CNT.Name = "SEAT_CNT";
-            this.SEAT_CNT.Size = new System.Drawing.Size(53, 31);
-            this.SEAT_CNT.TabIndex = 16;
-            this.SEAT_CNT.Text = "400";
-            this.SEAT_CNT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LeftSeatCnt.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LeftSeatCnt.Location = new System.Drawing.Point(1002, 47);
+            this.LeftSeatCnt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LeftSeatCnt.Name = "LeftSeatCnt";
+            this.LeftSeatCnt.Size = new System.Drawing.Size(53, 31);
+            this.LeftSeatCnt.TabIndex = 16;
+            this.LeftSeatCnt.Text = "400";
+            this.LeftSeatCnt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TOT_SEAT_CNT);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.SEAT_CNT);
+            this.Controls.Add(this.LeftSeatCnt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SCR_NM);
             this.Controls.Add(this.label1);
@@ -225,7 +225,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label SCR_NM;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label SEAT_CNT;
+        private System.Windows.Forms.Label LeftSeatCnt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label TOT_SEAT_CNT;
         private System.Windows.Forms.Panel panel1;

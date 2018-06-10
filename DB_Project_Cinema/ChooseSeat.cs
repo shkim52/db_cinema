@@ -52,10 +52,10 @@ namespace DB_Project_Cinema
             {
                 //  상영관에 맞는 상영관출력!
                 screen = Convert.ToInt32(show_schedule.Substring(8, 1));
-                string sql = "SELECT * FROM SCREEN WHERE SCR_NO=" +screen;
+                string sql = "SELECT * FROM SCREEN WHERE SCR_NO=" + screen;
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
                     this.SCR_NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
@@ -63,22 +63,43 @@ namespace DB_Project_Cinema
 
                 }
 
-                string sql2 = "SELECT * FROM SEAT WHERE SCR_NO=" +screen;
+                string sql2 = "SELECT * FROM SEAT WHERE SCR_NO=" + screen;
                 OracleCommand Comm2 = new OracleCommand(sql2, connect.con);
-                OracleDataReader reader2 = Comm.ExecuteReader();
-                
+                OracleDataReader reader2 = Comm2.ExecuteReader();
+
                 int index = 0;
-                
-                while(reader2.Read())
+
+                while (reader2.Read())
                 {
-                    exist_seat[index++] = Convert.ToString(reader["SEAT_NO"]);
+                    exist_seat[index++] = Convert.ToString(reader2["SEAT_NO"]);
                 }
 
-            } 
+                string sql3 = "SELECT * FROM SEAT_USE WHERE SHOW_SCHE_NO='" + show_schedule + "' AND SEAT_USE_STAT='Y'";
+                OracleCommand Comm3 = new OracleCommand(sql3, connect.con);
+                OracleDataReader reader3 = Comm3.ExecuteReader();
+
+                int index2 = 0;
+
+                while (reader3.Read())
+                {
+                    used_seat[index2++] = Convert.ToString(reader3["SEAT_NO"]);
+                }
+
+                string sql4 = "SELECT COUNT(*) FROM SEAT_USE WHERE SHOW_SCHE_NO='" + show_schedule + "' AND SEAT_USE_STAT='Y'";
+                OracleCommand Comm4 = new OracleCommand(sql4, connect.con);
+                OracleDataReader reader4 = Comm4.ExecuteReader();
+
+                while (reader4.Read())
+                {
+                    this.LeftSeatCnt.Text = (int.Parse(TOT_SEAT_CNT.Text) - reader4.GetInt32(reader4.GetOrdinal("COUNT(*)"))).ToString();
+                }
+            }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
+
+            
         }
 
         public string Get_SchNo()
@@ -126,33 +147,43 @@ namespace DB_Project_Cinema
                 for (int j = 0; j < 20; j++)
                 {
                     seat[i, j] = new Button();
-                    //seat[i, j].Name = (i * 20 + (j + 1)).ToString();
                     seat[i, j].Size = new Size(18, 18);
                     seat[i, j].Location = new Point(20 * (j + 1), 20 * (i + 1));
                     seat[i, j].FlatStyle = FlatStyle.Flat;
                     seat[i, j].BackColor = Color.Gray;
                     seat[i, j].FlatAppearance.BorderSize = 0;
                     seat[i, j].Click += new EventHandler(Seat_Click);
+                    //seat[i, j].Name = (i * 20 + (j + 1)).ToString();
                     
-                    if (screen == 1)
+                    //좌석 이름 설정
+                    for (int k = 0; k < 10; k++)
                     {
-                        seat[i, j].Name = (i * 20 + (j + 1)).ToString();
-                    }
-                    else if (screen == 2)
-                    {
-                        seat[i, j].Name = ((i * 20 + (j + 1))+380).ToString();
-                    }
-                    else if (screen == 3)
-                    {
-                        seat[i, j].Name = ((i * 20 + (j + 1)) + 760).ToString();
-                    }
-                    else if (screen == 4)
-                    {
-                        seat[i, j].Name = ((i * 20 + (j + 1)) + 1140).ToString();
+                        if (screen == (k + 1))
+                        {
+                            seat[i, j].Name = (i * 20 + (j + 1)+380*k).ToString();
+                        }
                     }
 
-
-                    //if(seat[i,j].Name)
+                    if (used_seat.Contains(seat[i, j].Name))
+                    {
+                        seat[i, j].BackColor = Color.LightGray;
+                        seat[i, j].Enabled = false;
+                    }
+                    else
+                    {
+                        seat[i, j].BackColor = Color.Gray;
+                        seat[i, j].Enabled = true;
+                    }
+                
+                    if(!exist_seat.Contains(seat[i, j].Name))
+                    {
+                        seat[i, j].Visible = false;
+                    }
+                    else
+                    {
+                        seat[i, j].Visible = true;
+                    }
+                
                     panel1.Controls.Add(seat[i, j]);
                 }
             }
