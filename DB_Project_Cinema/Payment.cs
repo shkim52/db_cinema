@@ -17,10 +17,17 @@ namespace DB_Project_Cinema
     {
         private Connection connect;
         private string[] Tel_NM = new string[10];
+        private string telnm;
         private string member;
         private string show_schedule;
+        private int movieno;
+        private int bk_seatcnt;
+        private int seatprice;
+        private int savepoint;
+        private int usepoint;
+        private string payway;
 
-        public Payment(string mem_id, string schedule_no)
+        public Payment(string mem_id, string schedule_no, int bk_seat_cnt)
         {
             InitializeComponent();
             connect = new Connection();
@@ -28,11 +35,35 @@ namespace DB_Project_Cinema
 
             member = mem_id;
             show_schedule = schedule_no;
+            bk_seatcnt = bk_seat_cnt;
 
+            get_sche_info();
             TelNM_View();
             Point_View();
-           
         
+        }
+
+        private void get_sche_info()
+        {
+            try
+            {
+                string sql = "SELECT * FROM SH_SCHE WHERE SHOW_SCHE_NO='"+show_schedule+"'";
+
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    movieno = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
+                    seatprice = reader.GetInt32(reader.GetOrdinal("SEAT_PRICE"));
+                }
+
+                 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }     
         }
 
        
@@ -56,6 +87,8 @@ namespace DB_Project_Cinema
                 {
                     TelNM.Items.Add(Tel_NM[i]);
                 }
+
+                telnm = TelNM.Text;
             }
             catch (Exception ex)
             {
@@ -90,7 +123,7 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                     this.SavePoint.Text = reader.GetInt32(reader.GetOrdinal("SAVE_POINT")).ToString();
-                 
+                    savepoint = Convert.ToInt32(SavePoint.Text);
                 }
             }
             catch (Exception ex)
@@ -105,12 +138,17 @@ namespace DB_Project_Cinema
             {
                 MessageBox.Show("1000Point 이상부터 사용 가능합니다!");
             }
+            else
+            {
+                usepoint = Convert.ToInt32(UsePoint.Text);
+            }
         }
 
         private void CreditCard_Click(object sender, EventArgs e)
         {
             if (CreditCard.Checked)
             {
+                payway = "카드 결제";
                 AccountTransfer.Enabled = false;
                 BankCategory.Enabled = false;
                 AccountNumber.Enabled = false;
@@ -131,6 +169,7 @@ namespace DB_Project_Cinema
         {
             if (AccountTransfer.Checked)
             {
+                payway = "계좌 이체";
                 CreditCard.Enabled = false;
                 CardCategory.Enabled = false;
                 CardNumber.Enabled = false;
@@ -185,6 +224,11 @@ namespace DB_Project_Cinema
             {
                 MessageBox.Show("계좌 검증이 완료되었습니다!");
             }
+        }
+
+        private void PaymentButton_Click(object sender, EventArgs e)
+        {
+
         }
         
     }

@@ -27,6 +27,7 @@ namespace DB_Project_Cinema
 
         private string member;
         private string show_schedule;
+        private int screen;
 
         public ChooseSeat(string mem_id, string schedule_no)
         {
@@ -36,8 +37,8 @@ namespace DB_Project_Cinema
 
             member = mem_id;
             show_schedule = schedule_no;
+            
 
-            ChooseNumber.Text = "1";
         }
 
         private void ChooseSeat_Load(object sender, EventArgs e)
@@ -47,12 +48,11 @@ namespace DB_Project_Cinema
             try
             {
                 //  상영관에 맞는 상영관출력!
-
-                int screen = Convert.ToInt32(show_schedule.Substring(7, 1));
-                string sql = "SELECT * FROM SCREEN WHERE SCR_NO=" + screen;
+                screen = Convert.ToInt32(show_schedule.Substring(8, 1));
+                string sql = "SELECT * FROM SCREEN WHERE SCR_NO=" +screen;
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
-
+                
                 while (reader.Read())
                 {
                     this.SCR_NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
@@ -65,10 +65,16 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
         }
+
         public string Get_SchNo()
         {
             return show_schedule;
         }
+        public int Get_BkSeatCnt()
+        {
+            return chosen_seat_cnt;
+        }
+
 
         public void Seat_View()
         {

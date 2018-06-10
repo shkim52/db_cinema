@@ -323,6 +323,7 @@
             this.PaymentButton.TabIndex = 77;
             this.PaymentButton.Text = "v 결제하기";
             this.PaymentButton.UseVisualStyleBackColor = false;
+            this.PaymentButton.Click += new System.EventHandler(this.PaymentButton_Click);
             // 
             // TelNM
             // 
@@ -332,7 +333,6 @@
             this.TelNM.Name = "TelNM";
             this.TelNM.Size = new System.Drawing.Size(208, 33);
             this.TelNM.TabIndex = 78;
-            this.TelNM.Text = "SKT";
             // 
             // label4
             // 

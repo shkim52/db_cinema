@@ -182,7 +182,7 @@
             this.ChooseNumber.Name = "ChooseNumber";
             this.ChooseNumber.Size = new System.Drawing.Size(76, 33);
             this.ChooseNumber.TabIndex = 23;
-            this.ChooseNumber.Text = "0";
+            this.ChooseNumber.Text = "1";
             // 
             // panel2
             // 
