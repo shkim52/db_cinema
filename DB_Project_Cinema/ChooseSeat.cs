@@ -20,6 +20,9 @@ namespace DB_Project_Cinema
 
         private Button[,] seat = new Button[19, 20];
 
+        private string[] used_seat = new string[500];
+        private string[] exist_seat = new string[500];
+
         private int chosen_seat_cnt = 0;
         private string[] chosen_seat = new string[20];
         private int cnt = 0;
@@ -59,6 +62,18 @@ namespace DB_Project_Cinema
                     this.TOT_SEAT_CNT.Text = reader.GetDecimal(reader.GetOrdinal("SCR_SEAT_CNT")).ToString();
 
                 }
+
+                string sql2 = "SELECT * FROM SEAT WHERE SCR_NO=" +screen;
+                OracleCommand Comm2 = new OracleCommand(sql2, connect.con);
+                OracleDataReader reader2 = Comm.ExecuteReader();
+                
+                int index = 0;
+                
+                while(reader2.Read())
+                {
+                    exist_seat[index++] = Convert.ToString(reader["SEAT_NO"]);
+                }
+
             } 
             catch (Exception ex)
             {
@@ -111,14 +126,33 @@ namespace DB_Project_Cinema
                 for (int j = 0; j < 20; j++)
                 {
                     seat[i, j] = new Button();
-                    seat[i, j].Name = (i * 20 + (j + 1)).ToString();
+                    //seat[i, j].Name = (i * 20 + (j + 1)).ToString();
                     seat[i, j].Size = new Size(18, 18);
                     seat[i, j].Location = new Point(20 * (j + 1), 20 * (i + 1));
                     seat[i, j].FlatStyle = FlatStyle.Flat;
                     seat[i, j].BackColor = Color.Gray;
                     seat[i, j].FlatAppearance.BorderSize = 0;
                     seat[i, j].Click += new EventHandler(Seat_Click);
+                    
+                    if (screen == 1)
+                    {
+                        seat[i, j].Name = (i * 20 + (j + 1)).ToString();
+                    }
+                    else if (screen == 2)
+                    {
+                        seat[i, j].Name = ((i * 20 + (j + 1))+380).ToString();
+                    }
+                    else if (screen == 3)
+                    {
+                        seat[i, j].Name = ((i * 20 + (j + 1)) + 760).ToString();
+                    }
+                    else if (screen == 4)
+                    {
+                        seat[i, j].Name = ((i * 20 + (j + 1)) + 1140).ToString();
+                    }
 
+
+                    //if(seat[i,j].Name)
                     panel1.Controls.Add(seat[i, j]);
                 }
             }
