@@ -46,7 +46,7 @@ namespace DB_Project_Cinema
 
         private void ChooseSeat_Load(object sender, EventArgs e)
         {
-            Seat_View();
+            
 
             try
             {
@@ -98,6 +98,8 @@ namespace DB_Project_Cinema
             {
                 Console.WriteLine(ex.ToString());
             }
+
+            Seat_View();
 
             
         }
@@ -153,29 +155,32 @@ namespace DB_Project_Cinema
                     seat[i, j].BackColor = Color.Gray;
                     seat[i, j].FlatAppearance.BorderSize = 0;
                     seat[i, j].Click += new EventHandler(Seat_Click);
+                    seat[i, j].Visible = true;
                     //seat[i, j].Name = (i * 20 + (j + 1)).ToString();
                     
                     //좌석 이름 설정
                     for (int k = 0; k < 10; k++)
                     {
-                        if (screen == (k + 1))
+                       if (screen == (k + 1))
                         {
-                            seat[i, j].Name = (i * 20 + (j + 1)+380*k).ToString();
+                            seat[i, j].Name = (i * 20 + (j + 1)+380*0).ToString();
                         }
                     }
 
                     if (used_seat.Contains(seat[i, j].Name))
                     {
+                        seat[i, j].Visible=true;
                         seat[i, j].BackColor = Color.LightGray;
                         seat[i, j].Enabled = false;
                     }
                     else
                     {
+                        seat[i, j].Visible = true;
                         seat[i, j].BackColor = Color.Gray;
                         seat[i, j].Enabled = true;
                     }
                 
-                    if(!exist_seat.Contains(seat[i, j].Name))
+                   if(!exist_seat.Contains(seat[i, j].Name))
                     {
                         seat[i, j].Visible = false;
                     }
@@ -186,6 +191,7 @@ namespace DB_Project_Cinema
                 
                     panel1.Controls.Add(seat[i, j]);
                 }
+                
             }
 
             Label choose = new Label();
