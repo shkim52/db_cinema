@@ -14,23 +14,13 @@ namespace DB_Project_Cinema
 {
     public partial class JoinCust : UserControl
     {
-        private static JoinCust _instance;
+        CinemaProgram _parent;
         private Connection connect;
-        public static JoinCust Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new JoinCust();
-                }
-                return _instance;
-            }
-        }
 
-        public JoinCust()
+        public JoinCust(CinemaProgram parent)
         {
             InitializeComponent();
+            _parent = parent;
         }
 
         private void JoinCust_Load(object sender, EventArgs e)
@@ -43,7 +33,7 @@ namespace DB_Project_Cinema
         {
             try
             {
-                if (CustNameTextbox.Text == "" || CustResidentTextbox.Text == "" || CustHPNumTextbox.Text == "" || CustPWTextbox.Text=="")
+                if (CustNameTextbox.Text == "" || CustResidentTextbox.Text == "" || CustHPNumTextbox.Text == "" || CustPWTextbox.Text == "")
                 {
                     MessageBox.Show("모든 정보를 입력해주세요.");
                 }
@@ -51,17 +41,17 @@ namespace DB_Project_Cinema
                 {
                     MessageBox.Show("생년월일 6자리를 입력해주세요.");
                 }
+                else if (CustHPNumTextbox.Text.Substring(0, 2) != "01")
+                {
+                    MessageBox.Show("핸드폰 번호의 입력이 잘못되었습니다.");
+                }
                 else
                 {
                     MessageBox.Show("임시 ID는 티켓예매번호이며 티켓예매번호와 비밀번호를 잊어버리면 예매확인이 어려우니 양해부탁드립니다!");
+                    this.Parent.Controls.Remove(this);
+                    this.Controls.Remove(this);
+                    _parent.load_ticketPage(CustNameTextbox.Text, CustResidentTextbox.Text, Convert.ToInt32(CustHPNumTextbox.Text), CustPWTextbox.Text);
                 }
-
-                CinemaProgram cp = new CinemaProgram();
-                this.Parent.Controls.Remove(this);
-                ChooseSeat cs = new ChooseSeat("", new SelectShowTime().Get_SchNo());
-                cp.mainPanel.Controls.Add(cs);
-                cs.Dock = DockStyle.Fill;
-                cs.BringToFront();
             }
             catch (Exception ex)
             {
@@ -71,7 +61,7 @@ namespace DB_Project_Cinema
 
         private void CustResidentTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!(char.IsDigit(e.KeyChar)))
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
             {
                 e.Handled = true;
                 MessageBox.Show("숫자만 입력해주세요!");
@@ -80,7 +70,7 @@ namespace DB_Project_Cinema
 
         private void CustHPNumTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsDigit(e.KeyChar)))
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
             {
                 e.Handled = true;
                 MessageBox.Show("숫자만 입력해주세요!");
