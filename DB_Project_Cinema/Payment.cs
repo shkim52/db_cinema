@@ -135,7 +135,7 @@ namespace DB_Project_Cinema
 
         private void PhoneNumber_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsDigit(e.KeyChar)))
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
             {
                 e.Handled = true;
                 MessageBox.Show("숫자만 입력해주세요!");
