@@ -49,7 +49,7 @@ namespace DB_Project_Cinema
 
             showtime_page.BringToFront();
             showtime_page.Dock = DockStyle.None;
-
+            Console.WriteLine(Cust_Pw + "AAAAAAAA");
             PaymentPageButton.Visible = false;
             ChooseSeatPageButton.Visible = true;
             BackToChooseSeatButton.Visible = false;
@@ -106,19 +106,6 @@ namespace DB_Project_Cinema
             if (showtime_page.Get_SchNo() == null)
             {
                 MessageBox.Show("상영일자 혹은 상영시간이 선택되지 않았습니다.");
-            }
-            else if (_parent.GetLoginId() == String.Empty)
-            {
-                if (MessageBox.Show("비회원으로 예매 하시겠습니까?", "", MessageBoxButtons.YesNo)== DialogResult.Yes)
-                {
-                    _parent.mainPanel.Controls.Add(JoinCust.Instance);
-                    JoinCust.Instance.Dock = DockStyle.Fill;
-                    JoinCust.Instance.BringToFront();
-                }
-                else
-                {
-                    MessageBox.Show("회원으로 로그인 해주세요!");
-                }
             }
             else
             {

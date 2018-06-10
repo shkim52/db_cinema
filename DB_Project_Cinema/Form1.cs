@@ -106,14 +106,14 @@ namespace DB_Project_Cinema
             {
                 if (MessageBox.Show("비회원으로 예매 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    mainPanel.Controls.Add(JoinCust.Instance);
-                    JoinCust.Instance.Dock = DockStyle.Fill;
-                    JoinCust.Instance.BringToFront();
+                    JoinCust jc = new JoinCust(this);
+                    mainPanel.Controls.Add(jc);
+                    jc.Dock = DockStyle.Fill;
+                    jc.BringToFront();
                 }
                 else
                 {
                     MessageBox.Show("회원으로 로그인 해주세요!");
-
                 }
             }
             else
@@ -123,6 +123,7 @@ namespace DB_Project_Cinema
                 tp.Dock = DockStyle.Fill;
                 tp.BringToFront();
             }
+
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = Color.DimGray;
@@ -134,7 +135,17 @@ namespace DB_Project_Cinema
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
         }
-
+        public void load_ticketPage(string cust_name, string cust_sid, int cust_tel, string cust_pw)
+        {
+            TicketingPage tp = new TicketingPage(this);
+            mainPanel.Controls.Add(tp);
+            tp.Dock = DockStyle.Fill;
+            tp.BringToFront();
+            tp.SetCustNM(cust_name);
+            tp.SetCustSid(cust_sid);
+            tp.SetCustTel(cust_tel);
+            tp.SetCustPw(cust_pw);
+        }
         private void ScreenInfoButton_Click(object sender, EventArgs e)
         {
             if (mainPanel.Controls.Contains(ScreenInfo.Instance))
