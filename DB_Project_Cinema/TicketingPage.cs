@@ -49,7 +49,6 @@ namespace DB_Project_Cinema
 
             showtime_page.BringToFront();
             showtime_page.Dock = DockStyle.None;
-            Console.WriteLine(Cust_Pw + "AAAAAAAA");
             PaymentPageButton.Visible = false;
             ChooseSeatPageButton.Visible = true;
             BackToChooseSeatButton.Visible = false;
