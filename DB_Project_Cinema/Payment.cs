@@ -98,9 +98,85 @@ namespace DB_Project_Cinema
             }
         }
 
-       
+        private void CreditCard_Click(object sender, EventArgs e)
+        {
+            if (CreditCard.Checked)
+            {
+                AccountTransfer.Enabled = false;
+                BankCategory.Enabled = false;
+                AccountNumber.Enabled = false;
+                AccountPW.Enabled = false;
+                AccountVerification.Enabled = false;
+            }
+            else
+            {
+                AccountTransfer.Enabled = true;
+                BankCategory.Enabled = true;
+                AccountNumber.Enabled = true;
+                AccountPW.Enabled = true;
+                AccountVerification.Enabled = true;
+            }
+        }
 
+        private void AccountTransfer_Click(object sender, EventArgs e)
+        {
+            if (AccountTransfer.Checked)
+            {
+                CreditCard.Enabled = false;
+                CardCategory.Enabled = false;
+                CardNumber.Enabled = false;
+                CardPW.Enabled = false;
+                ApprovalRequest.Enabled = false;
+            }
+            else
+            {
+                CreditCard.Enabled = true;
+                CardCategory.Enabled = true;
+                CardNumber.Enabled = true;
+                CardPW.Enabled = true;
+                ApprovalRequest.Enabled = true;
+            }
+        }
 
+        private void ApprovalRequest_Click(object sender, EventArgs e)
+        {
+            if (CardNumber.Text == "" || CardPW.Text == "")
+            {
+                MessageBox.Show("모든 정보를 입력해주세요!");
+            }
+            else if (CardNumber.Text.Length != 16)
+            {
+                MessageBox.Show("카드번호 16자리를 입력하세요!");
+            }
+            else if (CardPW.Text.Length != 4)
+            {
+                MessageBox.Show("비밀번호 4자리를 입력하세요!");
+            }
+            else
+            {
+                MessageBox.Show("승인번호가 발급되었습니다!");
+            }
+        }
+
+        private void AccountVerification_Click(object sender, EventArgs e)
+        {
+            if (AccountNumber.Text == "" || AccountPW.Text == "")
+            {
+                MessageBox.Show("모든 정보를 입력해주세요!");
+            }
+            else if (AccountNumber.Text.Length < 11)
+            {
+                MessageBox.Show("계좌번호를 정확히 입력하세요!");
+            }
+            else if (AccountPW.Text.Length != 4)
+            {
+                MessageBox.Show("비밀번호 4자리를 입력하세요!");
+            }
+            else
+            {
+                MessageBox.Show("계좌 검증이 완료되었습니다!");
+            }
+        }
         
     }
 }

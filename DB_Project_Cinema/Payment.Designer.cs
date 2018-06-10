@@ -39,9 +39,9 @@
             this.SavePoint = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.CardNumber = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.CardPW = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -56,16 +56,16 @@
             this.PhoneVerification = new System.Windows.Forms.Button();
             this.CreditCard = new System.Windows.Forms.CheckBox();
             this.AccountTransfer = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CardCategory = new System.Windows.Forms.ComboBox();
+            this.BankCategory = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AccountNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AccountPW = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ApprovalRequest = new System.Windows.Forms.Button();
+            this.AccountVerification = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -194,14 +194,15 @@
             this.label15.Text = "카드번호:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox6
+            // CardNumber
             // 
-            this.textBox6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox6.Location = new System.Drawing.Point(729, 280);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(220, 31);
-            this.textBox6.TabIndex = 63;
+            this.CardNumber.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CardNumber.Location = new System.Drawing.Point(729, 280);
+            this.CardNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.CardNumber.MaxLength = 16;
+            this.CardNumber.Name = "CardNumber";
+            this.CardNumber.Size = new System.Drawing.Size(220, 31);
+            this.CardNumber.TabIndex = 63;
             // 
             // label17
             // 
@@ -214,14 +215,15 @@
             this.label17.Text = "비밀번호:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox7
+            // CardPW
             // 
-            this.textBox7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox7.Location = new System.Drawing.Point(729, 317);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(220, 31);
-            this.textBox7.TabIndex = 65;
+            this.CardPW.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CardPW.Location = new System.Drawing.Point(729, 317);
+            this.CardPW.Margin = new System.Windows.Forms.Padding(2);
+            this.CardPW.MaxLength = 4;
+            this.CardPW.Name = "CardPW";
+            this.CardPW.Size = new System.Drawing.Size(220, 31);
+            this.CardPW.TabIndex = 65;
             // 
             // label16
             // 
@@ -347,6 +349,7 @@
             // 
             this.TelNo.Location = new System.Drawing.Point(304, 248);
             this.TelNo.Margin = new System.Windows.Forms.Padding(2);
+            this.TelNo.MaxLength = 11;
             this.TelNo.Name = "TelNo";
             this.TelNo.Size = new System.Drawing.Size(208, 28);
             this.TelNo.TabIndex = 80;
@@ -376,6 +379,7 @@
             this.CreditCard.TabIndex = 82;
             this.CreditCard.Text = "신용카드";
             this.CreditCard.UseVisualStyleBackColor = true;
+            this.CreditCard.Click += new System.EventHandler(this.CreditCard_Click);
             // 
             // AccountTransfer
             // 
@@ -386,12 +390,13 @@
             this.AccountTransfer.TabIndex = 83;
             this.AccountTransfer.Text = "계좌이체";
             this.AccountTransfer.UseVisualStyleBackColor = true;
+            this.AccountTransfer.Click += new System.EventHandler(this.AccountTransfer_Click);
             // 
-            // comboBox1
+            // CardCategory
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CardCategory.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CardCategory.FormattingEnabled = true;
+            this.CardCategory.Items.AddRange(new object[] {
             "신한카드",
             "KB국민카드",
             "NH농협카드",
@@ -400,27 +405,27 @@
             "우리카드",
             "하나카드",
             "롯데카드"});
-            this.comboBox1.Location = new System.Drawing.Point(729, 240);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(220, 33);
-            this.comboBox1.TabIndex = 84;
-            this.comboBox1.Text = "신한카드";
+            this.CardCategory.Location = new System.Drawing.Point(729, 240);
+            this.CardCategory.Name = "CardCategory";
+            this.CardCategory.Size = new System.Drawing.Size(220, 33);
+            this.CardCategory.TabIndex = 84;
+            this.CardCategory.Text = "신한카드";
             // 
-            // comboBox2
+            // BankCategory
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.BankCategory.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BankCategory.FormattingEnabled = true;
+            this.BankCategory.Items.AddRange(new object[] {
             "신한은행",
             "KB국민은행",
             "NH농협은행",
             "우리은행",
             "KEB하나은행"});
-            this.comboBox2.Location = new System.Drawing.Point(729, 425);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(220, 33);
-            this.comboBox2.TabIndex = 90;
-            this.comboBox2.Text = "신한은행";
+            this.BankCategory.Location = new System.Drawing.Point(729, 425);
+            this.BankCategory.Name = "BankCategory";
+            this.BankCategory.Size = new System.Drawing.Size(220, 33);
+            this.BankCategory.TabIndex = 90;
+            this.BankCategory.Text = "신한은행";
             // 
             // label6
             // 
@@ -444,14 +449,15 @@
             this.label7.Text = "게좌번호:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // AccountNumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(729, 465);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 31);
-            this.textBox1.TabIndex = 92;
+            this.AccountNumber.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AccountNumber.Location = new System.Drawing.Point(729, 465);
+            this.AccountNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.AccountNumber.MaxLength = 15;
+            this.AccountNumber.Name = "AccountNumber";
+            this.AccountNumber.Size = new System.Drawing.Size(220, 31);
+            this.AccountNumber.TabIndex = 92;
             // 
             // label8
             // 
@@ -464,14 +470,15 @@
             this.label8.Text = "비밀번호:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox2
+            // AccountPW
             // 
-            this.textBox2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(729, 502);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 31);
-            this.textBox2.TabIndex = 94;
+            this.AccountPW.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AccountPW.Location = new System.Drawing.Point(729, 502);
+            this.AccountPW.Margin = new System.Windows.Forms.Padding(2);
+            this.AccountPW.MaxLength = 4;
+            this.AccountPW.Name = "AccountPW";
+            this.AccountPW.Size = new System.Drawing.Size(220, 31);
+            this.AccountPW.TabIndex = 94;
             // 
             // label12
             // 
@@ -484,49 +491,51 @@
             this.label12.TabIndex = 95;
             this.label12.Text = "* 적립포인트는 1000Point 이상부터 사용할 수 있습니다.";
             // 
-            // button1
+            // ApprovalRequest
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(833, 368);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 33);
-            this.button1.TabIndex = 96;
-            this.button1.Text = "승인요청";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ApprovalRequest.BackColor = System.Drawing.Color.LightGray;
+            this.ApprovalRequest.FlatAppearance.BorderSize = 0;
+            this.ApprovalRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApprovalRequest.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ApprovalRequest.Location = new System.Drawing.Point(833, 368);
+            this.ApprovalRequest.Margin = new System.Windows.Forms.Padding(2);
+            this.ApprovalRequest.Name = "ApprovalRequest";
+            this.ApprovalRequest.Size = new System.Drawing.Size(116, 33);
+            this.ApprovalRequest.TabIndex = 96;
+            this.ApprovalRequest.Text = "승인요청";
+            this.ApprovalRequest.UseVisualStyleBackColor = false;
+            this.ApprovalRequest.Click += new System.EventHandler(this.ApprovalRequest_Click);
             // 
-            // button2
+            // AccountVerification
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(833, 554);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 33);
-            this.button2.TabIndex = 97;
-            this.button2.Text = "계좌검증";
-            this.button2.UseVisualStyleBackColor = false;
+            this.AccountVerification.BackColor = System.Drawing.Color.LightGray;
+            this.AccountVerification.FlatAppearance.BorderSize = 0;
+            this.AccountVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccountVerification.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AccountVerification.Location = new System.Drawing.Point(833, 554);
+            this.AccountVerification.Margin = new System.Windows.Forms.Padding(2);
+            this.AccountVerification.Name = "AccountVerification";
+            this.AccountVerification.Size = new System.Drawing.Size(116, 33);
+            this.AccountVerification.TabIndex = 97;
+            this.AccountVerification.Text = "계좌검증";
+            this.AccountVerification.UseVisualStyleBackColor = false;
+            this.AccountVerification.Click += new System.EventHandler(this.AccountVerification_Click);
             // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AccountVerification);
+            this.Controls.Add(this.ApprovalRequest);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AccountNumber);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.AccountPW);
+            this.Controls.Add(this.BankCategory);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CardCategory);
             this.Controls.Add(this.AccountTransfer);
             this.Controls.Add(this.CreditCard);
             this.Controls.Add(this.PhoneVerification);
@@ -545,9 +554,9 @@
             this.Controls.Add(this.SavePoint);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.CardNumber);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.CardPW);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
@@ -576,9 +585,9 @@
         private System.Windows.Forms.Label SavePoint;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox CardNumber;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox CardPW;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
@@ -593,16 +602,16 @@
         private System.Windows.Forms.Button PhoneVerification;
         private System.Windows.Forms.CheckBox CreditCard;
         private System.Windows.Forms.CheckBox AccountTransfer;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox CardCategory;
+        private System.Windows.Forms.ComboBox BankCategory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AccountNumber;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox AccountPW;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ApprovalRequest;
+        private System.Windows.Forms.Button AccountVerification;
 
     }
 }
