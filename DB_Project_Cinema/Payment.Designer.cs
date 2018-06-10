@@ -52,10 +52,10 @@
             this.PaymentButton = new System.Windows.Forms.Button();
             this.TelNM = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TELNO = new System.Windows.Forms.TextBox();
-            this.SearchButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.TelNo = new System.Windows.Forms.TextBox();
+            this.PhoneVerification = new System.Windows.Forms.Button();
+            this.CreditCard = new System.Windows.Forms.CheckBox();
+            this.AccountTransfer = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +63,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -151,11 +154,12 @@
             // UsePoint
             // 
             this.UsePoint.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UsePoint.Location = new System.Drawing.Point(368, 456);
+            this.UsePoint.Location = new System.Drawing.Point(373, 462);
             this.UsePoint.Margin = new System.Windows.Forms.Padding(2);
             this.UsePoint.Name = "UsePoint";
             this.UsePoint.Size = new System.Drawing.Size(92, 31);
             this.UsePoint.TabIndex = 56;
+            this.UsePoint.TextChanged += new System.EventHandler(this.UsePoint_TextChanged);
             // 
             // SavePoint
             // 
@@ -322,11 +326,6 @@
             // 
             this.TelNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.TelNM.FormattingEnabled = true;
-            this.TelNM.Items.AddRange(new object[] {
-            "SKT",
-            "KT",
-            "LG U+",
-            "알뜰폰"});
             this.TelNM.Location = new System.Drawing.Point(304, 191);
             this.TelNM.Name = "TelNM";
             this.TelNM.Size = new System.Drawing.Size(208, 33);
@@ -344,63 +343,68 @@
             this.label4.Text = "휴대폰 번호:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // TELNO
+            // TelNo
             // 
-            this.TELNO.Location = new System.Drawing.Point(304, 248);
-            this.TELNO.Margin = new System.Windows.Forms.Padding(2);
-            this.TELNO.Name = "TELNO";
-            this.TELNO.Size = new System.Drawing.Size(208, 28);
-            this.TELNO.TabIndex = 80;
+            this.TelNo.Location = new System.Drawing.Point(304, 248);
+            this.TelNo.Margin = new System.Windows.Forms.Padding(2);
+            this.TelNo.Name = "TelNo";
+            this.TelNo.Size = new System.Drawing.Size(208, 28);
+            this.TelNo.TabIndex = 80;
+            this.TelNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelNo_KeyPress_1);
             // 
-            // SearchButton
+            // PhoneVerification
             // 
-            this.SearchButton.BackColor = System.Drawing.Color.LightGray;
-            this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchButton.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SearchButton.Location = new System.Drawing.Point(396, 298);
-            this.SearchButton.Margin = new System.Windows.Forms.Padding(2);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(116, 33);
-            this.SearchButton.TabIndex = 81;
-            this.SearchButton.Text = "휴대폰 인증";
-            this.SearchButton.UseVisualStyleBackColor = false;
+            this.PhoneVerification.BackColor = System.Drawing.Color.LightGray;
+            this.PhoneVerification.FlatAppearance.BorderSize = 0;
+            this.PhoneVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PhoneVerification.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.PhoneVerification.Location = new System.Drawing.Point(396, 298);
+            this.PhoneVerification.Margin = new System.Windows.Forms.Padding(2);
+            this.PhoneVerification.Name = "PhoneVerification";
+            this.PhoneVerification.Size = new System.Drawing.Size(116, 33);
+            this.PhoneVerification.TabIndex = 81;
+            this.PhoneVerification.Text = "휴대폰 인증";
+            this.PhoneVerification.UseVisualStyleBackColor = false;
+            this.PhoneVerification.Click += new System.EventHandler(this.PhoneVerification_Click);
             // 
-            // checkBox1
+            // CreditCard
             // 
-            this.checkBox1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox1.Location = new System.Drawing.Point(614, 187);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(137, 36);
-            this.checkBox1.TabIndex = 82;
-            this.checkBox1.Text = "신용카드";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CreditCard.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CreditCard.Location = new System.Drawing.Point(614, 187);
+            this.CreditCard.Name = "CreditCard";
+            this.CreditCard.Size = new System.Drawing.Size(137, 36);
+            this.CreditCard.TabIndex = 82;
+            this.CreditCard.Text = "신용카드";
+            this.CreditCard.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // AccountTransfer
             // 
-            this.checkBox2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.checkBox2.Location = new System.Drawing.Point(603, 380);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(137, 30);
-            this.checkBox2.TabIndex = 83;
-            this.checkBox2.Text = "계좌이체";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.AccountTransfer.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.AccountTransfer.Location = new System.Drawing.Point(603, 380);
+            this.AccountTransfer.Name = "AccountTransfer";
+            this.AccountTransfer.Size = new System.Drawing.Size(137, 30);
+            this.AccountTransfer.TabIndex = 83;
+            this.AccountTransfer.Text = "계좌이체";
+            this.AccountTransfer.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "BC카드",
-            "삼성카드",
             "신한카드",
+            "KB국민카드",
+            "NH농협카드",
+            "삼성카드",
             "현대카드",
-            "KB국민카드"});
+            "우리카드",
+            "하나카드",
+            "롯데카드"});
             this.comboBox1.Location = new System.Drawing.Point(729, 240);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(220, 33);
             this.comboBox1.TabIndex = 84;
-            this.comboBox1.Text = "카드를 선택하세요";
+            this.comboBox1.Text = "신한카드";
             // 
             // comboBox2
             // 
@@ -408,14 +412,15 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "신한은행",
-            "기업은행",
-            "국민은행",
-            "우리은행"});
+            "KB국민은행",
+            "NH농협은행",
+            "우리은행",
+            "KEB하나은행"});
             this.comboBox2.Location = new System.Drawing.Point(729, 425);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(220, 33);
             this.comboBox2.TabIndex = 90;
-            this.comboBox2.Text = "은행을 선택하세요";
+            this.comboBox2.Text = "신한은행";
             // 
             // label6
             // 
@@ -468,11 +473,53 @@
             this.textBox2.Size = new System.Drawing.Size(220, 31);
             this.textBox2.TabIndex = 94;
             // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.ForeColor = System.Drawing.Color.IndianRed;
+            this.label12.Location = new System.Drawing.Point(165, 515);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(428, 31);
+            this.label12.TabIndex = 95;
+            this.label12.Text = "* 적립포인트는 1000Point 이상부터 사용할 수 있습니다.";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Location = new System.Drawing.Point(833, 368);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 33);
+            this.button1.TabIndex = 96;
+            this.button1.Text = "승인요청";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightGray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Location = new System.Drawing.Point(833, 554);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 33);
+            this.button2.TabIndex = 97;
+            this.button2.Text = "계좌검증";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
@@ -480,10 +527,10 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.TELNO);
+            this.Controls.Add(this.AccountTransfer);
+            this.Controls.Add(this.CreditCard);
+            this.Controls.Add(this.PhoneVerification);
+            this.Controls.Add(this.TelNo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TelNM);
             this.Controls.Add(this.PaymentButton);
@@ -542,10 +589,10 @@
         private System.Windows.Forms.Button PaymentButton;
         private System.Windows.Forms.ComboBox TelNM;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TELNO;
-        private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox TelNo;
+        private System.Windows.Forms.Button PhoneVerification;
+        private System.Windows.Forms.CheckBox CreditCard;
+        private System.Windows.Forms.CheckBox AccountTransfer;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
@@ -553,6 +600,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
 
     }
 }
