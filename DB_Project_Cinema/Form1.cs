@@ -102,11 +102,27 @@ namespace DB_Project_Cinema
 
         private void TicketingPageButton_Click(object sender, EventArgs e)
         {
-            TicketingPage tp = new TicketingPage(this);
-            mainPanel.Controls.Add(tp);
-            tp.Dock = DockStyle.Fill;
-            tp.BringToFront();
+            if (GetLoginId() == String.Empty)
+            {
+                if (MessageBox.Show("비회원으로 예매 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    mainPanel.Controls.Add(JoinCust.Instance);
+                    JoinCust.Instance.Dock = DockStyle.Fill;
+                    JoinCust.Instance.BringToFront();
+                }
+                else
+                {
+                    MessageBox.Show("회원으로 로그인 해주세요!");
 
+                }
+            }
+            else
+            {
+                TicketingPage tp = new TicketingPage(this);
+                mainPanel.Controls.Add(tp);
+                tp.Dock = DockStyle.Fill;
+                tp.BringToFront();
+            }
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = Color.DimGray;
