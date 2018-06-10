@@ -22,10 +22,20 @@ namespace DB_Project_Cinema
         private string show_schedule;
         private int movieno;
         private int bk_seatcnt;
+        private int seat_no;//
         private int seatprice;
         private int savepoint;
         private int usepoint;
+        private int tel_dc_rate;
+        private int total_dc_price;
+        private int total_differ_price;
         private string payway;
+        private string cust_id;//
+        private string cust_pw;
+        private string cust_nm;
+        private string cust_birth;
+        private string cust_telno;
+
 
         public Payment(string mem_id, string schedule_no, int bk_seat_cnt)
         {
@@ -38,8 +48,10 @@ namespace DB_Project_Cinema
             bk_seatcnt = bk_seat_cnt;
 
             get_sche_info();
+            get_cust_info();
             TelNM_View();
             Point_View();
+            Price_View();
         
         }
 
@@ -64,6 +76,31 @@ namespace DB_Project_Cinema
             {
                 Console.WriteLine(ex.ToString());
             }     
+        }
+
+        private void get_cust_info()
+        {
+            try
+            {
+                string sql = "SELECT * FROM CUST WHERE CUST_ID='" + cust_id + "'";
+
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
+                OracleDataReader reader = Comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cust_pw = reader.GetString(reader.GetOrdinal("CUST_PW"));
+                    cust_nm = reader.GetString(reader.GetOrdinal("CUST_NM"));
+                    cust_birth = reader.GetString(reader.GetOrdinal("CUST_BIRTH"));
+                    cust_telno = reader.GetString(reader.GetOrdinal("CUST_TELNO"));
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
        
@@ -107,7 +144,38 @@ namespace DB_Project_Cinema
 
         private void PhoneVerification_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("휴대폰 인증이 완료되었습니다!");
+            if (TelNM.Text == "" || PhoneNumber.Text == "")
+            {
+                MessageBox.Show("통신사를 선택해 주세요!");
+            }
+            else if (PhoneNumber.Text.Length < 10)
+            {
+                MessageBox.Show("휴대폰 번호를 정확히 입력해주세요!");
+            }
+            else
+            {
+                MessageBox.Show("휴대폰 인증이 완료되었습니다!");
+                try
+                {
+                    string sql = "SELECT * FROM TEL_DC WHERE TEL_NM = '" + TelNM.Text + "'";
+
+                    OracleCommand Comm = new OracleCommand(sql, connect.con);
+                    OracleDataReader reader = Comm.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        tel_dc_rate = reader.GetInt32(reader.GetOrdinal("DC_RATE"));
+                        TotalDCPrice.Text = ((seatprice * bk_seatcnt) * (tel_dc_rate * 0.01)).ToString();
+                        DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TotalDCPrice.Text)).ToString();
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+
+            }
         }
 
         private void Point_View()
@@ -132,6 +200,13 @@ namespace DB_Project_Cinema
             }
         }
 
+        private void Price_View()
+        {
+            TotalPrice.Text = (seatprice * bk_seatcnt).ToString();
+            //DifferencePrice.Text = (Convert.ToInt32(TotalPrice) - Convert.ToInt32(TotalDCPrice.Text)).ToString();
+
+        }
+
         private void UsePoint_TextChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(SavePoint.Text) < 1000)
@@ -140,7 +215,11 @@ namespace DB_Project_Cinema
             }
             else
             {
-                usepoint = Convert.ToInt32(UsePoint.Text);
+                usepoint = int.Parse(UsePoint.Text);
+                //total_dc_price = int.Parse(TotalDCPrice.Text) + usepoint;
+                //TotalDCPrice.Text = total_dc_price.ToString();
+                //total_differ_price = int.Parse(TotalPrice.Text) - int.Parse(TotalDCPrice.Text);
+                //DifferencePrice.Text=total_differ_price.ToString();
             }
         }
 
@@ -228,8 +307,23 @@ namespace DB_Project_Cinema
 
         private void PaymentButton_Click(object sender, EventArgs e)
         {
+            if (!CreditCard.Checked && !AccountTransfer.Checked)
+            {
+                MessageBox.Show("결제 방법을 선택해 주세요!");
+            }
+            else
+            {
+                OracleCommand Cmd = new OracleCommand();
+                Cmd.Connection = connect.con;
+                
 
+                string sql = "EXECUTE RESV_PROC('" + member + "'," + movieno + ", '" + show_schedule + "'," + bk_seatcnt + "," + seat_no + "," + savepoint + ", '" + payway + "', '" + telnm + "', " + usepoint + "," + seatprice + ", '" + cust_pw + "','" + cust_nm + "','" + cust_birth + "','" + cust_telno + "')";
+
+                Cmd.CommandText = sql;
+                Cmd.ExecuteNonQuery();
+                MessageBox.Show("결제가 완료되었습니다!");
+            }
         }
-        
+ 
     }
 }

@@ -43,11 +43,11 @@
             this.label17 = new System.Windows.Forms.Label();
             this.CardPW = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.TotalPrice = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.TotalDCPrice = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.DifferencePrice = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.PaymentButton = new System.Windows.Forms.Button();
             this.TelNM = new System.Windows.Forms.ComboBox();
@@ -156,6 +156,7 @@
             this.UsePoint.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.UsePoint.Location = new System.Drawing.Point(373, 462);
             this.UsePoint.Margin = new System.Windows.Forms.Padding(2);
+            this.UsePoint.MaxLength = 7;
             this.UsePoint.Name = "UsePoint";
             this.UsePoint.Size = new System.Drawing.Size(92, 31);
             this.UsePoint.TabIndex = 56;
@@ -238,17 +239,17 @@
             this.label16.Text = "총 결제금액";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // TotalPrice
             // 
-            this.label18.BackColor = System.Drawing.Color.OldLace;
-            this.label18.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label18.Location = new System.Drawing.Point(1083, 237);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(224, 35);
-            this.label18.TabIndex = 68;
-            this.label18.Text = "0원";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TotalPrice.BackColor = System.Drawing.Color.OldLace;
+            this.TotalPrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TotalPrice.Location = new System.Drawing.Point(1083, 237);
+            this.TotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.Size = new System.Drawing.Size(224, 35);
+            this.TotalPrice.TabIndex = 68;
+            this.TotalPrice.Text = "0원";
+            this.TotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
             // 
@@ -259,20 +260,20 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(224, 35);
             this.label19.TabIndex = 69;
-            this.label19.Text = "총 할인금액";
+            this.label19.Text = "통신사 할인금액";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // TotalDCPrice
             // 
-            this.label20.BackColor = System.Drawing.Color.OldLace;
-            this.label20.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label20.Location = new System.Drawing.Point(1083, 307);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(224, 35);
-            this.label20.TabIndex = 70;
-            this.label20.Text = "0원";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TotalDCPrice.BackColor = System.Drawing.Color.OldLace;
+            this.TotalDCPrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.TotalDCPrice.Location = new System.Drawing.Point(1083, 307);
+            this.TotalDCPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalDCPrice.Name = "TotalDCPrice";
+            this.TotalDCPrice.Size = new System.Drawing.Size(224, 35);
+            this.TotalDCPrice.TabIndex = 70;
+            this.TotalDCPrice.Text = "0원";
+            this.TotalDCPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
             // 
@@ -286,17 +287,17 @@
             this.label21.Text = "남은 결제금액";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // DifferencePrice
             // 
-            this.label22.BackColor = System.Drawing.Color.OldLace;
-            this.label22.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label22.Location = new System.Drawing.Point(1083, 377);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(224, 35);
-            this.label22.TabIndex = 72;
-            this.label22.Text = "0원";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DifferencePrice.BackColor = System.Drawing.Color.OldLace;
+            this.DifferencePrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.DifferencePrice.Location = new System.Drawing.Point(1083, 377);
+            this.DifferencePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DifferencePrice.Name = "DifferencePrice";
+            this.DifferencePrice.Size = new System.Drawing.Size(224, 35);
+            this.DifferencePrice.TabIndex = 72;
+            this.DifferencePrice.Text = "0원";
+            this.DifferencePrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label24
             // 
@@ -558,11 +559,11 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.CardPW);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.TotalPrice);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.label20);
+            this.Controls.Add(this.TotalDCPrice);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.DifferencePrice);
             this.Controls.Add(this.label24);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Payment";
@@ -589,11 +590,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox CardPW;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label TotalPrice;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label TotalDCPrice;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label DifferencePrice;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button PaymentButton;
         private System.Windows.Forms.ComboBox TelNM;
