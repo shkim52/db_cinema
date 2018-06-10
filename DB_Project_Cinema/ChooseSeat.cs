@@ -74,6 +74,10 @@ namespace DB_Project_Cinema
         {
             return chosen_seat_cnt;
         }
+        public int Get_SeatNo()
+        {
+            return int.Parse(chosen_seat[0]);
+        }
 
 
         public void Seat_View()

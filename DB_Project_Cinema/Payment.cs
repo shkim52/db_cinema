@@ -37,7 +37,7 @@ namespace DB_Project_Cinema
         private string cust_telno;
 
 
-        public Payment(string mem_id, string schedule_no, int bk_seat_cnt)
+        public Payment(string mem_id, string schedule_no, int bk_seat_cnt, int chosen_seat_no)
         {
             InitializeComponent();
             connect = new Connection();
@@ -46,7 +46,7 @@ namespace DB_Project_Cinema
             member = mem_id;
             show_schedule = schedule_no;
             bk_seatcnt = bk_seat_cnt;
-
+            seat_no = chosen_seat_no;
             get_sche_info();
             get_cust_info();
             TelNM_View();

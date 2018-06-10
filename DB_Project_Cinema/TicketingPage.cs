@@ -66,7 +66,7 @@ namespace DB_Project_Cinema
         {
             if (choose_seat.SeatCnt_Check())
             {
-                payment = new Payment(_parent.GetLoginId(), choose_seat.Get_SchNo(), choose_seat.Get_BkSeatCnt());
+                payment = new Payment(_parent.GetLoginId(), choose_seat.Get_SchNo(), choose_seat.Get_BkSeatCnt(), choose_seat.Get_SeatNo());
                 panel2.Controls.Add(payment);
                 payment.BringToFront();
                 payment.Dock = DockStyle.None;
