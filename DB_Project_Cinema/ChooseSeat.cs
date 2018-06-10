@@ -65,6 +65,10 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
         }
+        public string Get_SchNo()
+        {
+            return show_schedule;
+        }
 
         public void Seat_View()
         {

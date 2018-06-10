@@ -15,6 +15,7 @@ namespace DB_Project_Cinema
         private CinemaProgram _parent;
         private SelectShowTime showtime_page;
         private ChooseSeat choose_seat;
+        private Payment payment;
 
         public TicketingPage(CinemaProgram parent)
         {
@@ -65,10 +66,10 @@ namespace DB_Project_Cinema
         {
             if (choose_seat.SeatCnt_Check())
             {
-                Payment PM = new Payment();
-                panel2.Controls.Add(PM);
-                PM.BringToFront();
-                PM.Dock = DockStyle.None;
+                payment = new Payment(_parent.GetLoginId(), choose_seat.Get_SchNo());
+                panel2.Controls.Add(payment);
+                payment.BringToFront();
+                payment.Dock = DockStyle.None;
 
                 PaymentPageButton.Visible = false;
                 ChooseSeatPageButton.Visible = false;

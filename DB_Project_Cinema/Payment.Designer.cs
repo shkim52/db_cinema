@@ -52,7 +52,7 @@
             this.PaymentButton = new System.Windows.Forms.Button();
             this.TelNM = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TelNo = new System.Windows.Forms.TextBox();
+            this.PhoneNumber = new System.Windows.Forms.TextBox();
             this.PhoneVerification = new System.Windows.Forms.Button();
             this.CreditCard = new System.Windows.Forms.CheckBox();
             this.AccountTransfer = new System.Windows.Forms.CheckBox();
@@ -345,15 +345,15 @@
             this.label4.Text = "휴대폰 번호:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // TelNo
+            // PhoneNumber
             // 
-            this.TelNo.Location = new System.Drawing.Point(304, 248);
-            this.TelNo.Margin = new System.Windows.Forms.Padding(2);
-            this.TelNo.MaxLength = 11;
-            this.TelNo.Name = "TelNo";
-            this.TelNo.Size = new System.Drawing.Size(208, 28);
-            this.TelNo.TabIndex = 80;
-            this.TelNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelNo_KeyPress_1);
+            this.PhoneNumber.Location = new System.Drawing.Point(304, 248);
+            this.PhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.PhoneNumber.MaxLength = 11;
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(208, 28);
+            this.PhoneNumber.TabIndex = 80;
+            this.PhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneNumber_KeyPress_1);
             // 
             // PhoneVerification
             // 
@@ -539,7 +539,7 @@
             this.Controls.Add(this.AccountTransfer);
             this.Controls.Add(this.CreditCard);
             this.Controls.Add(this.PhoneVerification);
-            this.Controls.Add(this.TelNo);
+            this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TelNM);
             this.Controls.Add(this.PaymentButton);
@@ -598,7 +598,7 @@
         private System.Windows.Forms.Button PaymentButton;
         private System.Windows.Forms.ComboBox TelNM;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TelNo;
+        private System.Windows.Forms.TextBox PhoneNumber;
         private System.Windows.Forms.Button PhoneVerification;
         private System.Windows.Forms.CheckBox CreditCard;
         private System.Windows.Forms.CheckBox AccountTransfer;

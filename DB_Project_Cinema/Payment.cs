@@ -17,14 +17,21 @@ namespace DB_Project_Cinema
     {
         private Connection connect;
         private string[] Tel_NM = new string[10];
+        private string member;
+        private string show_schedule;
 
-        public Payment()
+        public Payment(string mem_id, string schedule_no)
         {
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
 
+            member = mem_id;
+            show_schedule = schedule_no;
+
             TelNM_View();
+            Point_View();
+           
         
         }
 
@@ -56,7 +63,7 @@ namespace DB_Project_Cinema
             }     
         }
 
-        private void TelNo_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void PhoneNumber_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar)))
             {
@@ -72,16 +79,18 @@ namespace DB_Project_Cinema
 
         private void Point_View()
         {
+            
             try
             {
-                string sql = "SELECT SAVE_POINT FROM MEM WHERE MEM_ID = '" + Program.memID + "'";
+                string sql = "SELECT SAVE_POINT FROM MEM WHERE MEM_ID = '" + member + "'";
 
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    SavePoint.Text = reader.GetInt32(reader.GetOrdinal("SAVE_POINT")).ToString();
+                    this.SavePoint.Text = reader.GetInt32(reader.GetOrdinal("SAVE_POINT")).ToString();
+                 
                 }
             }
             catch (Exception ex)
