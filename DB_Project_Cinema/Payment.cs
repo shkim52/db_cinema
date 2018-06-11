@@ -20,9 +20,8 @@ namespace DB_Project_Cinema
         private string telnm;
         private string member;
         private string show_schedule;
-        private int movieno;
         private int bk_seatcnt;
-        private int seat_no;//
+        private string seat_no;
         private int seatprice;
         private int savepoint;
         private int usepoint;
@@ -30,14 +29,13 @@ namespace DB_Project_Cinema
         private int total_dc_price;
         private int total_differ_price;
         private string payway;
-        private string cust_id;//
         private string cust_pw;
         private string cust_nm;
         private string cust_birth;
         private string cust_telno;
 
 
-        public Payment(string mem_id, string schedule_no, int bk_seat_cnt, int chosen_seat_no)
+        public Payment(string mem_id, string schedule_no, int bk_seat_cnt, string chosen_seat_no, string Cust_Pw, string Cust_Nm, string Cust_Birth, string Cust_Tel)
         {
             InitializeComponent();
             connect = new Connection();
@@ -47,15 +45,19 @@ namespace DB_Project_Cinema
             show_schedule = schedule_no;
             bk_seatcnt = bk_seat_cnt;
             seat_no = chosen_seat_no;
-            get_sche_info();
-            get_cust_info();
+            cust_pw = Cust_Pw;
+            cust_nm = Cust_Nm;
+            cust_birth = Cust_Birth;
+            cust_telno = Cust_Tel;
+
+            seat_price_info();
             TelNM_View();
             Point_View();
             Price_View();
         
         }
 
-        private void get_sche_info()
+        private void seat_price_info()
         {
             try
             {
@@ -64,12 +66,9 @@ namespace DB_Project_Cinema
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    movieno = reader.GetInt32(reader.GetOrdinal("MOVIE_NO"));
-                    seatprice = reader.GetInt32(reader.GetOrdinal("SEAT_PRICE"));
-                }
+                reader.Read();
 
+                seatprice = reader.GetInt32(reader.GetOrdinal("SEAT_PRICE"));
                  
             }
             catch (Exception ex)
@@ -78,32 +77,6 @@ namespace DB_Project_Cinema
             }     
         }
 
-        private void get_cust_info()
-        {
-            try
-            {
-                string sql = "SELECT * FROM CUST WHERE CUST_ID='" + cust_id + "'";
-
-                OracleCommand Comm = new OracleCommand(sql, connect.con);
-                OracleDataReader reader = Comm.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    cust_pw = reader.GetString(reader.GetOrdinal("CUST_PW"));
-                    cust_nm = reader.GetString(reader.GetOrdinal("CUST_NM"));
-                    cust_birth = reader.GetString(reader.GetOrdinal("CUST_BIRTH"));
-                    cust_telno = reader.GetString(reader.GetOrdinal("CUST_TELNO"));
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-        }
-
-       
         private void TelNM_View()
         {
             try
@@ -179,8 +152,7 @@ namespace DB_Project_Cinema
         }
 
         private void Point_View()
-        {
-            
+        {            
             try
             {
                 string sql = "SELECT SAVE_POINT FROM MEM WHERE MEM_ID = '" + member + "'";
@@ -317,7 +289,7 @@ namespace DB_Project_Cinema
                 Cmd.Connection = connect.con;
                 
 
-                string sql = "EXECUTE RESV_PROC('" + member + "'," + movieno + ", '" + show_schedule + "'," + bk_seatcnt + "," + seat_no + "," + savepoint + ", '" + payway + "', '" + telnm + "', " + usepoint + "," + seatprice + ", '" + cust_pw + "','" + cust_nm + "','" + cust_birth + "','" + cust_telno + "')";
+                string sql = "EXECUTE RESV_PROC('" + member + "','" + show_schedule + "'," + bk_seatcnt + ",'" + seat_no + "','" + payway + "', '" + telnm + "', " + usepoint + ", '" + cust_pw + "','" + cust_nm + "','" + cust_birth + "','" + cust_telno + "')";
 
                 Cmd.CommandText = sql;
                 Cmd.ExecuteNonQuery();

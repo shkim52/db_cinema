@@ -107,9 +107,9 @@ namespace DB_Project_Cinema
         {
             return chosen_seat_cnt;
         }
-        public int Get_SeatNo()
+        public string Get_SeatNo()
         {
-            return int.Parse(chosen_seat[0]);
+            return seat_no;
         }
 
         public void Seat_View()
@@ -253,8 +253,6 @@ namespace DB_Project_Cinema
                 chosen_seat[cnt] = seat.Name;
                 cnt++;
             }
-
-            Console.WriteLine("!!!"+seat_no);
         }
         public bool SeatCnt_Check()
         {
@@ -266,14 +264,11 @@ namespace DB_Project_Cinema
             }
             else
             {
-                seat_no = "'";
                 for (int i = 0; i < chosen_seat.Length; i++)
                 {
                     seat_no += chosen_seat[i] + ",";
                 }
-                seat_no += "'";
 
-                Console.WriteLine("!!!" + seat_no);
                 return true;
             }
         }
