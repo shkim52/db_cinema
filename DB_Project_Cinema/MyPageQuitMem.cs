@@ -15,30 +15,20 @@ namespace DB_Project_Cinema
 {
     public partial class MyPageQuitMem : UserControl
     {
-        Connection connect;
-        private static MyPageQuitMem _instance;
-        public static MyPageQuitMem Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPageQuitMem();
-                }
-                return _instance;
-            }
-        }
+        private Connection connect;
+        private MyPage _parent;
 
         private string mem_id;
         public void setMem_id(string s)
         {
             mem_id = s;
         }
-        public MyPageQuitMem()
+        public MyPageQuitMem(MyPage parent)
         {
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
+            _parent = parent;
         }
 
         private void QuitMemButton_Click(object sender, EventArgs e)
@@ -53,13 +43,8 @@ namespace DB_Project_Cinema
                 Cmd.CommandText = input_sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("탈퇴가 완료되었습니다.");
+                _parent.click_logout();
 
-                connect.con.Close();
-                this.Parent.Controls.Remove(this);
-                
-                CinemaProgram cp = new CinemaProgram();
-                cp.Refresh();
-                cp.Logout_clicked();
             }
             catch (Exception ex)
             {

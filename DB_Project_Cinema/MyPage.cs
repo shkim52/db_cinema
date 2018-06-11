@@ -64,10 +64,11 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.White;
 
-            SubPanel.Controls.Add(MyPageQuitMem.Instance);
-            MyPageQuitMem.Instance.setMem_id(_parent.GetLoginId());
-            MyPageQuitMem.Instance.BringToFront();
-            MyPageQuitMem.Instance.Dock = DockStyle.None;
+            MyPageQuitMem mpq = new MyPageQuitMem(this);
+            SubPanel.Controls.Add(mpq);
+            mpq.setMem_id(_parent.GetLoginId());
+            mpq.BringToFront();
+            mpq.Dock = DockStyle.None;
         }
 
         private void MyPageCheckResvButton_Click(object sender, EventArgs e)
@@ -120,6 +121,12 @@ namespace DB_Project_Cinema
             this.Parent.Controls.Remove(this);
             this.Controls.Remove(this);
             _parent.MovieDetailPage_Add(movie_no);
+        }
+        public void click_logout()
+        {
+            this.Parent.Controls.Remove(this);
+            this.Controls.Remove(this);
+            _parent.Logout_clicked();
         }
     }
 }
