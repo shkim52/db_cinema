@@ -48,7 +48,7 @@ namespace DB_Project_Cinema
                 while (reader.Read())
                 {
                     ID.Text = reader.GetString(reader.GetOrdinal("MEM_ID"));
-                    SID.Text = reader.GetString(reader.GetOrdinal("MEM_SID_NO"));
+                    SID.Text = reader.GetString(reader.GetOrdinal("MEM_BIRTH"));
                     NAME.Text = reader.GetString(reader.GetOrdinal("MEM_NM"));
                     EMAIL.Text = reader.GetString(reader.GetOrdinal("MEM_EMAIL"));
                     TELNO.Text = reader.GetString(reader.GetOrdinal("MEM_TELNO"));
