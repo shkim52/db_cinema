@@ -24,10 +24,8 @@ namespace DB_Project_Cinema
         private string seat_no;
         private int seatprice;
         private int savepoint;
-        private int usepoint;
+        private int usepoint = 0;
         private int tel_dc_rate;
-        private int total_dc_price;
-        private int total_differ_price;
         private string payway;
         private string cust_pw;
         private string cust_nm;
@@ -121,7 +119,7 @@ namespace DB_Project_Cinema
             {
                 MessageBox.Show("통신사를 선택해 주세요!");
             }
-            else if (PhoneNumber.Text.Length < 10)
+            else if (PhoneNumber.Text.Substring(0, 2) != "01")
             {
                 MessageBox.Show("휴대폰 번호를 정확히 입력해주세요!");
             }
@@ -135,14 +133,12 @@ namespace DB_Project_Cinema
                     OracleCommand Comm = new OracleCommand(sql, connect.con);
                     OracleDataReader reader = Comm.ExecuteReader();
 
-                    while (reader.Read())
-                    {
-                        tel_dc_rate = reader.GetInt32(reader.GetOrdinal("DC_RATE"));
-                        TotalDCPrice.Text = ((seatprice * bk_seatcnt) * (tel_dc_rate * 0.01)).ToString();
-                        DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TotalDCPrice.Text)).ToString();
-                    }
-                }
+                    reader.Read();
 
+                    tel_dc_rate = reader.GetInt32(reader.GetOrdinal("DC_RATE"));
+                    TelDCPrice.Text = ((seatprice * bk_seatcnt) * (tel_dc_rate * 0.01)).ToString();
+                    DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TelDCPrice.Text)).ToString();                    
+                }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
@@ -160,11 +156,10 @@ namespace DB_Project_Cinema
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    this.SavePoint.Text = reader.GetInt32(reader.GetOrdinal("SAVE_POINT")).ToString();
-                    savepoint = Convert.ToInt32(SavePoint.Text);
-                }
+                reader.Read();
+
+                this.SavePoint.Text = reader.GetInt32(reader.GetOrdinal("SAVE_POINT")).ToString();
+                savepoint = Convert.ToInt32(SavePoint.Text);
             }
             catch (Exception ex)
             {
@@ -175,8 +170,6 @@ namespace DB_Project_Cinema
         private void Price_View()
         {
             TotalPrice.Text = (seatprice * bk_seatcnt).ToString();
-            //DifferencePrice.Text = (Convert.ToInt32(TotalPrice) - Convert.ToInt32(TotalDCPrice.Text)).ToString();
-
         }
 
         private void UsePoint_TextChanged(object sender, EventArgs e)
@@ -187,11 +180,7 @@ namespace DB_Project_Cinema
             }
             else
             {
-                usepoint = int.Parse(UsePoint.Text);
-                //total_dc_price = int.Parse(TotalDCPrice.Text) + usepoint;
-                //TotalDCPrice.Text = total_dc_price.ToString();
-                //total_differ_price = int.Parse(TotalPrice.Text) - int.Parse(TotalDCPrice.Text);
-                //DifferencePrice.Text=total_differ_price.ToString();
+                PointDc.Text = UsePoint.Text;
             }
         }
 
@@ -253,7 +242,11 @@ namespace DB_Project_Cinema
             }
             else
             {
+                usepoint = int.Parse(UsePoint.Text);
                 MessageBox.Show("승인번호가 발급되었습니다!");
+                TelDCPrice.Text = (int.Parse(TelDCPrice.Text)).ToString();
+                DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TelDCPrice.Text)-usepoint).ToString();
+
             }
         }
 
@@ -273,7 +266,10 @@ namespace DB_Project_Cinema
             }
             else
             {
+                usepoint = int.Parse(UsePoint.Text);
                 MessageBox.Show("계좌 검증이 완료되었습니다!");
+                TelDCPrice.Text = (int.Parse(TelDCPrice.Text) + usepoint).ToString();
+                DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TelDCPrice.Text)-usepoint).ToString();
             }
         }
 
@@ -296,6 +292,53 @@ namespace DB_Project_Cinema
                 MessageBox.Show("결제가 완료되었습니다!");
             }
         }
+
+        private void UsePoint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void CardNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void CardPW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void AccountNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void AccountPW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        
  
     }
 }

@@ -98,6 +98,7 @@ namespace DB_Project_Cinema
                 BackToSelcetTimeButton.Visible = false;
 
             }
+            
         }
 
         private void ChooseSeatPageButton_Click_1(object sender, EventArgs e)
