@@ -59,7 +59,6 @@ namespace DB_Project_Cinema
                     ID_CHECK.Text = "사용 가능한 아이디입니다.";
                     idcheck = true;
                 }
-                Connect.con.Close();
             }
             catch (Exception ex)
             {
@@ -72,11 +71,6 @@ namespace DB_Project_Cinema
         {
             try
             {
-                
-                OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = Connect.con;
-                Connect.con.Open();
-
                 if (PWD_INPUT.Text == "" && PWD2_INPUT.Text == "" && PWD2_INPUT != PWD_INPUT)
                 {
                     MessageBox.Show("비밀번호가 일치하지 않거나 입력되지 않았습니다.");
@@ -95,12 +89,15 @@ namespace DB_Project_Cinema
                 }
                 else
                 {
-                    string sql = "INSERT INTO MEM (MEM_ID, MEM_PW, MEM_NM, MEM_SID_NO, MEM_EMAIL, MEM_TELNO) VALUES('" + ID_INPUT.Text + "','" + PWD_INPUT.Text + "','" + NAME_INPUT.Text + "','" + SID_INPUT.Text + "','" + EMAIL_INPUT.Text + "','" + TELNO_INPUT.Text + "')";
+                    OracleCommand Cmd = new OracleCommand();
+                    Cmd.Connection = Connect.con;
+
+                    string sql = "INSERT INTO MEM (MEM_ID, MEM_PW, MEM_NM, MEM_BIRTH, MEM_EMAIL, MEM_TELNO, SAVE_POINT, QUIT_STAT ) VALUES('" + ID_INPUT.Text + "','" + PWD_INPUT.Text + "','" + NAME_INPUT.Text + "','" + SID_INPUT.Text + "','" + EMAIL_INPUT.Text + "','" + TELNO_INPUT.Text + "', 0, 'N')";
                     Cmd.CommandText = sql;
                     Cmd.ExecuteNonQuery();
                     MessageBox.Show("회원가입에 성공하셨습니다");
-
                 }
+                Connect.con.Close();
             }
             catch (Exception ex)
             {
@@ -108,6 +105,5 @@ namespace DB_Project_Cinema
             }
 
         }
-
     }
 }

@@ -136,6 +136,7 @@
             // 
             this.TELNO_INPUT.Location = new System.Drawing.Point(375, 363);
             this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.TELNO_INPUT.MaxLength = 11;
             this.TELNO_INPUT.Name = "TELNO_INPUT";
             this.TELNO_INPUT.Size = new System.Drawing.Size(224, 25);
             this.TELNO_INPUT.TabIndex = 31;
