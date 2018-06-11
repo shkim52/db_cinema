@@ -15,6 +15,7 @@ namespace DB_Project_Cinema
     public partial class ScreenInfo : UserControl
     {
         private static ScreenInfo _instance;
+        private Connection connect;
         public static ScreenInfo Instance
         {
             get
@@ -30,22 +31,18 @@ namespace DB_Project_Cinema
         {
             InitializeComponent();
 
-            string str = "data source=localhost:1521/xe;user id=CINEMA; password=1234";
-            OracleConnection Conn = new OracleConnection(str);
-            /**OracleCommand Comm;
-            Comm = new OracleCommand();
-            Comm.Connection = Conn;*/
+            connect = new Connection();
+            connect.Connecting();
+        }
+
+        private void ScreenInfo_Load(object sender, EventArgs e)
+        {
             try
             {
-
-                Conn.Open();
                 string sql = "SELECT * FROM SCREEN ORDER BY SCR_NO";
 
-                OracleCommand Comm = new OracleCommand(sql, Conn);
-
-
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
-
 
                 while (reader.Read())
                 {
@@ -55,11 +52,6 @@ namespace DB_Project_Cinema
 
                     dataGridView1.Rows.Add(ScrNM, ScrIntro, ScrSeatCnt);
                 }
-
-                
-                Conn.Close();
-
-
             }
             catch (Exception ex)
             {
@@ -68,7 +60,7 @@ namespace DB_Project_Cinema
             }
             finally
             {
-                Conn.Close();
+                connect.con.Close();
             }
         }
     }
