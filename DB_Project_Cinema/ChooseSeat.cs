@@ -31,6 +31,7 @@ namespace DB_Project_Cinema
         private string member;
         private string show_schedule;
         private int screen;
+        private string seat_no;
 
         public ChooseSeat(string mem_id, string schedule_no)
         {
@@ -40,14 +41,10 @@ namespace DB_Project_Cinema
 
             member = mem_id;
             show_schedule = schedule_no;
-            
-
         }
 
         private void ChooseSeat_Load(object sender, EventArgs e)
         {
-            
-
             try
             {
                 //  상영관에 맞는 상영관출력!
@@ -55,12 +52,11 @@ namespace DB_Project_Cinema
                 string sql = "SELECT * FROM SCREEN WHERE SCR_NO=" + screen;
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
-
+                
                 while (reader.Read())
                 {
                     this.SCR_NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
                     this.TOT_SEAT_CNT.Text = reader.GetDecimal(reader.GetOrdinal("SCR_SEAT_CNT")).ToString();
-
                 }
 
                 string sql2 = "SELECT * FROM SEAT WHERE SCR_NO=" + screen;
@@ -101,7 +97,6 @@ namespace DB_Project_Cinema
 
             Seat_View();
 
-            
         }
 
         public string Get_SchNo()
@@ -116,7 +111,6 @@ namespace DB_Project_Cinema
         {
             return int.Parse(chosen_seat[0]);
         }
-
 
         public void Seat_View()
         {
@@ -156,14 +150,13 @@ namespace DB_Project_Cinema
                     seat[i, j].FlatAppearance.BorderSize = 0;
                     seat[i, j].Click += new EventHandler(Seat_Click);
                     seat[i, j].Visible = true;
-                    //seat[i, j].Name = (i * 20 + (j + 1)).ToString();
                     
                     //좌석 이름 설정
                     for (int k = 0; k < 10; k++)
                     {
                        if (screen == (k + 1))
                         {
-                            seat[i, j].Name = (i * 20 + (j + 1)+380*0).ToString();
+                            seat[i, j].Name = (i * 20 + (j + 1) + 380 * k).ToString();
                         }
                     }
 
@@ -190,8 +183,7 @@ namespace DB_Project_Cinema
                     }
                 
                     panel1.Controls.Add(seat[i, j]);
-                }
-                
+                }                
             }
 
             Label choose = new Label();
@@ -240,7 +232,6 @@ namespace DB_Project_Cinema
         {
             Button seat = sender as Button;
 
-
             if (chosen_seat.Contains(seat.Name))
             {
                 seat.BackColor = Color.Gray;
@@ -262,6 +253,8 @@ namespace DB_Project_Cinema
                 chosen_seat[cnt] = seat.Name;
                 cnt++;
             }
+
+            Console.WriteLine("!!!"+seat_no);
         }
         public bool SeatCnt_Check()
         {
@@ -273,9 +266,16 @@ namespace DB_Project_Cinema
             }
             else
             {
+                seat_no = "'";
+                for (int i = 0; i < chosen_seat.Length; i++)
+                {
+                    seat_no += chosen_seat[i] + ",";
+                }
+                seat_no += "'";
+
+                Console.WriteLine("!!!" + seat_no);
                 return true;
             }
-
         }
     }
 }

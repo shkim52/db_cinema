@@ -117,7 +117,7 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    Tel_NM[index++] = Convert.ToString(reader["TEL_NM"]); // select문으로 받아온 영화번호를 배열에 저장해둔다
+                    Tel_NM[index++] = Convert.ToString(reader["TEL_NM"]); 
                 }
 
                 for (int i = 0; i < Tel_NM.Length; i++)
