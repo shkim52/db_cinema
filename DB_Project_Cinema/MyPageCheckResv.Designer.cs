@@ -49,7 +49,7 @@
             this.label1.Location = new System.Drawing.Point(189, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 38);
+            this.label1.Size = new System.Drawing.Size(282, 71);
             this.label1.TabIndex = 7;
             this.label1.Text = "MyPage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

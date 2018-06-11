@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(405, 21);
+            this.label1.Location = new System.Drawing.Point(498, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 61);
             this.label1.TabIndex = 6;
@@ -57,7 +57,7 @@
             this.ScreenNM,
             this.ScreenIntro,
             this.ScreenSeatCnt});
-            this.dataGridView1.Location = new System.Drawing.Point(279, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(372, 122);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;

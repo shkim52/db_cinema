@@ -51,7 +51,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(258, 142);
+            this.label2.Location = new System.Drawing.Point(481, 189);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 29);
@@ -61,7 +61,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(258, 177);
+            this.label3.Location = new System.Drawing.Point(481, 224);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 33);
@@ -71,7 +71,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(258, 289);
+            this.label4.Location = new System.Drawing.Point(481, 336);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 29);
@@ -81,7 +81,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(258, 325);
+            this.label5.Location = new System.Drawing.Point(481, 372);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 29);
@@ -91,7 +91,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(258, 361);
+            this.label6.Location = new System.Drawing.Point(481, 408);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 29);
@@ -101,7 +101,7 @@
             // 
             // NAME_INPUT
             // 
-            this.NAME_INPUT.Location = new System.Drawing.Point(375, 144);
+            this.NAME_INPUT.Location = new System.Drawing.Point(598, 191);
             this.NAME_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.NAME_INPUT.Name = "NAME_INPUT";
             this.NAME_INPUT.Size = new System.Drawing.Size(224, 25);
@@ -109,7 +109,7 @@
             // 
             // ID_INPUT
             // 
-            this.ID_INPUT.Location = new System.Drawing.Point(375, 180);
+            this.ID_INPUT.Location = new System.Drawing.Point(598, 227);
             this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.ID_INPUT.Name = "ID_INPUT";
             this.ID_INPUT.Size = new System.Drawing.Size(224, 25);
@@ -117,7 +117,7 @@
             // 
             // EMAIL_INPUT
             // 
-            this.EMAIL_INPUT.Location = new System.Drawing.Point(375, 292);
+            this.EMAIL_INPUT.Location = new System.Drawing.Point(598, 339);
             this.EMAIL_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.EMAIL_INPUT.Name = "EMAIL_INPUT";
             this.EMAIL_INPUT.Size = new System.Drawing.Size(224, 25);
@@ -125,7 +125,7 @@
             // 
             // SID_INPUT
             // 
-            this.SID_INPUT.Location = new System.Drawing.Point(375, 327);
+            this.SID_INPUT.Location = new System.Drawing.Point(598, 374);
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 6;
             this.SID_INPUT.Name = "SID_INPUT";
@@ -134,7 +134,7 @@
             // 
             // TELNO_INPUT
             // 
-            this.TELNO_INPUT.Location = new System.Drawing.Point(375, 363);
+            this.TELNO_INPUT.Location = new System.Drawing.Point(598, 410);
             this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.TELNO_INPUT.MaxLength = 11;
             this.TELNO_INPUT.Name = "TELNO_INPUT";
@@ -143,7 +143,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(254, 217);
+            this.label8.Location = new System.Drawing.Point(477, 264);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 29);
@@ -153,7 +153,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(220, 253);
+            this.label9.Location = new System.Drawing.Point(443, 300);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 29);
@@ -163,7 +163,7 @@
             // 
             // PWD_INPUT
             // 
-            this.PWD_INPUT.Location = new System.Drawing.Point(375, 220);
+            this.PWD_INPUT.Location = new System.Drawing.Point(598, 267);
             this.PWD_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PWD_INPUT.Name = "PWD_INPUT";
             this.PWD_INPUT.PasswordChar = '*';
@@ -172,7 +172,7 @@
             // 
             // PWD2_INPUT
             // 
-            this.PWD2_INPUT.Location = new System.Drawing.Point(375, 256);
+            this.PWD2_INPUT.Location = new System.Drawing.Point(598, 303);
             this.PWD2_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PWD2_INPUT.Name = "PWD2_INPUT";
             this.PWD2_INPUT.PasswordChar = '*';
@@ -185,7 +185,7 @@
             this.DoubleCheckButton.FlatAppearance.BorderSize = 0;
             this.DoubleCheckButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DoubleCheckButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DoubleCheckButton.Location = new System.Drawing.Point(612, 180);
+            this.DoubleCheckButton.Location = new System.Drawing.Point(835, 227);
             this.DoubleCheckButton.Margin = new System.Windows.Forms.Padding(2);
             this.DoubleCheckButton.Name = "DoubleCheckButton";
             this.DoubleCheckButton.Size = new System.Drawing.Size(75, 28);
@@ -197,7 +197,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(502, 41);
+            this.label1.Location = new System.Drawing.Point(592, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(264, 45);
@@ -211,7 +211,7 @@
             this.SubmitButton.FlatAppearance.BorderSize = 0;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SubmitButton.Location = new System.Drawing.Point(481, 417);
+            this.SubmitButton.Location = new System.Drawing.Point(704, 464);
             this.SubmitButton.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(118, 42);
@@ -223,7 +223,7 @@
             // ID_CHECK
             // 
             this.ID_CHECK.AutoSize = true;
-            this.ID_CHECK.Location = new System.Drawing.Point(712, 187);
+            this.ID_CHECK.Location = new System.Drawing.Point(935, 234);
             this.ID_CHECK.Name = "ID_CHECK";
             this.ID_CHECK.Size = new System.Drawing.Size(162, 15);
             this.ID_CHECK.TabIndex = 41;
@@ -233,7 +233,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(495, 327);
+            this.label7.Location = new System.Drawing.Point(718, 374);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 19);
             this.label7.TabIndex = 50;
@@ -265,7 +265,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "JoinMembership";
-            this.Size = new System.Drawing.Size(994, 552);
+            this.Size = new System.Drawing.Size(1119, 552);
             this.Load += new System.EventHandler(this.JoinMembership_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

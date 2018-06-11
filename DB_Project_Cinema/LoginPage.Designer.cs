@@ -54,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(550, 65);
+            this.label1.Location = new System.Drawing.Point(664, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 32);
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(409, 37);
+            this.label2.Location = new System.Drawing.Point(529, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 33);
@@ -89,7 +89,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(381, 77);
+            this.label3.Location = new System.Drawing.Point(501, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 33);
@@ -100,7 +100,7 @@
             // ID_INPUT
             // 
             this.ID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ID_INPUT.Location = new System.Drawing.Point(490, 40);
+            this.ID_INPUT.Location = new System.Drawing.Point(610, 40);
             this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.ID_INPUT.Name = "ID_INPUT";
             this.ID_INPUT.Size = new System.Drawing.Size(210, 30);
@@ -109,7 +109,7 @@
             // PW_INPUT
             // 
             this.PW_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PW_INPUT.Location = new System.Drawing.Point(490, 80);
+            this.PW_INPUT.Location = new System.Drawing.Point(610, 80);
             this.PW_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PW_INPUT.Name = "PW_INPUT";
             this.PW_INPUT.PasswordChar = '*';
@@ -122,7 +122,7 @@
             this.mem_loginButton.FlatAppearance.BorderSize = 0;
             this.mem_loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mem_loginButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.mem_loginButton.Location = new System.Drawing.Point(726, 40);
+            this.mem_loginButton.Location = new System.Drawing.Point(846, 40);
             this.mem_loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.mem_loginButton.Name = "mem_loginButton";
             this.mem_loginButton.Size = new System.Drawing.Size(71, 68);

@@ -44,16 +44,18 @@
             this.panel1.Controls.Add(this.FindPWButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1256, 288);
+            this.panel1.Size = new System.Drawing.Size(1005, 240);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(595, 55);
+            this.label1.Location = new System.Drawing.Point(631, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 61);
+            this.label1.Size = new System.Drawing.Size(255, 51);
             this.label1.TabIndex = 4;
             this.label1.Text = "Find ID/PW";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,9 +66,10 @@
             this.FindIDButton.FlatAppearance.BorderSize = 0;
             this.FindIDButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindIDButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindIDButton.Location = new System.Drawing.Point(602, 239);
+            this.FindIDButton.Location = new System.Drawing.Point(637, 199);
+            this.FindIDButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FindIDButton.Name = "FindIDButton";
-            this.FindIDButton.Size = new System.Drawing.Size(154, 46);
+            this.FindIDButton.Size = new System.Drawing.Size(123, 38);
             this.FindIDButton.TabIndex = 5;
             this.FindIDButton.Text = "아이디 찾기";
             this.FindIDButton.UseVisualStyleBackColor = false;
@@ -78,9 +81,10 @@
             this.FindPWButton.FlatAppearance.BorderSize = 0;
             this.FindPWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindPWButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindPWButton.Location = new System.Drawing.Point(773, 239);
+            this.FindPWButton.Location = new System.Drawing.Point(773, 199);
+            this.FindPWButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FindPWButton.Name = "FindPWButton";
-            this.FindPWButton.Size = new System.Drawing.Size(154, 46);
+            this.FindPWButton.Size = new System.Drawing.Size(123, 38);
             this.FindPWButton.TabIndex = 6;
             this.FindPWButton.Text = "비밀번호 찾기";
             this.FindPWButton.UseVisualStyleBackColor = false;
@@ -88,33 +92,35 @@
             // 
             // FindPW
             // 
+            this.FindPW.BackColor = System.Drawing.Color.White;
             this.FindPW.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindPW.Location = new System.Drawing.Point(0, 288);
+            this.FindPW.Location = new System.Drawing.Point(0, 240);
             this.FindPW.Margin = new System.Windows.Forms.Padding(2);
             this.FindPW.Name = "FindPW";
-            this.FindPW.Size = new System.Drawing.Size(1256, 290);
+            this.FindPW.Size = new System.Drawing.Size(1005, 242);
             this.FindPW.TabIndex = 6;
             // 
             // FindID
             // 
             this.FindID.BackColor = System.Drawing.Color.White;
             this.FindID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindID.Location = new System.Drawing.Point(0, 288);
+            this.FindID.Location = new System.Drawing.Point(0, 240);
             this.FindID.Margin = new System.Windows.Forms.Padding(2);
             this.FindID.Name = "FindID";
-            this.FindID.Size = new System.Drawing.Size(1256, 290);
+            this.FindID.Size = new System.Drawing.Size(1005, 242);
             this.FindID.TabIndex = 5;
             // 
             // FindIDandPW
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.FindPW);
             this.Controls.Add(this.FindID);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FindIDandPW";
-            this.Size = new System.Drawing.Size(1256, 578);
+            this.Size = new System.Drawing.Size(1005, 482);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

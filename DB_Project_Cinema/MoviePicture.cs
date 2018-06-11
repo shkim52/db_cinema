@@ -36,7 +36,14 @@ namespace DB_Project_Cinema
                 Console.WriteLine(selected_movie_no);
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
+                if (!reader.HasRows)
+                {
+                    Picture1.Visible = false;
+                    Picture2.Visible = false;
+                    Picture3.Visible = false;
 
+                    label1.Text = "등록된 영화 사진이 없습니다.";
+                }
                 reader.Read();
                 var poster = reader.GetString(reader.GetOrdinal("PHOTO_ROUTE"));
 

@@ -32,6 +32,7 @@
             this.Picture2 = new System.Windows.Forms.PictureBox();
             this.Picture3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture3)).BeginInit();
@@ -40,7 +41,7 @@
             // Picture1
             // 
             this.Picture1.BackColor = System.Drawing.Color.Wheat;
-            this.Picture1.Location = new System.Drawing.Point(133, 146);
+            this.Picture1.Location = new System.Drawing.Point(289, 146);
             this.Picture1.Margin = new System.Windows.Forms.Padding(2);
             this.Picture1.Name = "Picture1";
             this.Picture1.Size = new System.Drawing.Size(258, 140);
@@ -50,7 +51,7 @@
             // Picture2
             // 
             this.Picture2.BackColor = System.Drawing.Color.Wheat;
-            this.Picture2.Location = new System.Drawing.Point(470, 146);
+            this.Picture2.Location = new System.Drawing.Point(626, 146);
             this.Picture2.Margin = new System.Windows.Forms.Padding(2);
             this.Picture2.Name = "Picture2";
             this.Picture2.Size = new System.Drawing.Size(258, 140);
@@ -60,7 +61,7 @@
             // Picture3
             // 
             this.Picture3.BackColor = System.Drawing.Color.Wheat;
-            this.Picture3.Location = new System.Drawing.Point(809, 146);
+            this.Picture3.Location = new System.Drawing.Point(965, 146);
             this.Picture3.Margin = new System.Windows.Forms.Padding(2);
             this.Picture3.Name = "Picture3";
             this.Picture3.Size = new System.Drawing.Size(258, 140);
@@ -77,11 +78,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(655, 350);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(12, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = " ";
+            // 
             // MoviePicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Picture3);
             this.Controls.Add(this.Picture2);
@@ -93,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Picture2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,6 +114,7 @@
         private System.Windows.Forms.PictureBox Picture2;
         private System.Windows.Forms.PictureBox Picture3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
 
     }
 }

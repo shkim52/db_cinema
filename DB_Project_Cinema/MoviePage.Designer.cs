@@ -63,7 +63,7 @@
             "영화명",
             "감독명",
             "장르명"});
-            this.MovieCategory.Location = new System.Drawing.Point(392, 111);
+            this.MovieCategory.Location = new System.Drawing.Point(459, 111);
             this.MovieCategory.Name = "MovieCategory";
             this.MovieCategory.Size = new System.Drawing.Size(102, 28);
             this.MovieCategory.TabIndex = 13;
@@ -74,7 +74,7 @@
             this.SearchButton.FlatAppearance.BorderSize = 0;
             this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SearchButton.Location = new System.Drawing.Point(968, 109);
+            this.SearchButton.Location = new System.Drawing.Point(1035, 109);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(77, 30);
@@ -86,7 +86,7 @@
             // SearchText
             // 
             this.SearchText.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SearchText.Location = new System.Drawing.Point(533, 111);
+            this.SearchText.Location = new System.Drawing.Point(600, 111);
             this.SearchText.Margin = new System.Windows.Forms.Padding(2);
             this.SearchText.Name = "SearchText";
             this.SearchText.Size = new System.Drawing.Size(401, 27);
@@ -95,7 +95,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(632, 23);
+            this.label1.Location = new System.Drawing.Point(699, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 50);
@@ -129,7 +129,7 @@
             this.ExpectedMovie.FlatAppearance.BorderSize = 0;
             this.ExpectedMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExpectedMovie.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ExpectedMovie.Location = new System.Drawing.Point(764, 15);
+            this.ExpectedMovie.Location = new System.Drawing.Point(821, 15);
             this.ExpectedMovie.Margin = new System.Windows.Forms.Padding(2);
             this.ExpectedMovie.Name = "ExpectedMovie";
             this.ExpectedMovie.Size = new System.Drawing.Size(130, 32);
@@ -144,7 +144,7 @@
             this.PlayingMovie.FlatAppearance.BorderSize = 0;
             this.PlayingMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayingMovie.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PlayingMovie.Location = new System.Drawing.Point(582, 15);
+            this.PlayingMovie.Location = new System.Drawing.Point(639, 15);
             this.PlayingMovie.Margin = new System.Windows.Forms.Padding(2);
             this.PlayingMovie.Name = "PlayingMovie";
             this.PlayingMovie.Size = new System.Drawing.Size(130, 32);

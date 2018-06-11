@@ -44,7 +44,7 @@
             // MovieNM
             // 
             this.MovieNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieNM.Location = new System.Drawing.Point(253, -1);
+            this.MovieNM.Location = new System.Drawing.Point(376, -1);
             this.MovieNM.Name = "MovieNM";
             this.MovieNM.Size = new System.Drawing.Size(510, 56);
             this.MovieNM.TabIndex = 8;
@@ -54,7 +54,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(181, 58);
+            this.label2.Location = new System.Drawing.Point(304, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 34);
             this.label2.TabIndex = 10;
@@ -63,7 +63,7 @@
             // 
             // Review
             // 
-            this.Review.Location = new System.Drawing.Point(338, 56);
+            this.Review.Location = new System.Drawing.Point(461, 56);
             this.Review.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Review.Name = "Review";
             this.Review.Size = new System.Drawing.Size(469, 27);
@@ -72,7 +72,7 @@
             // ReviewRegisterButton
             // 
             this.ReviewRegisterButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ReviewRegisterButton.Location = new System.Drawing.Point(822, 56);
+            this.ReviewRegisterButton.Location = new System.Drawing.Point(945, 56);
             this.ReviewRegisterButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ReviewRegisterButton.Name = "ReviewRegisterButton";
             this.ReviewRegisterButton.Size = new System.Drawing.Size(60, 29);
@@ -92,7 +92,7 @@
             this.MemID,
             this.Score,
             this.MemReview});
-            this.dataGridView1.Location = new System.Drawing.Point(206, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(329, 100);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
@@ -149,7 +149,7 @@
             "3",
             "2",
             "1"});
-            this.MovieScore.Location = new System.Drawing.Point(242, 55);
+            this.MovieScore.Location = new System.Drawing.Point(365, 55);
             this.MovieScore.Name = "MovieScore";
             this.MovieScore.Size = new System.Drawing.Size(75, 28);
             this.MovieScore.TabIndex = 27;

@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(379, 16);
+            this.label1.Location = new System.Drawing.Point(536, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 34);
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(390, 59);
+            this.label2.Location = new System.Drawing.Point(547, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 34);
@@ -61,7 +61,7 @@
             // SID_INPUT
             // 
             this.SID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SID_INPUT.Location = new System.Drawing.Point(522, 18);
+            this.SID_INPUT.Location = new System.Drawing.Point(679, 18);
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
@@ -71,7 +71,7 @@
             // TELNO_INPUT
             // 
             this.TELNO_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TELNO_INPUT.Location = new System.Drawing.Point(522, 62);
+            this.TELNO_INPUT.Location = new System.Drawing.Point(679, 62);
             this.TELNO_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.TELNO_INPUT.MaxLength = 11;
             this.TELNO_INPUT.Name = "TELNO_INPUT";
@@ -84,7 +84,7 @@
             this.FindIDButton.FlatAppearance.BorderSize = 0;
             this.FindIDButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindIDButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindIDButton.Location = new System.Drawing.Point(762, 16);
+            this.FindIDButton.Location = new System.Drawing.Point(917, 16);
             this.FindIDButton.Margin = new System.Windows.Forms.Padding(2);
             this.FindIDButton.Name = "FindIDButton";
             this.FindIDButton.Size = new System.Drawing.Size(83, 77);
@@ -97,7 +97,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(634, 25);
+            this.label3.Location = new System.Drawing.Point(791, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 11;
@@ -116,7 +116,7 @@
             this.Controls.Add(this.FindIDButton);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FindID";
-            this.Size = new System.Drawing.Size(951, 392);
+            this.Size = new System.Drawing.Size(1110, 392);
             this.Load += new System.EventHandler(this.FindID_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

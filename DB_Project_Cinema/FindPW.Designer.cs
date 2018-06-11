@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(410, 14);
+            this.label1.Location = new System.Drawing.Point(570, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 33);
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(385, 56);
+            this.label2.Location = new System.Drawing.Point(545, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 33);
@@ -61,7 +61,7 @@
             // ID_INPUT
             // 
             this.ID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ID_INPUT.Location = new System.Drawing.Point(518, 17);
+            this.ID_INPUT.Location = new System.Drawing.Point(678, 17);
             this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.ID_INPUT.Name = "ID_INPUT";
             this.ID_INPUT.Size = new System.Drawing.Size(204, 30);
@@ -70,7 +70,7 @@
             // SID_INPUT
             // 
             this.SID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SID_INPUT.Location = new System.Drawing.Point(518, 58);
+            this.SID_INPUT.Location = new System.Drawing.Point(678, 58);
             this.SID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.SID_INPUT.MaxLength = 13;
             this.SID_INPUT.Name = "SID_INPUT";
@@ -83,7 +83,7 @@
             this.FindPWButton.FlatAppearance.BorderSize = 0;
             this.FindPWButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FindPWButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.FindPWButton.Location = new System.Drawing.Point(757, 14);
+            this.FindPWButton.Location = new System.Drawing.Point(917, 14);
             this.FindPWButton.Margin = new System.Windows.Forms.Padding(2);
             this.FindPWButton.Name = "FindPWButton";
             this.FindPWButton.Size = new System.Drawing.Size(93, 75);
@@ -96,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gulim", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(613, 65);
+            this.label3.Location = new System.Drawing.Point(773, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 10;

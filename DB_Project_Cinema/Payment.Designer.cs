@@ -71,7 +71,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(460, 42);
+            this.label1.Location = new System.Drawing.Point(522, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(252, 37);
@@ -84,7 +84,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(134, 110);
+            this.label2.Location = new System.Drawing.Point(196, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(310, 29);
@@ -97,7 +97,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(487, 110);
+            this.label3.Location = new System.Drawing.Point(549, 110);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(288, 29);
@@ -108,7 +108,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(147, 157);
+            this.label5.Location = new System.Drawing.Point(209, 157);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 29);
@@ -121,7 +121,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(134, 317);
+            this.label9.Location = new System.Drawing.Point(196, 317);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(310, 29);
@@ -132,7 +132,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(134, 349);
+            this.label10.Location = new System.Drawing.Point(196, 349);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(155, 29);
@@ -143,7 +143,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(134, 378);
+            this.label11.Location = new System.Drawing.Point(196, 378);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(155, 38);
@@ -154,7 +154,7 @@
             // UsePoint
             // 
             this.UsePoint.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UsePoint.Location = new System.Drawing.Point(298, 385);
+            this.UsePoint.Location = new System.Drawing.Point(360, 385);
             this.UsePoint.Margin = new System.Windows.Forms.Padding(2);
             this.UsePoint.MaxLength = 7;
             this.UsePoint.Name = "UsePoint";
@@ -165,7 +165,7 @@
             // SavePoint
             // 
             this.SavePoint.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SavePoint.Location = new System.Drawing.Point(294, 349);
+            this.SavePoint.Location = new System.Drawing.Point(356, 349);
             this.SavePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SavePoint.Name = "SavePoint";
             this.SavePoint.Size = new System.Drawing.Size(73, 29);
@@ -176,7 +176,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(502, 199);
+            this.label14.Location = new System.Drawing.Point(564, 199);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 29);
@@ -187,7 +187,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(502, 231);
+            this.label15.Location = new System.Drawing.Point(564, 231);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(78, 29);
@@ -198,7 +198,7 @@
             // CardNumber
             // 
             this.CardNumber.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CardNumber.Location = new System.Drawing.Point(583, 233);
+            this.CardNumber.Location = new System.Drawing.Point(645, 233);
             this.CardNumber.Margin = new System.Windows.Forms.Padding(2);
             this.CardNumber.MaxLength = 16;
             this.CardNumber.Name = "CardNumber";
@@ -208,7 +208,7 @@
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(502, 262);
+            this.label17.Location = new System.Drawing.Point(564, 262);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(78, 29);
@@ -219,7 +219,7 @@
             // CardPW
             // 
             this.CardPW.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CardPW.Location = new System.Drawing.Point(583, 264);
+            this.CardPW.Location = new System.Drawing.Point(645, 264);
             this.CardPW.Margin = new System.Windows.Forms.Padding(2);
             this.CardPW.MaxLength = 4;
             this.CardPW.Name = "CardPW";
@@ -232,7 +232,7 @@
             this.label16.BackColor = System.Drawing.Color.Wheat;
             this.label16.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(866, 168);
+            this.label16.Location = new System.Drawing.Point(928, 168);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(179, 29);
@@ -244,7 +244,7 @@
             // 
             this.TotalPrice.BackColor = System.Drawing.Color.OldLace;
             this.TotalPrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TotalPrice.Location = new System.Drawing.Point(866, 197);
+            this.TotalPrice.Location = new System.Drawing.Point(928, 197);
             this.TotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.Size = new System.Drawing.Size(179, 29);
@@ -256,7 +256,7 @@
             // 
             this.label19.BackColor = System.Drawing.Color.Wheat;
             this.label19.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(866, 226);
+            this.label19.Location = new System.Drawing.Point(928, 226);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(179, 29);
@@ -268,7 +268,7 @@
             // 
             this.TotalDCPrice.BackColor = System.Drawing.Color.OldLace;
             this.TotalDCPrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TotalDCPrice.Location = new System.Drawing.Point(866, 256);
+            this.TotalDCPrice.Location = new System.Drawing.Point(928, 256);
             this.TotalDCPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalDCPrice.Name = "TotalDCPrice";
             this.TotalDCPrice.Size = new System.Drawing.Size(179, 29);
@@ -280,7 +280,7 @@
             // 
             this.label21.BackColor = System.Drawing.Color.Wheat;
             this.label21.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label21.Location = new System.Drawing.Point(866, 285);
+            this.label21.Location = new System.Drawing.Point(928, 285);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(179, 29);
@@ -292,7 +292,7 @@
             // 
             this.DifferencePrice.BackColor = System.Drawing.Color.OldLace;
             this.DifferencePrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DifferencePrice.Location = new System.Drawing.Point(866, 314);
+            this.DifferencePrice.Location = new System.Drawing.Point(928, 314);
             this.DifferencePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DifferencePrice.Name = "DifferencePrice";
             this.DifferencePrice.Size = new System.Drawing.Size(179, 29);
@@ -303,7 +303,7 @@
             // label24
             // 
             this.label24.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label24.Location = new System.Drawing.Point(371, 349);
+            this.label24.Location = new System.Drawing.Point(433, 349);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(73, 29);
@@ -318,7 +318,7 @@
             this.PaymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PaymentButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PaymentButton.ForeColor = System.Drawing.Color.White;
-            this.PaymentButton.Location = new System.Drawing.Point(940, 415);
+            this.PaymentButton.Location = new System.Drawing.Point(1002, 415);
             this.PaymentButton.Margin = new System.Windows.Forms.Padding(2);
             this.PaymentButton.Name = "PaymentButton";
             this.PaymentButton.Size = new System.Drawing.Size(105, 38);
@@ -331,8 +331,8 @@
             // 
             this.TelNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.TelNM.FormattingEnabled = true;
-            this.TelNM.Location = new System.Drawing.Point(243, 159);
-            this.TelNM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TelNM.Location = new System.Drawing.Point(305, 159);
+            this.TelNM.Margin = new System.Windows.Forms.Padding(2);
             this.TelNM.Name = "TelNM";
             this.TelNM.Size = new System.Drawing.Size(167, 28);
             this.TelNM.TabIndex = 78;
@@ -340,7 +340,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(131, 200);
+            this.label4.Location = new System.Drawing.Point(193, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 29);
@@ -350,7 +350,7 @@
             // 
             // PhoneNumber
             // 
-            this.PhoneNumber.Location = new System.Drawing.Point(243, 207);
+            this.PhoneNumber.Location = new System.Drawing.Point(305, 207);
             this.PhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumber.MaxLength = 11;
             this.PhoneNumber.Name = "PhoneNumber";
@@ -364,7 +364,7 @@
             this.PhoneVerification.FlatAppearance.BorderSize = 0;
             this.PhoneVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PhoneVerification.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PhoneVerification.Location = new System.Drawing.Point(317, 248);
+            this.PhoneVerification.Location = new System.Drawing.Point(379, 248);
             this.PhoneVerification.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneVerification.Name = "PhoneVerification";
             this.PhoneVerification.Size = new System.Drawing.Size(93, 27);
@@ -376,8 +376,8 @@
             // CreditCard
             // 
             this.CreditCard.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CreditCard.Location = new System.Drawing.Point(491, 156);
-            this.CreditCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreditCard.Location = new System.Drawing.Point(553, 156);
+            this.CreditCard.Margin = new System.Windows.Forms.Padding(2);
             this.CreditCard.Name = "CreditCard";
             this.CreditCard.Size = new System.Drawing.Size(110, 30);
             this.CreditCard.TabIndex = 82;
@@ -388,8 +388,8 @@
             // AccountTransfer
             // 
             this.AccountTransfer.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountTransfer.Location = new System.Drawing.Point(482, 317);
-            this.AccountTransfer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountTransfer.Location = new System.Drawing.Point(544, 317);
+            this.AccountTransfer.Margin = new System.Windows.Forms.Padding(2);
             this.AccountTransfer.Name = "AccountTransfer";
             this.AccountTransfer.Size = new System.Drawing.Size(110, 25);
             this.AccountTransfer.TabIndex = 83;
@@ -410,8 +410,8 @@
             "우리카드",
             "하나카드",
             "롯데카드"});
-            this.CardCategory.Location = new System.Drawing.Point(583, 200);
-            this.CardCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CardCategory.Location = new System.Drawing.Point(645, 200);
+            this.CardCategory.Margin = new System.Windows.Forms.Padding(2);
             this.CardCategory.Name = "CardCategory";
             this.CardCategory.Size = new System.Drawing.Size(177, 28);
             this.CardCategory.TabIndex = 84;
@@ -427,8 +427,8 @@
             "NH농협은행",
             "우리은행",
             "KEB하나은행"});
-            this.BankCategory.Location = new System.Drawing.Point(583, 354);
-            this.BankCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BankCategory.Location = new System.Drawing.Point(645, 354);
+            this.BankCategory.Margin = new System.Windows.Forms.Padding(2);
             this.BankCategory.Name = "BankCategory";
             this.BankCategory.Size = new System.Drawing.Size(177, 28);
             this.BankCategory.TabIndex = 90;
@@ -437,7 +437,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(478, 353);
+            this.label6.Location = new System.Drawing.Point(540, 353);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 29);
@@ -448,7 +448,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(502, 385);
+            this.label7.Location = new System.Drawing.Point(564, 385);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 29);
@@ -459,7 +459,7 @@
             // AccountNumber
             // 
             this.AccountNumber.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountNumber.Location = new System.Drawing.Point(583, 387);
+            this.AccountNumber.Location = new System.Drawing.Point(645, 387);
             this.AccountNumber.Margin = new System.Windows.Forms.Padding(2);
             this.AccountNumber.MaxLength = 15;
             this.AccountNumber.Name = "AccountNumber";
@@ -469,7 +469,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(502, 417);
+            this.label8.Location = new System.Drawing.Point(564, 417);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 29);
@@ -480,7 +480,7 @@
             // AccountPW
             // 
             this.AccountPW.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountPW.Location = new System.Drawing.Point(583, 418);
+            this.AccountPW.Location = new System.Drawing.Point(645, 418);
             this.AccountPW.Margin = new System.Windows.Forms.Padding(2);
             this.AccountPW.MaxLength = 4;
             this.AccountPW.Name = "AccountPW";
@@ -492,7 +492,7 @@
             // 
             this.label12.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label12.ForeColor = System.Drawing.Color.IndianRed;
-            this.label12.Location = new System.Drawing.Point(132, 429);
+            this.label12.Location = new System.Drawing.Point(194, 429);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(342, 26);
@@ -505,7 +505,7 @@
             this.ApprovalRequest.FlatAppearance.BorderSize = 0;
             this.ApprovalRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApprovalRequest.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ApprovalRequest.Location = new System.Drawing.Point(666, 307);
+            this.ApprovalRequest.Location = new System.Drawing.Point(728, 307);
             this.ApprovalRequest.Margin = new System.Windows.Forms.Padding(2);
             this.ApprovalRequest.Name = "ApprovalRequest";
             this.ApprovalRequest.Size = new System.Drawing.Size(93, 27);
@@ -520,7 +520,7 @@
             this.AccountVerification.FlatAppearance.BorderSize = 0;
             this.AccountVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AccountVerification.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountVerification.Location = new System.Drawing.Point(666, 462);
+            this.AccountVerification.Location = new System.Drawing.Point(728, 462);
             this.AccountVerification.Margin = new System.Windows.Forms.Padding(2);
             this.AccountVerification.Name = "AccountVerification";
             this.AccountVerification.Size = new System.Drawing.Size(93, 27);

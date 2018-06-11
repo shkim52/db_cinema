@@ -59,7 +59,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 518);
+            this.panel1.Size = new System.Drawing.Size(382, 518);
             this.panel1.TabIndex = 0;
             // 
             // MyPageChangePwButton
@@ -67,7 +67,7 @@
             this.MyPageChangePwButton.FlatAppearance.BorderSize = 0;
             this.MyPageChangePwButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageChangePwButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageChangePwButton.Location = new System.Drawing.Point(142, 227);
+            this.MyPageChangePwButton.Location = new System.Drawing.Point(220, 229);
             this.MyPageChangePwButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageChangePwButton.Name = "MyPageChangePwButton";
             this.MyPageChangePwButton.Size = new System.Drawing.Size(126, 33);
@@ -82,7 +82,7 @@
             this.MyPageQuitMemButton.FlatAppearance.BorderSize = 0;
             this.MyPageQuitMemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageQuitMemButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageQuitMemButton.Location = new System.Drawing.Point(142, 265);
+            this.MyPageQuitMemButton.Location = new System.Drawing.Point(220, 267);
             this.MyPageQuitMemButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageQuitMemButton.Name = "MyPageQuitMemButton";
             this.MyPageQuitMemButton.Size = new System.Drawing.Size(126, 33);
@@ -97,7 +97,7 @@
             this.MyPageCheckResvButton.FlatAppearance.BorderSize = 0;
             this.MyPageCheckResvButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageCheckResvButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageCheckResvButton.Location = new System.Drawing.Point(142, 342);
+            this.MyPageCheckResvButton.Location = new System.Drawing.Point(220, 344);
             this.MyPageCheckResvButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageCheckResvButton.Name = "MyPageCheckResvButton";
             this.MyPageCheckResvButton.Size = new System.Drawing.Size(126, 33);
@@ -112,7 +112,7 @@
             this.MyPageMyPointButton.FlatAppearance.BorderSize = 0;
             this.MyPageMyPointButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageMyPointButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageMyPointButton.Location = new System.Drawing.Point(142, 459);
+            this.MyPageMyPointButton.Location = new System.Drawing.Point(220, 461);
             this.MyPageMyPointButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageMyPointButton.Name = "MyPageMyPointButton";
             this.MyPageMyPointButton.Size = new System.Drawing.Size(126, 33);
@@ -127,7 +127,7 @@
             this.MyPageInterestButton.FlatAppearance.BorderSize = 0;
             this.MyPageInterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageInterestButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageInterestButton.Location = new System.Drawing.Point(142, 380);
+            this.MyPageInterestButton.Location = new System.Drawing.Point(220, 382);
             this.MyPageInterestButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageInterestButton.Name = "MyPageInterestButton";
             this.MyPageInterestButton.Size = new System.Drawing.Size(126, 33);
@@ -141,7 +141,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Wheat;
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(94, 152);
+            this.label3.Location = new System.Drawing.Point(172, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 33);
@@ -153,7 +153,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Wheat;
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(94, 306);
+            this.label4.Location = new System.Drawing.Point(172, 308);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 33);
@@ -165,7 +165,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Wheat;
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(94, 423);
+            this.label5.Location = new System.Drawing.Point(172, 425);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 33);
@@ -178,7 +178,7 @@
             this.MyPageChangeInfoButton.FlatAppearance.BorderSize = 0;
             this.MyPageChangeInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MyPageChangeInfoButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MyPageChangeInfoButton.Location = new System.Drawing.Point(142, 188);
+            this.MyPageChangeInfoButton.Location = new System.Drawing.Point(220, 190);
             this.MyPageChangeInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.MyPageChangeInfoButton.Name = "MyPageChangeInfoButton";
             this.MyPageChangeInfoButton.Size = new System.Drawing.Size(126, 33);
@@ -192,9 +192,9 @@
             // 
             this.SubPanel.Controls.Add(this.label1);
             this.SubPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SubPanel.Location = new System.Drawing.Point(288, 0);
+            this.SubPanel.Location = new System.Drawing.Point(382, 0);
             this.SubPanel.Name = "SubPanel";
-            this.SubPanel.Size = new System.Drawing.Size(615, 518);
+            this.SubPanel.Size = new System.Drawing.Size(521, 518);
             this.SubPanel.TabIndex = 1;
             // 
             // label1

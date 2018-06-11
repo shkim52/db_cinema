@@ -44,10 +44,10 @@
             this.panel1.Controls.Add(this.BackToSelcetTimeButton);
             this.panel1.Controls.Add(this.BackToChooseSeatButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 346);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 272);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1178, 74);
+            this.panel1.Size = new System.Drawing.Size(1254, 148);
             this.panel1.TabIndex = 4;
             // 
             // PaymentPageButton
@@ -56,8 +56,8 @@
             this.PaymentPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PaymentPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PaymentPageButton.ForeColor = System.Drawing.Color.White;
-            this.PaymentPageButton.Location = new System.Drawing.Point(957, 14);
-            this.PaymentPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PaymentPageButton.Location = new System.Drawing.Point(1120, 14);
+            this.PaymentPageButton.Margin = new System.Windows.Forms.Padding(2);
             this.PaymentPageButton.Name = "PaymentPageButton";
             this.PaymentPageButton.Size = new System.Drawing.Size(91, 37);
             this.PaymentPageButton.TabIndex = 6;
@@ -71,8 +71,8 @@
             this.ChooseSeatPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChooseSeatPageButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ChooseSeatPageButton.ForeColor = System.Drawing.Color.White;
-            this.ChooseSeatPageButton.Location = new System.Drawing.Point(957, 14);
-            this.ChooseSeatPageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChooseSeatPageButton.Location = new System.Drawing.Point(1120, 14);
+            this.ChooseSeatPageButton.Margin = new System.Windows.Forms.Padding(2);
             this.ChooseSeatPageButton.Name = "ChooseSeatPageButton";
             this.ChooseSeatPageButton.Size = new System.Drawing.Size(91, 37);
             this.ChooseSeatPageButton.TabIndex = 7;
@@ -87,7 +87,7 @@
             this.BackToSelcetTimeButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BackToSelcetTimeButton.ForeColor = System.Drawing.Color.White;
             this.BackToSelcetTimeButton.Location = new System.Drawing.Point(115, 14);
-            this.BackToSelcetTimeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackToSelcetTimeButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackToSelcetTimeButton.Name = "BackToSelcetTimeButton";
             this.BackToSelcetTimeButton.Size = new System.Drawing.Size(91, 37);
             this.BackToSelcetTimeButton.TabIndex = 4;
@@ -102,7 +102,7 @@
             this.BackToChooseSeatButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BackToChooseSeatButton.ForeColor = System.Drawing.Color.White;
             this.BackToChooseSeatButton.Location = new System.Drawing.Point(115, 14);
-            this.BackToChooseSeatButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackToChooseSeatButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackToChooseSeatButton.Name = "BackToChooseSeatButton";
             this.BackToChooseSeatButton.Size = new System.Drawing.Size(91, 37);
             this.BackToChooseSeatButton.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1178, 346);
+            this.panel2.Size = new System.Drawing.Size(1254, 272);
             this.panel2.TabIndex = 5;
             // 
             // TicketingPage
@@ -125,9 +125,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TicketingPage";
-            this.Size = new System.Drawing.Size(1178, 420);
+            this.Size = new System.Drawing.Size(1254, 420);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
