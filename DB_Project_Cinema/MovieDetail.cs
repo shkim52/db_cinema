@@ -174,7 +174,7 @@ namespace DB_Project_Cinema
         }
         private void BookButton_Click(object sender, EventArgs e)
         {
-
+            _parent.Join_Cust();
         }
 
         private void BackToHome_Click(object sender, EventArgs e)

@@ -102,6 +102,21 @@ namespace DB_Project_Cinema
 
         private void TicketingPageButton_Click(object sender, EventArgs e)
         {
+
+            Join_Cust();
+
+            MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            TicketingPageButton.BackColor = Color.DimGray;
+            ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
+        }
+        public void Join_Cust()
+        {
             if (GetLoginId() == String.Empty)
             {
                 if (MessageBox.Show("비회원으로 예매 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -123,17 +138,6 @@ namespace DB_Project_Cinema
                 tp.Dock = DockStyle.Fill;
                 tp.BringToFront();
             }
-
-
-            MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            TicketingPageButton.BackColor = Color.DimGray;
-            ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            DiscountCardButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
         }
         public void load_ticketPage(string cust_name, string cust_sid, string cust_tel, string cust_pw)
         {
@@ -303,7 +307,7 @@ namespace DB_Project_Cinema
             
         }
 
-        private void checkResv_Click(object sender, EventArgs e)
+        public void checkResv_Click(object sender, EventArgs e)
         {
             if (mainPanel.Controls.Contains(LoginCust.Instance))
             {
