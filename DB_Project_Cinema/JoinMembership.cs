@@ -97,7 +97,6 @@ namespace DB_Project_Cinema
                     Cmd.ExecuteNonQuery();
                     MessageBox.Show("회원가입에 성공하셨습니다");
                 }
-                Connect.con.Close();
             }
             catch (Exception ex)
             {
