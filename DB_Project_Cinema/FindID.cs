@@ -32,7 +32,7 @@ namespace DB_Project_Cinema
             try
             {
 
-                string sql = "SELECT * FROM MEM WHERE MEM_SID_NO = '" + SID_INPUT.Text + "' AND MEM_TELNO = '" + TELNO_INPUT.Text+"'";
+                string sql = "SELECT * FROM MEM WHERE MEM_BIRTH = '" + SID_INPUT.Text + "' AND MEM_TELNO = '" + TELNO_INPUT.Text+"'";
 
                 OracleCommand Comm = new OracleCommand(sql,Connect.con);
 
@@ -49,15 +49,10 @@ namespace DB_Project_Cinema
                 {
                     MessageBox.Show("회원님의 ID는 "+ reader.GetString(reader.GetOrdinal("Mem_ID"))+"  입니다!");
                 }
-                Connect.con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                Connect.con.Close();
             }
         }
 
