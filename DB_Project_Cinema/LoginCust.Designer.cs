@@ -50,7 +50,7 @@
             this.cust_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cust_panel.Location = new System.Drawing.Point(0, 0);
             this.cust_panel.Name = "cust_panel";
-            this.cust_panel.Size = new System.Drawing.Size(994, 552);
+            this.cust_panel.Size = new System.Drawing.Size(1154, 552);
             this.cust_panel.TabIndex = 8;
             // 
             // label4
@@ -58,7 +58,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gulim", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(334, 261);
+            this.label4.Location = new System.Drawing.Point(525, 295);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(548, 18);
             this.label4.TabIndex = 15;
@@ -67,7 +67,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(369, 154);
+            this.label2.Location = new System.Drawing.Point(560, 188);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 33);
@@ -78,7 +78,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(381, 194);
+            this.label3.Location = new System.Drawing.Point(572, 228);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 33);
@@ -89,7 +89,7 @@
             // ID_INPUT
             // 
             this.ID_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ID_INPUT.Location = new System.Drawing.Point(490, 157);
+            this.ID_INPUT.Location = new System.Drawing.Point(681, 191);
             this.ID_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.ID_INPUT.Name = "ID_INPUT";
             this.ID_INPUT.Size = new System.Drawing.Size(210, 30);
@@ -98,7 +98,7 @@
             // PW_INPUT
             // 
             this.PW_INPUT.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PW_INPUT.Location = new System.Drawing.Point(490, 197);
+            this.PW_INPUT.Location = new System.Drawing.Point(681, 231);
             this.PW_INPUT.Margin = new System.Windows.Forms.Padding(2);
             this.PW_INPUT.Name = "PW_INPUT";
             this.PW_INPUT.PasswordChar = '*';
@@ -111,7 +111,7 @@
             this.mem_loginButton.FlatAppearance.BorderSize = 0;
             this.mem_loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mem_loginButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.mem_loginButton.Location = new System.Drawing.Point(726, 157);
+            this.mem_loginButton.Location = new System.Drawing.Point(917, 191);
             this.mem_loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.mem_loginButton.Name = "mem_loginButton";
             this.mem_loginButton.Size = new System.Drawing.Size(71, 68);
@@ -126,7 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cust_panel);
             this.Name = "LoginCust";
-            this.Size = new System.Drawing.Size(994, 552);
+            this.Size = new System.Drawing.Size(1154, 552);
             this.Load += new System.EventHandler(this.LoginCust_Load);
             this.cust_panel.ResumeLayout(false);
             this.cust_panel.PerformLayout();
