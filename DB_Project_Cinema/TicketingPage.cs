@@ -19,7 +19,7 @@ namespace DB_Project_Cinema
 
         private string Cust_NM;
         private string Cust_Sid;
-        private int Cust_Tel;
+        private string Cust_Tel;
         private string Cust_Pw;
 
         public void SetCustNM(string cust_name)
@@ -30,7 +30,7 @@ namespace DB_Project_Cinema
         {
             Cust_Sid = cust_sid;
         }
-        public void SetCustTel(int cust_tel)
+        public void SetCustTel(string cust_tel)
         {
             Cust_Tel = cust_tel;
         }

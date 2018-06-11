@@ -135,7 +135,7 @@ namespace DB_Project_Cinema
             JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
         }
-        public void load_ticketPage(string cust_name, string cust_sid, int cust_tel, string cust_pw)
+        public void load_ticketPage(string cust_name, string cust_sid, string cust_tel, string cust_pw)
         {
             TicketingPage tp = new TicketingPage(this);
             mainPanel.Controls.Add(tp);

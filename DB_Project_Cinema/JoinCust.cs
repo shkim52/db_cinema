@@ -50,7 +50,7 @@ namespace DB_Project_Cinema
                     MessageBox.Show("임시 ID는 티켓예매번호이며 티켓예매번호와 비밀번호를 잊어버리면 예매확인이 어려우니 양해부탁드립니다!");
                     this.Parent.Controls.Remove(this);
                     this.Controls.Remove(this);
-                    _parent.load_ticketPage(CustNameTextbox.Text, CustResidentTextbox.Text, Convert.ToInt32(CustHPNumTextbox.Text), CustPWTextbox.Text);
+                    _parent.load_ticketPage(CustNameTextbox.Text, CustResidentTextbox.Text, CustHPNumTextbox.Text, CustPWTextbox.Text);
                 }
             }
             catch (Exception ex)
