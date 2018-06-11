@@ -31,6 +31,7 @@
             this.Picture1 = new System.Windows.Forms.PictureBox();
             this.Picture2 = new System.Windows.Forms.PictureBox();
             this.Picture3 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Picture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture3)).BeginInit();
@@ -66,11 +67,22 @@
             this.Picture3.TabIndex = 3;
             this.Picture3.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(57, 477);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "<- 뒤로가기";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MoviePicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Picture3);
             this.Controls.Add(this.Picture2);
             this.Controls.Add(this.Picture1);
@@ -89,6 +101,7 @@
         private System.Windows.Forms.PictureBox Picture1;
         private System.Windows.Forms.PictureBox Picture2;
         private System.Windows.Forms.PictureBox Picture3;
+        private System.Windows.Forms.Button button1;
 
     }
 }
