@@ -31,6 +31,7 @@ namespace DB_Project_Cinema
         private string cust_nm;
         private string cust_birth;
         private string cust_telno;
+        private bool button_check = false;
 
 
         public Payment(string mem_id, string schedule_no, int bk_seat_cnt, string chosen_seat_no, string Cust_Pw, string Cust_Nm, string Cust_Birth, string Cust_Tel)
@@ -52,7 +53,23 @@ namespace DB_Project_Cinema
             TelNM_View();
             Point_View();
             Price_View();
-        
+            if (member == "")
+            {
+                label9.Visible = false;
+                label11.Visible = false;
+                label24.Visible = false;
+                SavePoint.Visible = false;
+                UsePoint.Visible = false;
+                label12.Visible = false;
+                label18.Visible = false;
+                PointDc.Visible = false;
+                label13.Visible = false;
+            }
+            else if (Convert.ToInt32(SavePoint.Text) < 1000)
+            {
+                UsePoint.Enabled = false;
+            }
+            PointDc.Text = UsePoint.Text;
         }
 
         private void seat_price_info()
@@ -104,14 +121,6 @@ namespace DB_Project_Cinema
             }     
         }
 
-        private void PhoneNumber_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
-            {
-                e.Handled = true;
-                MessageBox.Show("숫자만 입력해주세요!");
-            }
-        }
 
         private void PhoneVerification_Click(object sender, EventArgs e)
         {
@@ -174,14 +183,7 @@ namespace DB_Project_Cinema
 
         private void UsePoint_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(SavePoint.Text) < 1000)
-            {
-                MessageBox.Show("1000Point 이상부터 사용 가능합니다!");
-            }
-            else
-            {
-                PointDc.Text = UsePoint.Text;
-            }
+            PointDc.Text = UsePoint.Text;
         }
 
         private void CreditCard_Click(object sender, EventArgs e)
@@ -246,7 +248,9 @@ namespace DB_Project_Cinema
                 MessageBox.Show("승인번호가 발급되었습니다!");
                 TelDCPrice.Text = (int.Parse(TelDCPrice.Text)).ToString();
                 DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TelDCPrice.Text)-usepoint).ToString();
-
+                AccountNumber.Enabled = false;
+                AccountPW.Enabled = false;
+                button_check = true;
             }
         }
 
@@ -269,7 +273,10 @@ namespace DB_Project_Cinema
                 usepoint = int.Parse(UsePoint.Text);
                 MessageBox.Show("계좌 검증이 완료되었습니다!");
                 TelDCPrice.Text = (int.Parse(TelDCPrice.Text) + usepoint).ToString();
+                CardNumber.Enabled = false;
                 DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TelDCPrice.Text)-usepoint).ToString();
+                CardPW.Enabled = false;
+                button_check = true;
             }
         }
 
@@ -279,6 +286,11 @@ namespace DB_Project_Cinema
             {
                 MessageBox.Show("결제 방법을 선택해 주세요!");
             }
+            else if(!button_check)
+            {
+                MessageBox.Show("카드 승인 요청 및 계좌 검증을 해주세요!!");
+            }
+
             else
             {
                 OracleCommand Cmd = new OracleCommand();
@@ -348,7 +360,13 @@ namespace DB_Project_Cinema
             }
         }
 
-        
- 
+        private void PhoneNumber_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
     }
 }

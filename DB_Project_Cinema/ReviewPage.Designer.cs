@@ -33,11 +33,12 @@
             this.Review = new System.Windows.Forms.TextBox();
             this.ReviewRegisterButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BackToHome = new System.Windows.Forms.Button();
+            this.MovieScore = new System.Windows.Forms.ComboBox();
             this.MemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MemReview = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BackToHome = new System.Windows.Forms.Button();
-            this.MovieScore = new System.Windows.Forms.ComboBox();
+            this.DELETE = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,39 +92,16 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MemID,
             this.Score,
-            this.MemReview});
-            this.dataGridView1.Location = new System.Drawing.Point(329, 100);
+            this.MemReview,
+            this.DELETE});
+            this.dataGridView1.Location = new System.Drawing.Point(271, 115);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(659, 121);
+            this.dataGridView1.Size = new System.Drawing.Size(818, 121);
             this.dataGridView1.TabIndex = 14;
-            // 
-            // MemID
-            // 
-            this.MemID.FillWeight = 150F;
-            this.MemID.HeaderText = "회원아이디";
-            this.MemID.Name = "MemID";
-            this.MemID.ReadOnly = true;
-            this.MemID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.MemID.Width = 150;
-            // 
-            // Score
-            // 
-            this.Score.HeaderText = "평점";
-            this.Score.Name = "Score";
-            this.Score.ReadOnly = true;
-            this.Score.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // MemReview
-            // 
-            this.MemReview.FillWeight = 400F;
-            this.MemReview.HeaderText = "리뷰";
-            this.MemReview.Name = "MemReview";
-            this.MemReview.ReadOnly = true;
-            this.MemReview.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.MemReview.Width = 400;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BackToHome
             // 
@@ -153,6 +131,36 @@
             this.MovieScore.Name = "MovieScore";
             this.MovieScore.Size = new System.Drawing.Size(75, 28);
             this.MovieScore.TabIndex = 27;
+            // 
+            // MemID
+            // 
+            this.MemID.FillWeight = 150F;
+            this.MemID.HeaderText = "회원아이디";
+            this.MemID.Name = "MemID";
+            this.MemID.ReadOnly = true;
+            this.MemID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MemID.Width = 150;
+            // 
+            // Score
+            // 
+            this.Score.HeaderText = "평점";
+            this.Score.Name = "Score";
+            this.Score.ReadOnly = true;
+            this.Score.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // MemReview
+            // 
+            this.MemReview.FillWeight = 400F;
+            this.MemReview.HeaderText = "리뷰";
+            this.MemReview.Name = "MemReview";
+            this.MemReview.ReadOnly = true;
+            this.MemReview.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MemReview.Width = 400;
+            // 
+            // DELETE
+            // 
+            this.DELETE.HeaderText = "삭제하기";
+            this.DELETE.Name = "DELETE";
             // 
             // ReviewPage
             // 
@@ -185,10 +193,11 @@
         private System.Windows.Forms.Button ReviewRegisterButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BackToHome;
+        private System.Windows.Forms.ComboBox MovieScore;
         private System.Windows.Forms.DataGridViewTextBoxColumn MemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn MemReview;
-        private System.Windows.Forms.ComboBox MovieScore;
+        private System.Windows.Forms.DataGridViewButtonColumn DELETE;
 
     }
 }

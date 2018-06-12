@@ -141,5 +141,43 @@ namespace DB_Project_Cinema
             dataGridView1.Rows.Clear();
             connect.con.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                if (dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString() == MoviePage.Instance.GetMem_id())
+                {
+                    delete_review();
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
+                }
+                else
+                {
+                    MessageBox.Show("회원이 아닐 경우 삭제가 불가능합니다!");
+                }
+            }
+           
+        }
+
+        private void delete_review()
+        {
+            try
+            {
+                OracleCommand Cmd = new OracleCommand();
+                Cmd.Connection = connect.con;
+
+                string input_sql = "DELETE FROM GRADE WHERE MOVIE_NO = " + selected_movie_no + " AND MEM_ID = '" + MoviePage.Instance.GetMem_id() + "'";
+
+                Cmd.CommandText = input_sql;
+                Cmd.ExecuteNonQuery();
+
+                MessageBox.Show("삭제완료");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }

@@ -58,6 +58,7 @@ namespace DB_Project_Cinema
                 {
                     ID_CHECK.Text = "사용 가능한 아이디입니다.";
                     idcheck = true;
+                    ID_INPUT.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -74,6 +75,10 @@ namespace DB_Project_Cinema
                 if (PWD_INPUT.Text == "" && PWD2_INPUT.Text == "" && PWD2_INPUT != PWD_INPUT)
                 {
                     MessageBox.Show("비밀번호가 일치하지 않거나 입력되지 않았습니다.");
+                }
+                else if (!idcheck)
+                {
+                    MessageBox.Show("중복확인 체크를 해주세요");
                 }
                 else if (!EMAIL_INPUT.Text.Contains("@"))
                 {

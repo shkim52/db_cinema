@@ -74,10 +74,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(652, 50);
+            this.label1.Location = new System.Drawing.Point(522, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 44);
+            this.label1.Size = new System.Drawing.Size(252, 37);
             this.label1.TabIndex = 42;
             this.label1.Text = "PAYMENT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,10 +87,10 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(245, 132);
+            this.label2.Location = new System.Drawing.Point(196, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(388, 35);
+            this.label2.Size = new System.Drawing.Size(310, 29);
             this.label2.TabIndex = 43;
             this.label2.Text = "통신 카드사 할인";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,10 +100,10 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(686, 132);
+            this.label3.Location = new System.Drawing.Point(549, 110);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(360, 35);
+            this.label3.Size = new System.Drawing.Size(288, 29);
             this.label3.TabIndex = 44;
             this.label3.Text = "기본 결제";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,10 +111,10 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(261, 188);
+            this.label5.Location = new System.Drawing.Point(209, 157);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 35);
+            this.label5.Size = new System.Drawing.Size(85, 29);
             this.label5.TabIndex = 45;
             this.label5.Text = "통신사:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -124,10 +124,10 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(245, 380);
+            this.label9.Location = new System.Drawing.Point(196, 317);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(388, 35);
+            this.label9.Size = new System.Drawing.Size(310, 29);
             this.label9.TabIndex = 49;
             this.label9.Text = "포인트 할인";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,10 +135,10 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.Location = new System.Drawing.Point(245, 419);
+            this.label10.Location = new System.Drawing.Point(196, 349);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(194, 35);
+            this.label10.Size = new System.Drawing.Size(155, 29);
             this.label10.TabIndex = 50;
             this.label10.Text = "현재 보유 포인트:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -146,10 +146,10 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.Location = new System.Drawing.Point(245, 454);
+            this.label11.Location = new System.Drawing.Point(196, 378);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(194, 46);
+            this.label11.Size = new System.Drawing.Size(155, 38);
             this.label11.TabIndex = 51;
             this.label11.Text = "사용할 포인트:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -157,22 +157,23 @@
             // UsePoint
             // 
             this.UsePoint.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UsePoint.Location = new System.Drawing.Point(450, 462);
+            this.UsePoint.Location = new System.Drawing.Point(360, 385);
             this.UsePoint.Margin = new System.Windows.Forms.Padding(2);
             this.UsePoint.MaxLength = 7;
             this.UsePoint.Name = "UsePoint";
-            this.UsePoint.Size = new System.Drawing.Size(92, 31);
+            this.UsePoint.Size = new System.Drawing.Size(74, 27);
             this.UsePoint.TabIndex = 56;
+            this.UsePoint.Text = "0";
             this.UsePoint.TextChanged += new System.EventHandler(this.UsePoint_TextChanged);
             this.UsePoint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsePoint_KeyPress);
             // 
             // SavePoint
             // 
             this.SavePoint.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.SavePoint.Location = new System.Drawing.Point(445, 419);
+            this.SavePoint.Location = new System.Drawing.Point(356, 349);
             this.SavePoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SavePoint.Name = "SavePoint";
-            this.SavePoint.Size = new System.Drawing.Size(91, 35);
+            this.SavePoint.Size = new System.Drawing.Size(73, 29);
             this.SavePoint.TabIndex = 59;
             this.SavePoint.Text = "0";
             this.SavePoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,10 +181,10 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(705, 239);
+            this.label14.Location = new System.Drawing.Point(564, 199);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 35);
+            this.label14.Size = new System.Drawing.Size(78, 29);
             this.label14.TabIndex = 61;
             this.label14.Text = "카드종류:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,10 +192,10 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.Location = new System.Drawing.Point(705, 277);
+            this.label15.Location = new System.Drawing.Point(564, 231);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 35);
+            this.label15.Size = new System.Drawing.Size(78, 29);
             this.label15.TabIndex = 62;
             this.label15.Text = "카드번호:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -202,21 +203,21 @@
             // CardNumber
             // 
             this.CardNumber.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CardNumber.Location = new System.Drawing.Point(806, 280);
+            this.CardNumber.Location = new System.Drawing.Point(645, 233);
             this.CardNumber.Margin = new System.Windows.Forms.Padding(2);
             this.CardNumber.MaxLength = 16;
             this.CardNumber.Name = "CardNumber";
-            this.CardNumber.Size = new System.Drawing.Size(220, 31);
+            this.CardNumber.Size = new System.Drawing.Size(177, 27);
             this.CardNumber.TabIndex = 63;
             this.CardNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CardNumber_KeyPress);
             // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(705, 314);
+            this.label17.Location = new System.Drawing.Point(564, 262);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(98, 35);
+            this.label17.Size = new System.Drawing.Size(78, 29);
             this.label17.TabIndex = 64;
             this.label17.Text = "비밀번호:";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,12 +225,12 @@
             // CardPW
             // 
             this.CardPW.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CardPW.Location = new System.Drawing.Point(806, 317);
+            this.CardPW.Location = new System.Drawing.Point(645, 264);
             this.CardPW.Margin = new System.Windows.Forms.Padding(2);
             this.CardPW.MaxLength = 4;
             this.CardPW.Name = "CardPW";
             this.CardPW.PasswordChar = '*';
-            this.CardPW.Size = new System.Drawing.Size(220, 31);
+            this.CardPW.Size = new System.Drawing.Size(177, 27);
             this.CardPW.TabIndex = 65;
             this.CardPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CardPW_KeyPress);
             // 
@@ -238,10 +239,10 @@
             this.label16.BackColor = System.Drawing.Color.Wheat;
             this.label16.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(1160, 154);
+            this.label16.Location = new System.Drawing.Point(928, 128);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(224, 35);
+            this.label16.Size = new System.Drawing.Size(179, 29);
             this.label16.TabIndex = 67;
             this.label16.Text = "총 결제금액";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,10 +251,10 @@
             // 
             this.TotalPrice.BackColor = System.Drawing.Color.OldLace;
             this.TotalPrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TotalPrice.Location = new System.Drawing.Point(1160, 188);
+            this.TotalPrice.Location = new System.Drawing.Point(928, 157);
             this.TotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.Size = new System.Drawing.Size(224, 35);
+            this.TotalPrice.Size = new System.Drawing.Size(179, 29);
             this.TotalPrice.TabIndex = 68;
             this.TotalPrice.Text = "0원";
             this.TotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,10 +263,10 @@
             // 
             this.label19.BackColor = System.Drawing.Color.Wheat;
             this.label19.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label19.Location = new System.Drawing.Point(1160, 223);
+            this.label19.Location = new System.Drawing.Point(928, 186);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(224, 35);
+            this.label19.Size = new System.Drawing.Size(179, 29);
             this.label19.TabIndex = 69;
             this.label19.Text = "통신사 할인금액";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,10 +275,10 @@
             // 
             this.TelDCPrice.BackColor = System.Drawing.Color.OldLace;
             this.TelDCPrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TelDCPrice.Location = new System.Drawing.Point(1160, 259);
+            this.TelDCPrice.Location = new System.Drawing.Point(928, 216);
             this.TelDCPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TelDCPrice.Name = "TelDCPrice";
-            this.TelDCPrice.Size = new System.Drawing.Size(224, 35);
+            this.TelDCPrice.Size = new System.Drawing.Size(179, 29);
             this.TelDCPrice.TabIndex = 70;
             this.TelDCPrice.Text = "0원";
             this.TelDCPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,10 +287,10 @@
             // 
             this.label21.BackColor = System.Drawing.Color.Wheat;
             this.label21.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label21.Location = new System.Drawing.Point(1160, 364);
+            this.label21.Location = new System.Drawing.Point(928, 303);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(224, 35);
+            this.label21.Size = new System.Drawing.Size(179, 29);
             this.label21.TabIndex = 71;
             this.label21.Text = "남은 결제금액";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,10 +299,10 @@
             // 
             this.DifferencePrice.BackColor = System.Drawing.Color.OldLace;
             this.DifferencePrice.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DifferencePrice.Location = new System.Drawing.Point(1160, 399);
+            this.DifferencePrice.Location = new System.Drawing.Point(928, 332);
             this.DifferencePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DifferencePrice.Name = "DifferencePrice";
-            this.DifferencePrice.Size = new System.Drawing.Size(224, 35);
+            this.DifferencePrice.Size = new System.Drawing.Size(179, 29);
             this.DifferencePrice.TabIndex = 72;
             this.DifferencePrice.Text = "0원";
             this.DifferencePrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,10 +310,10 @@
             // label24
             // 
             this.label24.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label24.Location = new System.Drawing.Point(541, 419);
+            this.label24.Location = new System.Drawing.Point(433, 349);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(91, 35);
+            this.label24.Size = new System.Drawing.Size(73, 29);
             this.label24.TabIndex = 74;
             this.label24.Text = "Point";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,10 +325,10 @@
             this.PaymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PaymentButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PaymentButton.ForeColor = System.Drawing.Color.White;
-            this.PaymentButton.Location = new System.Drawing.Point(1252, 498);
+            this.PaymentButton.Location = new System.Drawing.Point(1002, 415);
             this.PaymentButton.Margin = new System.Windows.Forms.Padding(2);
             this.PaymentButton.Name = "PaymentButton";
-            this.PaymentButton.Size = new System.Drawing.Size(131, 46);
+            this.PaymentButton.Size = new System.Drawing.Size(105, 38);
             this.PaymentButton.TabIndex = 77;
             this.PaymentButton.Text = "v 결제하기";
             this.PaymentButton.UseVisualStyleBackColor = false;
@@ -337,30 +338,30 @@
             // 
             this.TelNM.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.TelNM.FormattingEnabled = true;
-            this.TelNM.Location = new System.Drawing.Point(381, 191);
+            this.TelNM.Location = new System.Drawing.Point(305, 159);
             this.TelNM.Margin = new System.Windows.Forms.Padding(2);
             this.TelNM.Name = "TelNM";
-            this.TelNM.Size = new System.Drawing.Size(208, 33);
+            this.TelNM.Size = new System.Drawing.Size(167, 28);
             this.TelNM.TabIndex = 78;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(241, 240);
+            this.label4.Location = new System.Drawing.Point(193, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 35);
+            this.label4.Size = new System.Drawing.Size(101, 29);
             this.label4.TabIndex = 79;
             this.label4.Text = "휴대폰 번호:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PhoneNumber
             // 
-            this.PhoneNumber.Location = new System.Drawing.Point(381, 248);
+            this.PhoneNumber.Location = new System.Drawing.Point(305, 207);
             this.PhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumber.MaxLength = 11;
             this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.Size = new System.Drawing.Size(208, 28);
+            this.PhoneNumber.Size = new System.Drawing.Size(167, 25);
             this.PhoneNumber.TabIndex = 80;
             this.PhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneNumber_KeyPress_1);
             // 
@@ -370,10 +371,10 @@
             this.PhoneVerification.FlatAppearance.BorderSize = 0;
             this.PhoneVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PhoneVerification.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PhoneVerification.Location = new System.Drawing.Point(474, 298);
+            this.PhoneVerification.Location = new System.Drawing.Point(379, 248);
             this.PhoneVerification.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneVerification.Name = "PhoneVerification";
-            this.PhoneVerification.Size = new System.Drawing.Size(116, 32);
+            this.PhoneVerification.Size = new System.Drawing.Size(93, 27);
             this.PhoneVerification.TabIndex = 81;
             this.PhoneVerification.Text = "휴대폰 인증";
             this.PhoneVerification.UseVisualStyleBackColor = false;
@@ -382,10 +383,10 @@
             // CreditCard
             // 
             this.CreditCard.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CreditCard.Location = new System.Drawing.Point(691, 187);
+            this.CreditCard.Location = new System.Drawing.Point(553, 156);
             this.CreditCard.Margin = new System.Windows.Forms.Padding(2);
             this.CreditCard.Name = "CreditCard";
-            this.CreditCard.Size = new System.Drawing.Size(138, 36);
+            this.CreditCard.Size = new System.Drawing.Size(110, 30);
             this.CreditCard.TabIndex = 82;
             this.CreditCard.Text = "신용카드";
             this.CreditCard.UseVisualStyleBackColor = true;
@@ -394,10 +395,10 @@
             // AccountTransfer
             // 
             this.AccountTransfer.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountTransfer.Location = new System.Drawing.Point(680, 380);
+            this.AccountTransfer.Location = new System.Drawing.Point(544, 317);
             this.AccountTransfer.Margin = new System.Windows.Forms.Padding(2);
             this.AccountTransfer.Name = "AccountTransfer";
-            this.AccountTransfer.Size = new System.Drawing.Size(138, 30);
+            this.AccountTransfer.Size = new System.Drawing.Size(110, 25);
             this.AccountTransfer.TabIndex = 83;
             this.AccountTransfer.Text = "계좌이체";
             this.AccountTransfer.UseVisualStyleBackColor = true;
@@ -416,10 +417,10 @@
             "우리카드",
             "하나카드",
             "롯데카드"});
-            this.CardCategory.Location = new System.Drawing.Point(806, 240);
+            this.CardCategory.Location = new System.Drawing.Point(645, 200);
             this.CardCategory.Margin = new System.Windows.Forms.Padding(2);
             this.CardCategory.Name = "CardCategory";
-            this.CardCategory.Size = new System.Drawing.Size(220, 33);
+            this.CardCategory.Size = new System.Drawing.Size(177, 28);
             this.CardCategory.TabIndex = 84;
             this.CardCategory.Text = "신한카드";
             // 
@@ -433,20 +434,20 @@
             "NH농협은행",
             "우리은행",
             "KEB하나은행"});
-            this.BankCategory.Location = new System.Drawing.Point(806, 425);
+            this.BankCategory.Location = new System.Drawing.Point(645, 354);
             this.BankCategory.Margin = new System.Windows.Forms.Padding(2);
             this.BankCategory.Name = "BankCategory";
-            this.BankCategory.Size = new System.Drawing.Size(220, 33);
+            this.BankCategory.Size = new System.Drawing.Size(177, 28);
             this.BankCategory.TabIndex = 90;
             this.BankCategory.Text = "신한은행";
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(675, 424);
+            this.label6.Location = new System.Drawing.Point(540, 353);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 35);
+            this.label6.Size = new System.Drawing.Size(102, 29);
             this.label6.TabIndex = 85;
             this.label6.Text = "게좌이체은행:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -454,10 +455,10 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(705, 462);
+            this.label7.Location = new System.Drawing.Point(564, 385);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 35);
+            this.label7.Size = new System.Drawing.Size(78, 29);
             this.label7.TabIndex = 91;
             this.label7.Text = "게좌번호:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -465,21 +466,21 @@
             // AccountNumber
             // 
             this.AccountNumber.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountNumber.Location = new System.Drawing.Point(806, 464);
+            this.AccountNumber.Location = new System.Drawing.Point(645, 387);
             this.AccountNumber.Margin = new System.Windows.Forms.Padding(2);
             this.AccountNumber.MaxLength = 15;
             this.AccountNumber.Name = "AccountNumber";
-            this.AccountNumber.Size = new System.Drawing.Size(220, 31);
+            this.AccountNumber.Size = new System.Drawing.Size(177, 27);
             this.AccountNumber.TabIndex = 92;
             this.AccountNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AccountNumber_KeyPress);
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(705, 500);
+            this.label8.Location = new System.Drawing.Point(564, 417);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 35);
+            this.label8.Size = new System.Drawing.Size(78, 29);
             this.label8.TabIndex = 93;
             this.label8.Text = "비밀번호:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -487,12 +488,12 @@
             // AccountPW
             // 
             this.AccountPW.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountPW.Location = new System.Drawing.Point(806, 502);
+            this.AccountPW.Location = new System.Drawing.Point(645, 418);
             this.AccountPW.Margin = new System.Windows.Forms.Padding(2);
             this.AccountPW.MaxLength = 4;
             this.AccountPW.Name = "AccountPW";
             this.AccountPW.PasswordChar = '*';
-            this.AccountPW.Size = new System.Drawing.Size(220, 31);
+            this.AccountPW.Size = new System.Drawing.Size(177, 27);
             this.AccountPW.TabIndex = 94;
             this.AccountPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AccountPW_KeyPress);
             // 
@@ -500,10 +501,10 @@
             // 
             this.label12.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label12.ForeColor = System.Drawing.Color.IndianRed;
-            this.label12.Location = new System.Drawing.Point(242, 515);
+            this.label12.Location = new System.Drawing.Point(194, 429);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(428, 31);
+            this.label12.Size = new System.Drawing.Size(342, 26);
             this.label12.TabIndex = 95;
             this.label12.Text = "* 적립포인트는 1000Point 이상부터 사용할 수 있습니다.";
             // 
@@ -513,10 +514,10 @@
             this.ApprovalRequest.FlatAppearance.BorderSize = 0;
             this.ApprovalRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApprovalRequest.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ApprovalRequest.Location = new System.Drawing.Point(910, 368);
+            this.ApprovalRequest.Location = new System.Drawing.Point(728, 307);
             this.ApprovalRequest.Margin = new System.Windows.Forms.Padding(2);
             this.ApprovalRequest.Name = "ApprovalRequest";
-            this.ApprovalRequest.Size = new System.Drawing.Size(116, 32);
+            this.ApprovalRequest.Size = new System.Drawing.Size(93, 27);
             this.ApprovalRequest.TabIndex = 96;
             this.ApprovalRequest.Text = "승인요청";
             this.ApprovalRequest.UseVisualStyleBackColor = false;
@@ -528,10 +529,10 @@
             this.AccountVerification.FlatAppearance.BorderSize = 0;
             this.AccountVerification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AccountVerification.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.AccountVerification.Location = new System.Drawing.Point(910, 554);
+            this.AccountVerification.Location = new System.Drawing.Point(728, 462);
             this.AccountVerification.Margin = new System.Windows.Forms.Padding(2);
             this.AccountVerification.Name = "AccountVerification";
-            this.AccountVerification.Size = new System.Drawing.Size(116, 32);
+            this.AccountVerification.Size = new System.Drawing.Size(93, 27);
             this.AccountVerification.TabIndex = 97;
             this.AccountVerification.Text = "계좌검증";
             this.AccountVerification.UseVisualStyleBackColor = false;
@@ -541,10 +542,10 @@
             // 
             this.label13.BackColor = System.Drawing.Color.Wheat;
             this.label13.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(1160, 294);
+            this.label13.Location = new System.Drawing.Point(928, 245);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(224, 35);
+            this.label13.Size = new System.Drawing.Size(179, 29);
             this.label13.TabIndex = 98;
             this.label13.Text = "포인트";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -553,10 +554,10 @@
             // 
             this.PointDc.BackColor = System.Drawing.Color.OldLace;
             this.PointDc.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PointDc.Location = new System.Drawing.Point(1160, 329);
+            this.PointDc.Location = new System.Drawing.Point(928, 274);
             this.PointDc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PointDc.Name = "PointDc";
-            this.PointDc.Size = new System.Drawing.Size(224, 35);
+            this.PointDc.Size = new System.Drawing.Size(179, 29);
             this.PointDc.TabIndex = 99;
             this.PointDc.Text = "0원";
             this.PointDc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -565,16 +566,16 @@
             // 
             this.label18.Font = new System.Drawing.Font("Malgun Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label18.ForeColor = System.Drawing.Color.IndianRed;
-            this.label18.Location = new System.Drawing.Point(242, 546);
+            this.label18.Location = new System.Drawing.Point(194, 455);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(391, 40);
+            this.label18.Size = new System.Drawing.Size(313, 33);
             this.label18.TabIndex = 100;
             this.label18.Text = "* 포인트 할인은 신용카드 승인을 받거나 계좌검증을 받았을 시에 적용됩니다.";
             // 
             // Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label18);
@@ -620,7 +621,7 @@
             this.Controls.Add(this.label24);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Payment";
-            this.Size = new System.Drawing.Size(1502, 769);
+            this.Size = new System.Drawing.Size(1202, 641);
             this.ResumeLayout(false);
             this.PerformLayout();
 
