@@ -81,8 +81,13 @@ namespace DB_Project_Cinema
             if (mainPanel.Controls.Contains(MoviePage.Instance))
             {
                 mainPanel.Controls.Remove(MoviePage.Instance);
+               // foreach (var c in MoviePage.Instance.Controls)
+              //  {
+               //     MoviePage.Instance.Controls.Remove((Control)c);
+               // }
                 
             }
+            MoviePage.Instance.View_PlayingMovie();
             mainPanel.Controls.Add(MoviePage.Instance);
             MoviePage.Instance.SetParent(this);
             MoviePage.Instance.Dock = DockStyle.Fill;

@@ -14,17 +14,17 @@ namespace DB_Project_Cinema
 {
     public partial class MovieSearchPage : UserControl
     {
-        private static MovieSearchPage _instance;
         private Connection connect;
         private string category;
         private string searchtext;
-        private int movie_no;
         private int[] movie_no_array;
+        private MoviePage _parent;
 
-        public MovieSearchPage(string movie_category, string search_text)
+        public MovieSearchPage(string movie_category, string search_text, MoviePage parent)
         {
 
             InitializeComponent();
+            _parent = parent;
             connect = new Connection();
             connect.Connecting();
 
@@ -195,10 +195,14 @@ namespace DB_Project_Cinema
 
             if (e.ColumnIndex == 7)
             {
+                /*
                 MovieDetail MD = new MovieDetail(movie_no_array[e.RowIndex]);
                 this.Parent.Controls.Add(MD); // parent -> panel3
                 MD.Dock = DockStyle.None;
-                MD.BringToFront();
+                MD.BringToFront();*/
+                //this.Parent.Controls.Remove(this);
+                //this.Controls.Remove(this);
+                _parent.Movie_Detail(movie_no_array[e.RowIndex]);
             }
 
         }
