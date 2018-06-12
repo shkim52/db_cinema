@@ -75,7 +75,7 @@ namespace DB_Project_Cinema
         private void ReviewRegisterButton_Click(object sender, EventArgs e)
         {
 
-            if (MoviePage.Instance.GetMem_id() == String.Empty)
+            if (CinemaProgram.Instance.GetLoginId() == String.Empty)
             {
                 MessageBox.Show("로그인을 하세요!");
             }

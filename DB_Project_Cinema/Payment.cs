@@ -282,12 +282,22 @@ namespace DB_Project_Cinema
             else
             {
                 OracleCommand Cmd = new OracleCommand();
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.CommandText = "RESV_PROC";
                 Cmd.Connection = connect.con;
-                
 
-                string sql = "EXECUTE RESV_PROC('" + member + "','" + show_schedule + "'," + bk_seatcnt + ",'" + seat_no + "','" + payway + "', '" + telnm + "', " + usepoint + ", '" + cust_pw + "','" + cust_nm + "','" + cust_birth + "','" + cust_telno + "')";
+                Cmd.Parameters.Add(new OracleParameter("p_mem_id", member));
+                Cmd.Parameters.Add(new OracleParameter("p_show_sche_no", show_schedule));
+                Cmd.Parameters.Add(new OracleParameter("p_bk_seat_cnt", bk_seatcnt));
+                Cmd.Parameters.Add(new OracleParameter("p_seat_no", seat_no));
+                Cmd.Parameters.Add(new OracleParameter("p_pay_way", payway));
+                Cmd.Parameters.Add(new OracleParameter("p_tel_nm", telnm));
+                Cmd.Parameters.Add(new OracleParameter("p_use_point", usepoint));
+                Cmd.Parameters.Add(new OracleParameter("p_cust_pw", cust_pw));
+                Cmd.Parameters.Add(new OracleParameter("p_cust_nm", cust_nm));
+                Cmd.Parameters.Add(new OracleParameter("p_cust_birth", cust_birth));
+                Cmd.Parameters.Add(new OracleParameter("p_cust_telno", cust_telno));
 
-                Cmd.CommandText = sql;
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("결제가 완료되었습니다!");
             }
