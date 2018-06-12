@@ -23,8 +23,8 @@ namespace DB_Project_Cinema
         //private string[] used_seat = new string[500];
         //private string[] exist_seat = new string[500];
 
-        private int[,] used_seat = new int[19, 20];
-        private int[,] exist_seat = new int[19, 20];
+        private int[,] seat_array = new int[19, 20];
+        //private int[,] exist_seat = new int[19, 20];
 
         private int chosen_seat_cnt = 0;
         private string[] chosen_seat = new string[20];
@@ -76,6 +76,7 @@ namespace DB_Project_Cinema
 
                         seat[row, col].Visible = true;
                         seat[row, col].BackColor = Color.Gray;
+                        seat[row, col].Name = (reader2["SEAT_NO"]).ToString();
                     }
                 }
                 catch (Exception)
@@ -106,6 +107,8 @@ namespace DB_Project_Cinema
                     seat[row, col].Visible = true;
                     seat[row, col].BackColor = Color.LightGray;
                     seat[row, col].Enabled = false;
+
+                    seat_array[row, col] = seat_no;
                 }
 
                 string sql4 = "SELECT COUNT(*) FROM SEAT_USE WHERE SHOW_SCHE_NO='" + show_schedule + "' AND SEAT_USE_STAT='Y'";
@@ -256,15 +259,15 @@ namespace DB_Project_Cinema
 
         private void Seat_Click(object sender, EventArgs e)
         {
-            Button seat = sender as Button;
-
-            if (chosen_seat.Contains(seat.Name))
+            string button_name = ((Button)sender).Name;
+            
+            if (chosen_seat.Contains(button_name))
             {
-                seat.BackColor = Color.Gray;
+                ((Button)sender).BackColor = Color.Gray;
                 chosen_seat_cnt--;
                 Console.WriteLine(chosen_seat_cnt);
-                Console.WriteLine(seat.Name);
-                index = Array.IndexOf(chosen_seat, seat.Name);
+                Console.WriteLine(button_name);
+                index = Array.IndexOf(chosen_seat, button_name);
                 chosen_seat[index] = chosen_seat[cnt - 1];
                 chosen_seat[cnt - 1] = null;
                 cnt--;
@@ -272,11 +275,11 @@ namespace DB_Project_Cinema
             }
             else
             {
-                seat.BackColor = Color.Red;
+                ((Button)sender).BackColor = Color.Red;
                 chosen_seat_cnt++;
                 Console.WriteLine(chosen_seat_cnt);
-                Console.WriteLine(seat.Name);
-                chosen_seat[cnt] = seat.Name;
+                Console.WriteLine(button_name);
+                chosen_seat[cnt] = button_name;
                 cnt++;
             }
         }
