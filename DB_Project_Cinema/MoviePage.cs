@@ -53,13 +53,7 @@ namespace DB_Project_Cinema
         private void MoviePage_Load(object sender, EventArgs e)
         {
             // 상영중인 영화가 가장 먼저 보이도록
-            panel3.Controls.Add(Show_ML);
-            Show_ML.Dock = DockStyle.None;
-            Show_ML.BringToFront();
-
-            PlayingMovie.FlatAppearance.BorderColor = Color.Red;
-            PlayingMovie.FlatAppearance.BorderSize = 1;
-            ExpectedMovie.FlatAppearance.BorderSize = 0;
+            View_PlayingMovie(); 
         }
 
         public void SetMem_id(string id)
@@ -71,6 +65,10 @@ namespace DB_Project_Cinema
             return Mem_id;
         }
         private void PlayingMovie_Click(object sender, EventArgs e)
+        {
+            View_PlayingMovie();            
+        }
+        public void View_PlayingMovie()
         {
             if (!panel3.Controls.Contains(Show_ML))
             {
@@ -86,7 +84,6 @@ namespace DB_Project_Cinema
             PlayingMovie.FlatAppearance.BorderColor = Color.Red;
             PlayingMovie.FlatAppearance.BorderSize = 1;
             ExpectedMovie.FlatAppearance.BorderSize = 0;
-            
         }
 
         private void ExpectedMovie_Click(object sender, EventArgs e)
@@ -126,7 +123,7 @@ namespace DB_Project_Cinema
 
                         if (reader.HasRows)
                         {
-                            MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text);
+                            MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text,this);
                             panel3.Controls.Add(MS);
                             MS.Dock = DockStyle.None;
                             MS.BringToFront();
@@ -145,7 +142,7 @@ namespace DB_Project_Cinema
 
                         if (reader.HasRows)
                         {
-                            MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text);
+                            MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text,this);
                             panel3.Controls.Add(MS);
                             MS.Dock = DockStyle.None;
                             MS.BringToFront();
@@ -164,7 +161,7 @@ namespace DB_Project_Cinema
 
                         if (reader.HasRows)
                         {
-                            MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text);
+                            MovieSearchPage MS = new MovieSearchPage(MovieCategory.Text, SearchText.Text,this);
                             panel3.Controls.Add(MS);
                             MS.Dock = DockStyle.None;
                             MS.BringToFront();
@@ -185,8 +182,8 @@ namespace DB_Project_Cinema
 
         public void Movie_Detail(int movie_no)
         {
-            this.Parent.Controls.Remove(this);
-            this.Controls.Remove(this);
+            //this.Parent.Controls.Remove(this);
+            //this.Controls.Remove(this);
             _parent.MovieDetailPage_Add(movie_no);
         }
     }

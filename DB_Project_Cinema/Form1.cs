@@ -81,8 +81,13 @@ namespace DB_Project_Cinema
             if (mainPanel.Controls.Contains(MoviePage.Instance))
             {
                 mainPanel.Controls.Remove(MoviePage.Instance);
+               // foreach (var c in MoviePage.Instance.Controls)
+              //  {
+               //     MoviePage.Instance.Controls.Remove((Control)c);
+               // }
                 
             }
+            MoviePage.Instance.View_PlayingMovie();
             mainPanel.Controls.Add(MoviePage.Instance);
             MoviePage.Instance.SetParent(this);
             MoviePage.Instance.Dock = DockStyle.Fill;
@@ -299,12 +304,9 @@ namespace DB_Project_Cinema
             LogoutButton.Visible = false;
             checkResv.Visible = true;
 
-            mainPanel.Controls.Remove(MoviePage.Instance);
-            mainPanel.Controls.Add(MoviePage.Instance);
-            MoviePage.Instance.SetParent(this);
+            MoviePage.Instance.SetMem_id(null);
             MoviePage.Instance.Dock = DockStyle.Fill;
-            MoviePage.Instance.BringToFront();
-            
+            MoviePage.Instance.BringToFront();            
         }
 
         public void checkResv_Click(object sender, EventArgs e)

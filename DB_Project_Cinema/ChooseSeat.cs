@@ -20,8 +20,11 @@ namespace DB_Project_Cinema
 
         private Button[,] seat = new Button[19, 20];
 
-        private string[] used_seat = new string[500];
-        private string[] exist_seat = new string[500];
+        //private string[] used_seat = new string[500];
+        //private string[] exist_seat = new string[500];
+
+        private int[,] seat_array = new int[19, 20];
+        //private int[,] exist_seat = new int[19, 20];
 
         private int chosen_seat_cnt = 0;
         private string[] chosen_seat = new string[20];
@@ -41,8 +44,8 @@ namespace DB_Project_Cinema
 
             member = mem_id;
             show_schedule = schedule_no;
+            Seat_View();
         }
-
         private void ChooseSeat_Load(object sender, EventArgs e)
         {
             try
@@ -52,7 +55,7 @@ namespace DB_Project_Cinema
                 string sql = "SELECT * FROM SCREEN WHERE SCR_NO=" + screen;
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
                     this.SCR_NM.Text = reader.GetString(reader.GetOrdinal("SCR_NM"));
@@ -63,12 +66,27 @@ namespace DB_Project_Cinema
                 OracleCommand Comm2 = new OracleCommand(sql2, connect.con);
                 OracleDataReader reader2 = Comm2.ExecuteReader();
 
-                int index = 0;
+                //int index = 0;
+                try
+                {
+                    while (reader2.Read())
+                    {
+                        int row = Convert.ToChar(reader2["SEAT_ROW"]) - 0 - 65;
+                        int col = Convert.ToInt32(reader2["SEAT_COL"]) - 1;
 
-                while (reader2.Read())
+                        seat[row, col].Visible = true;
+                        seat[row, col].BackColor = Color.Gray;
+                        seat[row, col].Name = (reader2["SEAT_NO"]).ToString();
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+                /*while (reader2.Read())
                 {
                     exist_seat[index++] = Convert.ToString(reader2["SEAT_NO"]);
-                }
+                }*/
 
                 string sql3 = "SELECT * FROM SEAT_USE WHERE SHOW_SCHE_NO='" + show_schedule + "' AND SEAT_USE_STAT='Y'";
                 OracleCommand Comm3 = new OracleCommand(sql3, connect.con);
@@ -78,7 +96,19 @@ namespace DB_Project_Cinema
 
                 while (reader3.Read())
                 {
-                    used_seat[index2++] = Convert.ToString(reader3["SEAT_NO"]);
+                    int seat_no = Convert.ToInt32(reader3["SEAT_NO"]);
+                    string seat_sql = "SELECT * FROM SEAT WHERE SEAT_NO = " + seat_no;
+
+                    OracleCommand seat_com = new OracleCommand(seat_sql, connect.con);
+                    OracleDataReader seat_reader = seat_com.ExecuteReader();
+                    seat_reader.Read();
+                    int row = Convert.ToChar(seat_reader["SEAT_ROW"]) - 0 - 65;
+                    int col = Convert.ToInt32(seat_reader["SEAT_COL"]) - 1;
+                    seat[row, col].Visible = true;
+                    seat[row, col].BackColor = Color.LightGray;
+                    seat[row, col].Enabled = false;
+
+                    seat_array[row, col] = seat_no;
                 }
 
                 string sql4 = "SELECT COUNT(*) FROM SEAT_USE WHERE SHOW_SCHE_NO='" + show_schedule + "' AND SEAT_USE_STAT='Y'";
@@ -95,10 +125,9 @@ namespace DB_Project_Cinema
                 Console.WriteLine(ex.ToString());
             }
 
-            Seat_View();
+            //Seat_View();
 
         }
-
         public string Get_SchNo()
         {
             return show_schedule;
@@ -149,18 +178,18 @@ namespace DB_Project_Cinema
                     seat[i, j].BackColor = Color.Gray;
                     seat[i, j].FlatAppearance.BorderSize = 0;
                     seat[i, j].Click += new EventHandler(Seat_Click);
-                    seat[i, j].Visible = true;
-                    
+                    seat[i, j].Visible = false;
                     //좌석 이름 설정
+                    /*
                     for (int k = 0; k < 10; k++)
                     {
                        if (screen == (k + 1))
                         {
                             seat[i, j].Name = (i * 20 + (j + 1) + 380 * k).ToString();
                         }
-                    }
+                    }*/
 
-                    if (used_seat.Contains(seat[i, j].Name))
+                   /* if (used_seat.Contains(seat[i, j].Name))
                     {
                         seat[i, j].Visible=true;
                         seat[i, j].BackColor = Color.LightGray;
@@ -180,7 +209,7 @@ namespace DB_Project_Cinema
                     else
                     {
                         seat[i, j].Visible = true;
-                    }
+                    }*/
                 
                     panel1.Controls.Add(seat[i, j]);
                 }                
@@ -230,15 +259,15 @@ namespace DB_Project_Cinema
 
         private void Seat_Click(object sender, EventArgs e)
         {
-            Button seat = sender as Button;
-
-            if (chosen_seat.Contains(seat.Name))
+            string button_name = ((Button)sender).Name;
+            
+            if (chosen_seat.Contains(button_name))
             {
-                seat.BackColor = Color.Gray;
+                ((Button)sender).BackColor = Color.Gray;
                 chosen_seat_cnt--;
                 Console.WriteLine(chosen_seat_cnt);
-                Console.WriteLine(seat.Name);
-                index = Array.IndexOf(chosen_seat, seat.Name);
+                Console.WriteLine(button_name);
+                index = Array.IndexOf(chosen_seat, button_name);
                 chosen_seat[index] = chosen_seat[cnt - 1];
                 chosen_seat[cnt - 1] = null;
                 cnt--;
@@ -246,11 +275,11 @@ namespace DB_Project_Cinema
             }
             else
             {
-                seat.BackColor = Color.Red;
+                ((Button)sender).BackColor = Color.Red;
                 chosen_seat_cnt++;
                 Console.WriteLine(chosen_seat_cnt);
-                Console.WriteLine(seat.Name);
-                chosen_seat[cnt] = seat.Name;
+                Console.WriteLine(button_name);
+                chosen_seat[cnt] = button_name;
                 cnt++;
             }
         }
