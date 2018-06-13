@@ -117,7 +117,7 @@ namespace DB_Project_Cinema
 
             try
             {
-                string sql = "SELECT SC.SCR_NM, SH.SHOW_START_TIME, SH.SHOW_SCHE_NO FROM SH_SCHE SH, SCREEN SC WHERE SH.MOVIE_NO = " + movie_no_array[selected_movie_no] + " AND SH.SCR_NO = SC.SCR_NO AND SH.SHOW_DATE= '" + selected_date.ToString().Substring(0, 10) + "' ORDER BY SC.SCR_NM, SH.SHOW_START_TIME";
+                string sql = "SELECT SC.SCR_NM, SH.SHOW_START_TIME, SH.SHOW_SCHE_NO, SH.SEAT_PRICE FROM SH_SCHE SH, SCREEN SC WHERE SH.MOVIE_NO = " + movie_no_array[selected_movie_no] + " AND SH.SCR_NO = SC.SCR_NO AND SH.SHOW_DATE= '" + selected_date.ToString().Substring(0, 10) + "' ORDER BY SC.SCR_NM, SH.SHOW_START_TIME";
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
                 int index;
@@ -126,7 +126,8 @@ namespace DB_Project_Cinema
                     index = dataGridView2.Rows.Add();
                     dataGridView2.Rows[index].Cells[0].Value = reader["SCR_NM"];
                     dataGridView2.Rows[index].Cells[1].Value = reader["SHOW_START_TIME"];
-                    dataGridView2.Rows[index].Cells[2].Value = reader["SHOW_SCHE_NO"];
+                    dataGridView2.Rows[index].Cells[2].Value = reader["SEAT_PRICE"]+"원";
+                    dataGridView2.Rows[index].Cells[3].Value = reader["SHOW_SCHE_NO"];
                 }
             }
             catch (Exception ex)

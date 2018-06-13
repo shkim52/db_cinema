@@ -55,7 +55,7 @@ namespace DB_Project_Cinema
                         string show_start_time = reader.GetString(reader.GetOrdinal("SHOW_START_TIME"));
                         string show_date = reader.GetDateTime(reader.GetOrdinal("SHOW_DATE")).ToString().Substring(0, 10);
                         int bk_price = reader.GetInt32(reader.GetOrdinal("BK_PRICE"));
-                        dataGridView1.Rows.Add(bk_date, tk_bk_no, movie_nm, show_start_time, show_date, bk_price.ToString());
+                        dataGridView1.Rows.Add(bk_date, tk_bk_no, movie_nm, show_start_time, show_date, bk_price.ToString(), "예매 취소");
                     }
                 }
 

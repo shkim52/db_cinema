@@ -42,6 +42,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -89,7 +90,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(511, 173);
-            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2018, 6, 4, 0, 0, 0, 0), new System.DateTime(2018, 6, 10, 0, 0, 0, 0));
             this.monthCalendar1.TabIndex = 14;
@@ -150,6 +151,7 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewButtonColumn1,
+            this.price,
             this.dataGridViewTextBoxColumn2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -193,6 +195,12 @@
             this.dataGridViewButtonColumn1.HeaderText = "상영시간";
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
             // 
+            // price
+            // 
+            this.price.Frozen = true;
+            this.price.HeaderText = "가격";
+            this.price.Name = "price";
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.Frozen = true;
@@ -234,6 +242,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 
     }
