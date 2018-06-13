@@ -36,15 +36,35 @@ namespace DB_Project_Cinema
             
             try
             {
-                OracleCommand Cmd = new OracleCommand();
-                Cmd.Connection = connect.con;
-                
-                string input_sql = "UPDATE MEM SET QUIT_STAT = 'Y' WHERE MEM_ID ='"+mem_id+"'";
-                Cmd.CommandText = input_sql;
-                Cmd.ExecuteNonQuery();
-                MessageBox.Show("탈퇴가 완료되었습니다.");
-                _parent.click_logout();
+                string sql = "SELECT TICKETING_STAT FROM BOOKING WHERE MEM_ID = '" + mem_id + "'";
 
+                OracleCommand Comm = new OracleCommand(sql, connect.con);
+                OracleDataReader reader = Comm.ExecuteReader();
+                bool stat = false;
+
+                while (reader.Read())
+                {
+                    if (reader.GetString(reader.GetOrdinal("TICKETING_STAT")).ToString() == "N")
+                    {
+                        stat = true;
+                        break;
+                    }
+                }
+                if (stat)
+                {
+                    MessageBox.Show("에매 되어있는 영화가 존재하므로 탈퇴가 불가능합니다!");
+                }
+                else
+                {
+                    OracleCommand Cmd = new OracleCommand();
+                    Cmd.Connection = connect.con;
+
+                    string input_sql = "UPDATE MEM SET QUIT_STAT = 'Y' WHERE MEM_ID ='" + mem_id + "'";
+                    Cmd.CommandText = input_sql;
+                    Cmd.ExecuteNonQuery();
+                    MessageBox.Show("탈퇴가 완료되었습니다.");
+                    _parent.click_logout();
+                }
             }
             catch (Exception ex)
             {

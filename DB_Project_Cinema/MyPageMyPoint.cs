@@ -46,7 +46,7 @@ namespace DB_Project_Cinema
         {
             try
             {
-               string sql = "SELECT SAVE_POINT FROM MEM WHERE MEM_ID = '" + Program.memID + "'";
+               string sql = "SELECT SAVE_POINT FROM MEM WHERE MEM_ID = '" + mem_id + "'";
 
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
