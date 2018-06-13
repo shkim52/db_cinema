@@ -228,7 +228,7 @@
             this.checkResv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkResv.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.checkResv.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.checkResv.Location = new System.Drawing.Point(788, 1);
+            this.checkResv.Location = new System.Drawing.Point(614, 1);
             this.checkResv.Margin = new System.Windows.Forms.Padding(2);
             this.checkResv.Name = "checkResv";
             this.checkResv.Size = new System.Drawing.Size(240, 40);
@@ -239,18 +239,10 @@
             // 
             // DiscountCardButton
             // 
-            this.DiscountCardButton.FlatAppearance.BorderSize = 0;
-            this.DiscountCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DiscountCardButton.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.DiscountCardButton.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.DiscountCardButton.Location = new System.Drawing.Point(642, 0);
-            this.DiscountCardButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DiscountCardButton.Location = new System.Drawing.Point(0, 0);
             this.DiscountCardButton.Name = "DiscountCardButton";
-            this.DiscountCardButton.Size = new System.Drawing.Size(100, 40);
-            this.DiscountCardButton.TabIndex = 8;
-            this.DiscountCardButton.Text = "할인카드";
-            this.DiscountCardButton.UseVisualStyleBackColor = true;
-            this.DiscountCardButton.Click += new System.EventHandler(this.DiscountCardButton_Click);
+            this.DiscountCardButton.Size = new System.Drawing.Size(75, 23);
+            this.DiscountCardButton.TabIndex = 10;
             // 
             // ScreenInfoButton
             // 

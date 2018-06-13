@@ -222,28 +222,7 @@ namespace DB_Project_Cinema
 
         }
 
-        private void DiscountCardButton_Click(object sender, EventArgs e)
-        {
-            if (mainPanel.Controls.Contains(DiscountCard.Instance))
-            {
-                mainPanel.Controls.Remove(DiscountCard.Instance);
-            }
-            mainPanel.Controls.Add(DiscountCard.Instance);
-            DiscountCard.Instance.Dock = DockStyle.Fill;
-            DiscountCard.Instance.BringToFront();
-            
-            MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            ScreenInfoButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            LoginPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            checkResv.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            MyPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            DiscountCardButton.BackColor = Color.DimGray;
-            JoinMembershipButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            FindIDandPWButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
-
-        }
-
+       
         private void JoinMembershipButton_Click(object sender, EventArgs e)
         {
             if (mainPanel.Controls.Contains(JoinMembership.Instance))

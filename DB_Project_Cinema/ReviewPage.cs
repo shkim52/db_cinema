@@ -129,7 +129,7 @@ namespace DB_Project_Cinema
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    MessageBox.Show("로그인을 하세요!!");
                 }
                 
             }      
