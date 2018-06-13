@@ -214,7 +214,7 @@ namespace DB_Project_Cinema
                 payway = "계좌 이체";
                 CreditCard.Enabled = false;
                 CardCategory.Enabled = false;
-                CardNumber.Enabled = false;
+                CardNumber1.Enabled = false;
                 CardPW.Enabled = false;
                 ApprovalRequest.Enabled = false;
             }
@@ -222,7 +222,7 @@ namespace DB_Project_Cinema
             {
                 CreditCard.Enabled = true;
                 CardCategory.Enabled = true;
-                CardNumber.Enabled = true;
+                CardNumber1.Enabled = true;
                 CardPW.Enabled = true;
                 ApprovalRequest.Enabled = true;
             }
@@ -230,11 +230,11 @@ namespace DB_Project_Cinema
 
         private void ApprovalRequest_Click(object sender, EventArgs e)
         {
-            if (CardNumber.Text == "" || CardPW.Text == "")
+            if (CardNumber1.Text == "" || CardPW.Text == "")
             {
                 MessageBox.Show("모든 정보를 입력해주세요!");
             }
-            else if (CardNumber.Text.Length != 16)
+            else if (CardNumber1.Text.Length != 4 || CardNumber2.Text.Length != 4 || CardNumber3.Text.Length != 4 || CardNumber4.Text.Length != 4)
             {
                 MessageBox.Show("카드번호 16자리를 입력하세요!");
             }
@@ -273,7 +273,7 @@ namespace DB_Project_Cinema
                 usepoint = int.Parse(UsePoint.Text);
                 MessageBox.Show("계좌 검증이 완료되었습니다!");
                 TelDCPrice.Text = (int.Parse(TelDCPrice.Text) + usepoint).ToString();
-                CardNumber.Enabled = false;
+                CardNumber1.Enabled = false;
                 DifferencePrice.Text = (int.Parse(TotalPrice.Text) - int.Parse(TelDCPrice.Text)-usepoint).ToString();
                 CardPW.Enabled = false;
                 button_check = true;
@@ -361,6 +361,33 @@ namespace DB_Project_Cinema
         }
 
         private void PhoneNumber_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void CardNumber2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void CardNumber3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                MessageBox.Show("숫자만 입력해주세요!");
+            }
+        }
+
+        private void CardNumber4_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
             {
