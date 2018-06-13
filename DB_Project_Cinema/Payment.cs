@@ -16,6 +16,7 @@ namespace DB_Project_Cinema
     public partial class Payment : UserControl
     {
         private Connection connect;
+        private PaymentComplete paymentcomplete;
         private string[] Tel_NM = new string[10];
         private string telnm;
         private string member;
@@ -64,6 +65,7 @@ namespace DB_Project_Cinema
                 label18.Visible = false;
                 PointDc.Visible = false;
                 label13.Visible = false;
+                label10.Visible = false;
             }
             else if (Convert.ToInt32(SavePoint.Text) < 1000)
             {
@@ -312,6 +314,12 @@ namespace DB_Project_Cinema
 
                 Cmd.ExecuteNonQuery();
                 MessageBox.Show("결제가 완료되었습니다!");
+
+                paymentcomplete = new PaymentComplete(show_schedule, DifferencePrice.Text);
+                Controls.Add(paymentcomplete);
+                paymentcomplete.BringToFront();
+                paymentcomplete.Dock = DockStyle.None;
+
             }
         }
 

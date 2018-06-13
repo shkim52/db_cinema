@@ -262,7 +262,7 @@
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.Size = new System.Drawing.Size(224, 35);
             this.TotalPrice.TabIndex = 68;
-            this.TotalPrice.Text = "0원";
+            this.TotalPrice.Text = "0";
             this.TotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
@@ -286,7 +286,7 @@
             this.TelDCPrice.Name = "TelDCPrice";
             this.TelDCPrice.Size = new System.Drawing.Size(224, 35);
             this.TelDCPrice.TabIndex = 70;
-            this.TelDCPrice.Text = "0원";
+            this.TelDCPrice.Text = "0";
             this.TelDCPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
@@ -310,7 +310,7 @@
             this.DifferencePrice.Name = "DifferencePrice";
             this.DifferencePrice.Size = new System.Drawing.Size(224, 35);
             this.DifferencePrice.TabIndex = 72;
-            this.DifferencePrice.Text = "0원";
+            this.DifferencePrice.Text = "0";
             this.DifferencePrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label24
@@ -565,7 +565,7 @@
             this.PointDc.Name = "PointDc";
             this.PointDc.Size = new System.Drawing.Size(224, 35);
             this.PointDc.TabIndex = 99;
-            this.PointDc.Text = "0원";
+            this.PointDc.Text = "0";
             this.PointDc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
