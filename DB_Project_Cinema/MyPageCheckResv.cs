@@ -53,7 +53,7 @@ namespace DB_Project_Cinema
                         string tk_bk_no = reader.GetString(reader.GetOrdinal("TK_BK_NO"));
                         string movie_nm = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
                         string show_start_time = reader.GetString(reader.GetOrdinal("SHOW_START_TIME"));
-                        string show_date = reader.GetString(reader.GetOrdinal("SHOW_DATE")).ToString().Substring(0, 10);
+                        string show_date = reader.GetDateTime(reader.GetOrdinal("SHOW_DATE")).ToString().Substring(0, 10);
                         int bk_price = reader.GetInt32(reader.GetOrdinal("BK_PRICE"));
                         dataGridView1.Rows.Add(bk_date, tk_bk_no, movie_nm, show_start_time, show_date, bk_price.ToString());
                     }
@@ -64,6 +64,28 @@ namespace DB_Project_Cinema
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("예매를 취소하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    string tk_bk_no = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    Console.WriteLine(tk_bk_no);
+
+                    OracleCommand Cmd = new OracleCommand();
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    Cmd.CommandText = "CANCEL_RESV_PROC";
+                    Cmd.Connection = connect.con;
+
+                    Cmd.Parameters.Add(new OracleParameter("p_tk_bk_no", tk_bk_no));
+
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[e.RowIndex]);
+                }
             }
         }
     }

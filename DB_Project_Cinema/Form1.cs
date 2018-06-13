@@ -150,7 +150,6 @@ namespace DB_Project_Cinema
             mainPanel.Controls.Add(tp);
             tp.Dock = DockStyle.Fill;
             tp.BringToFront();
-            Console.WriteLine("cddddd" + cust_pw);
             tp.SetCustNM(cust_name);
             tp.SetCustSid(cust_sid);
             tp.SetCustTel(cust_tel);

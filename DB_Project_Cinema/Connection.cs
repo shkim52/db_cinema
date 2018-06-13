@@ -16,7 +16,7 @@ namespace DB_Project_Cinema
         {
             try
             {
-                string conString = "User Id=cinema;Password=1234;" + "Data Source=localhost:1521/xe;";
+                string conString = "data source=localhost:1521/xe;user id=CINEMA; password=1234"; 
                 con.ConnectionString = conString;
                 con.Open();
 

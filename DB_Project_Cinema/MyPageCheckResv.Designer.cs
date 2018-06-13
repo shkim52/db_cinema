@@ -103,8 +103,9 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 145;
             this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(829, 130);
+            this.dataGridView1.Size = new System.Drawing.Size(829, 162);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // resv_date
             // 
@@ -138,9 +139,10 @@
             // 
             // quit_resv
             // 
-            this.quit_resv.HeaderText = "quit_resv";
+            this.quit_resv.HeaderText = "예매 취소하기";
             this.quit_resv.Name = "quit_resv";
-            this.quit_resv.Visible = false;
+            this.quit_resv.Text = "취소하기";
+            this.quit_resv.Width = 120;
             // 
             // MyPageCheckResv
             // 

@@ -41,7 +41,6 @@
             this.LoginPageButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.checkResv = new System.Windows.Forms.Button();
-            this.DiscountCardButton = new System.Windows.Forms.Button();
             this.ScreenInfoButton = new System.Windows.Forms.Button();
             this.TicketingPageButton = new System.Windows.Forms.Button();
             this.MoviePageButton = new System.Windows.Forms.Button();
@@ -211,7 +210,6 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel4.Controls.Add(this.checkResv);
-            this.panel4.Controls.Add(this.DiscountCardButton);
             this.panel4.Controls.Add(this.ScreenInfoButton);
             this.panel4.Controls.Add(this.TicketingPageButton);
             this.panel4.Controls.Add(this.MoviePageButton);
@@ -236,13 +234,6 @@
             this.checkResv.Text = "비회원 예매내역 확인";
             this.checkResv.UseVisualStyleBackColor = true;
             this.checkResv.Click += new System.EventHandler(this.checkResv_Click);
-            // 
-            // DiscountCardButton
-            // 
-            this.DiscountCardButton.Location = new System.Drawing.Point(0, 0);
-            this.DiscountCardButton.Name = "DiscountCardButton";
-            this.DiscountCardButton.Size = new System.Drawing.Size(75, 23);
-            this.DiscountCardButton.TabIndex = 10;
             // 
             // ScreenInfoButton
             // 
@@ -373,7 +364,6 @@
         private System.Windows.Forms.Button MoviePageButton;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button DiscountCardButton;
         private System.Windows.Forms.Button FindIDandPWButton;
         private System.Windows.Forms.Button LogoutButton;
         private System.Windows.Forms.Button checkResv;
