@@ -44,6 +44,8 @@
             this.PaymentPrice = new System.Windows.Forms.Label();
             this.MoviePoster = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePoster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,18 +61,18 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(443, 148);
+            this.label2.Location = new System.Drawing.Point(479, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 36);
+            this.label2.Size = new System.Drawing.Size(109, 36);
             this.label2.TabIndex = 1;
             this.label2.Text = "티켓 번호:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(441, 188);
+            this.label3.Location = new System.Drawing.Point(479, 188);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 36);
+            this.label3.Size = new System.Drawing.Size(107, 36);
             this.label3.TabIndex = 2;
             this.label3.Text = "영화 이름:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -115,14 +117,14 @@
             // 
             this.ScheDate.Location = new System.Drawing.Point(641, 224);
             this.ScheDate.Name = "ScheDate";
-            this.ScheDate.Size = new System.Drawing.Size(131, 36);
+            this.ScheDate.Size = new System.Drawing.Size(105, 36);
             this.ScheDate.TabIndex = 7;
             this.ScheDate.Text = "-";
             this.ScheDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ScheStarTime
             // 
-            this.ScheStarTime.Location = new System.Drawing.Point(778, 224);
+            this.ScheStarTime.Location = new System.Drawing.Point(774, 224);
             this.ScheStarTime.Name = "ScheStarTime";
             this.ScheStarTime.Size = new System.Drawing.Size(100, 36);
             this.ScheStarTime.TabIndex = 8;
@@ -131,7 +133,7 @@
             // 
             // ScheEndTime
             // 
-            this.ScheEndTime.Location = new System.Drawing.Point(919, 224);
+            this.ScheEndTime.Location = new System.Drawing.Point(902, 224);
             this.ScheEndTime.Name = "ScheEndTime";
             this.ScheEndTime.Size = new System.Drawing.Size(111, 36);
             this.ScheEndTime.TabIndex = 9;
@@ -149,9 +151,9 @@
             // 
             // SeatNo
             // 
-            this.SeatNo.Location = new System.Drawing.Point(778, 270);
+            this.SeatNo.Location = new System.Drawing.Point(752, 260);
             this.SeatNo.Name = "SeatNo";
-            this.SeatNo.Size = new System.Drawing.Size(157, 36);
+            this.SeatNo.Size = new System.Drawing.Size(398, 36);
             this.SeatNo.TabIndex = 11;
             this.SeatNo.Text = "-";
             this.SeatNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,18 +186,38 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(880, 224);
+            this.label6.Location = new System.Drawing.Point(863, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 36);
             this.label6.TabIndex = 15;
             this.label6.Text = "~";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(737, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 36);
+            this.label7.TabIndex = 16;
+            this.label7.Text = ",";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(716, 260);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 36);
+            this.label8.TabIndex = 17;
+            this.label8.Text = ",";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // PaymentComplete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.MoviePoster);
             this.Controls.Add(this.PaymentPrice);
@@ -239,5 +261,7 @@
         private System.Windows.Forms.Label PaymentPrice;
         private System.Windows.Forms.PictureBox MoviePoster;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

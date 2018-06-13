@@ -22,6 +22,8 @@ namespace DB_Project_Cinema
         private int screen_no;
         private string paymentprice;
         private string[] seat_no = new string[10];
+        private string[] seat_row = new string[10];
+        private string[] seat_col = new string[10];
 
         public PaymentComplete(string show_scehdule, string Payment_Price)
         {
@@ -91,24 +93,26 @@ namespace DB_Project_Cinema
 
                 ScrName.Text = reader4.GetString(reader4.GetOrdinal("SCR_NM"));
 
-                string sql5 = "SELECT * FROM BK_SEAT WHERE TK_BK_NO=" + tk_bk_no;
+                string sql5 = "SELECT S.SEAT_ROW, S.SEAT_COL FROM SEAT S, BK_SEAT B WHERE S.SEAT_NO=B.SEAT_NO AND B.TK_BK_NO='"+tk_bk_no+"'";
 
                 OracleCommand Comm5 = new OracleCommand(sql5, connect.con);
                 OracleDataReader reader5 = Comm5.ExecuteReader();
                 
                 int index = 0;
-
+                SeatNo.Text = "";
                 while (reader5.Read())
                 {
-                    seat_no[index++] = Convert.ToString(reader5["SEAT_NO"]); 
+                    seat_row[index++] = Convert.ToString(reader5["SEAT_ROW"]);
+                    seat_col[index++] = Convert.ToString(reader5["SEAT_COL"]); 
                 }
 
-                for (int i = 0; i < bk_seat_no; i++)
+                for (int i = 0; i < seat_no.Length; i++)
                 {
-                    SeatNo.Text += seat_no[i]+"/ ";
+                    seat_no[i] = seat_row[i] + seat_col[i];
+                    SeatNo.Text += seat_no[i] + "      ";
                 }
 
-                PaymentPrice.Text = paymentprice;
+                PaymentPrice.Text = paymentprice+"원";
                       
             }
             catch (Exception ex)
