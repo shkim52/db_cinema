@@ -262,19 +262,19 @@ namespace DB_Project_Cinema
         {
             MessageBox.Show("로그아웃 되었습니다.");
             Logout_clicked();
-            login_mem_id = string.Empty;
+            login_mem_id = String.Empty;
         }
 
         public void Logout_clicked()
         {
-            login_mem_id = string.Empty;
+            login_mem_id = String.Empty;
             LoginPageButton.Visible = true;
             FindIDandPWButton.Visible = true; 
             JoinMembershipButton.Visible = true;
             LogoutButton.Visible = false;
             checkResv.Visible = true;
 
-            MoviePage.Instance.SetMem_id(null);
+            MoviePage.Instance.SetMem_id(String.Empty);
             MoviePage.Instance.Dock = DockStyle.Fill;
             MoviePage.Instance.BringToFront();            
         }
