@@ -147,7 +147,7 @@ namespace DB_Project_Cinema
                     cellStyle.SelectionForeColor = Color.White;
                     cell.Style = cellStyle;
 
-                    select_sch_no = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    select_sch_no = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
                 }
             }
             catch (Exception)
