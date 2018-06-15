@@ -37,7 +37,6 @@ C:\db_cinema\DB_Project_Cinema\bin\x86\Debug\Oracle.ManagedDataAccess.dll
 C:\db_cinema\DB_Project_Cinema\bin\x86\Debug\Oracle.Web.dll
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.csprojResolveAssemblyReference.cache
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.ChooseSeat.resources
-C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.DiscountCard.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.FindID.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.FindIDandPW.resources
 C:\db_cinema\DB_Project_Cinema\obj\x86\Debug\DB_Project_Cinema.FindPW.resources

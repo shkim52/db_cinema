@@ -20,6 +20,9 @@ namespace DB_Project_Cinema
         private Label[] label = new Label[5];
         private Label[] score = new Label[5];
         private int[] movie_no_array = new int[5];
+        private int[] resv_rate = new int[5];
+        private int total_resv;
+        
         private bool selected_show_stat;
 
         public MovieList(bool show_stat)
@@ -80,7 +83,7 @@ namespace DB_Project_Cinema
 
                             btn[i].Text = reader.GetString(reader.GetOrdinal("MOVIE_NM"));
 
-                            label[i].Text = "   예매율:  ";
+
 
                         }
 
@@ -99,6 +102,33 @@ namespace DB_Project_Cinema
                         else if (!reader2.HasRows)
                         {
                             score[i].Text = "   평점: -점";
+                        }
+
+                        string sql3 = "SELECT COUNT(*) FROM BOOKING";
+
+                        OracleCommand Comm3 = new OracleCommand(sql3, Connect.con);
+                        OracleDataReader reader3 = Comm3.ExecuteReader();
+
+                        reader3.Read();
+
+                        total_resv = reader3.GetInt32(reader3.GetOrdinal("COUNT(*)"));
+
+                        string sql4 = "SELECT COUNT(*) FROM BOOKING WHERE MOVIE_NO="+movie_no_array[i]+" GROUP BY MOVIE_NO";
+
+                        OracleCommand Comm4 = new OracleCommand(sql4, Connect.con);
+                        OracleDataReader reader4 = Comm4.ExecuteReader();
+
+                        if (reader4.HasRows)
+                        {
+                            while (reader4.Read())
+                            {
+                                label[i].Text = "   예매율: " + ((reader4.GetFloat(reader4.GetOrdinal("COUNT(*)"))/total_resv)*100).ToString("N2") + "%";
+
+                            }
+                        }
+                        else if (!reader4.HasRows)
+                        {
+                            label[i].Text = "   예매율: -";
                         }
 
                         Controls.Add(pic[i]);
