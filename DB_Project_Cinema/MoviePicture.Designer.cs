@@ -31,8 +31,8 @@
             this.Picture1 = new System.Windows.Forms.PictureBox();
             this.Picture2 = new System.Windows.Forms.PictureBox();
             this.Picture3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.BackToHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Picture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture3)).BeginInit();
@@ -41,7 +41,7 @@
             // Picture1
             // 
             this.Picture1.BackColor = System.Drawing.Color.Wheat;
-            this.Picture1.Location = new System.Drawing.Point(289, 146);
+            this.Picture1.Location = new System.Drawing.Point(288, 235);
             this.Picture1.Margin = new System.Windows.Forms.Padding(2);
             this.Picture1.Name = "Picture1";
             this.Picture1.Size = new System.Drawing.Size(258, 140);
@@ -51,7 +51,7 @@
             // Picture2
             // 
             this.Picture2.BackColor = System.Drawing.Color.Wheat;
-            this.Picture2.Location = new System.Drawing.Point(626, 146);
+            this.Picture2.Location = new System.Drawing.Point(625, 235);
             this.Picture2.Margin = new System.Windows.Forms.Padding(2);
             this.Picture2.Name = "Picture2";
             this.Picture2.Size = new System.Drawing.Size(258, 140);
@@ -61,22 +61,12 @@
             // Picture3
             // 
             this.Picture3.BackColor = System.Drawing.Color.Wheat;
-            this.Picture3.Location = new System.Drawing.Point(965, 146);
+            this.Picture3.Location = new System.Drawing.Point(964, 235);
             this.Picture3.Margin = new System.Windows.Forms.Padding(2);
             this.Picture3.Name = "Picture3";
             this.Picture3.Size = new System.Drawing.Size(258, 140);
             this.Picture3.TabIndex = 3;
             this.Picture3.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(57, 477);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "<- 뒤로가기";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -87,13 +77,28 @@
             this.label1.TabIndex = 5;
             this.label1.Text = " ";
             // 
+            // BackToHome
+            // 
+            this.BackToHome.BackColor = System.Drawing.Color.LightGray;
+            this.BackToHome.FlatAppearance.BorderSize = 0;
+            this.BackToHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToHome.Font = new System.Drawing.Font("Malgun Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BackToHome.Location = new System.Drawing.Point(75, 546);
+            this.BackToHome.Margin = new System.Windows.Forms.Padding(2);
+            this.BackToHome.Name = "BackToHome";
+            this.BackToHome.Size = new System.Drawing.Size(90, 29);
+            this.BackToHome.TabIndex = 27;
+            this.BackToHome.Text = "<-뒤로가기";
+            this.BackToHome.UseVisualStyleBackColor = false;
+            this.BackToHome.Click += new System.EventHandler(this.BackToHome_Click);
+            // 
             // MoviePicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.BackToHome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Picture3);
             this.Controls.Add(this.Picture2);
             this.Controls.Add(this.Picture1);
@@ -113,8 +118,8 @@
         private System.Windows.Forms.PictureBox Picture1;
         private System.Windows.Forms.PictureBox Picture2;
         private System.Windows.Forms.PictureBox Picture3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackToHome;
 
     }
 }

@@ -110,11 +110,11 @@ namespace DB_Project_Cinema
             MyPageInterestButton.BackColor = Color.White;
             MyPageMyPointButton.BackColor = Color.AntiqueWhite;
 
-            SubPanel.Controls.Add(MyPageMyPoint.Instance);
 
-            MyPageMyPoint.Instance.setMem_id(_parent.GetLoginId());
-            MyPageMyPoint.Instance.BringToFront();
-            MyPageMyPoint.Instance.Dock = DockStyle.None; 
+            MyPageMyPoint myPoint = new MyPageMyPoint(_parent.GetLoginId());
+            SubPanel.Controls.Add(myPoint);
+            myPoint.BringToFront();
+            myPoint.Dock = DockStyle.None;
         }
         public void Interest_MovieDetail_View(int movie_no)
         {

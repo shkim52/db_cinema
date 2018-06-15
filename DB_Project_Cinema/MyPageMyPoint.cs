@@ -17,29 +17,15 @@ namespace DB_Project_Cinema
     public partial class MyPageMyPoint : UserControl
     {
         Connection connect;
-        private static MyPageMyPoint _instance;
-        public static MyPageMyPoint Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new MyPageMyPoint();
-                }
-                return _instance;
-            }
-        }
-
         private string mem_id;
-        public void setMem_id(string s)
-        {
-            mem_id = s;
-        }
-        public MyPageMyPoint()
+        
+        
+        public MyPageMyPoint(string id)
         {
             InitializeComponent();
             connect = new Connection();
             connect.Connecting();
+            mem_id = id;
         }
 
         private void MyPageMyPoint_Load(object sender, EventArgs e)
@@ -47,7 +33,7 @@ namespace DB_Project_Cinema
             try
             {
                string sql = "SELECT SAVE_POINT FROM MEM WHERE MEM_ID = '" + mem_id + "'";
-
+               Console.WriteLine(sql);
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
 

@@ -69,7 +69,8 @@ namespace DB_Project_Cinema
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void BackToHome_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
             connect.con.Close();

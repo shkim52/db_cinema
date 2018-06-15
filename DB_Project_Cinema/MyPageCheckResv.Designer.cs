@@ -68,7 +68,7 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -89,7 +89,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(125, 186);
+            this.dataGridView1.Location = new System.Drawing.Point(79, 186);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -103,7 +103,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(829, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(875, 303);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -153,7 +153,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageCheckResv";
-            this.Size = new System.Drawing.Size(1078, 503);
+            this.Size = new System.Drawing.Size(1078, 540);
             this.Load += new System.EventHandler(this.MyPageCheckResv_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
