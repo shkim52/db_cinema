@@ -102,7 +102,7 @@
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageMyPoint";
-            this.Size = new System.Drawing.Size(861, 493);
+            this.Size = new System.Drawing.Size(1078, 503);
             this.Load += new System.EventHandler(this.MyPageMyPoint_Load);
             this.ResumeLayout(false);
 

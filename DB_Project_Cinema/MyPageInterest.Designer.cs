@@ -187,7 +187,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MyPageInterest";
-            this.Size = new System.Drawing.Size(941, 650);
+            this.Size = new System.Drawing.Size(1078, 503);
             this.Load += new System.EventHandler(this.MyPageInterest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

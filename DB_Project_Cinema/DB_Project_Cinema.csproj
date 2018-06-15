@@ -102,6 +102,12 @@
       <DependentUpon>ChooseSeat.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="CustCheckResv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustCheckResv.Designer.cs">
+      <DependentUpon>CustCheckResv.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindID.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </Compile>
     <EmbeddedResource Include="ChooseSeat.resx">
       <DependentUpon>ChooseSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustCheckResv.resx">
+      <DependentUpon>CustCheckResv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindID.resx">
       <DependentUpon>FindID.cs</DependentUpon>

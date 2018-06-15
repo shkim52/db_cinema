@@ -194,7 +194,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageChangeInfo";
-            this.Size = new System.Drawing.Size(876, 535);
+            this.Size = new System.Drawing.Size(1078, 503);
             this.Load += new System.EventHandler(this.MyPageChangeInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

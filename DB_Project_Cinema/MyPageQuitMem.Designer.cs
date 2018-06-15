@@ -73,7 +73,7 @@
             this.QuitMemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QuitMemButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.QuitMemButton.Location = new System.Drawing.Point(488, 288);
-            this.QuitMemButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuitMemButton.Margin = new System.Windows.Forms.Padding(2);
             this.QuitMemButton.Name = "QuitMemButton";
             this.QuitMemButton.Size = new System.Drawing.Size(86, 41);
             this.QuitMemButton.TabIndex = 7;
@@ -90,9 +90,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.QuitMemButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPageQuitMem";
-            this.Size = new System.Drawing.Size(834, 458);
+            this.Size = new System.Drawing.Size(1022, 458);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -381,7 +381,7 @@
             // 
             this.MoviePictureBut.Location = new System.Drawing.Point(264, 406);
             this.MoviePictureBut.Name = "MoviePictureBut";
-            this.MoviePictureBut.Size = new System.Drawing.Size(152, 23);
+            this.MoviePictureBut.Size = new System.Drawing.Size(152, 41);
             this.MoviePictureBut.TabIndex = 30;
             this.MoviePictureBut.Text = "상세 영화 사진 보기";
             this.MoviePictureBut.UseVisualStyleBackColor = true;

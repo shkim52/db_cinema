@@ -1,16 +1,16 @@
 ﻿namespace DB_Project_Cinema
 {
-    partial class MyPageCheckResv
+    partial class CustCheckResv
     {
         /// <summary> 
-        /// 필수 디자이너 변수입니다.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
-        /// 사용 중인 모든 리소스를 정리합니다.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,18 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region 구성 요소 디자이너에서 생성한 코드
+        #region Component Designer generated code
 
         /// <summary> 
-        /// 디자이너 지원에 필요한 메서드입니다. 
-        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.resv_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resv_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,17 +41,6 @@
             this.quit_resv = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(189, 78);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 71);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "MyPage";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -89,7 +77,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(125, 186);
+            this.dataGridView1.Location = new System.Drawing.Point(289, 124);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -104,7 +92,7 @@
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(829, 287);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // resv_date
@@ -144,17 +132,14 @@
             this.quit_resv.Text = "취소하기";
             this.quit_resv.Width = 120;
             // 
-            // MyPageCheckResv
+            // CustCheckResv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MyPageCheckResv";
-            this.Size = new System.Drawing.Size(1078, 503);
-            this.Load += new System.EventHandler(this.MyPageCheckResv_Load);
+            this.Name = "CustCheckResv";
+            this.Size = new System.Drawing.Size(977, 530);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -162,7 +147,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_num;
@@ -171,6 +155,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn show_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn resv_price;
         private System.Windows.Forms.DataGridViewButtonColumn quit_resv;
-
     }
 }

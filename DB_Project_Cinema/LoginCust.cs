@@ -50,7 +50,11 @@ namespace DB_Project_Cinema
                 if (reader.HasRows)
                 {
                     MessageBox.Show("로그인 완료되었습니다.");
-                    cust_panel.Controls.Add(new MyPageCheckResv(ID_INPUT.Text));
+                    CustCheckResv ccr = new CustCheckResv(ID_INPUT.Text);
+                    this.Parent.Controls.Remove(this);
+                    CinemaProgram.Instance.mainPanel.Controls.Add(ccr);
+                    ccr.Dock = DockStyle.Fill;
+                    ccr.BringToFront();
                 }
 
                 else
