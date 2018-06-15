@@ -16,7 +16,8 @@ namespace DB_Project_Cinema
     {
         private static LoginCust _instance;
         private Connection connect;
-        public static LoginCust Instance
+        private CinemaProgram _parent;
+        /*public static LoginCust Instance
         {
             get
             {
@@ -26,10 +27,11 @@ namespace DB_Project_Cinema
                 }
                 return _instance;
             }
-        }
-        public LoginCust()
+        }*/
+        public LoginCust(CinemaProgram parent)
         {
             InitializeComponent();
+            _parent = parent;
         }
 
         private void LoginCust_Load(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace DB_Project_Cinema
             connect = new Connection();
             connect.Connecting();
         }
-        
+
         private void mem_loginButton_Click(object sender, EventArgs e)
         {
             try
@@ -52,7 +54,7 @@ namespace DB_Project_Cinema
                     MessageBox.Show("로그인 완료되었습니다.");
                     CustCheckResv ccr = new CustCheckResv(ID_INPUT.Text);
                     this.Parent.Controls.Remove(this);
-                    CinemaProgram.Instance.mainPanel.Controls.Add(ccr);
+                    _parent.mainPanel.Controls.Add(ccr);
                     ccr.Dock = DockStyle.Fill;
                     ccr.BringToFront();
                 }
@@ -66,6 +68,6 @@ namespace DB_Project_Cinema
             {
                 Console.WriteLine(ex.ToString());
             }
-        } 
+        }
     }
 }

@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(614, 57);
+            this.label1.Location = new System.Drawing.Point(636, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(273, 52);
             this.label1.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("NanumGothicExtraBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(460, 166);
+            this.label2.Location = new System.Drawing.Point(482, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 36);
             this.label2.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("NanumGothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(456, 227);
+            this.label4.Location = new System.Drawing.Point(478, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 36);
             this.label4.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("NanumGothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(437, 263);
+            this.label5.Location = new System.Drawing.Point(459, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 36);
             this.label5.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             this.TicketNo.Font = new System.Drawing.Font("NanumGothicExtraBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.TicketNo.ForeColor = System.Drawing.Color.DarkRed;
-            this.TicketNo.Location = new System.Drawing.Point(609, 166);
+            this.TicketNo.Location = new System.Drawing.Point(631, 166);
             this.TicketNo.Name = "TicketNo";
             this.TicketNo.Size = new System.Drawing.Size(327, 36);
             this.TicketNo.TabIndex = 5;
@@ -106,7 +106,7 @@
             // MovieName
             // 
             this.MovieName.Font = new System.Drawing.Font("NanumGothicExtraBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.MovieName.Location = new System.Drawing.Point(252, 64);
+            this.MovieName.Location = new System.Drawing.Point(274, 64);
             this.MovieName.Name = "MovieName";
             this.MovieName.Size = new System.Drawing.Size(351, 36);
             this.MovieName.TabIndex = 6;
@@ -115,7 +115,7 @@
             // 
             // ScheDate
             // 
-            this.ScheDate.Location = new System.Drawing.Point(604, 227);
+            this.ScheDate.Location = new System.Drawing.Point(626, 227);
             this.ScheDate.Name = "ScheDate";
             this.ScheDate.Size = new System.Drawing.Size(105, 36);
             this.ScheDate.TabIndex = 7;
@@ -124,7 +124,7 @@
             // 
             // ScheStarTime
             // 
-            this.ScheStarTime.Location = new System.Drawing.Point(749, 227);
+            this.ScheStarTime.Location = new System.Drawing.Point(771, 227);
             this.ScheStarTime.Name = "ScheStarTime";
             this.ScheStarTime.Size = new System.Drawing.Size(100, 36);
             this.ScheStarTime.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             // ScheEndTime
             // 
-            this.ScheEndTime.Location = new System.Drawing.Point(877, 227);
+            this.ScheEndTime.Location = new System.Drawing.Point(899, 227);
             this.ScheEndTime.Name = "ScheEndTime";
             this.ScheEndTime.Size = new System.Drawing.Size(111, 36);
             this.ScheEndTime.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             // ScrName
             // 
-            this.ScrName.Location = new System.Drawing.Point(606, 263);
+            this.ScrName.Location = new System.Drawing.Point(628, 263);
             this.ScrName.Name = "ScrName";
             this.ScrName.Size = new System.Drawing.Size(96, 36);
             this.ScrName.TabIndex = 10;
@@ -151,7 +151,7 @@
             // 
             // SeatNo
             // 
-            this.SeatNo.Location = new System.Drawing.Point(716, 263);
+            this.SeatNo.Location = new System.Drawing.Point(738, 263);
             this.SeatNo.Name = "SeatNo";
             this.SeatNo.Size = new System.Drawing.Size(398, 36);
             this.SeatNo.TabIndex = 11;
@@ -162,7 +162,7 @@
             // 
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("NanumGothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label13.Location = new System.Drawing.Point(491, 299);
+            this.label13.Location = new System.Drawing.Point(513, 299);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(112, 36);
             this.label13.TabIndex = 12;
@@ -171,7 +171,7 @@
             // 
             // PaymentPrice
             // 
-            this.PaymentPrice.Location = new System.Drawing.Point(606, 299);
+            this.PaymentPrice.Location = new System.Drawing.Point(628, 299);
             this.PaymentPrice.Name = "PaymentPrice";
             this.PaymentPrice.Size = new System.Drawing.Size(154, 36);
             this.PaymentPrice.TabIndex = 13;
@@ -180,7 +180,7 @@
             // 
             // MoviePoster
             // 
-            this.MoviePoster.Location = new System.Drawing.Point(221, 135);
+            this.MoviePoster.Location = new System.Drawing.Point(243, 135);
             this.MoviePoster.Name = "MoviePoster";
             this.MoviePoster.Size = new System.Drawing.Size(221, 252);
             this.MoviePoster.TabIndex = 14;
@@ -188,7 +188,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(838, 227);
+            this.label6.Location = new System.Drawing.Point(860, 227);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 36);
             this.label6.TabIndex = 15;
@@ -197,7 +197,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(712, 227);
+            this.label7.Location = new System.Drawing.Point(734, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 36);
             this.label7.TabIndex = 16;
@@ -206,7 +206,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(691, 263);
+            this.label8.Location = new System.Drawing.Point(713, 263);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 36);
             this.label8.TabIndex = 17;

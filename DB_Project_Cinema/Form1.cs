@@ -281,15 +281,11 @@ namespace DB_Project_Cinema
 
         public void checkResv_Click(object sender, EventArgs e)
         {
-            if (mainPanel.Controls.Contains(LoginCust.Instance))
-            {
-                mainPanel.Controls.Remove(LoginCust.Instance);
-            }
-            
-            mainPanel.Controls.Add(LoginCust.Instance);
-            LoginCust.Instance.Dock = DockStyle.Fill;
-            LoginCust.Instance.BringToFront();
-            
+            LoginCust logincust = new LoginCust(this);
+            mainPanel.Controls.Add(logincust);
+            logincust.Dock = DockStyle.Fill;
+            logincust.BringToFront();
+
 
             MoviePageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);
             TicketingPageButton.BackColor = System.Drawing.Color.FromArgb(64, 64, 64);

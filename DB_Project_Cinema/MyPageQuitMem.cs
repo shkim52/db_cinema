@@ -36,7 +36,7 @@ namespace DB_Project_Cinema
             
             try
             {
-                string sql = "SELECT TICKETING_STAT FROM BOOKING WHERE MEM_ID = '" + mem_id + "'";
+                string sql = "SELECT P.PAY_STAT FROM PAYMENT P, BOOKING B WHERE B.MEM_ID = '" + mem_id + "' AND B.TK_BK_NO = P.PAY_NO";
 
                 OracleCommand Comm = new OracleCommand(sql, connect.con);
                 OracleDataReader reader = Comm.ExecuteReader();
@@ -44,7 +44,7 @@ namespace DB_Project_Cinema
 
                 while (reader.Read())
                 {
-                    if (reader.GetString(reader.GetOrdinal("TICKETING_STAT")).ToString() == "N")
+                    if (reader.GetString(reader.GetOrdinal("PAY_STAT")).ToString() == "N")
                     {
                         stat = true;
                         break;

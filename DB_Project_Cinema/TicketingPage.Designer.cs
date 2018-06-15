@@ -86,7 +86,7 @@
             this.BackToSelcetTimeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackToSelcetTimeButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BackToSelcetTimeButton.ForeColor = System.Drawing.Color.White;
-            this.BackToSelcetTimeButton.Location = new System.Drawing.Point(115, 14);
+            this.BackToSelcetTimeButton.Location = new System.Drawing.Point(237, 14);
             this.BackToSelcetTimeButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackToSelcetTimeButton.Name = "BackToSelcetTimeButton";
             this.BackToSelcetTimeButton.Size = new System.Drawing.Size(91, 37);
@@ -101,7 +101,7 @@
             this.BackToChooseSeatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackToChooseSeatButton.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BackToChooseSeatButton.ForeColor = System.Drawing.Color.White;
-            this.BackToChooseSeatButton.Location = new System.Drawing.Point(115, 14);
+            this.BackToChooseSeatButton.Location = new System.Drawing.Point(237, 14);
             this.BackToChooseSeatButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackToChooseSeatButton.Name = "BackToChooseSeatButton";
             this.BackToChooseSeatButton.Size = new System.Drawing.Size(91, 37);

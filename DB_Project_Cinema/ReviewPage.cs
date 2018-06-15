@@ -57,11 +57,9 @@ namespace DB_Project_Cinema
                     string score = reader2.GetInt32(reader2.GetOrdinal("MOVIE_SCORE")).ToString();
                     string review = reader2.GetString(reader2.GetOrdinal("REVIEW"));
 
-                    string[] row0 = { memID, score, review };
+                    this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                    this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
-
-                    dataGridView1.Rows.Add(row0);
+                    dataGridView1.Rows.Add(memID, score, review, "삭제하기");
                 }
 
             }
@@ -121,9 +119,7 @@ namespace DB_Project_Cinema
                         string score = reader2.GetInt32(reader2.GetOrdinal("MOVIE_SCORE")).ToString();
                         string review = reader2.GetString(reader2.GetOrdinal("REVIEW"));
 
-                        string[] row0 = { memID, score, review };
-
-                        dataGridView1.Rows.Add(row0);
+                        dataGridView1.Rows.Add(memID, score, review, "삭제하기");
                     }
 
                 }
