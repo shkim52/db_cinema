@@ -102,14 +102,15 @@ namespace DB_Project_Cinema
                 SeatNo.Text = "";
                 while (reader5.Read())
                 {
-                    seat_row[index++] = Convert.ToString(reader5["SEAT_ROW"]);
+                    seat_row[index] = Convert.ToString(reader5["SEAT_ROW"]);
                     seat_col[index++] = Convert.ToString(reader5["SEAT_COL"]); 
                 }
-
-                for (int i = 0; i < seat_no.Length; i++)
+                string string_seat = "{0}:{1}";
+                for (int i = 0; i < index; i++)
                 {
-                    seat_no[i] = seat_row[i] + seat_col[i];
-                    SeatNo.Text += seat_no[i] + "      ";
+                    string temp = String.Format(string_seat, seat_row[i], seat_col[i]);
+                    //seat_no[i] = seat_row[i] + seat_col[i];
+                    SeatNo.Text += "   "+temp ;
                 }
 
                 PaymentPrice.Text = paymentprice+"원";

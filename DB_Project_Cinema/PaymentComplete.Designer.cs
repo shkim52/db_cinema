@@ -151,7 +151,7 @@
             // 
             // SeatNo
             // 
-            this.SeatNo.Location = new System.Drawing.Point(703, 263);
+            this.SeatNo.Location = new System.Drawing.Point(716, 263);
             this.SeatNo.Name = "SeatNo";
             this.SeatNo.Size = new System.Drawing.Size(398, 36);
             this.SeatNo.TabIndex = 11;

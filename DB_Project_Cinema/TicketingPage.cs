@@ -99,7 +99,7 @@ namespace DB_Project_Cinema
                 ChooseSeatPageButton.Visible = false;
                 BackToChooseSeatButton.Visible = true;
                 BackToSelcetTimeButton.Visible = false;
-
+                BackToChooseSeatButton.Visible = false;
             }
             
         }
