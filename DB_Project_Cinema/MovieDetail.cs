@@ -71,7 +71,7 @@ namespace DB_Project_Cinema
                 if (reader2.HasRows)
                 {
                     reader2.Read();
-                    MovieScore.Text = reader2.GetInt32(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() + "점";
+                    MovieScore.Text = reader2.GetFloat(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString("N1") + "점";
 
                 }
                 else if (!reader2.HasRows)

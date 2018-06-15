@@ -95,7 +95,7 @@ namespace DB_Project_Cinema
                         {
                             while (reader2.Read())
                             {
-                                score[i].Text = "   평점: " + reader2.GetInt32(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString() + "점";
+                                score[i].Text = "   평점: " + reader2.GetFloat(reader2.GetOrdinal("AVG(MOVIE_SCORE)")).ToString("N1") + "점";
 
                             }
                         }
@@ -122,7 +122,7 @@ namespace DB_Project_Cinema
                         {
                             while (reader4.Read())
                             {
-                                label[i].Text = "   예매율: " + ((reader4.GetFloat(reader4.GetOrdinal("COUNT(*)"))/total_resv)*100).ToString("N2") + "%";
+                                label[i].Text = "   예매율: " + ((reader4.GetFloat(reader4.GetOrdinal("COUNT(*)"))/total_resv)*100).ToString("N1") + "%";
 
                             }
                         }
